@@ -1,0 +1,594 @@
+-- 15_seed_module_03.sql
+-- Seed content items for Module 3 (Treatment Overview & Medication) into yb_content_items
+-- Safe to re-run: uses ON CONFLICT DO UPDATE
+--
+-- Module 3 UUID: 00000000-0000-4000-8000-000000000003  (from 01_seed_modules.sql)
+-- Content item UUIDs: 00000000-0000-4000-a000-000000030001 through ...030017
+
+INSERT INTO yb_content_items (id, module_id, type, title, instructions, xp_value, companion_website_ref, schema)
+VALUES
+
+-- ch3_item_01: Psychoeducation — Understanding ADHD Treatment: It Is Not Just Medication
+(
+  '00000000-0000-4000-a000-000000030001',
+  '00000000-0000-4000-8000-000000000003',
+  'psychoeducation',
+  'Understanding ADHD Treatment: It Is Not Just Medication',
+  'Read through this overview before starting the exercises in this module.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why Treatment Matters",
+        "body": "Although medication helps alleviate core symptoms of ADHD, the additional comorbid psychiatric problems, psychosocial problems and skills deficits which have developed over a lifetime of having ADHD need to be addressed by psychological interventions. Medication alone is less likely to be sufficient for adolescents and adults compared to children."
+      },
+      {
+        "heading": "Two Directions of Change",
+        "body": "The Young-Bramham Programme promotes two primary aims. First, ''change from the outside in'' — changing your environment to optimise personal, occupational and social functioning. Second, ''change from the inside out'' — developing psychological strategies for adaptive functioning within different environments."
+      },
+      {
+        "heading": "Three Therapeutic Approaches Combined",
+        "body": "This programme draws on three core psychological techniques: (1) Cognitive Behavioural Therapy (CBT) — structured, evidence-based, action-oriented; (2) Psychoeducation — learning about ADHD so you understand yourself better; (3) Motivational Interviewing — building confidence that change is possible and overcoming ambivalence."
+      },
+      {
+        "heading": "What You Will Learn in This Module",
+        "body": "In this module you will learn about how medication works for ADHD, practical tips for managing medication, how to handle side effects, the emotional journey after diagnosis, and how the therapy programme is structured to help you build skills over time."
+      }
+    ],
+    "clinician_notes": "This is the foundational psychoeducation module. Emphasise the biosocial model — medication plus psychological strategies. Many patients arrive believing medication is the only treatment. After this module, patients should understand that a range of approaches work together."
+  }'::jsonb
+),
+
+-- ch3_item_02: Psychoeducation — How ADHD Medication Works
+(
+  '00000000-0000-4000-a000-000000030002',
+  '00000000-0000-4000-8000-000000000003',
+  'psychoeducation',
+  'How ADHD Medication Works',
+  'Read this overview of how ADHD medications work. Discuss any questions with your prescribing doctor.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Stimulant Medication",
+        "body": "Stimulant medication (usually methylphenidate or dexamphetamine) is the most common treatment for ADHD across the lifespan. However, efficacy varies — some individuals benefit more than others, with success rates ranging from 25% to 78%."
+      },
+      {
+        "heading": "Immediate Release vs Slow Release",
+        "body": "Medication comes in two main forms. Immediate release (e.g. Ritalin) acts within 20-30 minutes, peaks after 1-2 hours and wears off after 3-4 hours. Slow release (e.g. Concerta) lasts longer and reduces the need to remember multiple doses. Some patients experience a ''rebound'' effect — becoming more irritable as medication wears off."
+      },
+      {
+        "heading": "Non-Stimulant Alternatives",
+        "body": "Other medications can also be effective. Anti-depressants such as desipramine and venlafaxine, and atomoxetine (a non-stimulant) are alternatives. These may be preferable for patients with comorbid depression or those who have adverse reactions to stimulants."
+      },
+      {
+        "heading": "Medication Is Not a Magic Pill",
+        "body": "It is important not to view medication as a ''magic pill'' but as one of several strategies for improving your functioning. When taking appropriate medication, you are better placed to access psychological treatment as you may be more focused, less distracted and less restless. But certain problems require you to make changes in your behaviour too."
+      }
+    ],
+    "clinician_notes": "Reinforce that medication is one component of treatment, not the whole solution. Patients who responded ''drugs'' or ''medication'' when asked how ADHD can be overcome should be gently redirected toward the biosocial model. Discuss individual medication experiences without giving prescribing advice — that is the psychiatrist''s role."
+  }'::jsonb
+),
+
+-- ch3_item_03: Worksheet — Medication Tips Checklist (Table 3.1)
+(
+  '00000000-0000-4000-a000-000000030003',
+  '00000000-0000-4000-8000-000000000003',
+  'worksheet',
+  'Medication Tips Checklist (Table 3.1)',
+  'Review each medication tip below. For each one, rate how well you currently follow it and note any barriers. This will help you and your therapist identify practical improvements.',
+  50,
+  'Table 3.1',
+  '{
+    "fields": [
+      {"id": "tip1_rating", "label": "Tip 1: Slow release preparations reduce the need for remembering to take medication frequently. Are you on a slow release form?", "type": "select", "required": true, "options": ["Yes — slow release", "No — immediate release", "Not sure", "Not currently on medication"]},
+      {"id": "tip2_timing", "label": "Tip 2: Have you worked out the best time for taking tablets to optimise sleep? (For some people medication helps them sleep; for others it keeps them awake.)", "type": "select", "required": true, "options": ["Yes, I have a good schedule", "Somewhat — still adjusting", "No — I take it at random times", "Not on medication"]},
+      {"id": "tip2_notes", "label": "What time do you currently take your medication, and how does it affect your sleep?", "type": "textarea", "required": false, "placeholder": "e.g. I take it at 8am and 2pm. If I take it later than 3pm I cannot sleep."},
+      {"id": "tip3_reminders", "label": "Tip 3: Do you use reminders (phone alarms, mealtimes, TV programmes) to take medication at regular times?", "type": "select", "required": true, "options": ["Yes — I have a reliable system", "Sometimes — it is inconsistent", "No — I rely on memory", "Not on medication"]},
+      {"id": "tip3_system", "label": "What reminder system could you set up or improve?", "type": "textarea", "required": false, "placeholder": "e.g. Set phone alarm for 8am and 2pm, keep pills next to breakfast cereal..."},
+      {"id": "tip4_prescriptions", "label": "Tip 4: Do you organise repeat prescriptions well in advance so medication does not run out?", "type": "select", "required": true, "options": ["Yes — always ahead", "Sometimes I cut it close", "I often run out", "Not on medication"]},
+      {"id": "tip5_holidays", "label": "Tip 5: Have you discussed planned ''drug holidays'' with your doctor? (These should be planned carefully, not taken just when medication runs out.)", "type": "select", "required": true, "options": ["Yes — we have discussed this", "No — but I sometimes skip doses", "No — I have not considered this", "Not on medication"]},
+      {"id": "tip6_expectations", "label": "Tip 6: Do you view medication as one of several strategies, rather than a ''magic pill''?", "type": "likert", "required": true, "options": ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"]},
+      {"id": "tip7_mood", "label": "Tip 7: Since starting medication, have you noticed increased low mood or rumination? (Improved cognitive function can sometimes lead to dwelling on past regrets.)", "type": "select", "required": true, "options": ["Yes — noticeably", "Sometimes", "No", "Not on medication"]},
+      {"id": "tip7_notes", "label": "If yes, what do you tend to ruminate about?", "type": "textarea", "required": false, "placeholder": "e.g. Past failures, missed opportunities, regrets about not being diagnosed sooner..."},
+      {"id": "action_plan", "label": "Based on these tips, what is ONE thing you will change about how you manage your medication this week?", "type": "textarea", "required": true, "placeholder": "Pick the most impactful change you can make right now."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Go through each tip honestly. The goal is not to score perfectly — it is to identify one or two practical improvements you can make right now.",
+    "clinician_notes": "Table 3.1 from the book. Use this as a collaborative discussion tool in session. Pay special attention to Tip 7 (post-medication low mood) — this is a commonly overlooked issue. If patient reports significant rumination, consider whether Module 11 (Low Mood) should be assigned."
+  }'::jsonb
+),
+
+-- ch3_item_04: Worksheet — Managing Medication Side Effects (Table 3.2)
+(
+  '00000000-0000-4000-a000-000000030004',
+  '00000000-0000-4000-8000-000000000003',
+  'worksheet',
+  'Managing Medication Side Effects (Table 3.2)',
+  'Review the common side effects of ADHD medication below. Check any that apply to you, note the severity, and review the recommended strategies. Always discuss side effects with your prescribing doctor.',
+  50,
+  'Table 3.2',
+  '{
+    "fields": [
+      {"id": "insomnia", "label": "Insomnia: Do you experience difficulty sleeping since starting medication?", "type": "select", "required": true, "options": ["Not at all", "Mild", "Moderate", "Severe"]},
+      {"id": "insomnia_notes", "label": "Insomnia recommendation: See sleep hygiene strategies (Module 12). What have you tried so far?", "type": "textarea", "required": false, "placeholder": "e.g. Avoiding late doses, no screens before bed..."},
+      {"id": "nausea", "label": "Nausea: Do you experience nausea with your medication?", "type": "select", "required": true, "options": ["Not at all", "Mild", "Moderate", "Severe"]},
+      {"id": "nausea_notes", "label": "Nausea recommendation: This tends to remit over time. Taking medication with meals often helps. Do you take medication with food?", "type": "select", "required": false, "options": ["Yes — always with meals", "Sometimes", "No — on an empty stomach"]},
+      {"id": "headaches", "label": "Headaches: Do you experience headaches since starting medication?", "type": "select", "required": true, "options": ["Not at all", "Mild", "Moderate", "Severe"]},
+      {"id": "headaches_notes", "label": "Headaches recommendation: Relaxation techniques (Module 9) and over-the-counter pain relief can help. What do you currently do for headaches?", "type": "textarea", "required": false},
+      {"id": "weight_loss", "label": "Weight loss / appetite suppression: Have you noticed reduced appetite or weight loss?", "type": "select", "required": true, "options": ["Not at all", "Mild", "Moderate", "Severe"]},
+      {"id": "weight_loss_notes", "label": "Weight loss recommendation: Taking medication with food or just after meals can help maintain nutrition. Are you eating regular meals?", "type": "select", "required": false, "options": ["Yes — 3 regular meals", "Mostly — I skip one occasionally", "Often skip meals", "Eating is very irregular"]},
+      {"id": "anxiety", "label": "Anxiety or edginess: Do you feel more anxious or on edge since starting medication?", "type": "select", "required": true, "options": ["Not at all", "Mild", "Moderate", "Severe"]},
+      {"id": "anxiety_notes", "label": "Anxiety recommendation: Psychoeducation and anxiety management strategies (Module 9) can help. Have you discussed this with your doctor?", "type": "select", "required": false, "options": ["Yes", "Not yet", "Not applicable"]},
+      {"id": "psychotic_symptoms", "label": "Psychotic symptoms (e.g. paranoia, hallucinations): Have you experienced any unusual perceptual experiences?", "type": "select", "required": true, "options": ["No", "Unsure", "Yes"]},
+      {"id": "psychotic_warning", "label": "IMPORTANT: If you experience any psychotic symptoms, stop medication immediately and seek medical advice. Have you reported this to your doctor?", "type": "select", "required": false, "options": ["Not applicable", "Yes — already reported", "No — I will contact my doctor"]},
+      {"id": "tics", "label": "Tics (involuntary movements or sounds): Have you developed any new tics?", "type": "select", "required": true, "options": ["No", "Unsure", "Yes"]},
+      {"id": "tics_warning", "label": "If you experience tics, stop medication and seek medical advice. Have you reported this to your doctor?", "type": "select", "required": false, "options": ["Not applicable", "Yes — already reported", "No — I will contact my doctor"]},
+      {"id": "other_side_effects", "label": "Are there any other side effects you are experiencing that are not listed above?", "type": "textarea", "required": false, "placeholder": "Describe any other effects you have noticed..."},
+      {"id": "overall_plan", "label": "What is ONE thing you will do this week to better manage your side effects?", "type": "textarea", "required": false, "placeholder": "e.g. Start taking medication with breakfast, discuss dose timing with doctor..."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Be honest about what you are experiencing. This worksheet is to help you have a better conversation with your doctor and therapist. Any side effect should be discussed with a medical professional before attempting management strategies.",
+    "clinician_notes": "Table 3.2 from the book. This is a screening and discussion tool, not a diagnostic instrument. Flag any patient reporting psychotic symptoms or tics for immediate psychiatrist review. For moderate-severe insomnia, consider whether Module 12 (Sleep) should be prioritised. For anxiety, consider Module 9."
+  }'::jsonb
+),
+
+-- ch3_item_05: Psychoeducation — The Six Stages of Adjustment After Diagnosis
+(
+  '00000000-0000-4000-a000-000000030005',
+  '00000000-0000-4000-8000-000000000003',
+  'psychoeducation',
+  'The Six Stages of Adjustment After Diagnosis',
+  'Read about the emotional journey that most adults go through after receiving an ADHD diagnosis. Understanding this process can help you make sense of your own feelings.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why This Matters",
+        "body": "Treatment for adults begins at the time they are diagnosed. Research shows that adults pass through six emotional stages after diagnosis. These stages are normal and expected. Knowing about them can help you feel less alone in your experience."
+      },
+      {
+        "heading": "Stage 1: Relief and Elation",
+        "body": "Many people feel relieved after receiving a diagnosis. They say they always knew something was different and it is reassuring to know it is not their fault. There is finally an explanation."
+      },
+      {
+        "heading": "Stage 2: Confusion and Emotional Turmoil",
+        "body": "Relief is quickly followed by confusion as you try to make sense of past experiences in light of the diagnosis. You may begin to consider what might have been — how your life may have been different if you had been diagnosed earlier."
+      },
+      {
+        "heading": "Stage 3: Anger",
+        "body": "There is often anger that you were not given appropriate support during childhood and adolescence. You may feel bitter that your condition was not recognised sooner. This is a natural reaction."
+      },
+      {
+        "heading": "Stage 4: Sadness and Grief",
+        "body": "You may feel particularly sad and regretful — grieving for lost opportunities, academic potential that was not realised, relationships that suffered. You may have come to expect yourself to fail and underachieve."
+      },
+      {
+        "heading": "Stage 5: Anxiety",
+        "body": "There is a period of realisation that ADHD may be a lifelong chronic condition. This can trigger anxiety about the future — about managing symptoms, relationships, career, and daily life long-term."
+      },
+      {
+        "heading": "Stage 6: Accommodation and Acceptance",
+        "body": "In the final stage, you come to accept the diagnosis and the need for treatment. You can acknowledge how medication and strategies have improved your functioning. You begin to distinguish between what is ADHD and what is not — and focus on what you can change."
+      },
+      {
+        "heading": "Important Note",
+        "body": "Most people do not absorb much information at the time of diagnosis. It is not until a follow-up appointment that you may be able to fully process the experience. This is normal. That is why we pace information gradually rather than overwhelming you at the start."
+      }
+    ],
+    "clinician_notes": "This maps directly to the six adjustment stages stored in patients.adjustment_stage. Use this psychoeducation item to help patients identify which stage they are currently in. Normalise all stages. Be especially attentive at stages 3-5 where risk of dropout or mood deterioration is highest. Do not rush patients to acceptance — each stage serves a purpose."
+  }'::jsonb
+),
+
+-- ch3_item_06: Worksheet — Where Am I in the Adjustment Journey?
+(
+  '00000000-0000-4000-a000-000000030006',
+  '00000000-0000-4000-8000-000000000003',
+  'worksheet',
+  'Where Am I in the Adjustment Journey?',
+  'Based on what you just read about the six stages, reflect on where you are right now. There are no right or wrong answers — this helps your therapist understand your emotional experience.',
+  50,
+  NULL,
+  '{
+    "fields": [
+      {"id": "current_stage", "label": "Which stage do you think you are mostly in right now?", "type": "select", "required": true, "options": ["Stage 1 — Relief and Elation", "Stage 2 — Confusion and Emotional Turmoil", "Stage 3 — Anger", "Stage 4 — Sadness and Grief", "Stage 5 — Anxiety", "Stage 6 — Accommodation and Acceptance", "I experience several stages at once", "I am not sure"]},
+      {"id": "stage_description", "label": "Describe what you are feeling about your diagnosis right now, in your own words.", "type": "textarea", "required": true, "placeholder": "There is no right answer. Write whatever comes to mind about how you feel about having ADHD."},
+      {"id": "past_review", "label": "When you look back at your life before diagnosis, what comes up? (Feeling different from others, being compared unfavourably, being called lazy or stupid?)", "type": "textarea", "required": false, "placeholder": "Reflect on your experiences growing up and before you knew about ADHD..."},
+      {"id": "what_might_have_been", "label": "Do you find yourself thinking about ''what might have been'' if you had been diagnosed earlier?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Constantly"]},
+      {"id": "what_might_have_been_details", "label": "If so, what do you think about?", "type": "textarea", "required": false, "placeholder": "e.g. I could have done better in school, I might not have lost that job..."},
+      {"id": "anger_level", "label": "How much anger do you feel about not being diagnosed sooner?", "type": "scale", "required": true, "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "No anger", "5": "Moderate", "10": "Intense anger"}},
+      {"id": "grief_level", "label": "How much sadness or grief do you feel about lost opportunities?", "type": "scale", "required": true, "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "No sadness", "5": "Moderate", "10": "Intense grief"}},
+      {"id": "anxiety_level", "label": "How anxious are you about managing ADHD as a lifelong condition?", "type": "scale", "required": true, "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "Not anxious", "5": "Moderately anxious", "10": "Extremely anxious"}},
+      {"id": "strengths", "label": "Despite the challenges, what strengths or positive characteristics do you recognise in yourself?", "type": "textarea", "required": true, "placeholder": "e.g. Creativity, energy, spontaneity, resilience, humour..."},
+      {"id": "coping_strategies", "label": "What coping strategies have you already developed on your own — even before knowing you had ADHD?", "type": "textarea", "required": false, "placeholder": "e.g. Lists, alarms, asking friends to remind me, working in bursts..."},
+      {"id": "disclosure", "label": "Have you told people close to you about your diagnosis? How did that feel?", "type": "textarea", "required": false, "placeholder": "Some people worry about stigma. Others find support. What has your experience been?"}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Take your time with this one. It may bring up strong feelings — that is normal and part of the process. You do not have to share everything in one go.",
+    "clinician_notes": "This worksheet directly informs the patients.adjustment_stage field. Use the responses to update the stage if appropriate. High scores on anger (>7), grief (>7), or anxiety (>7) may warrant additional attention. The strengths and coping strategies questions are crucial — they set the foundation for the therapeutic alliance and future module work. Explore existing coping strategies as clues to what will work in treatment."
+  }'::jsonb
+),
+
+-- ch3_item_07: Psychoeducation — The Three Themes: Past, Diagnosis, and Future
+(
+  '00000000-0000-4000-a000-000000030007',
+  '00000000-0000-4000-8000-000000000003',
+  'psychoeducation',
+  'The Three Themes: Past, Diagnosis, and Future',
+  'Research with ADHD adults has revealed three common themes in how people experience their diagnosis. Read these and see if any resonate with you.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Theme 1: Review of the Past — Feeling Different from Others",
+        "body": "Many adults with ADHD report that they always felt different from their peers and family. They were compared unfavourably with siblings and often told they were stupid, lazy or disruptive. For some, this led to internalising the negative feedback, which damaged their self-esteem. However, others were relatively resistant to criticism — partly because their inattention and impulsivity prevented them from dwelling on difficulties long enough for them to become distressing."
+      },
+      {
+        "heading": "Theme 2: Emotional Impact of the Diagnosis",
+        "body": "On being diagnosed, most people feel initial relief and elation that there is an explanation. This is quickly followed by turmoil and confusion as they try to reframe past experiences. They consider what might have been — better academic achievement, stronger relationships, a different career path. This leads to anger about lack of earlier support, then sadness and grief, then anxiety about the future, and finally acceptance."
+      },
+      {
+        "heading": "Theme 3: Consideration of the Future",
+        "body": "Adults who have been on medication can acknowledge how it has improved their motivation and daily functioning, particularly in relationships. They recognise the difference between being on and off medication. However, they are also aware that not all difficulties disappear with medication — certain problems require behavioural change. Understanding what is and is not attributable to ADHD is important, as some people worry others will think they are using ADHD as an excuse."
+      },
+      {
+        "heading": "What This Means for Your Treatment",
+        "body": "These three areas — making sense of the past, reducing anxiety about the future, and building skills that medication alone does not address — are exactly what this programme is designed to help with. You are not alone in these experiences."
+      }
+    ],
+    "clinician_notes": "Based on Young, Bramham et al. qualitative research on post-diagnosis experiences. Use this to normalise the patient''s experience. Theme 2 maps directly to the six adjustment stages. Theme 3 highlights the importance of helping patients distinguish ADHD-attributable difficulties from non-ADHD ones — this distinction is therapeutic in itself."
+  }'::jsonb
+),
+
+-- ch3_item_08: Worksheet — What Has ADHD Changed and What Has Not?
+(
+  '00000000-0000-4000-a000-000000030008',
+  '00000000-0000-4000-8000-000000000003',
+  'worksheet',
+  'What Has ADHD Changed and What Has Not? (Medication vs Behaviour)',
+  'Since starting treatment (medication and/or therapy), some things may have improved and others may still be difficult. This worksheet helps you distinguish what medication addresses from what requires behavioural strategies.',
+  50,
+  NULL,
+  '{
+    "fields": [
+      {"id": "improved_with_medication", "label": "What has improved since starting medication? (If not on medication, skip this.)", "type": "textarea", "required": false, "placeholder": "e.g. I can focus longer, I am less impulsive, I feel calmer, I can follow conversations better..."},
+      {"id": "still_difficult", "label": "What is still difficult despite medication?", "type": "textarea", "required": true, "placeholder": "e.g. I still lose things, I am still late, I still struggle with relationships, I still procrastinate..."},
+      {"id": "on_vs_off", "label": "Can you describe the difference between how you feel when medication is active versus when it has worn off?", "type": "textarea", "required": false, "placeholder": "e.g. On medication I can start tasks; off medication I feel scattered and restless..."},
+      {"id": "not_adhd", "label": "Are there difficulties in your life that you think are NOT related to ADHD?", "type": "textarea", "required": false, "placeholder": "It is important to recognise that not every problem is caused by ADHD."},
+      {"id": "excuse_worry", "label": "Do you worry that others think you are using ADHD as an excuse?", "type": "likert", "required": true, "options": ["Not at all", "A little", "Somewhat", "Quite a lot", "Very much"]},
+      {"id": "excuse_worry_details", "label": "If so, who do you worry about most? How does this affect whether you disclose your diagnosis?", "type": "textarea", "required": false},
+      {"id": "behaviour_targets", "label": "Based on what medication does NOT fix, what behavioural changes would you most like to work on?", "type": "textarea", "required": true, "placeholder": "List 2-3 areas where you want to develop new strategies..."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "This helps you and your therapist identify which problems to target with therapy skills — the ones medication alone does not resolve.",
+    "clinician_notes": "This worksheet is clinically important for setting treatment goals. The ''behaviour_targets'' field directly informs module assignment decisions. The ''excuse_worry'' field relates to stigma concerns mentioned in the chapter — explore this sensitively. Use responses to guide which YB Programme modules to prioritise."
+  }'::jsonb
+),
+
+-- ch3_item_09: Psychoeducation — The Stages of Change: How Change Actually Happens
+(
+  '00000000-0000-4000-a000-000000030009',
+  '00000000-0000-4000-8000-000000000003',
+  'psychoeducation',
+  'The Stages of Change: How Change Actually Happens',
+  'Read about the five stages of change. Understanding this model can help you see where you are in your readiness to make changes — and that is okay wherever you land.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why Change Is Hard",
+        "body": "People with ADHD may lack confidence in their ability to make changes. Years of trying and failing can lead to ambivalence — part of you wants to change, but another part doubts it is possible. This is completely normal. Motivational interviewing techniques help overcome this ambivalence."
+      },
+      {
+        "heading": "Stage 1: Precontemplation",
+        "body": "You are not yet considering change. You may not see the problem or feel it is not that serious. (If you are reading this, you have likely moved past this stage.)"
+      },
+      {
+        "heading": "Stage 2: Contemplation",
+        "body": "You are seriously thinking about change. You can see the problem and are weighing up the pros and cons of doing something about it."
+      },
+      {
+        "heading": "Stage 3: Preparation",
+        "body": "You are planning and committing to change. You are looking for strategies and getting ready to take action."
+      },
+      {
+        "heading": "Stage 4: Action",
+        "body": "You are making specific behavioural changes. You are putting strategies into practice — using new tools, trying new routines, applying what you learn in therapy."
+      },
+      {
+        "heading": "Stage 5: Maintenance",
+        "body": "You are working to sustain change over time. New habits are becoming routine. You are learning to handle setbacks without giving up entirely."
+      },
+      {
+        "heading": "Change Is a Cycle, Not a Straight Line",
+        "body": "It is normal to move back and forth between stages. A slip does not mean failure — it means you are human. The early stages require more support from your therapist and family. In later stages, you become more self-reinforcing and independent."
+      }
+    ],
+    "clinician_notes": "Based on Prochaska and DiClemente''s transactional model of change (Figure 3.1 in the book). Use this to assess the patient''s readiness for specific modules. Patients in precontemplation or contemplation need more motivational interviewing before jumping into skills-based modules. The four principles of MI (express empathy, develop discrepancy, roll with resistance, support self-efficacy) should guide your approach at all stages."
+  }'::jsonb
+),
+
+-- ch3_item_10: Exercise — My Readiness for Change Assessment
+(
+  '00000000-0000-4000-a000-000000030010',
+  '00000000-0000-4000-8000-000000000003',
+  'exercise',
+  'My Readiness for Change Assessment',
+  'For each area of your life affected by ADHD, rate how ready you are to make changes. This helps your therapist tailor the programme to where you are right now.',
+  70,
+  NULL,
+  '{
+    "fields": [
+      {
+        "id": "areas",
+        "label": "Rate your readiness to change in each area",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "area", "label": "Life area", "type": "select", "options": ["Organisation and planning", "Time management", "Memory", "Impulsivity", "Relationships", "Work or study", "Mood and emotions", "Sleep", "Substance use", "Self-esteem", "Anger management", "Other"]},
+          {"id": "stage", "label": "Which stage of change are you in for this area?", "type": "select", "options": ["Not considering change", "Thinking about it", "Preparing to change", "Already taking action", "Maintaining changes"]},
+          {"id": "importance", "label": "How important is change in this area? (0-10)", "type": "scale", "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "Not important", "10": "Extremely important"}},
+          {"id": "confidence", "label": "How confident are you that you CAN change in this area? (0-10)", "type": "scale", "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "No confidence", "10": "Completely confident"}}
+        ],
+        "min_items": 3,
+        "max_items": 12
+      },
+      {"id": "highest_priority", "label": "Which area is most important for you to work on first and why?", "type": "textarea", "required": true, "placeholder": "Choose the area with the biggest gap between importance and confidence..."},
+      {"id": "barriers", "label": "What has stopped you from making changes in the past?", "type": "textarea", "required": false, "placeholder": "e.g. Gave up too quickly, could not stick to routines, felt overwhelmed..."},
+      {"id": "past_successes", "label": "Can you think of a time when you DID successfully make a change? What helped?", "type": "textarea", "required": false, "placeholder": "Even small successes count — what made them work?"}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Be honest about your readiness. It is okay to not be ready in every area. The programme is designed to meet you where you are.",
+    "clinician_notes": "This exercise directly informs module assignment. Areas rated high importance + low confidence are prime targets. Areas where the patient is still in precontemplation need motivational work before skills training. The gap between importance and confidence scores is the key clinical indicator. Use past successes to build self-efficacy."
+  }'::jsonb
+),
+
+-- ch3_item_11: Psychoeducation — The Five Roles of Your Therapist
+(
+  '00000000-0000-4000-a000-000000030011',
+  '00000000-0000-4000-8000-000000000003',
+  'psychoeducation',
+  'The Five Roles of Your Therapist',
+  'Understanding what your therapist does — and does not do — helps you get the most out of therapy. Read about the five roles your therapist plays.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why This Matters",
+        "body": "By adulthood, people with ADHD have often had many encounters with education and mental health services — and not always positive ones. You may feel that services have failed you, or that clinicians do not understand your problems. This programme is built on collaboration, not telling you what to do."
+      },
+      {
+        "heading": "Role 1: Supporter",
+        "body": "Your therapist helps you move from feeling like a victim to feeling empowered. This means building on your strengths and validating your experiences, not just focusing on deficits."
+      },
+      {
+        "heading": "Role 2: Interpreter",
+        "body": "Your therapist helps you understand how your different difficulties fit together as part of ADHD. They can also help you communicate this understanding to family, employers or others."
+      },
+      {
+        "heading": "Role 3: Structurer",
+        "body": "For someone who has difficulty planning and organising, the therapist provides more active structure than in typical therapy — clear agendas, structured sessions, written summaries."
+      },
+      {
+        "heading": "Role 4: Educator",
+        "body": "Your therapist provides education about ADHD through discussion, reading materials, session notes and ongoing conversation. Understanding your condition is the foundation for change."
+      },
+      {
+        "heading": "Role 5: Trainer",
+        "body": "The most important role: through guided discovery, your therapist helps you build a bridge between your internal and external world. You will identify and develop coping strategies to overcome difficult situations. The therapist does not fix things for you — they train you to do it yourself."
+      }
+    ],
+    "clinician_notes": "Based on Nadeau (1995) with the addition of the Trainer role proposed by Young and Bramham. Emphasise the collaborative nature of the alliance. For patients who are mistrustful of services, spend extra time on the Supporter role. The Trainer role is the most important — the therapist facilitates, the patient builds skills."
+  }'::jsonb
+),
+
+-- ch3_item_12: Exercise — Setting My Therapy Goals
+(
+  '00000000-0000-4000-a000-000000030012',
+  '00000000-0000-4000-8000-000000000003',
+  'exercise',
+  'Setting My Therapy Goals',
+  'Therapy works best when you have clear goals. Work with your therapist to define goals at three levels: general, modular and specific. Goals should be reviewed regularly.',
+  70,
+  NULL,
+  '{
+    "fields": [
+      {"id": "general_goals", "label": "General goals: What do you most want to get out of this programme overall?", "type": "textarea", "required": true, "placeholder": "e.g. Feel more in control of my life, improve my relationships, build confidence..."},
+      {"id": "modular_goals", "label": "Module-level goals: Based on what you know about the programme modules, which areas do you most want to work on?", "type": "textarea", "required": true, "placeholder": "e.g. Time management, impulsivity, social skills, anxiety..."},
+      {
+        "id": "specific_goals",
+        "label": "Specific goals: What are 2-3 concrete, measurable things you want to achieve?",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "goal", "label": "Specific goal", "type": "text", "placeholder": "e.g. Arrive on time to work at least 4 out of 5 days"},
+          {"id": "timeframe", "label": "By when?", "type": "text", "placeholder": "e.g. Within 4 weeks"},
+          {"id": "how_measure", "label": "How will you know you have achieved it?", "type": "text", "placeholder": "e.g. I will track arrival times for a month"}
+        ],
+        "min_items": 2,
+        "max_items": 5
+      },
+      {"id": "obstacles", "label": "What obstacles might get in the way of your goals?", "type": "textarea", "required": false, "placeholder": "e.g. Forgetting to practice, losing motivation, getting distracted by crises..."},
+      {"id": "rewards", "label": "How will you reward yourself for progress toward these goals?", "type": "textarea", "required": true, "placeholder": "Rewards are important for ADHD — pick something you genuinely look forward to."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "It can be tempting to list 20 goals. Try to focus on 2-3 specific ones. You can always add more later. Treatment cannot address everything at once.",
+    "clinician_notes": "Goal setting is a core CBT technique adapted for ADHD. Many patients will list vague goals (''I want people to like me'') or overwhelmingly broad goals (''I want to succeed''). Help them break these down. The obstacles field is key — use it to pre-plan solutions. The rewards field is especially important for ADHD motivation. Review goals regularly to maintain focus and prevent crisis-driven sessions."
+  }'::jsonb
+),
+
+-- ch3_item_13: Psychoeducation — How CBT Is Adapted for ADHD
+(
+  '00000000-0000-4000-a000-000000030013',
+  '00000000-0000-4000-8000-000000000003',
+  'psychoeducation',
+  'How CBT Is Adapted for ADHD',
+  'Read about how Cognitive Behavioural Therapy (CBT) has been adapted to work for people with ADHD. Understanding these adaptations will help you get more out of your sessions.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why Standard CBT Needs Adapting",
+        "body": "Adults with ADHD present with multiple problems and complex histories. Concentration difficulties may mean you struggle to follow a train of thought or sit through a 50-minute session. Standard CBT homework may feel impossible. The programme adapts for this."
+      },
+      {
+        "heading": "Cognitive Remediation",
+        "body": "These strategies directly address core symptoms — enhancing memory, attention and organisation in everyday life. Learning to apply strategies that compensate for core symptoms helps you feel greater self-control and reduces feelings of learned helplessness."
+      },
+      {
+        "heading": "Cognitive Reframing of the Past",
+        "body": "Helping you understand that ADHD has a neurological basis and is ''not a character defect or moral weakness'' provides hope for the future. We work together to acknowledge feelings of distress and confusion, normalise them, and then direct attention to learning from the past and focusing constructively on the future."
+      },
+      {
+        "heading": "Internal and External Strategies",
+        "body": "Problems can be addressed from two directions. Internal strategies involve changing how you think and respond (e.g. ''stop and think'' techniques). External strategies involve adapting your environment (e.g. removing distractions). Most problems benefit from a combination of both approaches."
+      },
+      {
+        "heading": "Session Adaptations for ADHD",
+        "body": "Sessions are adapted by: introducing shorter sessions with scheduled breaks; structured changes in topic; variety in methods (visual aids, written exercises, role-plays); fast pace to maintain interest; and regular immediate and delayed rewards. Learning new strategies requires ongoing practice until a new skill becomes automatic — this takes repetition and patience."
+      },
+      {
+        "heading": "Homework in the Programme",
+        "body": "Homework tasks are set at the end of each session. It is important to learn to take responsibility for practising techniques in real life. If you find homework difficult, that is something to discuss openly — obstacles can be identified and alternative strategies planned."
+      }
+    ],
+    "clinician_notes": "This item covers cognitive remediation, reframing, restructuring, rationalisation and compensatory strategies from the chapter. Patients who have had negative experiences with previous therapy may respond well to hearing about the ADHD-specific adaptations. Emphasise that homework resistance is expected and should be addressed collaboratively, not punitively. The internal/external strategy framework is used throughout the remaining modules."
+  }'::jsonb
+),
+
+-- ch3_item_14: Worksheet — My Internal and External Strategy Inventory
+(
+  '00000000-0000-4000-a000-000000030014',
+  '00000000-0000-4000-8000-000000000003',
+  'worksheet',
+  'My Internal and External Strategy Inventory',
+  'Before learning new strategies, let us take stock of what you already do. People with ADHD often have more coping strategies than they realise — they have been adapting their whole lives.',
+  50,
+  NULL,
+  '{
+    "fields": [
+      {"id": "internal_current", "label": "What INTERNAL strategies do you already use? (Things you do in your mind: self-talk, counting to ten, mental checklists, etc.)", "type": "textarea", "required": true, "placeholder": "e.g. I repeat instructions in my head, I count to 5 before responding, I visualise my to-do list..."},
+      {"id": "internal_helpful", "label": "Which of these internal strategies work best for you?", "type": "textarea", "required": false},
+      {"id": "external_current", "label": "What EXTERNAL strategies do you already use? (Things you change in your environment: alarms, lists, removing distractions, asking for help, etc.)", "type": "textarea", "required": true, "placeholder": "e.g. Phone alarms, sticky notes, sitting away from windows, asking my partner to remind me..."},
+      {"id": "external_helpful", "label": "Which of these external strategies work best for you?", "type": "textarea", "required": false},
+      {"id": "maladaptive", "label": "Are there any strategies you use that actually make things worse? (e.g. avoidance, over-reliance on others, substance use to cope)", "type": "textarea", "required": false, "placeholder": "Be honest — this is not about judgment, it is about identifying what to replace."},
+      {"id": "gaps", "label": "What areas of your life feel like they have NO coping strategy at all?", "type": "textarea", "required": true, "placeholder": "e.g. I have nothing for managing anger, I have no system for keeping appointments..."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "This is your strategy inventory. We will build on what already works and fill in the gaps as you progress through the programme.",
+    "clinician_notes": "This worksheet establishes a baseline of existing compensatory strategies. Patients will have developed both adaptive and maladaptive strategies over a lifetime. Highlight the adaptive ones to build self-efficacy. The maladaptive ones become treatment targets. The gaps field directly informs module assignment. The internal/external framework is used throughout all subsequent YB modules."
+  }'::jsonb
+),
+
+-- ch3_item_15: Psychoeducation — Programme Structure: What to Expect from Therapy
+(
+  '00000000-0000-4000-a000-000000030015',
+  '00000000-0000-4000-8000-000000000003',
+  'psychoeducation',
+  'Programme Structure: What to Expect from Therapy',
+  'Read about how the therapy programme is structured. Knowing what to expect will help you get the most out of each session.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Modular Design",
+        "body": "The programme is modular — specific topics are selected as appropriate for you, rather than working through everything sequentially. Modules are chosen collaboratively so you are empowered by the process. Skills acquisition is cumulative: each module builds on previous ones."
+      },
+      {
+        "heading": "Session Structure",
+        "body": "Each session has a clear agenda drawn up collaboratively. Your therapist will stick to the agenda even if crises come up — this provides a model for dealing with difficult situations in a rational, non-catastrophic manner. An issue from one week can be put on the agenda for the next session."
+      },
+      {
+        "heading": "Time Per Module",
+        "body": "It is recommended that 3-4 sessions are spent on each module, but this can be adjusted. Due to the desire for immediate gratification, no more than 6 sessions will be spent on one module at a time. If material needs to be revisited, it will be re-introduced later to avoid boredom and disengagement."
+      },
+      {
+        "heading": "Rewards Are Built In",
+        "body": "People with ADHD find it difficult to delay gratification and tend to prefer short-term rewards over waiting for larger, long-term ones. The programme builds in regular rewards for achievement to maintain your interest and motivation."
+      },
+      {
+        "heading": "Homework Matters",
+        "body": "You will be asked to practise techniques between sessions. This is how new skills become automatic. If homework feels difficult, tell your therapist — obstacles can be anticipated and overcome with planning."
+      },
+      {
+        "heading": "Planning for the End",
+        "body": "ADHD is a chronic condition, so knowing when to end therapy is important. Clear goals will be set early and reviewed regularly. Sessions may gradually reduce in frequency rather than stopping abruptly. Booster sessions can be planned. A relapse prevention plan will help you cope when difficulties arise after therapy ends."
+      }
+    ],
+    "clinician_notes": "This covers the session structure, agendas, goal setting, rewards, homework, termination and relapse prevention sections of the chapter. Setting expectations early reduces dropout. Emphasise the collaborative nature and modular flexibility. The relapse prevention content is important even at this early stage — adults with ADHD tend to catastrophise setbacks."
+  }'::jsonb
+),
+
+-- ch3_item_16: Exercise — My Relapse Prevention Plan (Early Draft)
+(
+  '00000000-0000-4000-a000-000000030016',
+  '00000000-0000-4000-8000-000000000003',
+  'exercise',
+  'My Relapse Prevention Plan (Early Draft)',
+  'Even though you are just starting, it is helpful to think ahead about what might go wrong and plan for it. This is a first draft — you will update it as you progress through the programme.',
+  70,
+  NULL,
+  '{
+    "fields": [
+      {"id": "risk_situations", "label": "What situations or times make you most likely to slip back into old patterns?", "type": "textarea", "required": true, "placeholder": "e.g. Stressful deadlines, arguments with partner, running out of medication, holidays..."},
+      {"id": "warning_signs", "label": "What are your personal warning signs that things are slipping?", "type": "textarea", "required": true, "placeholder": "e.g. Skipping medication, staying up too late, missing appointments, isolating myself..."},
+      {"id": "cognitive_strategies", "label": "What can you tell yourself when you notice these warning signs? (Cognitive strategies)", "type": "textarea", "required": false, "placeholder": "e.g. A slip is not a failure. I can get back on track. One bad day does not undo my progress."},
+      {"id": "social_support", "label": "Who can you reach out to for support when you are struggling?", "type": "textarea", "required": true, "placeholder": "Name specific people and how they can help. e.g. Partner — remind me to take medication. Friend — talk me through frustration."},
+      {"id": "practical_actions", "label": "What practical actions will you take when you notice a slip?", "type": "textarea", "required": true, "placeholder": "e.g. Re-read my therapy notes, set up my phone alarms again, schedule an appointment..."},
+      {"id": "situations_to_avoid", "label": "Are there specific situations or people you should avoid when vulnerable?", "type": "textarea", "required": false, "placeholder": "e.g. Late nights with heavy drinkers, taking on extra commitments when already overwhelmed..."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "This is a FIRST DRAFT. You will revisit and improve this plan as you learn more strategies in the programme. Think of it as a safety net you are starting to build.",
+    "clinician_notes": "Relapse prevention is introduced early per the chapter''s recommendation. This first draft will be sparse — that is fine. Revisit this exercise at the end of each module to add new strategies. The plan should be multi-faceted: cognitive techniques, social support, practical actions, and avoidance of high-risk situations. Adults with ADHD tend to catastrophise setbacks — reframe slips as expected parts of the change cycle (link to Stages of Change psychoeducation)."
+  }'::jsonb
+),
+
+-- ch3_item_17: Diary — Medication and Mood Tracking Diary
+(
+  '00000000-0000-4000-a000-000000030017',
+  '00000000-0000-4000-8000-000000000003',
+  'diary',
+  'Medication and Mood Tracking Diary',
+  'For the next week, track your medication timing, how you feel when it is active, and how you feel when it wears off. This diary helps you and your doctor optimise your medication schedule.',
+  60,
+  NULL,
+  '{
+    "fields": [
+      {"id": "log_date", "label": "Date", "type": "date", "required": true},
+      {"id": "med_time_1", "label": "First dose — what time did you take it?", "type": "time", "required": false},
+      {"id": "med_type_1", "label": "First dose — medication name and dose", "type": "text", "required": false, "placeholder": "e.g. Concerta 36mg, Ritalin 10mg"},
+      {"id": "med_time_2", "label": "Second dose — what time? (if applicable)", "type": "time", "required": false},
+      {"id": "med_type_2", "label": "Second dose — medication name and dose", "type": "text", "required": false},
+      {"id": "med_time_3", "label": "Third dose — what time? (if applicable)", "type": "time", "required": false},
+      {"id": "focus_on_med", "label": "When medication is active: rate your focus (1-10)", "type": "scale", "required": true, "scale_min": 1, "scale_max": 10, "scale_labels": {"1": "Cannot focus at all", "5": "Moderate", "10": "Excellent focus"}},
+      {"id": "mood_on_med", "label": "When medication is active: rate your mood (1-10)", "type": "scale", "required": true, "scale_min": 1, "scale_max": 10, "scale_labels": {"1": "Very low", "5": "Neutral", "10": "Very positive"}},
+      {"id": "focus_off_med", "label": "When medication has worn off: rate your focus (1-10)", "type": "scale", "required": false, "scale_min": 1, "scale_max": 10, "scale_labels": {"1": "Cannot focus at all", "5": "Moderate", "10": "Excellent focus"}},
+      {"id": "mood_off_med", "label": "When medication has worn off: rate your mood (1-10)", "type": "scale", "required": false, "scale_min": 1, "scale_max": 10, "scale_labels": {"1": "Very low", "5": "Neutral", "10": "Very positive"}},
+      {"id": "rebound", "label": "Did you experience a ''rebound'' effect (increased irritability, pronounced symptoms) as medication wore off?", "type": "select", "required": false, "options": ["No", "Mild", "Moderate", "Severe"]},
+      {"id": "side_effects_today", "label": "Any side effects today?", "type": "checkbox", "required": false, "options": ["Insomnia", "Nausea", "Headache", "Appetite loss", "Anxiety", "None"]},
+      {"id": "took_with_food", "label": "Did you take medication with food?", "type": "select", "required": false, "options": ["Yes", "No", "Sometimes"]},
+      {"id": "notes", "label": "Any other observations about how you felt today?", "type": "textarea", "required": false, "placeholder": "e.g. Felt great until 3pm, then crashed. Slept well. Forgot afternoon dose."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Fill this in once at the end of each day. It takes 2-3 minutes. After 7 days, you and your therapist will review the patterns together.",
+    "clinician_notes": "This diary provides data for medication review conversations with the psychiatrist. Look for: rebound patterns, optimal dosing times, correlation between food intake and side effects, on-med vs off-med functioning gaps. Share relevant patterns with the prescribing psychiatrist. If the patient is not on medication, this diary can still be used to track baseline focus and mood scores."
+  }'::jsonb
+)
+
+ON CONFLICT (id) DO UPDATE SET
+  module_id              = EXCLUDED.module_id,
+  type                   = EXCLUDED.type,
+  title                  = EXCLUDED.title,
+  instructions           = EXCLUDED.instructions,
+  xp_value               = EXCLUDED.xp_value,
+  companion_website_ref  = EXCLUDED.companion_website_ref,
+  schema                 = EXCLUDED.schema,
+  updated_at             = now();

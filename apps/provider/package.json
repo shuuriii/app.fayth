@@ -1,0 +1,25 @@
+{
+  "name": "@fayth/provider",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "14.2.29",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@fayth/ui": "workspace:*",
+    "@fayth/types": "workspace:*",
+    "@fayth/db": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "~18.3.0",
+    "@types/react-dom": "~18.3.0",
+    "typescript": "5.9.2"
+  }
+}

@@ -2,9 +2,6 @@
 -- fayth.life — Initial database schema
 -- All tables from CLAUDE.md, RLS enabled (no policies yet)
 
--- Enable UUID extension
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
 -- ============================================================================
 -- ENUMS
 -- ============================================================================
@@ -22,7 +19,7 @@ CREATE TYPE session_status AS ENUM ('scheduled', 'complete', 'cancelled');
 -- ============================================================================
 
 CREATE TABLE profiles (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL UNIQUE REFERENCES auth.users(id) ON DELETE CASCADE,
     role user_role NOT NULL,
     full_name TEXT NOT NULL,
@@ -41,7 +38,7 @@ ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 -- ============================================================================
 
 CREATE TABLE patients (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL UNIQUE REFERENCES auth.users(id) ON DELETE CASCADE,
     assigned_psychologist_id UUID REFERENCES auth.users(id),
     assigned_psychiatrist_id UUID REFERENCES auth.users(id),
@@ -65,7 +62,7 @@ ALTER TABLE patients ENABLE ROW LEVEL SECURITY;
 -- ============================================================================
 
 CREATE TABLE providers (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL UNIQUE REFERENCES auth.users(id) ON DELETE CASCADE,
     role user_role NOT NULL CHECK (role IN ('psychologist', 'psychiatrist', 'admin')),
     license_number TEXT,
@@ -85,7 +82,7 @@ ALTER TABLE providers ENABLE ROW LEVEL SECURITY;
 -- ============================================================================
 
 CREATE TABLE yb_modules (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     chapter_number INT NOT NULL UNIQUE CHECK (chapter_number BETWEEN 1 AND 14),
     title TEXT NOT NULL,
     description TEXT,
@@ -104,7 +101,7 @@ CREATE INDEX idx_yb_modules_sequence_order ON yb_modules(sequence_order);
 ALTER TABLE yb_modules ENABLE ROW LEVEL SECURITY;
 
 CREATE TABLE yb_content_items (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     module_id UUID NOT NULL REFERENCES yb_modules(id) ON DELETE CASCADE,
     type content_item_type NOT NULL,
     title TEXT NOT NULL,
@@ -126,7 +123,7 @@ ALTER TABLE yb_content_items ENABLE ROW LEVEL SECURITY;
 -- ============================================================================
 
 CREATE TABLE patient_modules (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     patient_id UUID NOT NULL REFERENCES patients(id) ON DELETE CASCADE,
     module_id UUID NOT NULL REFERENCES yb_modules(id) ON DELETE CASCADE,
     status module_status NOT NULL DEFAULT 'locked',
@@ -147,7 +144,7 @@ CREATE INDEX idx_patient_modules_status ON patient_modules(status);
 ALTER TABLE patient_modules ENABLE ROW LEVEL SECURITY;
 
 CREATE TABLE patient_content_responses (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     patient_id UUID NOT NULL REFERENCES patients(id) ON DELETE CASCADE,
     content_item_id UUID NOT NULL REFERENCES yb_content_items(id) ON DELETE CASCADE,
     session_date DATE,
@@ -170,7 +167,7 @@ ALTER TABLE patient_content_responses ENABLE ROW LEVEL SECURITY;
 -- ============================================================================
 
 CREATE TABLE symptom_logs (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     patient_id UUID NOT NULL REFERENCES patients(id) ON DELETE CASCADE,
     logged_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     focus_score INT CHECK (focus_score BETWEEN 1 AND 10),
@@ -190,7 +187,7 @@ CREATE INDEX idx_symptom_logs_patient_date ON symptom_logs(patient_id, logged_at
 ALTER TABLE symptom_logs ENABLE ROW LEVEL SECURITY;
 
 CREATE TABLE medications (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     patient_id UUID NOT NULL REFERENCES patients(id) ON DELETE CASCADE,
     name TEXT NOT NULL,
     dose_mg NUMERIC NOT NULL,
@@ -209,7 +206,7 @@ CREATE INDEX idx_medications_active ON medications(patient_id, active) WHERE act
 ALTER TABLE medications ENABLE ROW LEVEL SECURITY;
 
 CREATE TABLE medication_logs (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     patient_id UUID NOT NULL REFERENCES patients(id) ON DELETE CASCADE,
     medication_id UUID NOT NULL REFERENCES medications(id) ON DELETE CASCADE,
     taken_at TIMESTAMPTZ NOT NULL DEFAULT now(),
@@ -230,7 +227,7 @@ ALTER TABLE medication_logs ENABLE ROW LEVEL SECURITY;
 -- ============================================================================
 
 CREATE TABLE sessions (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     patient_id UUID NOT NULL REFERENCES patients(id) ON DELETE CASCADE,
     provider_id UUID NOT NULL REFERENCES auth.users(id),
     type session_type NOT NULL,
@@ -256,7 +253,7 @@ ALTER TABLE sessions ENABLE ROW LEVEL SECURITY;
 -- ============================================================================
 
 CREATE TABLE ai_checkins (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     patient_id UUID NOT NULL REFERENCES patients(id) ON DELETE CASCADE,
     triggered_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     context JSONB,

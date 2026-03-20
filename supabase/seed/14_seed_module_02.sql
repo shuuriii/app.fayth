@@ -1,0 +1,521 @@
+-- 14_seed_module_02.sql
+-- Seed content items for Module 2 (Assessment) into yb_content_items
+-- Safe to re-run: uses ON CONFLICT DO UPDATE
+--
+-- Module 2 UUID: 00000000-0000-4000-8000-000000000002  (from 01_seed_modules.sql)
+-- Content item UUIDs: 00000000-0000-4000-a000-000000020001 through ...020012
+
+INSERT INTO yb_content_items (id, module_id, type, title, instructions, xp_value, companion_website_ref, schema)
+VALUES
+
+-- ch2_item_01: Psychoeducation — Understanding ADHD Assessment in Adults
+(
+  '00000000-0000-4000-a000-000000020001',
+  '00000000-0000-4000-8000-000000000002',
+  'psychoeducation',
+  'Understanding ADHD Assessment in Adults',
+  'Read through this section to understand why adult ADHD assessment matters and what it involves.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why Assessment Matters",
+        "body": "Although ADHD is now recognised as a condition present in adulthood, many clinicians lack the confidence to make the diagnosis. The central tenet is that adults with ADHD will have had their symptoms through their childhood. When conducting an assessment, there are two fundamental questions: (1) Did the client have ADHD as a child? (2) If so, to what extent is the client still symptomatic?"
+      },
+      {
+        "heading": "What a Comprehensive Assessment Involves",
+        "body": "A thorough assessment includes: a structured clinical interview, neuropsychological testing, rating scales, corroborative documentation (school reports, parent accounts), and evaluation of how symptoms impact your daily life — relationships, work, and emotional wellbeing."
+      },
+      {
+        "heading": "Why This Module is Important for You",
+        "body": "Understanding how your diagnosis was reached helps you trust it. Many adults wonder if they ''really'' have ADHD, especially if diagnosed later in life. This module walks you through the assessment process so you can see why your clinician reached the conclusion they did."
+      }
+    ],
+    "clinician_notes": "This psychoeducation piece sets the stage for the assessment module. Patients recently diagnosed may still be processing doubt or relief. Normalise both reactions. Link to the adjustment stages (Module 1)."
+  }'::jsonb
+),
+
+-- ch2_item_02: Psychoeducation — Diagnostic Classification of ADHD (Table 2.1)
+(
+  '00000000-0000-4000-a000-000000020002',
+  '00000000-0000-4000-8000-000000000002',
+  'psychoeducation',
+  'Diagnostic Classification of ADHD (Table 2.1)',
+  'Learn about the three recognised subtypes of ADHD and how they are diagnosed using DSM-IV criteria.',
+  20,
+  'Table 2.1',
+  '{
+    "content_blocks": [
+      {
+        "heading": "The Three Core Symptoms",
+        "body": "There are three recognised symptoms of ADHD: inattention, hyperactivity, and impulsivity. There are 18 diagnostic items total — 9 for inattention and 9 for hyperactivity/impulsivity. For a diagnosis, at least 6 out of 9 items in a domain must be rated as occurring ''often''."
+      },
+      {
+        "heading": "Three Subtypes of ADHD",
+        "body": "ADHD can be diagnosed as three distinct types: (1) Predominantly Inattentive Type — 6 or more out of 9 inattentive symptoms rated as ''often''. (2) Predominantly Hyperactive-Impulsive Type — 6 or more out of 9 hyperactive/impulsive symptoms rated as ''often''. (3) Combined Type — meets criteria for both inattentive AND hyperactive-impulsive domains. Combined type represents the more severe form."
+      },
+      {
+        "heading": "How ADHD Changes in Adulthood",
+        "body": "Symptoms do not uniformly remit as you grow up. Some adults retain predominantly poor impulse control, others retain predominantly poor attention. Motor overactivity — common in children — usually transforms into a feeling of internal restlessness or ceaseless mental activity in adults. Hyperactivity-impulsivity problems tend to decline more rapidly with age than attention difficulties."
+      },
+      {
+        "heading": "Partial Remission",
+        "body": "About one-quarter of children with ADHD will continue to meet full criteria in adulthood, but many more retain disabling symptoms without meeting the strict threshold. A total score of 17 or above on the DSM-IV checklist (rating 0 = never, 1 = sometimes, 2 = often) indicates moderate ADHD symptoms and identifies individuals ''in partial remission'' who may still benefit from treatment."
+      }
+    ],
+    "clinician_notes": "Use this to help patients understand their specific subtype. Many patients feel invalidated if they do not have the ''classic'' hyperactive presentation. Emphasise that the predominantly inattentive type is very common in adults and is equally valid. Discuss how their symptoms may have shifted from childhood to now."
+  }'::jsonb
+),
+
+-- ch2_item_03: Worksheet — DSM-IV Symptom Checklist — Self-Report (Table 2.2a)
+(
+  '00000000-0000-4000-a000-000000020003',
+  '00000000-0000-4000-8000-000000000002',
+  'worksheet',
+  'DSM-IV Symptom Checklist — Self-Report (Table 2.2a)',
+  'For each item, rate how often you have experienced this symptom in the past six months. Answer honestly based on your own experience — there are no right or wrong answers. This is for your own understanding.',
+  50,
+  'Table 2.2a',
+  '{
+    "fields": [
+      {"id": "section_header_inattention", "label": "INATTENTION — In the past six months, do you think you:", "type": "text", "required": false},
+      {"id": "ia1", "label": "Failed to give close attention to details or made careless mistakes in studying, work or other activities?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "ia2", "label": "Had difficulty sustaining attention in tasks or leisure activities?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "ia3", "label": "Have not seemed to listen when spoken to directly?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "ia4", "label": "Did not follow through on instructions and failed to finish studies, chores or duties in the workplace (not due to oppositional behaviour or failure to understand instructions)?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "ia5", "label": "Had difficulty organising tasks and activities?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "ia6", "label": "Avoided, disliked or were reluctant to engage in tasks that require sustained mental effort (e.g. studying, homework, leisure activities)?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "ia7", "label": "Lost things necessary for tasks or activities (e.g. pens, books, tools, study papers)?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "ia8", "label": "Were easily distracted by outside events and stimuli?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "ia9", "label": "Were forgetful in daily activities?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "section_header_hyperactivity", "label": "HYPERACTIVITY/IMPULSIVITY — In the past six months, do you think you:", "type": "text", "required": false},
+      {"id": "hi1", "label": "Fidgeted with hands or feet or squirmed in seat?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "hi2", "label": "Left seat in situations where remaining seated is expected (e.g. in classes, church, movies)?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "hi3", "label": "Experienced feelings of restlessness, especially in situations where it is inappropriate?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "hi4", "label": "Had difficulty engaging in leisure tasks quietly?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "hi5", "label": "Felt ''on the go'' or as if driven by a motor?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "hi6", "label": "Talked excessively?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "hi7", "label": "Blurted out answers before questions have been completed?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "hi8", "label": "Had difficulty waiting turn?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "hi9", "label": "Interrupted or intruded on others (e.g. butting into conversations)?", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2], "reverse_score": false},
+      {"id": "childhood_symptoms", "label": "Were some hyperactive-impulsive or inattentive symptoms present before age 7?", "type": "select", "required": true, "options": ["Yes", "No", "Unsure"]},
+      {"id": "pervasiveness", "label": "Is there impairment from these symptoms in two or more settings (e.g. educational setting, work, at home)?", "type": "select", "required": true, "options": ["Yes", "No", "Unsure"]},
+      {"id": "clinical_impairment", "label": "Is there clear evidence of clinically significant impairment in social, academic or occupational functioning?", "type": "select", "required": true, "options": ["Yes", "No", "Unsure"]}
+    ],
+    "scoring": {
+      "method": "custom",
+      "subscales": {
+        "inattention": {"items": ["ia1","ia2","ia3","ia4","ia5","ia6","ia7","ia8","ia9"], "criteria_met": "6 or more items rated Often (2)"},
+        "hyperactivity_impulsivity": {"items": ["hi1","hi2","hi3","hi4","hi5","hi6","hi7","hi8","hi9"], "criteria_met": "6 or more items rated Often (2)"},
+        "total": {"items": ["ia1","ia2","ia3","ia4","ia5","ia6","ia7","ia8","ia9","hi1","hi2","hi3","hi4","hi5","hi6","hi7","hi8","hi9"], "max_score": 36}
+      },
+      "interpretation": {
+        "combined_type": "Both inattention and hyperactivity/impulsivity criteria met, plus items B-E endorsed",
+        "predominantly_inattentive": "Inattention criteria met but not hyperactivity/impulsivity, plus items B-E",
+        "predominantly_hyperactive_impulsive": "Hyperactivity/impulsivity criteria met but not inattention, plus items B-E",
+        "partial_remission": "Total score >= 17 but full criteria not met",
+        "below_threshold": "Total score < 17"
+      }
+    },
+    "instructions_for_patient": "Rate each symptom honestly for the past six months. Your total score and pattern help your clinician understand your specific ADHD profile. A score of 17 or above indicates moderate symptoms.",
+    "clinician_notes": "This is the DSM-IV self-report version (Table 2.2a). Use Table 2.2b (clinician version) to endorse each positive self-rating with supplementary questioning. A total score of 17+ on the 18 symptom items (0-36 range) represents 1 SD above normal mean (Young, 1999) and identifies partial remission. Count number of items rated ''Often'' in each domain separately for subtype classification."
+  }'::jsonb
+),
+
+-- ch2_item_04: Worksheet — DSM-IV Symptom Checklist — Clinician Scoring Guide (Table 2.2b)
+(
+  '00000000-0000-4000-a000-000000020004',
+  '00000000-0000-4000-8000-000000000002',
+  'worksheet',
+  'DSM-IV Symptom Checklist — Clinician Scoring Guide (Table 2.2b)',
+  'This is the clinician version of the DSM-IV checklist. For each symptom endorsed by the client, verify through supplementary questioning or corroborative information. Record whether each symptom is clinician-endorsed.',
+  50,
+  'Table 2.2b',
+  '{
+    "fields": [
+      {"id": "section_header_inattention", "label": "INATTENTION — Clinician endorsement of client-reported symptoms:", "type": "text", "required": false},
+      {"id": "ia1_client", "label": "Failed to give close attention to details / careless mistakes — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "ia1_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "ia2_client", "label": "Difficulty sustaining attention in tasks or leisure — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "ia2_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "ia3_client", "label": "Not seeming to listen when spoken to directly — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "ia3_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "ia4_client", "label": "Not following through on instructions / failing to finish tasks — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "ia4_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "ia5_client", "label": "Difficulty organising tasks and activities — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "ia5_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "ia6_client", "label": "Avoiding tasks requiring sustained mental effort — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "ia6_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "ia7_client", "label": "Losing things necessary for tasks — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "ia7_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "ia8_client", "label": "Easily distracted by outside events and stimuli — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "ia8_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "ia9_client", "label": "Forgetful in daily activities — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "ia9_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "inattention_criteria_met", "label": "Inattention criteria met? (6 or more items rated ''Often'' and clinician-endorsed)", "type": "select", "required": true, "options": ["Yes", "No"]},
+      {"id": "section_header_hi", "label": "HYPERACTIVITY/IMPULSIVITY — Clinician endorsement:", "type": "text", "required": false},
+      {"id": "hi1_client", "label": "Fidgeted with hands or feet or squirmed in seat — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "hi1_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "hi2_client", "label": "Left seat in situations where remaining seated is expected — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "hi2_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "hi3_client", "label": "Feelings of restlessness in inappropriate situations — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "hi3_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "hi4_client", "label": "Difficulty engaging in leisure tasks quietly — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "hi4_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "hi5_client", "label": "Felt ''on the go'' or as if driven by a motor — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "hi5_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "hi6_client", "label": "Talked excessively — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "hi6_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "hi7_client", "label": "Blurted out answers before questions completed — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "hi7_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "hi8_client", "label": "Difficulty waiting turn — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "hi8_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "hi9_client", "label": "Interrupted or intruded on others — Client rating", "type": "likert", "required": true, "options": ["Never", "Sometimes", "Often"], "score_values": [0, 1, 2]},
+      {"id": "hi9_endorsed", "label": "Clinician endorsed?", "type": "select", "required": true, "options": ["Yes", "No", "Insufficient information"]},
+      {"id": "hi_criteria_met", "label": "Hyperactivity/Impulsivity criteria met? (6 or more items rated ''Often'' and clinician-endorsed)", "type": "select", "required": true, "options": ["Yes", "No"]},
+      {"id": "criterion_a", "label": "Criterion A: Either inattention or hyperactivity/impulsivity criteria met (or both)?", "type": "select", "required": true, "options": ["Yes", "No"]},
+      {"id": "criterion_b", "label": "Criterion B: Were some symptoms present before age 7?", "type": "select", "required": true, "options": ["Yes", "No", "Unclear"]},
+      {"id": "criterion_c", "label": "Criterion C: Impairment present in two or more settings?", "type": "select", "required": true, "options": ["Yes", "No"]},
+      {"id": "criterion_d", "label": "Criterion D: Clear evidence of clinically significant impairment in social, academic, or occupational functioning?", "type": "select", "required": true, "options": ["Yes", "No"]},
+      {"id": "criterion_e", "label": "Criterion E: Symptoms do not occur exclusively during severe psychiatric illness and are not better accounted for by another mental disorder?", "type": "select", "required": true, "options": ["Yes — symptoms are not better explained by another disorder", "No — another disorder may account for symptoms"]},
+      {"id": "diagnosis_combined", "label": "Combined type (A-E met, both domains criteria met)?", "type": "select", "required": true, "options": ["Yes", "No"]},
+      {"id": "diagnosis_inattentive", "label": "Predominantly inattentive type (A-E met, inattention criteria met)?", "type": "select", "required": true, "options": ["Yes", "No"]},
+      {"id": "diagnosis_hyperactive", "label": "Predominantly hyperactive-impulsive type (A-E met, HI criteria met)?", "type": "select", "required": true, "options": ["Yes", "No"]},
+      {"id": "total_score", "label": "Total score (sum of 18 symptom ratings, 0=never, 1=sometimes, 2=often)", "type": "number", "required": true, "scale_min": 0, "scale_max": 36},
+      {"id": "partial_remission", "label": "In partial remission? (Score >= 17 but full categorical criteria not met)", "type": "select", "required": true, "options": ["Yes", "No", "N/A — full criteria met"]},
+      {"id": "clinician_notes_field", "label": "Clinical notes and observations", "type": "textarea", "required": false, "placeholder": "Record observations, supplementary information, and reasoning for endorsement decisions."}
+    ],
+    "scoring": {
+      "method": "custom",
+      "subscales": {
+        "inattention_count_often": "Count of ia items with client rating ''Often'' AND clinician endorsed ''Yes''",
+        "hi_count_often": "Count of hi items with client rating ''Often'' AND clinician endorsed ''Yes''",
+        "total_symptom_score": "Sum of all 18 client ratings (0-36 range)"
+      },
+      "interpretation": {
+        "combined_type": "Criteria A-E met, both inattention and HI domains >= 6 ''Often''",
+        "predominantly_inattentive": "Criteria A-E met, inattention >= 6 ''Often'', HI < 6",
+        "predominantly_hyperactive_impulsive": "Criteria A-E met, HI >= 6 ''Often'', inattention < 6",
+        "partial_remission": "Total score >= 17 but categorical criteria not met",
+        "adhd_nos": "Prominent symptoms present but stringent criteria not met"
+      }
+    },
+    "instructions_for_patient": "This version is completed with your clinician during your assessment session. Your clinician will review your self-report answers and ask follow-up questions to verify each symptom.",
+    "clinician_notes": "This is the clinician-scored version (Table 2.2b). Each positive client self-rating should be endorsed through supplementary questioning or corroborative information. A total symptom score of 17+ (1 SD above normal mean per Young 1999) identifies partial remission. Note: DSM-IV requires symptoms to be maladaptive, inconsistent with developmental level, and present for the past six months."
+  }'::jsonb
+),
+
+-- ch2_item_05: Psychoeducation — Symptomatic Features of ADHD in Adulthood (Table 2.3)
+(
+  '00000000-0000-4000-a000-000000020005',
+  '00000000-0000-4000-8000-000000000002',
+  'psychoeducation',
+  'Symptomatic Features of ADHD in Adulthood (Table 2.3)',
+  'These are common features of adult ADHD that go beyond the formal diagnostic criteria. Read through and notice which ones feel familiar to you.',
+  20,
+  'Table 2.3',
+  '{
+    "content_blocks": [
+      {
+        "heading": "Procrastination",
+        "body": "People with ADHD do not put things off for hours or days — they put things off for weeks or months. They have loads of projects half started but do not see things through. They may get into debt because they do not pay bills on time or miss deadlines. If they do meet deadlines, it is only because they have crammed in last-minute information or stayed up all night. They are always late and have loads of excuses for why they have been unable to do a task on time."
+      },
+      {
+        "heading": "Low Tolerance of Frustration",
+        "body": "This often presents as being irritable or ''tetchy''. People are often impatient and quick to become cross, especially when others do not appear to understand them or follow what they are saying."
+      },
+      {
+        "heading": "Mood Lability",
+        "body": "Mood states can change rapidly and possibly without apparent triggers. These symptoms may be misdiagnosed as bipolar disorder, but the difference is that for ADHD, lability occurs over a matter of hours whereas in bipolar disorder it occurs over a period of weeks."
+      },
+      {
+        "heading": "Low Self-Esteem",
+        "body": "Individuals have a history of failing (which they may perceive as the incompletion of projects). They commonly feel they are underachieving according to their potential and constantly seek reassurance or approval. They are sensitive to criticism and motivated to seek social recognition. At the same time they often have a sense of self-efficacy and resilience, which drives them to constantly seek new opportunities. Their entrepreneurial nature may appear incompatible with a lack of self-esteem."
+      },
+      {
+        "heading": "Disorganisation",
+        "body": "This often presents as poor planning and sequencing. People may have difficulty organising and prioritising information, and imposing order and structure in their world. This may be for particular tasks (e.g. household chores resulting in mess and chaos) or more functional (e.g. being late for work, taking a long time to prepare a meal). This may present as a haphazard, chaotic approach to tasks."
+      },
+      {
+        "heading": "Attitudinal Problems",
+        "body": "Individuals may present as irritable and oppositional, arguing for the sake of argument. They may seek arousal and stimulus this way, presenting as ''difficult'' people who do not take criticism well. They may be poor employees who do not accept line management. This may result in falling out with friends and colleagues and a high turnover of jobs."
+      },
+      {
+        "heading": "Disinhibition",
+        "body": "This may be expressed as both verbal and physical disinhibitive behaviours. People may not be able to inhibit the impulse to speak out and say the first thing that comes into their head, resulting in being hurtful and insensitive towards others. Poor impulse control may also present as physical expressions of anger."
+      },
+      {
+        "heading": "Sensation-Seeking Behaviour",
+        "body": "A need for high stimulation and immediate gratification often leads to risk-taking behaviours. This may be expressed as an obsessive eagerness to explore new ideas and gain new experiences. Leisure pursuits may contain a sense of danger and recklessness. People tend to live life to excess and push limits to extremes."
+      },
+      {
+        "heading": "Ceaseless Mental Activity",
+        "body": "People describe their brain working too fast and a speeding up of thoughts that rapidly change. They are unable to keep track of these thoughts or write them down and may feel completely overwhelmed and exhausted by this experience. Others may appear calm but still report having racing thoughts."
+      }
+    ],
+    "clinician_notes": "These features are not part of the formal DSM-IV criteria but are commonly associated with adult ADHD. They are important for a complete clinical picture and for treatment planning. Distinguish ceaseless mental activity (flooding of thoughts) from hypermania (speeded up thoughts). Use this as a discussion tool — patients often feel validated when they see their daily experiences described clinically."
+  }'::jsonb
+),
+
+-- ch2_item_06: Worksheet — My ADHD Symptom Profile (Table 2.3 Self-Assessment)
+(
+  '00000000-0000-4000-a000-000000020006',
+  '00000000-0000-4000-8000-000000000002',
+  'worksheet',
+  'My ADHD Symptom Profile (Table 2.3 Self-Assessment)',
+  'Look at each feature below and rate how much it affects your daily life. This is not a diagnostic tool — it is to help you and your therapist understand which areas cause you the most difficulty so therapy can focus on what matters most to you.',
+  50,
+  NULL,
+  '{
+    "fields": [
+      {"id": "procrastination", "label": "Procrastination — Do you put tasks off for weeks or months, leave projects unfinished, or only complete things at the last minute?", "type": "likert", "required": true, "options": ["Not a problem for me", "Mild — occasionally causes issues", "Moderate — regularly causes problems", "Severe — significantly impacts my life"], "score_values": [0, 1, 2, 3]},
+      {"id": "frustration_tolerance", "label": "Low Tolerance of Frustration — Do you become irritable or impatient quickly, especially when others do not follow you or things go wrong?", "type": "likert", "required": true, "options": ["Not a problem for me", "Mild — occasionally causes issues", "Moderate — regularly causes problems", "Severe — significantly impacts my life"], "score_values": [0, 1, 2, 3]},
+      {"id": "mood_lability", "label": "Mood Lability — Do your moods change rapidly (over hours), sometimes without obvious triggers?", "type": "likert", "required": true, "options": ["Not a problem for me", "Mild — occasionally causes issues", "Moderate — regularly causes problems", "Severe — significantly impacts my life"], "score_values": [0, 1, 2, 3]},
+      {"id": "self_esteem", "label": "Low Self-Esteem — Do you feel you are underachieving, constantly seek approval, or feel sensitive to criticism?", "type": "likert", "required": true, "options": ["Not a problem for me", "Mild — occasionally causes issues", "Moderate — regularly causes problems", "Severe — significantly impacts my life"], "score_values": [0, 1, 2, 3]},
+      {"id": "disorganisation", "label": "Disorganisation — Do you have difficulty organising, planning, prioritising, or keeping order in your environment?", "type": "likert", "required": true, "options": ["Not a problem for me", "Mild — occasionally causes issues", "Moderate — regularly causes problems", "Severe — significantly impacts my life"], "score_values": [0, 1, 2, 3]},
+      {"id": "attitudinal", "label": "Attitudinal Problems — Do you come across as argumentative, oppositional, or resistant to authority?", "type": "likert", "required": true, "options": ["Not a problem for me", "Mild — occasionally causes issues", "Moderate — regularly causes problems", "Severe — significantly impacts my life"], "score_values": [0, 1, 2, 3]},
+      {"id": "disinhibition", "label": "Disinhibition — Do you say or do things impulsively that you later regret, or find it hard to hold back reactions?", "type": "likert", "required": true, "options": ["Not a problem for me", "Mild — occasionally causes issues", "Moderate — regularly causes problems", "Severe — significantly impacts my life"], "score_values": [0, 1, 2, 3]},
+      {"id": "sensation_seeking", "label": "Sensation-Seeking — Do you crave excitement, take risks, get bored easily, or constantly seek new experiences?", "type": "likert", "required": true, "options": ["Not a problem for me", "Mild — occasionally causes issues", "Moderate — regularly causes problems", "Severe — significantly impacts my life"], "score_values": [0, 1, 2, 3]},
+      {"id": "mental_activity", "label": "Ceaseless Mental Activity — Do you experience racing thoughts, a brain that ''will not switch off'', or feeling overwhelmed by constant mental chatter?", "type": "likert", "required": true, "options": ["Not a problem for me", "Mild — occasionally causes issues", "Moderate — regularly causes problems", "Severe — significantly impacts my life"], "score_values": [0, 1, 2, 3]},
+      {"id": "top_three", "label": "Which three features affect your life the most right now? List them in order.", "type": "textarea", "required": true, "placeholder": "e.g. 1. Disorganisation, 2. Procrastination, 3. Mood lability"},
+      {"id": "impact_example", "label": "Give a recent example of how your top-ranked feature caused a problem in your daily life.", "type": "textarea", "required": false, "placeholder": "e.g. Last week I forgot to pay my electricity bill for the third month in a row..."}
+    ],
+    "scoring": {
+      "method": "sum",
+      "max_score": 27,
+      "interpretation": {
+        "0-9": "Relatively mild associated features. Focus on the specific areas rated highest.",
+        "10-18": "Moderate associated features across several areas. These will be addressed in later modules.",
+        "19-27": "Significant associated features. Discuss prioritisation of treatment targets with your therapist."
+      }
+    },
+    "instructions_for_patient": "Be honest about how these features affect your real life, not how you think they should be. Your answers help your therapist choose which later modules to prioritise for you.",
+    "clinician_notes": "Use this to identify treatment targets beyond core ADHD symptoms. The top-rated features should guide module selection: disorganisation → Module 4/5, frustration → Module 10, mood lability → Module 11, sensation-seeking → Module 13. Cross-reference with the DSM-IV checklist results."
+  }'::jsonb
+),
+
+-- ch2_item_07: Psychoeducation — Understanding Differential Diagnosis and Comorbidity
+(
+  '00000000-0000-4000-a000-000000020007',
+  '00000000-0000-4000-8000-000000000002',
+  'psychoeducation',
+  'Understanding Differential Diagnosis and Comorbidity',
+  'Read this section to understand why your clinician considers other conditions alongside ADHD, and why this is important for your treatment.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why Other Conditions Are Considered",
+        "body": "Clinical assessment of adult ADHD should only be made by a professional trained in differential diagnosis. Adults with other psychiatric problems may appear to have ADHD symptoms. Difficulty with attentional control is common in many disorders, and poor impulse control is commonly associated with conduct disorders and antisocial behaviours. Your clinician needs to determine whether symptoms are best explained by ADHD, by another condition, or by ADHD plus one or more co-existing conditions."
+      },
+      {
+        "heading": "Common Comorbid Conditions",
+        "body": "In childhood, ADHD commonly co-occurs with conduct disorder, oppositional defiant disorder, anxiety, depression, Tourette''s syndrome, and substance misuse. In adulthood, common comorbidities include personality disorder (particularly antisocial), bipolar disorder, obsessive-compulsive disorder, anxiety, depression, and substance misuse. Language, learning, and motor developmental delays are also frequently reported."
+      },
+      {
+        "heading": "Age of Onset is Key",
+        "body": "When deciding whether a condition is a differential diagnosis (instead of ADHD) or a comorbid condition (alongside ADHD), the age of onset is critical. ADHD begins in childhood. Most comorbid conditions — anxiety, depression, substance misuse — tend to have a later onset. If attentional difficulties only started in adulthood, another condition may be the primary cause."
+      },
+      {
+        "heading": "The Assessment Checklist",
+        "body": "A thorough assessment needs to: (1) Obtain a comprehensive childhood history regarding ADHD symptoms. (2) Evaluate current ADHD symptoms. (3) Confirm that symptoms cause significant impairment in everyday life. (4) Assess for differential and comorbid conditions — sometimes the comorbid condition impacts life more than ADHD and should be the primary treatment target."
+      }
+    ],
+    "clinician_notes": "This is particularly relevant for patients who present with anxiety or depression as primary complaints. Help patients understand that treating comorbid conditions (e.g. substance misuse in Module 13, anxiety in Module 9, depression in Module 11) may be prioritised alongside or before core ADHD treatment. In severe comorbid cases such as active substance misuse, treat that prior to formal ADHD re-assessment."
+  }'::jsonb
+),
+
+-- ch2_item_08: Exercise — Developmental History Exercise (Exercise 2.1)
+(
+  '00000000-0000-4000-a000-000000020008',
+  '00000000-0000-4000-8000-000000000002',
+  'exercise',
+  'Developmental History Exercise (Exercise 2.1)',
+  'This exercise helps you think about your past experiences in a structured way and identify important gaps in your knowledge about your history. Complete as much as you can on your own, then discuss the gaps with your therapist and, if possible, a parent or someone who knew you as a child.',
+  70,
+  'Exercise 2.1',
+  '{
+    "fields": [
+      {"id": "section_early", "label": "EARLY CHILDHOOD (ages 0-5)", "type": "text", "required": false},
+      {"id": "early_milestones", "label": "What do you know about your developmental milestones? (walking, talking, toilet training — were any delayed?)", "type": "textarea", "required": false, "placeholder": "Write what you know or have been told. It is OK to write ''I do not know''."},
+      {"id": "early_behaviour", "label": "What were you like as a young child? (active, quiet, difficult, easy-going?)", "type": "textarea", "required": false, "placeholder": "What have family members told you about yourself as a young child?"},
+      {"id": "early_problems", "label": "Were there any problems or concerns raised by parents, nursery, or doctors?", "type": "textarea", "required": false},
+      {"id": "section_primary", "label": "PRIMARY SCHOOL (ages 5-11)", "type": "text", "required": false},
+      {"id": "primary_attention", "label": "Could you sit still and pay attention in class? What did teachers say about you?", "type": "textarea", "required": false, "placeholder": "Think about school reports, parent-teacher meetings, what you remember..."},
+      {"id": "primary_behaviour", "label": "Did you get into trouble at school? What for?", "type": "textarea", "required": false},
+      {"id": "primary_academic", "label": "How did you do academically? Were there specific difficulties (reading, maths, writing)?", "type": "textarea", "required": false},
+      {"id": "primary_social", "label": "Did you have friends? Were there problems with other children?", "type": "textarea", "required": false},
+      {"id": "section_secondary", "label": "SECONDARY SCHOOL / ADOLESCENCE (ages 11-18)", "type": "text", "required": false},
+      {"id": "secondary_attention", "label": "How were your attention and concentration? Could you study for exams?", "type": "textarea", "required": false},
+      {"id": "secondary_behaviour", "label": "Were there behavioural problems, suspensions, or conflicts with teachers?", "type": "textarea", "required": false},
+      {"id": "secondary_social", "label": "How were your friendships and social life? Any risky behaviour?", "type": "textarea", "required": false},
+      {"id": "secondary_emotional", "label": "Did you experience anxiety, depression, mood swings, or substance use during this period?", "type": "textarea", "required": false},
+      {"id": "section_adulthood", "label": "ADULTHOOD (18+)", "type": "text", "required": false},
+      {"id": "adult_education", "label": "Did you pursue further education? How did you manage? Any difficulties completing courses?", "type": "textarea", "required": false},
+      {"id": "adult_employment", "label": "Describe your work history. How many jobs have you had? Have you been fired or changed jobs frequently?", "type": "textarea", "required": false},
+      {"id": "adult_relationships", "label": "How have your close relationships been affected? (partner, family, friends)", "type": "textarea", "required": false},
+      {"id": "adult_current", "label": "What are the main symptoms that bother you most right now?", "type": "textarea", "required": true, "placeholder": "Think about attention, impulsivity, restlessness, organisation, relationships..."},
+      {"id": "section_family", "label": "FAMILY HISTORY", "type": "text", "required": false},
+      {"id": "family_adhd", "label": "Is there any ADHD, attention problems, or hyperactivity in your family (parents, siblings, children)?", "type": "textarea", "required": false},
+      {"id": "family_mental_health", "label": "Is there any history of mental health conditions in your family (depression, anxiety, bipolar, substance misuse)?", "type": "textarea", "required": false},
+      {"id": "section_compare", "label": "COMPARING POTENTIAL VS ACHIEVEMENT", "type": "text", "required": false},
+      {"id": "sibling_comparison", "label": "How does your educational and occupational achievement compare to your siblings or family expectations?", "type": "textarea", "required": false, "placeholder": "It is common for adults with ADHD to feel they have not achieved their potential."},
+      {"id": "gaps_identified", "label": "What gaps in your history do you need to fill? Who could help you find this information?", "type": "textarea", "required": false, "placeholder": "e.g. I need to ask my mother about primary school, I need to find my school reports..."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "This is not a test — it is a way to gather your life story in a structured way. Fill in what you can before your next session. Do not worry about gaps — identifying what you do not know is just as useful. If possible, ask a parent or someone who knew you as a child to help fill in the early sections.",
+    "clinician_notes": "Provide this to the client before the assessment session to facilitate a thorough developmental history. Encourage them to bring corroborative information (school reports, parent accounts). Clients may need emotional support when reflecting on childhood difficulties. Use the family history section to assess genetic loading. Compare achievement vs potential (sibling comparison) as this often reveals the functional impact of ADHD even when formal criteria are borderline."
+  }'::jsonb
+),
+
+-- ch2_item_09: Psychoeducation — Sources of Information for Assessment
+(
+  '00000000-0000-4000-a000-000000020009',
+  '00000000-0000-4000-8000-000000000002',
+  'psychoeducation',
+  'Sources of Information for Assessment',
+  'Read this section to understand why your clinician may ask for information from people who know you, and what types of evidence support a thorough assessment.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why Multiple Sources Matter",
+        "body": "Research shows that parents can be more reliable informants than adults themselves when it comes to predicting treatment response. However, adults with ADHD are able to give reliable and valid accounts of their symptoms. The reliability of reporting depends on context — a parent may know less about current symptoms of an adult child living independently, but may have crucial information about childhood behaviour."
+      },
+      {
+        "heading": "Self-Diagnosis Caution",
+        "body": "Clinicians need to be cautious when faced with self-diagnosed ADHD, particularly since clients could self-refer anticipating medication. However, this does not mean your experiences are invalid. The assessment process is designed to build a complete picture from multiple angles to ensure the diagnosis is accurate and leads to the right treatment."
+      },
+      {
+        "heading": "Types of Evidence",
+        "body": "A thorough assessment draws from several sources: (1) Your own self-report of symptoms and history. (2) Informant reports — parents for childhood, partners for current difficulties. (3) School reports and educational records. (4) Neuropsychological testing — assessing attention, memory, processing speed, and executive function. (5) Rating scales — standardised questionnaires that compare your symptoms to known norms. (6) Behavioural observation during assessment sessions."
+      },
+      {
+        "heading": "What You Can Do",
+        "body": "Before your assessment, try to gather: old school reports or certificates, any previous psychological or psychiatric reports, and ask a parent or older relative if they would be willing to provide information about your childhood. The more information available, the more confident your clinician can be in the diagnosis."
+      }
+    ],
+    "clinician_notes": "Use this to set expectations before assessment. Encourage the client to bring corroborative documentation. Parental information may be unreliable for antisocial behaviour (Young, 2004). In the absence of parental informants, partners may be useful sources for current difficulties (Young, 2004). Consider cultural factors — in India, family involvement in healthcare is common and can be leveraged positively."
+  }'::jsonb
+),
+
+-- ch2_item_10: Psychoeducation — Neuropsychological Assessment — What to Expect
+(
+  '00000000-0000-4000-a000-000000020010',
+  '00000000-0000-4000-8000-000000000002',
+  'psychoeducation',
+  'Neuropsychological Assessment — What to Expect',
+  'Read this section to understand what neuropsychological testing involves and why it may be part of your assessment.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why Neuropsychological Testing",
+        "body": "Neuropsychological assessment is important for three reasons: (1) It can support a diagnosis by showing patterns of cognitive impairment common in ADHD. (2) It can exclude other diagnoses such as learning disabilities or brain injury. (3) It provides a picture of your cognitive strengths and weaknesses, which helps predict where you may struggle in daily life."
+      },
+      {
+        "heading": "What Is Tested",
+        "body": "Key areas assessed include: intelligence (baseline ability), attention (selective, divided, shifting, and sustained), response inhibition and executive functioning (ability to plan, control impulses, and think flexibly), memory (working memory and short-term recall), and processing speed."
+      },
+      {
+        "heading": "Typical ADHD Patterns",
+        "body": "Adults with ADHD commonly show: impaired working memory and processing speed, difficulty sustaining attention over long tasks, impulsive responding (fast but inaccurate), difficulty with planning — they tend to think during a task rather than planning before starting, and reduced ability to organise information strategically (e.g. learning lists in order rather than grouping by category)."
+      },
+      {
+        "heading": "Limitations to Know About",
+        "body": "Neuropsychological testing alone cannot diagnose ADHD — normal test scores do not rule it out. The quiet, one-on-one testing environment may actually help you concentrate better than in real life, where there are many distractions. Some people perform better in testing because the examiner provides structure and motivation. This is why testing is always combined with other assessment methods."
+      }
+    ],
+    "clinician_notes": "Not all patients will undergo full neuropsychological assessment. Use this psychoeducation to set expectations and reduce anxiety. If assessment reveals normal scores, explain that this does not invalidate the diagnosis — false negatives are more common than false positives with neuropsychological measures. Highlight that the structured testing environment may mask real-world difficulties."
+  }'::jsonb
+),
+
+-- ch2_item_11: Psychoeducation — Rating Scales in ADHD Assessment
+(
+  '00000000-0000-4000-a000-000000020011',
+  '00000000-0000-4000-8000-000000000002',
+  'psychoeducation',
+  'Rating Scales in ADHD Assessment',
+  'Read this section to understand the questionnaires used in ADHD assessment and what their scores mean.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "What Are Rating Scales",
+        "body": "Rating scales are standardised questionnaires that measure the frequency and severity of ADHD symptoms. They provide a consistent approach to assessment, allow quantitative monitoring of symptom progression and treatment response, and can screen for ADHD by comparing your scores to established norms."
+      },
+      {
+        "heading": "Childhood Rating Scales",
+        "body": "Common childhood measures include: Conners'' Rating Scales (for parents and teachers, assessing DSM-IV symptoms and comorbid disorders), the Conners Global Index (assessing restless-impulsive factors and emotional lability), and the Wender Utah Rating Scale (a retrospective 25-item scale for adults recalling childhood symptoms). Your clinician may ask you or a parent to complete one of these."
+      },
+      {
+        "heading": "Adulthood Rating Scales",
+        "body": "Common adult measures include: Conners'' Adult ADHD Rating Scale (CAARS, self-report and observer versions with 66 or 26 items), and the Brown Attention Deficit Disorder Scales (BADDS, which assess executive functioning deficits across six domains: organising and activating, focusing and shifting attention, regulating alertness and effort, managing frustration and emotions, working memory, and self-monitoring)."
+      },
+      {
+        "heading": "Important Limitations",
+        "body": "Rating scales are subjective — you answer based on your own perception. Some people overrate symptoms (motivated to receive a diagnosis) while others underrate them (limited insight). Scoring above a threshold does not automatically constitute a diagnosis. This is why clinicians combine rating scales with clinical interviews, neuropsychological assessment, and corroborative information."
+      }
+    ],
+    "clinician_notes": "Select rating scales based on speed and comprehensiveness needs. The DSM-IV checklist (Table 2.2) is the most straightforward. For a more detailed picture, use the CAARS or BADDS. Always obtain corroborative ratings where possible, especially for retrospective childhood ratings. Be aware of response biases — motivated patients may overrate, referred patients may underrate."
+  }'::jsonb
+),
+
+-- ch2_item_12: Worksheet — Assessment Checklist (Table 2.4)
+(
+  '00000000-0000-4000-a000-000000020012',
+  '00000000-0000-4000-8000-000000000002',
+  'worksheet',
+  'Assessment Checklist (Table 2.4)',
+  'Use this checklist to track what information has been gathered for a comprehensive ADHD assessment. This helps ensure no important area is overlooked.',
+  50,
+  'Table 2.4',
+  '{
+    "fields": [
+      {"id": "section_childhood", "label": "CHILDHOOD HISTORY", "type": "text", "required": false},
+      {"id": "childhood_symptoms_present", "label": "Childhood ADHD symptoms documented (inattention, hyperactivity, impulsivity before age 7)?", "type": "select", "required": true, "options": ["Yes — documented", "Partially — some information available", "No — not yet gathered", "Unable to obtain"]},
+      {"id": "childhood_source", "label": "Source of childhood information", "type": "checkbox", "required": false, "options": ["Client self-report (retrospective)", "Parent report", "School reports / records", "Other informant", "Previous clinical records"]},
+      {"id": "childhood_rating_scale", "label": "Childhood rating scale completed?", "type": "select", "required": true, "options": ["Conners'' Rating Scale", "Wender Utah Rating Scale", "DSM-IV Checklist (retrospective)", "Other", "Not completed"]},
+      {"id": "childhood_rating_score", "label": "Childhood rating scale score and interpretation", "type": "textarea", "required": false, "placeholder": "Record the scale used, scores, and interpretation..."},
+      {"id": "section_current", "label": "CURRENT SYMPTOMS", "type": "text", "required": false},
+      {"id": "current_dsm_checklist", "label": "DSM-IV symptom checklist completed (current)?", "type": "select", "required": true, "options": ["Yes — self-report", "Yes — self-report and clinician-endorsed", "Not yet completed"]},
+      {"id": "current_inattention_count", "label": "Number of inattention symptoms rated ''Often'' (out of 9)", "type": "number", "required": false, "scale_min": 0, "scale_max": 9},
+      {"id": "current_hi_count", "label": "Number of hyperactivity/impulsivity symptoms rated ''Often'' (out of 9)", "type": "number", "required": false, "scale_min": 0, "scale_max": 9},
+      {"id": "current_total_score", "label": "Total DSM-IV symptom score (0-36)", "type": "number", "required": false, "scale_min": 0, "scale_max": 36},
+      {"id": "current_adult_scale", "label": "Adult rating scale completed?", "type": "select", "required": true, "options": ["CAARS (self-report)", "CAARS (self + observer)", "BADDS", "Other", "Not completed"]},
+      {"id": "current_adult_scale_score", "label": "Adult rating scale score and interpretation", "type": "textarea", "required": false},
+      {"id": "section_impairment", "label": "FUNCTIONAL IMPAIRMENT", "type": "text", "required": false},
+      {"id": "impairment_settings", "label": "Impairment documented in which settings?", "type": "checkbox", "required": true, "options": ["Educational / academic", "Occupational / work", "Home / domestic", "Social relationships", "Emotional wellbeing", "Financial management"]},
+      {"id": "impairment_notes", "label": "Notes on functional impairment", "type": "textarea", "required": false, "placeholder": "Describe the specific ways symptoms impair functioning in each setting..."},
+      {"id": "section_differential", "label": "DIFFERENTIAL AND COMORBID DIAGNOSES", "type": "text", "required": false},
+      {"id": "differential_considered", "label": "Differential diagnoses considered and ruled out", "type": "checkbox", "required": true, "options": ["Anxiety disorder", "Depressive disorder", "Bipolar disorder", "Personality disorder", "Substance misuse disorder", "Learning disability", "Autism spectrum disorder", "Psychotic disorder", "Brain injury / neurological", "Other"]},
+      {"id": "comorbid_present", "label": "Comorbid conditions identified", "type": "textarea", "required": false, "placeholder": "List any comorbid diagnoses and their current severity..."},
+      {"id": "section_neuropsych", "label": "NEUROPSYCHOLOGICAL ASSESSMENT", "type": "text", "required": false},
+      {"id": "neuropsych_completed", "label": "Neuropsychological assessment conducted?", "type": "select", "required": true, "options": ["Yes — full battery", "Yes — screening only", "Not required", "Planned but not yet done"]},
+      {"id": "neuropsych_findings", "label": "Key neuropsychological findings", "type": "textarea", "required": false, "placeholder": "Summarise findings across: intelligence, attention, executive function, memory, processing speed..."},
+      {"id": "section_corroborative", "label": "CORROBORATIVE INFORMATION", "type": "text", "required": false},
+      {"id": "corroborative_sources", "label": "Corroborative information obtained from", "type": "checkbox", "required": false, "options": ["Parent / family member", "Partner / spouse", "School reports", "Employment records", "Previous medical records", "Previous psychological assessments", "None available"]},
+      {"id": "section_conclusion", "label": "CONCLUSION", "type": "text", "required": false},
+      {"id": "diagnosis_reached", "label": "Diagnostic conclusion", "type": "select", "required": true, "options": ["ADHD Combined Type", "ADHD Predominantly Inattentive Type", "ADHD Predominantly Hyperactive-Impulsive Type", "ADHD in Partial Remission", "ADHD Not Otherwise Specified", "Does not meet criteria for ADHD", "Further assessment required"]},
+      {"id": "treatment_priority", "label": "Primary treatment target", "type": "textarea", "required": false, "placeholder": "Is ADHD the primary target, or should a comorbid condition be addressed first?"}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "This checklist is primarily for your clinician but you may review it together to understand how thorough your assessment has been and whether any areas still need to be explored.",
+    "clinician_notes": "Use this to ensure comprehensive assessment. All sections should be at least partially completed before finalising a diagnosis. Where information is unavailable (e.g. no parent informant), document this explicitly. This serves as both a clinical tool and an audit trail for quality assurance."
+  }'::jsonb
+)
+
+ON CONFLICT (id) DO UPDATE SET
+  module_id              = EXCLUDED.module_id,
+  type                   = EXCLUDED.type,
+  title                  = EXCLUDED.title,
+  instructions           = EXCLUDED.instructions,
+  xp_value               = EXCLUDED.xp_value,
+  companion_website_ref  = EXCLUDED.companion_website_ref,
+  schema                 = EXCLUDED.schema,
+  updated_at             = now();

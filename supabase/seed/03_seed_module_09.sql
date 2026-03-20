@@ -1,0 +1,517 @@
+-- 03_seed_module_09.sql
+-- Seed content items for Module 9 (Anxiety) into yb_content_items
+-- Safe to re-run: uses ON CONFLICT DO UPDATE
+--
+-- Module 9 UUID: 00000000-0000-4000-8000-000000000009  (from 01_seed_modules.sql)
+-- Content item UUIDs: 00000000-0000-4000-a000-000000090001 through ...090014
+
+INSERT INTO yb_content_items (id, module_id, type, title, instructions, xp_value, companion_website_ref, schema)
+VALUES
+
+-- ch9_item_01: Psychoeducation — Understanding Anxiety and ADHD
+(
+  '00000000-0000-4000-a000-000000090001',
+  '00000000-0000-4000-8000-000000000009',
+  'psychoeducation',
+  'Understanding Anxiety and ADHD',
+  'Read through this before starting the exercises. This explains why anxiety is common in adults with ADHD and how we will tackle it.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Why Anxiety is Common in ADHD",
+        "body": "Around 25% of adults with ADHD have a comorbid anxiety disorder, but many more experience anxiety problems that stem from past experience and lack of confidence. Anxiety and ADHD symptoms can overlap — restlessness, inattention, and ceaseless mental energy are features of both. It is important to disentangle which symptoms are better addressed by attention/impulsivity strategies and which need anxiety-specific treatment."
+      },
+      {
+        "heading": "The Three-Legged Table",
+        "body": "Anxiety can be understood as a table with three legs: Thoughts, Feelings, and Behaviour. If you knock out any one leg, the anxiety table falls over. In this module you will learn techniques to attack all three legs: challenging negative thoughts, controlling feelings through relaxation, and changing avoidance behaviour through graded exposure."
+      },
+      {
+        "heading": "The Anxiety Spiral",
+        "body": "Anxiety is not a single moment — it is a downward spiral. A situation triggers anxious thoughts (''I can''t cope''), which trigger physical symptoms (racing heart, sweating), which trigger more negative thoughts (''something is seriously wrong with me''), which trigger avoidance behaviour (''I have to get out of here''). Each stage fuels the next, making the anxiety worse. Breaking the cycle at any point can stop the spiral."
+      },
+      {
+        "heading": "What You Will Learn",
+        "body": "This module covers: identifying your anxiety patterns (checklist and chart), keeping a thought diary, recognising thinking errors, challenging and replacing negative thoughts, breathing exercises, progressive muscle relaxation, coping with panic, and graded exposure to overcome avoidance."
+      }
+    ],
+    "clinician_notes": "Normalise anxiety as a functional process — explain the fight-or-flight response using the ''tigers cage'' analogy from the book. Emphasise that anxiety is dysfunctional when activated in non-dangerous situations. Introduce the three-legged table visual early as it structures the entire module."
+  }'::jsonb
+),
+
+-- ch9_item_02: Worksheet — Anxiety Checklist (Table 9.1)
+(
+  '00000000-0000-4000-a000-000000090002',
+  '00000000-0000-4000-8000-000000000009',
+  'worksheet',
+  'Anxiety Checklist (Table 9.1)',
+  'For each statement below, rate how often you have experienced this in the past week. This helps identify the type and severity of your anxiety. There are no right or wrong answers.',
+  50,
+  'Table 9.1',
+  '{
+    "fields": [
+      {"id": "section_label_1", "label": "--- Generalised Anxiety ---", "type": "text", "required": false},
+      {"id": "ga1", "label": "I have worried about money, e.g. being able to pay bills, debts", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "ga2", "label": "I have worried about not coping at work/school", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "ga3", "label": "I have worried about my health", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "ga4", "label": "I have worried that things will go wrong in the future, anticipating disappointment/failure", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "ga5", "label": "I have worried that I am not capable of being a good parent, employee, son/daughter", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "section_label_2", "label": "--- Social Anxiety ---", "type": "text", "required": false},
+      {"id": "sa1", "label": "I felt self-conscious", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "sa2", "label": "I avoided social events, e.g. parties", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "sa3", "label": "I avoided crowds", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "sa4", "label": "I was concerned about performance", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "sa5", "label": "I was worried about meeting new people", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "section_label_3", "label": "--- Panic ---", "type": "text", "required": false},
+      {"id": "pa1", "label": "I felt constriction in my chest", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "pa2", "label": "I felt heart palpitations", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "pa3", "label": "I thought I was having a heart attack", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "pa4", "label": "I felt dizzy and faint", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "pa5", "label": "I felt the blood rushing around my head", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "section_label_4", "label": "--- Obsessive-Compulsive ---", "type": "text", "required": false},
+      {"id": "oc1", "label": "I felt uncomfortable if the house was not clean and tidy", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "oc2", "label": "I needed to check everything several times before I was confident that it was right", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "oc3", "label": "I had to do things in routines otherwise I worried", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "oc4", "label": "I had intrusive thoughts", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "oc5", "label": "I tended to over-focus", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false}
+    ],
+    "scoring": {
+      "method": "sum",
+      "max_score": 80,
+      "subscales": {
+        "generalised_anxiety": {"items": ["ga1", "ga2", "ga3", "ga4", "ga5"], "max": 20},
+        "social_anxiety": {"items": ["sa1", "sa2", "sa3", "sa4", "sa5"], "max": 20},
+        "panic": {"items": ["pa1", "pa2", "pa3", "pa4", "pa5"], "max": 20},
+        "obsessive_compulsive": {"items": ["oc1", "oc2", "oc3", "oc4", "oc5"], "max": 20}
+      },
+      "interpretation": {
+        "0-20": "Mild anxiety. Some specific areas may still benefit from attention.",
+        "21-40": "Moderate anxiety. This module will help you develop coping strategies.",
+        "41-60": "Significant anxiety across multiple domains. Work through this module carefully with your therapist.",
+        "61-80": "Severe anxiety. Prioritise this module and discuss medication review with your psychiatrist."
+      }
+    },
+    "instructions_for_patient": "Rate each item based on the past week. This helps your therapist understand what type of anxiety you experience most.",
+    "clinician_notes": "The checklist deliberately excludes category labels in the patient-facing version to avoid biasing responses. Use subscale scores to identify the dominant anxiety subtype and tailor treatment accordingly. Administer at baseline and repeat at module end."
+  }'::jsonb
+),
+
+-- ch9_item_03: Worksheet — Anxiety Chart: What Happens When You Become Anxious? (Table 9.2)
+(
+  '00000000-0000-4000-a000-000000090003',
+  '00000000-0000-4000-8000-000000000009',
+  'worksheet',
+  'Anxiety Chart: What Happens When You Become Anxious? (Table 9.2)',
+  'Think of a recent situation where you felt anxious. Break down what happened into four categories: your thoughts, your feelings, your physical reactions, and your behaviour. This helps you see how these factors are connected.',
+  50,
+  'Table 9.2',
+  '{
+    "fields": [
+      {"id": "situation", "label": "What was the situation?", "type": "textarea", "required": true, "placeholder": "e.g. Had to complete a project on time for work..."},
+      {"id": "thoughts", "label": "Thoughts — What went through your mind?", "type": "textarea", "required": true, "placeholder": "e.g. I can''t focus, I''m going to lose concentration, everyone will criticise me, I''m useless..."},
+      {"id": "feelings", "label": "Feelings — How did you feel emotionally?", "type": "textarea", "required": true, "placeholder": "e.g. Frightened, panicky, lost control, on edge, irritable, uncomfortable..."},
+      {"id": "physical_reactions", "label": "Physical Reactions — What did you notice in your body?", "type": "textarea", "required": true, "placeholder": "e.g. Increased fidgeting, sweaty palms, racing heart, going pale, stammering, butterflies in stomach..."},
+      {"id": "behaviour", "label": "Behaviour — What did you do (or avoid doing)?", "type": "textarea", "required": true, "placeholder": "e.g. Avoided social situations, made excuses, used alcohol/food to calm nerves, overcompensated by being outgoing..."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Complete this for one anxiety-provoking situation. You can fill in more charts for different situations over the week.",
+    "clinician_notes": "Use this to introduce the cognitive-behavioural model. Show how thoughts, feelings, physical reactions, and behaviour are interconnected and form a downward spiral. Reference Figure 9.1 (anxiety spiral) and Figure 9.3 (three-legged table) when discussing."
+  }'::jsonb
+),
+
+-- ch9_item_04: Diary — Thought Diary (Table 9.3)
+(
+  '00000000-0000-4000-a000-000000090004',
+  '00000000-0000-4000-8000-000000000009',
+  'diary',
+  'Thought Diary (Table 9.3)',
+  'Keep a record of situations that make you anxious. Write down the time, what was happening, how you felt, what thoughts went through your mind, and how strongly you believed those thoughts. This is your key tool for spotting negative thinking patterns.',
+  60,
+  'Table 9.3',
+  '{
+    "fields": [
+      {
+        "id": "entries",
+        "label": "Record each anxious moment",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "date_time", "label": "Date and time", "type": "text", "placeholder": "e.g. Mon 4th, 8.15am"},
+          {"id": "situation", "label": "Situation", "type": "textarea", "placeholder": "e.g. Getting ready for work"},
+          {"id": "feelings", "label": "Feelings", "type": "textarea", "placeholder": "e.g. Feeling jittery and a bit sick"},
+          {"id": "thoughts", "label": "Thoughts", "type": "textarea", "placeholder": "e.g. I will never survive this week"},
+          {"id": "belief_rating", "label": "How much do I believe this? (0-100%)", "type": "number", "placeholder": "e.g. 40"}
+        ],
+        "min_items": 1,
+        "max_items": 20
+      }
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Try to record anxious moments as close to when they happen as possible. Even 2-3 entries over a week will be very useful for your sessions.",
+    "clinician_notes": "Review the diary in session. Look for recurring themes, common thinking errors, and high belief-rating entries. Once cognitive challenge techniques are taught, extend the diary to include a challenge column and re-rating (see Table 9.4 format)."
+  }'::jsonb
+),
+
+-- ch9_item_05: Diary — Thought Diary with Cognitive Challenges (Table 9.4)
+(
+  '00000000-0000-4000-a000-000000090005',
+  '00000000-0000-4000-8000-000000000009',
+  'diary',
+  'Thought Diary with Cognitive Challenges (Table 9.4)',
+  'This is an extended version of the thought diary. After recording your anxious thoughts, write a challenge to each thought, then re-rate how much you believe the original thought. The goal is to see the belief rating drop.',
+  60,
+  'Table 9.4',
+  '{
+    "fields": [
+      {
+        "id": "entries",
+        "label": "Record each anxious moment and challenge it",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "date_time", "label": "Date and time", "type": "text", "placeholder": "e.g. Mon 4th, 8.15am"},
+          {"id": "situation", "label": "Situation", "type": "textarea", "placeholder": "e.g. Getting ready for work"},
+          {"id": "feelings", "label": "Feelings", "type": "textarea", "placeholder": "e.g. Feeling jittery and a bit sick"},
+          {"id": "thoughts", "label": "Thoughts", "type": "textarea", "placeholder": "e.g. I will never survive this week"},
+          {"id": "belief_before", "label": "How much do I believe this? (0-100%)", "type": "number", "placeholder": "e.g. 40"},
+          {"id": "cognitive_challenge", "label": "Cognitive challenge", "type": "textarea", "placeholder": "e.g. I felt like this last Monday and got through the week"},
+          {"id": "belief_after", "label": "How much do I believe the thought now? (0-100%)", "type": "number", "placeholder": "e.g. 20"}
+        ],
+        "min_items": 1,
+        "max_items": 20
+      }
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Use this after you have practised the basic thought diary and learned cognitive challenge techniques with your therapist. The drop in belief rating shows you that the techniques are working.",
+    "clinician_notes": "Compare belief_before and belief_after ratings to demonstrate efficacy. Teach three techniques: (1) challenge — cross-examine the thought like a lawyer, (2) superimpose — replace with a positive thought, (3) distract — redirect attention. Different techniques work better at different stages of anxiety (see Table 9.5)."
+  }'::jsonb
+),
+
+-- ch9_item_06: Psychoeducation — Cognitive Techniques and the Process of Anxiety (Table 9.5)
+(
+  '00000000-0000-4000-a000-000000090006',
+  '00000000-0000-4000-8000-000000000009',
+  'psychoeducation',
+  'Cognitive Techniques and the Process of Anxiety (Table 9.5)',
+  'Different techniques work best at different stages of anxiety. Read through this to understand which tools to reach for and when.',
+  20,
+  'Table 9.5',
+  '{
+    "content_blocks": [
+      {
+        "heading": "Onset of Anxiety",
+        "body": "At the earliest signs of anxiety, use these techniques: Identify negative automatic thoughts. Apply cognitive challenges. Identify thinking errors."
+      },
+      {
+        "heading": "Midst of Anxiety",
+        "body": "When anxiety is at its peak, these techniques are more accessible: Coping self-statements. Self-instructions. Flashcards with prepared challenges. Distraction techniques (mental arithmetic, counting items, intense physical activity)."
+      },
+      {
+        "heading": "Decreasing Anxiety",
+        "body": "As anxiety subsides, reinforce your progress: Self-praise. Rewards for coping successfully."
+      }
+    ],
+    "clinician_notes": "Use this as a reference handout. Help the client identify which stage they are usually at when they try to apply techniques, and match technique to stage. Ruminative thoughts respond best to cognitive challenges; advanced anxiety responds better to self-statements and distraction."
+  }'::jsonb
+),
+
+-- ch9_item_07: Worksheet — Thinking Errors (Table 9.6)
+(
+  '00000000-0000-4000-a000-000000090007',
+  '00000000-0000-4000-8000-000000000009',
+  'worksheet',
+  'Thinking Errors (Table 9.6)',
+  'When you feel anxious, you are vulnerable to ''thinking errors'' — viewing the world through glasses that distort what you see. Read each type below, then identify which ones you recognise in yourself.',
+  50,
+  'Table 9.6',
+  '{
+    "fields": [
+      {"id": "all_or_nothing", "label": "All or Nothing — Seeing everything in black and white with no middle ground (e.g. ''I can never concentrate on anything''). Do you recognise this in yourself?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "overgeneralising", "label": "Overgeneralising — Drawing a general conclusion from a single event (e.g. ''I will mess it up next time''). Do you recognise this?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "catastrophising", "label": "Catastrophising — Exaggerating the likelihood of bad outcomes (e.g. ''Because I didn''t pay the gas bill on time, I''m going to be evicted''). Do you recognise this?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "personalising", "label": "Personalising — Blaming yourself for anything unpleasant, believing everything is a reaction to you (e.g. ''She left the room because I upset her''). Do you recognise this?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "negative_focus", "label": "Negative Focus — Ignoring positives and looking on the dark side (e.g. ''At my appraisal they said I needed a new skill, so I must be useless''). Do you recognise this?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "jumping_to_conclusions", "label": "Jumping to Conclusions — Automatic negative interpretation without evidence, predicting the future or reading minds (e.g. ''I have been too slow, she thinks I cannot do this''). Do you recognise this?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "shoulds_and_oughts", "label": "Shoulds and Oughts — Believing you are failing to meet unrealistic standards (e.g. ''I ought to always be on time''). Do you recognise this?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "most_common", "label": "Which 1-2 thinking errors do you fall into most often? Write them here.", "type": "textarea", "required": true, "placeholder": "e.g. I mostly catastrophise and jump to conclusions..."}
+    ],
+    "scoring": {
+      "method": "sum",
+      "max_score": 28,
+      "scored_fields": ["all_or_nothing", "overgeneralising", "catastrophising", "personalising", "negative_focus", "jumping_to_conclusions", "shoulds_and_oughts"],
+      "interpretation": {
+        "0-7": "Few thinking errors. Focus on the specific ones you rated highest.",
+        "8-14": "Moderate thinking errors. Cognitive challenge techniques will be particularly helpful.",
+        "15-28": "Frequent thinking errors across multiple types. This is very common in ADHD — the techniques in this module will make a real difference."
+      }
+    },
+    "instructions_for_patient": "Be honest about how often you catch yourself thinking this way. Everyone has thinking errors — the point is to recognise yours so you can challenge them.",
+    "clinician_notes": "Note that thinking error categories are not mutually exclusive. Use the client''s most common errors to guide which cognitive challenges to practise. Cross-reference with thought diary entries to show real examples."
+  }'::jsonb
+),
+
+-- ch9_item_08: Exercise — Thinking Errors Exercise (Table 9.6b)
+(
+  '00000000-0000-4000-a000-000000090008',
+  '00000000-0000-4000-8000-000000000009',
+  'exercise',
+  'Thinking Errors Exercise (Table 9.6b)',
+  'Read each thought below and identify which type of thinking error it is. This practises your ability to spot thinking errors in real time.',
+  70,
+  'Table 9.6b',
+  '{
+    "fields": [
+      {"id": "ex1", "label": "''I did that badly. What''s the point in doing it again?'' — What thinking error is this?", "type": "select", "required": true, "options": ["All or nothing", "Overgeneralising", "Catastrophising", "Personalising", "Negative focus", "Jumping to conclusions", "Shoulds and oughts"]},
+      {"id": "ex2", "label": "''I upset her by blurting out gossip. I''m a terrible person.'' — What thinking error is this?", "type": "select", "required": true, "options": ["All or nothing", "Overgeneralising", "Catastrophising", "Personalising", "Negative focus", "Jumping to conclusions", "Shoulds and oughts"]},
+      {"id": "ex3", "label": "''I should have finished everything I planned to do.'' — What thinking error is this?", "type": "select", "required": true, "options": ["All or nothing", "Overgeneralising", "Catastrophising", "Personalising", "Negative focus", "Jumping to conclusions", "Shoulds and oughts"]},
+      {"id": "ex4", "label": "''Everything goes wrong.'' — What thinking error is this?", "type": "select", "required": true, "options": ["All or nothing", "Overgeneralising", "Catastrophising", "Personalising", "Negative focus", "Jumping to conclusions", "Shoulds and oughts"]},
+      {"id": "own_example", "label": "Now write one of your own recent thoughts and identify the thinking error", "type": "textarea", "required": false, "placeholder": "e.g. ''My colleague didn''t reply to my message — she must be angry with me'' → Jumping to conclusions"}
+    ],
+    "scoring": {
+      "method": "custom",
+      "correct_answers": {
+        "ex1": "Negative focus",
+        "ex2": "Overgeneralising",
+        "ex3": "Shoulds and oughts",
+        "ex4": "Catastrophising"
+      }
+    },
+    "instructions_for_patient": "Try to answer each one before looking at the answers. The goal is to practise recognising thinking errors quickly.",
+    "clinician_notes": "Review answers in session. Discuss why each answer is correct, noting that categories are not mutually exclusive — some thoughts fit multiple categories. Use the client''s own example to practise cognitive challenges."
+  }'::jsonb
+),
+
+-- ch9_item_09: Worksheet — Negative Thoughts and Cognitive Challenges (Table 9.7)
+(
+  '00000000-0000-4000-a000-000000090009',
+  '00000000-0000-4000-8000-000000000009',
+  'worksheet',
+  'Negative Thoughts and Cognitive Challenges (Table 9.7)',
+  'For each negative thought, read the example challenge. Then write your own version of a challenge that feels authentic to you. You can also use the cross-examination questions: (1) What evidence do I have? (2) Have I coped before? (3) Am I overestimating the likelihood? (4) What is the worst that could happen? (5) What can I do about it?',
+  50,
+  'Table 9.7',
+  '{
+    "fields": [
+      {
+        "id": "challenges",
+        "label": "For each negative thought, write your own cognitive challenge",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "negative_thought", "label": "Negative thought", "type": "text"},
+          {"id": "example_challenge", "label": "Example challenge", "type": "text"},
+          {"id": "your_challenge", "label": "Your own challenge (in your words)", "type": "textarea", "placeholder": "Write a challenge that feels real and convincing to you..."}
+        ],
+        "prefill_data": [
+          {"negative_thought": "I am just not good enough", "example_challenge": "I am not perfect. Like everybody I am good at some things and not so good at others"},
+          {"negative_thought": "What is the point in trying?", "example_challenge": "If I don''t try, I won''t know. Trying in itself will broaden my experience and skill"},
+          {"negative_thought": "What if I make a mistake — it would be awful", "example_challenge": "Everybody makes mistakes. It is good to make mistakes because that is the best way to learn"},
+          {"negative_thought": "I have nothing to say — I''m boring", "example_challenge": "I have opinions, thoughts and feelings. Perhaps I need to practise expressing myself"},
+          {"negative_thought": "Nobody likes me", "example_challenge": "There are people who like me. I have had better relationships in the past and will in the future"},
+          {"negative_thought": "Everybody else has a better time than I do", "example_challenge": "I don''t know this for a fact. Just because they seem busier doesn''t mean they are more satisfied"},
+          {"negative_thought": "It would be best if I stayed away from people", "example_challenge": "If I stay away I don''t give myself a chance. I''ll probably be all right if I can just relax"},
+          {"negative_thought": "I might break down emotionally in front of people", "example_challenge": "I have good reason to be upset. People are more understanding than I think. What is wrong with showing emotion?"},
+          {"negative_thought": "I''m hopeless at everything. I''ll never sort myself out", "example_challenge": "Just take one step at a time. I''ve overcome more difficult problems than this"}
+        ],
+        "min_items": 3,
+        "max_items": 15
+      }
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "The example challenges are starting points. Your own version should feel convincing and personal — something you would actually say to yourself.",
+    "clinician_notes": "Encourage the client to use social-perspective taking: ''If a friend came to you with this problem, what would you tell them?'' ADHD individuals tend to positively reappraise stressful situations — leverage this natural resilience. Consider having the client write their best challenges on wallet-size flashcards for use during acute anxiety."
+  }'::jsonb
+),
+
+-- ch9_item_10: Worksheet — Positive Self-Statements (Table 9.8)
+(
+  '00000000-0000-4000-a000-000000090010',
+  '00000000-0000-4000-8000-000000000009',
+  'worksheet',
+  'Positive Self-Statements (Table 9.8)',
+  'These are statements you can say to yourself when anxiety strikes. Read through them, tick the ones that resonate with you, and add your own. Consider writing your favourites on a small card to keep in your wallet.',
+  50,
+  'Table 9.8',
+  '{
+    "fields": [
+      {"id": "s1", "label": "''Anxiety is not harmful, it is a normal human response''", "type": "select", "required": true, "options": ["This helps me", "Somewhat helpful", "Not helpful for me"]},
+      {"id": "s2", "label": "''I can cope with these feelings''", "type": "select", "required": true, "options": ["This helps me", "Somewhat helpful", "Not helpful for me"]},
+      {"id": "s3", "label": "''There is no need to escape or avoid this situation, if I just carry on the anxiety will subside''", "type": "select", "required": true, "options": ["This helps me", "Somewhat helpful", "Not helpful for me"]},
+      {"id": "s4", "label": "''As I relax the anxiety will begin to ease off''", "type": "select", "required": true, "options": ["This helps me", "Somewhat helpful", "Not helpful for me"]},
+      {"id": "s5", "label": "''Relax, breathe gently and try to let go of the tension''", "type": "select", "required": true, "options": ["This helps me", "Somewhat helpful", "Not helpful for me"]},
+      {"id": "own_statements", "label": "Write your own positive self-statements that feel authentic to you", "type": "textarea", "required": false, "placeholder": "e.g. ''I''ve handled worse than this before and I''m still here''..."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Pick at least 2-3 statements that genuinely help you. Write them on a small card and keep it in your wallet or save them on your phone. When anxiety peaks, read the card.",
+    "clinician_notes": "Some self-statements cue relaxation techniques (breathing, muscle relaxation). Point this out — they are reminders to apply other tools. Superimposing positive thoughts may be more natural for ADHD clients than challenging negatives, given their tendency to positively reappraise."
+  }'::jsonb
+),
+
+-- ch9_item_11: Psychoeducation — Ten Rules for Coping with Panic (Table 9.9)
+(
+  '00000000-0000-4000-a000-000000090011',
+  '00000000-0000-4000-8000-000000000009',
+  'psychoeducation',
+  'Ten Rules for Coping with Panic (Table 9.9)',
+  'Read through these ten rules. They are your emergency guide for when panic strikes. The key message: panic is unpleasant but not dangerous, and it will pass.',
+  20,
+  'Table 9.9',
+  '{
+    "content_blocks": [
+      {"heading": "Rule 1", "body": "Feelings of panic are an exaggeration of the body''s normal reaction to stress."},
+      {"heading": "Rule 2", "body": "They are unpleasant but not harmful or dangerous. Nothing worse will happen."},
+      {"heading": "Rule 3", "body": "Stop adding to panic with frightening thoughts about what is going to happen."},
+      {"heading": "Rule 4", "body": "Concentrate on what is really happening in your body, not what you fear might happen."},
+      {"heading": "Rule 5", "body": "Wait for the fear to pass. Accept it. Do not fight it or run away from it."},
+      {"heading": "Rule 6", "body": "Notice that once you stop adding frightening thoughts, the fear starts to fade by itself."},
+      {"heading": "Rule 7", "body": "The whole point of practice is to learn how to cope with fear — without avoiding it. This is an opportunity to make progress."},
+      {"heading": "Rule 8", "body": "Think about the progress you have made. You are moving towards success."},
+      {"heading": "Rule 9", "body": "When you feel better, start to plan what to do next."},
+      {"heading": "Rule 10", "body": "When you are ready, start off slowly in an easy and relaxed way. There is no need for effort or hurry."}
+    ],
+    "clinician_notes": "This is a wallet-size handout. Discuss each rule and ask the client which ones are hardest to accept. Rules 3 and 5 are usually the most difficult for ADHD clients. Consider the paradoxical hyperventilation technique in session to demonstrate that panic can be induced and reversed at will."
+  }'::jsonb
+),
+
+-- ch9_item_12: Exercise — Breathing Exercises (Table 9.10)
+(
+  '00000000-0000-4000-a000-000000090012',
+  '00000000-0000-4000-8000-000000000009',
+  'exercise',
+  'Breathing Exercises (Table 9.10)',
+  'These two exercises teach you to control your breathing, which directly reduces anxiety. Start with Exercise 1 (lying down) and progress to Exercise 2 (sitting/standing) once Exercise 1 feels natural.',
+  70,
+  'Table 9.10',
+  '{
+    "fields": [
+      {"id": "exercise_1_steps", "label": "Exercise 1 — Did you complete all steps? (1) Lie on your back, one hand on stomach, one on chest. (2) Breathe IN and OUT gently, aiming for 7-8 breaths per minute. (3) As you breathe out, imagine your body relaxing deeper with each exhalation. (4) Practise for 10 minutes.", "type": "select", "required": true, "options": ["Completed fully", "Completed partially", "Could not do it", "Not attempted yet"]},
+      {"id": "exercise_1_log", "label": "Exercise 1 practice log — which days did you practise this week?", "type": "checkbox", "required": false, "options": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]},
+      {"id": "exercise_2_steps", "label": "Exercise 2 — Repeat Exercise 1 steps in a sitting position, then standing. For at least 3 weeks, be aware of your breathing at different times during the day and correct it if necessary.", "type": "select", "required": false, "options": ["Completed fully", "Completed partially", "Could not do it", "Not attempted yet"]},
+      {"id": "exercise_2_log", "label": "Exercise 2 practice log — which days did you practise this week?", "type": "checkbox", "required": false, "options": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]},
+      {"id": "reflection", "label": "How did the breathing exercises make you feel? Did you notice any difference in your anxiety levels?", "type": "textarea", "required": false, "placeholder": "Describe what you noticed..."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "You are learning a new skill — it may feel strange at first. Keep practising daily, morning and evening. Once Exercise 1 feels natural, move to Exercise 2.",
+    "clinician_notes": "Introduce Exercise 1 in session first. The client should practise when reasonably calm initially, not during acute anxiety. Breathing exercises can be more subtly applied in public situations (e.g. meetings) than muscle relaxation. Aim for the technique to become automatic over 3+ weeks."
+  }'::jsonb
+),
+
+-- ch9_item_13: Exercise — Progressive Muscle Relaxation (Table 9.11)
+(
+  '00000000-0000-4000-a000-000000090013',
+  '00000000-0000-4000-8000-000000000009',
+  'exercise',
+  'Progressive Muscle Relaxation (Table 9.11)',
+  'This technique teaches you to recognise and release tension throughout your body. For each exercise, tense your muscles for 5-7 seconds, then relax for about 30 seconds. Practise in a quiet, comfortable environment whilst sitting on a chair.',
+  70,
+  'Table 9.11',
+  '{
+    "fields": [
+      {
+        "id": "practice_log",
+        "label": "Track your practice sessions this week",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "practice_date", "label": "Date", "type": "date"},
+          {"id": "time_of_day", "label": "Time of day", "type": "select", "options": ["Morning", "Afternoon", "Evening", "Before bed"]},
+          {"id": "duration_mins", "label": "Duration (minutes)", "type": "number", "placeholder": "e.g. 10"},
+          {"id": "completed_all_14", "label": "Completed all 14 muscle groups?", "type": "select", "options": ["Yes - all 14", "Most of them", "Only a few", "Could not focus"]},
+          {"id": "relaxation_rating", "label": "How relaxed did you feel after? (0-10)", "type": "scale", "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "Not relaxed at all", "10": "Completely relaxed"}}
+        ],
+        "min_items": 1,
+        "max_items": 14
+      },
+      {"id": "pmr_steps_reference", "label": "The 14 muscle groups (reference): 1. Right fist 2. Right arm 3. Left fist 4. Left arm 5. Eyebrows up 6. Squint eyes/wrinkle nose 7. Clench teeth/exaggerated smile 8. Press lips/tongue to roof 9. Chin to chest while pulling head back 10. Shoulder blades together 11. Stomach muscles taut 12. Heels into ground 13. Toes towards head 14. Feet downwards/toes curled. Did you remember the sequence?", "type": "select", "required": false, "options": ["Yes, from memory", "Mostly, needed a few reminders", "Had to read the instructions throughout", "Used an audio recording"]},
+      {"id": "reflection", "label": "What did you notice about tension in your body? Were some areas more tense than others?", "type": "textarea", "required": false}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Practise morning and evening, ideally before bed after a warm bath. It can be completed in 10 minutes or extended longer. The goal is for this to become automatic so you can use it when anxiety strikes.",
+    "clinician_notes": "Record an audio guide of the PMR sequence in session for the client to use at home — this prevents them from having to read instructions which breaks the relaxation. Combine with breathing exercises (Table 9.10) and mental imagery (tranquil place visualisation). PMR is best for preventative relaxation; breathing exercises are better for acute in-the-moment anxiety."
+  }'::jsonb
+),
+
+-- ch9_item_14: Exercise — Overcoming Avoidance: Graded Exposure (Tables 9.12-9.15)
+(
+  '00000000-0000-4000-a000-000000090014',
+  '00000000-0000-4000-8000-000000000009',
+  'exercise',
+  'Overcoming Avoidance: Graded Exposure (Tables 9.12-9.15)',
+  'Avoidance feels safe in the short term but makes anxiety worse over time. This exercise walks you through a step-by-step process to gradually face situations you have been avoiding, starting with the easiest and building up.',
+  70,
+  'Tables 9.12-9.15',
+  '{
+    "fields": [
+      {
+        "id": "stage1_list",
+        "label": "Stage 1 — Make a list of situations you avoid because of your feelings",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "situation", "label": "Situation I avoid", "type": "text", "placeholder": "e.g. Going to the supermarket, attending team meetings..."},
+          {"id": "reason", "label": "Why I avoid it", "type": "textarea", "placeholder": "e.g. Because I worry people will recognise me and judge me..."}
+        ],
+        "min_items": 3,
+        "max_items": 10
+      },
+      {
+        "id": "stage2_grading",
+        "label": "Stage 2 — Grade each situation from 0 (no anxiety) to 10 (severe anxiety)",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "situation", "label": "Situation", "type": "text"},
+          {"id": "anxiety_grade", "label": "Anxiety grade (0-10)", "type": "scale", "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "No anxiety", "10": "Severe anxiety"}}
+        ],
+        "min_items": 3,
+        "max_items": 10
+      },
+      {
+        "id": "stage3_ranked",
+        "label": "Stage 3 — Rank your situations from least difficult to most difficult, and choose a reward for completing each one",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "rank", "label": "Rank (1 = easiest)", "type": "number"},
+          {"id": "situation", "label": "Situation", "type": "text"},
+          {"id": "grade", "label": "Anxiety grade", "type": "number"},
+          {"id": "reward", "label": "Reward for completing this", "type": "text", "placeholder": "e.g. chocolate, new book, long bath..."}
+        ],
+        "min_items": 3,
+        "max_items": 10
+      },
+      {
+        "id": "stage4_action_log",
+        "label": "Stage 4 — Take action! Record your progress as you tackle each situation, starting with the easiest",
+        "type": "repeating_group",
+        "required": false,
+        "sub_fields": [
+          {"id": "situation", "label": "Situation tackled", "type": "text"},
+          {"id": "date_attempted", "label": "Date", "type": "date"},
+          {"id": "anxiety_before", "label": "Anxiety before (0-10)", "type": "scale", "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "None", "10": "Severe"}},
+          {"id": "anxiety_during", "label": "Anxiety during (0-10)", "type": "scale", "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "None", "10": "Severe"}},
+          {"id": "anxiety_after", "label": "Anxiety after (0-10)", "type": "scale", "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "None", "10": "Severe"}},
+          {"id": "what_happened", "label": "What actually happened?", "type": "textarea"},
+          {"id": "reward_claimed", "label": "Did you claim your reward?", "type": "select", "options": ["Yes", "Not yet", "Forgot"]}
+        ],
+        "min_items": 1,
+        "max_items": 10
+      },
+      {"id": "evaluation", "label": "Stage 5 — Evaluate: How did you cope? What are you most proud of?", "type": "textarea", "required": false, "placeholder": "Congratulate yourself on what you have achieved. Initially, the most important aspect of success is just facing the situation."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Do not expect too much too soon. Be proud of whatever progress you make. The more you tackle a situation, the better it will become and the more confident you will grow. Remember: small rewards for each step, and a greater reward for completing the programme.",
+    "clinician_notes": "Plan each step of the hierarchy carefully in session. Discuss what could go wrong and role-play coping strategies. ADHD clients are particularly motivated by short-term rewards — ensure rewards are immediate and tangible. Anxiety is usually not as severe as anticipated once the client actually faces the situation. Track anxiety_before vs anxiety_during to demonstrate this."
+  }'::jsonb
+)
+
+ON CONFLICT (id) DO UPDATE SET
+  module_id              = EXCLUDED.module_id,
+  type                   = EXCLUDED.type,
+  title                  = EXCLUDED.title,
+  instructions           = EXCLUDED.instructions,
+  xp_value               = EXCLUDED.xp_value,
+  companion_website_ref  = EXCLUDED.companion_website_ref,
+  schema                 = EXCLUDED.schema,
+  updated_at             = now();

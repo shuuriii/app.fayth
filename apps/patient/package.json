@@ -1,0 +1,24 @@
+{
+  "name": "@fayth/patient",
+  "version": "0.0.1",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "dev": "expo start",
+    "build": "expo export",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "expo": "~52.0.0",
+    "expo-router": "~4.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.7",
+    "@fayth/ui": "workspace:*",
+    "@fayth/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "~18.3.0",
+    "typescript": "5.9.2"
+  }
+}

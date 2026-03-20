@@ -1,0 +1,975 @@
+{
+  "module_id": 7,
+  "chapter": 7,
+  "title": "Impulsivity",
+  "content_items": [
+    {
+      "id": "ch7_item_01",
+      "type": "psychoeducation",
+      "title": "Understanding Impulsivity in ADHD",
+      "instructions": "Read through this carefully before starting the exercises. Understanding why impulsivity happens is the first step to managing it.",
+      "xp_value": 20,
+      "schema": {
+        "content_blocks": [
+          {
+            "heading": "What is Impulsivity?",
+            "body": "People with ADHD often experience behavioural and cognitive disinhibition — difficulty controlling behaviour, speech, or certain thought processes. You might say the first thing that comes into your head, express feelings or opinions without weighing up consequences, or act before thinking. It is as if you do not have an internal 'brake' that filters out inappropriate responses. This is sometimes called poor 'response inhibition'."
+          },
+          {
+            "heading": "The Upside",
+            "body": "Impulsivity is not all bad. The tendency to act on the spur of the moment means you may be willing to take risks that pay off, while others are too cautious and miss opportunities. A lack of inhibition can also fuel divergent and lateral thinking, making people with ADHD highly creative. Many successful entrepreneurs and artists attribute part of their success to ADHD."
+          },
+          {
+            "heading": "The Downside",
+            "body": "The tendency to act and think impulsively can also bring disadvantages. You may not engage in systematic decision-making or consider alternative perspectives. The need for immediate gratification can make you seem demanding, tactless, or inconsiderate. You may get impulsively enthusiastic about something and then quickly lose interest. Others may view this as being self-centred or fickle, which can lead to social isolation and feeling misunderstood."
+          },
+          {
+            "heading": "Two Types of Impulsivity",
+            "body": "Behavioural impulsivity is the inability to inhibit physical or verbal actions — hitting out in temper, making hurtful comments, or being excessively attracted to immediate rewards. Cognitive impulsivity relates to disorganised behaviour from executive function problems — forgetfulness, poor planning, making rash decisions based on inadequate information, and misappraising situations."
+          },
+          {
+            "heading": "Why It Happens: Two Theories",
+            "body": "Theory 1: There is a primary deficit in inhibitory control — your brain's 'stopping' mechanism is slower. Given more time to respond, you are more accurate and less impulsive. Theory 2: Impulsivity is driven by aversion to delay. You prefer immediate rewards even if a bigger reward is available later. Both theories point to the same solution: learning to 'stop and think' and breaking tasks into smaller steps with short-term rewards."
+          },
+          {
+            "heading": "What You Will Learn",
+            "body": "In this module you will learn to: identify situations where you are vulnerable to impulsive behaviour, use the IMPULSE method to monitor and change specific behaviours, apply the CONTROL process to interrupt impulsive thinking, use self-talk and distraction techniques, and build double-checking habits into your decision-making."
+          }
+        ],
+        "clinician_notes": "Frame impulsivity as a neurological difference, not a character flaw. Acknowledge the positives (creativity, risk-taking) before addressing the negatives. This builds rapport and reduces shame. Be sensitive to cognitive avoidance — developing insight into past impulsive behaviour can be distressing."
+      }
+    },
+    {
+      "id": "ch7_item_02",
+      "type": "table",
+      "title": "Typical Impulse Control Problems (Table 7.1)",
+      "instructions": "Review this list of common impulse control problems experienced by people with ADHD. As you read each one, think about whether it applies to you. Tick the ones you recognise in yourself — this will help you and your therapist identify which areas to focus on.",
+      "xp_value": 20,
+      "schema": {
+        "fields": [
+          {
+            "id": "consequence_blindness",
+            "label": "Consequence blindness — Difficulty considering consequences before acting (e.g. blurting out gossip, interrupting people)",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "consequence_blindness_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false,
+            "placeholder": "e.g. I told my friend's secret without thinking..."
+          },
+          {
+            "id": "difficulty_waiting",
+            "label": "Difficulty waiting — Trouble queuing or waiting for your turn, especially in shopping queues or when there is a delay",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "difficulty_waiting_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "immediate_gratification",
+            "label": "Motivation for immediate gratification — Opting for a short-term reward with less effort rather than working longer for a larger reward",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "immediate_gratification_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "taking_shortcuts",
+            "label": "Taking short cuts — Cutting corners, leading to reduced accuracy or lower quality outcomes",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "taking_shortcuts_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "demanding_behaviour",
+            "label": "Demanding behaviour — Seeming demanding or self-centred when someone else controls access to what you want",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "demanding_behaviour_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "lack_of_insight",
+            "label": "Lack of insight — Not recognising situations where you are likely to be impulsive until after the fact",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "lack_of_insight_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "abrupt_movements",
+            "label": "Abrupt movements — Getting up suddenly, snatching items, making impulsive physical movements",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "abrupt_movements_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "reckless_driving",
+            "label": "Reckless driving — Difficulty waiting at traffic lights, impatience behind slower drivers, speeding, jumping lights, unsafe overtaking",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "reckless_driving_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "rule_breaking",
+            "label": "Rule breaking — Disobedience or violation of instructions driven by impulsivity rather than defiance",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "rule_breaking_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "recklessness",
+            "label": "Recklessness — Engaging in dangerous activities without considering possible consequences",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "recklessness_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "jumping_to_conclusions",
+            "label": "Jumping to conclusions — Misinterpreting ambiguous situations, making assumptions based on very little information, catastrophising",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "jumping_to_conclusions_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "incurring_debts",
+            "label": "Incurring debts — Buying items impulsively without considering whether you can afford them or need them",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "incurring_debts_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "novelty_seeking",
+            "label": "Novelty seeking — Searching for thrills and novelty, driven by excessive attraction to immediate reward",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "novelty_seeking_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "anxiety_driven",
+            "label": "Anxiety-driven impulsivity — Impulsively avoiding aversive situations due to anxiety, or anxiety worsening impulse control",
+            "type": "checkbox",
+            "required": false,
+            "options": ["This applies to me"]
+          },
+          {
+            "id": "anxiety_driven_example",
+            "label": "If this applies, give a recent example",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "id": "top_three",
+            "label": "Which 3 of the above cause you the most problems right now?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "Pick your top 3 and explain briefly why they are the most problematic..."
+          }
+        ],
+        "scoring": {
+          "method": "count",
+          "count_field_type": "checkbox",
+          "interpretation": {
+            "0-4": "A few areas to work on. Focus your energy on the ones that cause you the most trouble.",
+            "5-8": "Several impulse control areas are affecting your life. The strategies in this module will help.",
+            "9-13": "Impulsivity is having a significant impact. Working through this module thoroughly will make a real difference."
+          }
+        },
+        "instructions_for_patient": "Be honest — there is no judgement here. The more accurately you identify your patterns, the more targeted your strategies can be.",
+        "clinician_notes": "Use the patient's top 3 selections to guide which exercises to prioritise. The examples they give are valuable for creating personalised IMPULSE and CONTROL worksheets later. Watch for items that suggest risk (reckless driving, debts, recklessness) and flag for provider review if needed."
+      }
+    },
+    {
+      "id": "ch7_item_03",
+      "type": "exercise",
+      "title": "Identifying Your Impulsive Behaviours",
+      "instructions": "Before you can change impulsive behaviour, you need to identify it clearly. Work with your therapist to pinpoint specific situations where you tend to act impulsively. Think back over the past month — what have you done that you regretted afterwards? Focus on behaviours that happen regularly, as these are the ones you can track and improve.",
+      "xp_value": 70,
+      "schema": {
+        "fields": [
+          {
+            "id": "regretted_behaviours",
+            "label": "List 3-5 recent situations where you acted impulsively and regretted it",
+            "type": "repeating_group",
+            "required": true,
+            "sub_fields": [
+              {"id": "situation", "label": "What happened?", "type": "textarea", "placeholder": "Describe the situation briefly..."},
+              {"id": "what_i_did", "label": "What did you do impulsively?", "type": "textarea"},
+              {"id": "consequence", "label": "What was the consequence?", "type": "textarea"},
+              {"id": "frequency", "label": "How often does this happen?", "type": "select", "options": ["One-off", "Monthly", "Weekly", "Several times a week", "Daily"]},
+              {"id": "type", "label": "Is this more behavioural or cognitive impulsivity?", "type": "select", "options": ["Behavioural (acting/speaking without thinking)", "Cognitive (poor planning, rash decisions, jumping to conclusions)", "Both"]}
+            ],
+            "min_items": 3,
+            "max_items": 5
+          },
+          {
+            "id": "target_behaviour",
+            "label": "Choose ONE behaviour to target first. It should be specific, measurable, and something that happens regularly.",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. 'Interrupting my partner during conversations' or 'Making unplanned online purchases over Rs 500'"
+          },
+          {
+            "id": "baseline_frequency",
+            "label": "How often does this target behaviour currently happen? (This is your baseline)",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g. About 3 times a day, About 5 times a week..."
+          },
+          {
+            "id": "how_to_measure",
+            "label": "How will you measure it? (count, record, ask someone to observe?)",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. I will keep a tally on my phone each time I interrupt someone"
+          }
+        ],
+        "scoring": {"method": "none"},
+        "instructions_for_patient": "The target behaviour must be specific and clearly defined. 'Stop being impulsive' is too vague. 'Stop interrupting others in meetings' is specific and measurable.",
+        "clinician_notes": "Guide the patient toward a target behaviour that is frequent enough to measure progress (at least weekly). Ensure it is operationalised — vague targets like 'be less impulsive' are both difficult to measure and difficult to achieve. The baseline frequency will be compared against post-intervention frequency to demonstrate progress."
+      }
+    },
+    {
+      "id": "ch7_item_04",
+      "type": "worksheet",
+      "title": "The IMPULSE Method (Table 7.2)",
+      "instructions": "The IMPULSE method is a structured approach to identifying, monitoring, and changing a specific impulsive behaviour. Work through each step with your therapist, using the target behaviour you identified in the previous exercise. You will apply this method over the coming weeks and evaluate your progress.",
+      "xp_value": 50,
+      "companion_website_ref": "Table 7.2",
+      "schema": {
+        "fields": [
+          {
+            "id": "i_identify",
+            "label": "I — Identify the behaviour: What specific impulsive behaviour are you targeting?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Impulsive spending on online shopping apps"
+          },
+          {
+            "id": "m_make_explicit",
+            "label": "M — Make the behaviour explicit: Describe exactly what happens in concrete terms",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Buying clothes and gadgets when I do not have the money, usually late at night when bored"
+          },
+          {
+            "id": "p_peer_monitoring",
+            "label": "P — Peer/partner monitoring: Who can help monitor this behaviour? How?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. My partner can check bank statements with me weekly. My therapist can review my purchase log in sessions."
+          },
+          {
+            "id": "u_understanding",
+            "label": "U — Understanding and self-monitoring: How will you track this behaviour yourself?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. For every purchase, I will log whether it was planned, whether I could afford it, and whether I actually needed it"
+          },
+          {
+            "id": "l_list_plans",
+            "label": "L — List plans to tackle the problem: What strategies will you use? (You will learn more strategies in this module)",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Set a weekly budget, remove saved credit card details from apps, use the CONTROL process before any purchase over Rs 500"
+          },
+          {
+            "id": "s_strategy",
+            "label": "S — Strategy implementation: When and how will you start?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Starting this week, I will follow my budget plan and use the 24-hour rule for non-essential purchases"
+          },
+          {
+            "id": "e_evaluation",
+            "label": "E — Evaluation of strategy: How will you measure success? (Complete this after 1-2 weeks)",
+            "type": "textarea",
+            "required": false,
+            "placeholder": "e.g. 1. Self-report: Did I resist temptation this week? When? 2. Count of unplanned purchases compared to baseline"
+          },
+          {
+            "id": "evaluation_feedback",
+            "label": "What has been helpful or unhelpful about the strategy so far?",
+            "type": "textarea",
+            "required": false,
+            "placeholder": "e.g. The 24-hour rule helped a lot for big purchases, but I still impulse-buy small items at checkout..."
+          },
+          {
+            "id": "baseline_count",
+            "label": "Baseline: How many times did the behaviour occur before you started? (per week)",
+            "type": "number",
+            "required": false
+          },
+          {
+            "id": "post_count",
+            "label": "Post-strategy: How many times did the behaviour occur this past week?",
+            "type": "number",
+            "required": false
+          }
+        ],
+        "scoring": {
+          "method": "custom",
+          "description": "Compare baseline_count with post_count to evaluate improvement"
+        },
+        "instructions_for_patient": "Fill in I through S in your session. Come back after 1-2 weeks to fill in E (evaluation). You can apply IMPULSE to any impulsive behaviour — once you master it for one, try it for another.",
+        "clinician_notes": "This is the core worksheet for the module. Walk through the example in the book (impulsive shopping/credit card spending) if the patient struggles to get started. The evaluation step is critical — schedule a follow-up to review. If peer/partner monitoring is not possible, the therapist can fill this role. Encourage the patient to apply IMPULSE to multiple behaviours over time."
+      }
+    },
+    {
+      "id": "ch7_item_05",
+      "type": "psychoeducation",
+      "title": "Cognitive-Behavioural Strategies for Impulse Control",
+      "instructions": "Read through these strategies that you will learn and practise in this module. The primary goal is to develop skills that help you 'stop and think' before acting.",
+      "xp_value": 20,
+      "schema": {
+        "content_blocks": [
+          {
+            "heading": "The Goal",
+            "body": "The primary objective is for you to develop and maintain your own management plan for impulsive behaviour — one that becomes more generalised over time. This involves learning techniques to monitor and control impulsive behaviour. Not all strategies will work for everyone, but you will likely find some of these methods helpful."
+          },
+          {
+            "heading": "Self-Talk",
+            "body": "Self-talk is proactive thinking — using words to interrupt automatic dysfunctional thinking. You can say words like 'Stop', 'Control', 'Look before you leap', 'Think before you speak' to pause an impulsive reaction. When emotionally aroused, self-talk like 'Stay calm', 'I can do this' combined with visualising calming images (a beach, mountains, a sunset) can help you regain control."
+          },
+          {
+            "heading": "Self-Instructional Training",
+            "body": "After self-talk interrupts the impulse, self-instructional training helps you direct yourself toward positive thinking. You learn to stand back from a situation, appraise it from different perspectives, evaluate possible responses and outcomes, and select an appropriate response. This is achieved through self-directed purposeful instructions."
+          },
+          {
+            "heading": "The CONTROL Process",
+            "body": "CONTROL is a structured sequence: Control (interrupt the thought), Off-line processing (calm down using self-talk), New solutions (generate alternatives), Test solutions (mentally rehearse outcomes), Re-evaluation (choose the best option), On-line processing (carry out the solution), Look for benefits (reinforce the process). You will practise this with cue cards."
+          },
+          {
+            "heading": "Double-Checks",
+            "body": "Once self-talk becomes more automatic, add a habit of 'double-checking' your decisions by asking five key questions before acting. This is especially useful for impulse purchases and rash decisions."
+          },
+          {
+            "heading": "Distraction Techniques",
+            "body": "When you must wait or queue (a common trigger for impulsive behaviour), distraction techniques can help you cope. These include focusing on objects, people-watching, sensory awareness, counting, word games, fantasies, and puzzles."
+          },
+          {
+            "heading": "A Note on Avoidance",
+            "body": "Developing better insight into your behaviour and its impact on others can be distressing. You might feel tempted to avoid facing past mistakes or disengage from treatment. This is normal but important to work through. Your therapist will support you with a non-judgemental approach."
+          }
+        ],
+        "clinician_notes": "Be wary of cognitive avoidance presenting as lack of motivation. Developing insight into past impulsive behaviour can trigger distress about financially or emotionally costly mistakes. Some clients may attempt to sabotage treatment by disengagement (a secondary gain — removing themselves from anxiety-provoking treatment). Take a sensitive, non-judgemental, open approach."
+      }
+    },
+    {
+      "id": "ch7_item_06",
+      "type": "exercise",
+      "title": "Self-Talk Practice",
+      "instructions": "Self-talk is your first line of defence against impulsive reactions. In this exercise, you will develop a personalised set of self-talk phrases and calming images, then practise using them in low-pressure situations before trying them in the heat of the moment.",
+      "xp_value": 70,
+      "schema": {
+        "fields": [
+          {
+            "id": "stop_phrases",
+            "label": "Write down 3-5 'stop' phrases that feel natural to you",
+            "type": "repeating_group",
+            "required": true,
+            "sub_fields": [
+              {"id": "phrase", "label": "Stop phrase", "type": "text", "placeholder": "e.g. 'Stop', 'Wait', 'Control', 'Think first', 'Look before you leap'"}
+            ],
+            "min_items": 3,
+            "max_items": 5
+          },
+          {
+            "id": "calming_phrases",
+            "label": "Write down 2-3 calming phrases for when you feel emotionally overwhelmed",
+            "type": "repeating_group",
+            "required": true,
+            "sub_fields": [
+              {"id": "phrase", "label": "Calming phrase", "type": "text", "placeholder": "e.g. 'Stay calm', 'I can handle this', 'This feeling will pass', 'Breathe'"}
+            ],
+            "min_items": 2,
+            "max_items": 3
+          },
+          {
+            "id": "calming_images",
+            "label": "Describe 2-3 calming mental images you can visualise when you need to calm down",
+            "type": "repeating_group",
+            "required": true,
+            "sub_fields": [
+              {"id": "image", "label": "Describe the image in detail", "type": "textarea", "placeholder": "e.g. Sitting on a quiet beach at sunset, warm sand, sound of waves, gentle breeze..."}
+            ],
+            "min_items": 2,
+            "max_items": 3
+          },
+          {
+            "id": "perspective_questions",
+            "label": "Write down 2-3 perspective-taking questions you can ask yourself after the 'stop'",
+            "type": "repeating_group",
+            "required": true,
+            "sub_fields": [
+              {"id": "question", "label": "Question", "type": "text", "placeholder": "e.g. 'Is there another way to think about this?', 'What would my mother say?', 'How would I see this if a friend did it?'"}
+            ],
+            "min_items": 2,
+            "max_items": 3
+          },
+          {
+            "id": "practice_plan",
+            "label": "When will you practise self-talk this week? (Practise during calm, routine activities first — e.g. while driving on a clear road, while cooking, while walking)",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. I will practise saying 'Stop, think' while driving home every evening this week"
+          },
+          {
+            "id": "practice_outcome",
+            "label": "After practising for a week: How did it go? Did you use self-talk in any real impulsive moments?",
+            "type": "textarea",
+            "required": false,
+            "placeholder": "Describe what happened when you tried it..."
+          }
+        ],
+        "scoring": {"method": "none"},
+        "instructions_for_patient": "The more you practise self-talk in calm situations, the more likely you will use it automatically in the heat of the moment. Rehearse your phrases daily this week.",
+        "clinician_notes": "Help the patient generate phrases that feel natural and authentic — not forced. Practise aloud in session first. The calming images should be vivid and personally meaningful. Emphasise that self-talk must be rehearsed in low-stress contexts first before it can work in high-stress moments. Review in next session whether they used it and what happened."
+      }
+    },
+    {
+      "id": "ch7_item_07",
+      "type": "worksheet",
+      "title": "The CONTROL Process (Table 7.3)",
+      "instructions": "CONTROL is a step-by-step process for interrupting impulsive thinking and making better decisions. Work through a specific example with your therapist. You can also carry a cue card with these steps in your wallet or phone for quick reference.",
+      "xp_value": 50,
+      "companion_website_ref": "Table 7.3",
+      "schema": {
+        "fields": [
+          {
+            "id": "situation",
+            "label": "Describe a recent situation where you acted impulsively (or one that is likely to happen soon)",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. I was waiting in a long queue at the grocery store and started getting irritated..."
+          },
+          {
+            "id": "c_control",
+            "label": "C — CONTROL: What will you say to interrupt the dysfunctional thinking? Would it help to temporarily remove yourself from the situation?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Say 'CONTROL' to myself. Step away from the situation for a moment if possible."
+          },
+          {
+            "id": "o_offline",
+            "label": "O — Off-line processing: What self-talk and calming images will you use to reach an emotionally neutral state?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. 'Stay calm, I can handle this.' Visualise sitting on the beach. Take 3 deep breaths."
+          },
+          {
+            "id": "n_new_solutions",
+            "label": "N — New solutions: What alternative solutions can you think of? List at least 3.",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. 1) Stay in queue and use distraction techniques, 2) Switch to a shorter queue, 3) Leave and come back at a quieter time, 4) Use self-checkout"
+          },
+          {
+            "id": "t_test_solutions",
+            "label": "T — Test solutions: For each solution, predict the outcome. What are the pros and cons?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Option 1: Pro — I get my shopping done. Con — I have to wait 10 mins. Option 2: Pro — might be faster. Con — might not be."
+          },
+          {
+            "id": "r_reevaluation",
+            "label": "R — Re-evaluation: Considering your goals, which option is best?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Option 1 is best — I need the groceries tonight and waiting 10 minutes is worth it."
+          },
+          {
+            "id": "o_online",
+            "label": "O — On-line processing: Carry out the chosen solution. What reward will you give yourself for using CONTROL?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. I stayed in the queue and used distraction. Reward: I will treat myself to a chocolate bar at checkout."
+          },
+          {
+            "id": "l_look_benefits",
+            "label": "L — Look for benefits: What were the positive outcomes of using the CONTROL process?",
+            "type": "textarea",
+            "required": false,
+            "placeholder": "e.g. I got my shopping done, saved myself a second trip, felt proud of staying calm, my evening plans were not disrupted."
+          }
+        ],
+        "scoring": {"method": "none"},
+        "instructions_for_patient": "Practise this in session with your therapist first, then try it in real life. Carry a cue card with the CONTROL steps (C-O-N-T-R-O-L) in your wallet or save them on your phone. With practice, this process will become automatic.",
+        "clinician_notes": "Walk through the full CONTROL sequence using a real or anticipated situation. Provide the patient with a cue card to carry in their wallet/purse. The book notes that consequential thinking (Step T) is particularly powerful if the patient writes down pros and cons, although this is not always possible in the moment. The key insight is introducing an 'off-line' feedback loop in the thinking process. Repeat with multiple scenarios across sessions."
+      }
+    },
+    {
+      "id": "ch7_item_08",
+      "type": "exercise",
+      "title": "Self-Instructional Training: Building a Management Plan",
+      "instructions": "Self-instructional training helps you create a step-by-step plan for a specific situation where impulsivity causes you problems. You will work through the situation in detail with your therapist, writing out what you will do at each stage. Think of this as a 'script' you can follow when the situation arises.",
+      "xp_value": 70,
+      "schema": {
+        "fields": [
+          {
+            "id": "problem_situation",
+            "label": "Describe a specific recurring situation where you act impulsively",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. I get irritated waiting in queues and end up leaving without finishing what I came to do"
+          },
+          {
+            "id": "step1_prevention",
+            "label": "Step 1 — Prevention: Can you change the circumstances to reduce the trigger?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Whenever possible, do the task at a quieter time of day"
+          },
+          {
+            "id": "step2_self_talk",
+            "label": "Step 2 — Self-talk: When the impulse hits, what will you say to yourself?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. 'Stop', 'Calm down', 'I can get through this'"
+          },
+          {
+            "id": "step3_evaluate_options",
+            "label": "Step 3 — Evaluate options: What are the consequences of giving in to the impulse vs. resisting it?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. If I leave: I will not achieve my goal, I will have to come back later, it might be worse then. If I stay: I can use distraction, I will feel accomplished, my plans for tonight are saved."
+          },
+          {
+            "id": "step4_distraction",
+            "label": "Step 4 — Distraction: What specific distraction techniques will you use?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Count backwards from 100 in 7s, play a word game on my phone, focus on describing an object in detail"
+          },
+          {
+            "id": "step5_reward",
+            "label": "Step 5 — Reward: How will you reward yourself for successfully managing the impulse?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Buy myself a treat, watch a favourite show tonight, tell myself 'well done'"
+          },
+          {
+            "id": "outcome",
+            "label": "After trying the plan: What happened? Did it work?",
+            "type": "textarea",
+            "required": false,
+            "placeholder": "Describe what happened when you used the plan in real life..."
+          },
+          {
+            "id": "adjustments",
+            "label": "What would you change about the plan for next time?",
+            "type": "textarea",
+            "required": false
+          }
+        ],
+        "scoring": {"method": "none"},
+        "instructions_for_patient": "Create this plan in your session. Rehearse it aloud — practising the words and the steps. Then try it out in real life and report back next session. You can create management plans for as many situations as you like.",
+        "clinician_notes": "The example in the book involves 'Julie' who leaves the supermarket without shopping when the queue is long. Walk through all steps in detail. The plan should be rehearsed aloud in session — self-instructional training is initially done out loud before becoming internalised. The most common obstacle is the desire for immediate gratification. Consequential thinking (Step 3) is the most important component. Review and adjust the plan in follow-up sessions."
+      }
+    },
+    {
+      "id": "ch7_item_09",
+      "type": "worksheet",
+      "title": "Double-Check Questions (Table 7.4)",
+      "instructions": "These five questions are a quick safety check before you make any decision or purchase on impulse. Write them on a card and keep it in your wallet, or save them on your phone. Before any impulsive action, go through all five.",
+      "xp_value": 50,
+      "companion_website_ref": "Table 7.4",
+      "schema": {
+        "fields": [
+          {
+            "id": "situation",
+            "label": "What is the situation or decision you are about to act on?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. I want to buy a new phone even though mine works fine"
+          },
+          {
+            "id": "q1_really_want",
+            "label": "1. Is this what I really want to happen?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "Think carefully — is this what you truly want, or just what you want right now?"
+          },
+          {
+            "id": "q2_how_long",
+            "label": "2. For how long have I wanted to do this?",
+            "type": "select",
+            "required": true,
+            "options": ["Just now / a few minutes", "A few hours", "A few days", "A week or more", "A month or more"]
+          },
+          {
+            "id": "q3_if_i_do",
+            "label": "3. What will happen if I do this?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "List the immediate and short-term consequences..."
+          },
+          {
+            "id": "q4_if_i_dont",
+            "label": "4. What will happen if I don't do this?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "What is the cost of NOT acting? Often, nothing bad happens..."
+          },
+          {
+            "id": "q5_long_term",
+            "label": "5. What are the longer-term consequences?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "Think weeks and months ahead, not just today..."
+          },
+          {
+            "id": "decision",
+            "label": "After answering all five questions, what is your decision?",
+            "type": "select",
+            "required": true,
+            "options": ["Go ahead — this is a considered decision", "Wait 24 hours and re-evaluate", "Do not do it — this is an impulse"]
+          },
+          {
+            "id": "follow_up",
+            "label": "If you waited or said no: How do you feel about that decision now? (Fill in after 24-48 hours)",
+            "type": "textarea",
+            "required": false,
+            "placeholder": "e.g. Glad I waited — I no longer want it. Or: I still want it, so I will go ahead with a plan."
+          }
+        ],
+        "scoring": {"method": "none"},
+        "instructions_for_patient": "Use this every time you feel an impulsive urge to buy, quit, or decide something important. Learning to postpone decisions briefly is one of the best safety guards for adults with ADHD. Keep a record of 'near purchases' or 'near decisions' to see how much you saved by pausing.",
+        "clinician_notes": "This is meant to be a quick in-the-moment tool. Help the patient create a physical or digital cue card with just the 5 questions. The book emphasises that the patient should also create a management plan — e.g., leave the shop for 5 minutes, walk around, answer the questions on the card, then decide. Track 'near purchases' vs actual purchases over time to demonstrate savings and reinforce the habit."
+      }
+    },
+    {
+      "id": "ch7_item_10",
+      "type": "worksheet",
+      "title": "Distraction Techniques (Table 7.5)",
+      "instructions": "When you have to wait or queue — common triggers for impulsive behaviour — distraction techniques can help you cope instead of giving up or getting confrontational. Review these techniques and pick 3-4 that appeal to you. Then practise them this week.",
+      "xp_value": 50,
+      "companion_website_ref": "Table 7.5",
+      "schema": {
+        "fields": [
+          {
+            "id": "object_focus",
+            "label": "Object focus — Pick an object near you and describe it in as much detail as possible (colour, texture, shape, size, material, what it is made of, who made it). Would you like to try this technique?",
+            "type": "select",
+            "required": true,
+            "options": ["Yes, I will try this", "Maybe", "Not for me"]
+          },
+          {
+            "id": "person_focus",
+            "label": "Person focus — Look at the person in front of you in the queue. Imagine what they might be called, what they do for a living, where they live, what character they would play in a film. (Be careful not to stare!) Would you like to try this?",
+            "type": "select",
+            "required": true,
+            "options": ["Yes, I will try this", "Maybe", "Not for me"]
+          },
+          {
+            "id": "sensory_awareness",
+            "label": "Sensory awareness — Focus on each of your five senses in turn and make a mental list: What can you see? Hear? Taste? Touch? Smell? Would you like to try this?",
+            "type": "select",
+            "required": true,
+            "options": ["Yes, I will try this", "Maybe", "Not for me"]
+          },
+          {
+            "id": "counting",
+            "label": "Counting — Try complicated counting tasks like counting backwards in 7s from 100 (100, 93, 86, 79...). Would you like to try this?",
+            "type": "select",
+            "required": true,
+            "options": ["Yes, I will try this", "Maybe", "Not for me"]
+          },
+          {
+            "id": "word_generation",
+            "label": "Word generation — Think of as many animals, countries, towns, or names beginning with each letter of the alphabet. Would you like to try this?",
+            "type": "select",
+            "required": true,
+            "options": ["Yes, I will try this", "Maybe", "Not for me"]
+          },
+          {
+            "id": "fantasies",
+            "label": "Fantasies — Imagine where you would rather be: on a beach, in the mountains, swimming, travelling. Would you like to try this?",
+            "type": "select",
+            "required": true,
+            "options": ["Yes, I will try this", "Maybe", "Not for me"]
+          },
+          {
+            "id": "winning_lottery",
+            "label": "Winning the lottery — Imagine how you would spend 1 crore rupees. Plan it in detail! Would you like to try this?",
+            "type": "select",
+            "required": true,
+            "options": ["Yes, I will try this", "Maybe", "Not for me"]
+          },
+          {
+            "id": "puzzles",
+            "label": "Puzzles — Crosswords, word searches, or puzzle apps on your phone. (Note: attentional problems may make this tricky, but it is worth trying.) Would you like to try this?",
+            "type": "select",
+            "required": true,
+            "options": ["Yes, I will try this", "Maybe", "Not for me"]
+          },
+          {
+            "id": "my_top_techniques",
+            "label": "Which 3-4 techniques will you practise this week?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "List the ones that appeal to you most..."
+          },
+          {
+            "id": "practice_situations",
+            "label": "In what situations will you try them? (Be specific about when and where)",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. In the queue at the canteen at work, while waiting for the bus, while stuck in traffic..."
+          },
+          {
+            "id": "practice_result",
+            "label": "After trying them: Which techniques worked best? Which did not help?",
+            "type": "textarea",
+            "required": false,
+            "placeholder": "e.g. Counting backwards worked great, but word generation was too hard when I was already frustrated..."
+          }
+        ],
+        "scoring": {"method": "none"},
+        "instructions_for_patient": "Choose at least 3 techniques and practise them this week in situations where you have to wait. These can also be practised in advance by imagining a frustrating waiting situation and applying the technique mentally.",
+        "clinician_notes": "These techniques can be practised in advance of anticipated difficult situations or practised in imagination. Review which techniques worked and which did not. Some patients may find certain techniques too demanding when already frustrated — help them find ones that work at different emotional intensity levels. Note the book's caution that puzzles may be problematic due to attentional issues."
+      }
+    },
+    {
+      "id": "ch7_item_11",
+      "type": "diary",
+      "title": "Impulse Control Diary",
+      "instructions": "For the next two weeks, keep a daily log of impulsive moments. Record what happened, what you did, and whether you used any of the techniques from this module. This helps you and your therapist see your progress and identify patterns.",
+      "xp_value": 60,
+      "schema": {
+        "fields": [
+          {
+            "id": "log_date",
+            "label": "Date",
+            "type": "date",
+            "required": true
+          },
+          {
+            "id": "incidents",
+            "label": "Impulsive moments today",
+            "type": "repeating_group",
+            "required": false,
+            "sub_fields": [
+              {"id": "time_of_day", "label": "Approximate time", "type": "select", "options": ["Morning", "Afternoon", "Evening", "Night"]},
+              {"id": "situation", "label": "What happened?", "type": "textarea", "placeholder": "Brief description of the situation..."},
+              {"id": "impulse_type", "label": "Type", "type": "select", "options": ["Behavioural (acted/spoke without thinking)", "Cognitive (rash decision, jumped to conclusion)", "Both"]},
+              {"id": "did_i_use_strategy", "label": "Did you use a strategy from this module?", "type": "select", "options": ["Yes — Self-talk", "Yes — CONTROL process", "Yes — Double-check questions", "Yes — Distraction technique", "Yes — IMPULSE method", "No — I acted impulsively", "No — but I caught it afterwards"]},
+              {"id": "outcome", "label": "What happened?", "type": "textarea", "placeholder": "Did the strategy help? What was the result?"},
+              {"id": "success_rating", "label": "How well did you handle it?", "type": "scale", "scale_min": 1, "scale_max": 5, "scale_labels": {"1": "Gave in completely", "3": "Managed partially", "5": "Handled it well"}}
+            ],
+            "min_items": 0,
+            "max_items": 10
+          },
+          {
+            "id": "no_incidents",
+            "label": "If no impulsive moments today, tick this box",
+            "type": "checkbox",
+            "required": false,
+            "options": ["No impulsive moments today"]
+          },
+          {
+            "id": "daily_reflection",
+            "label": "End of day reflection: What did you learn about your impulse control today?",
+            "type": "textarea",
+            "required": false,
+            "placeholder": "e.g. I noticed I am most impulsive in the evenings when I am tired..."
+          }
+        ],
+        "scoring": {
+          "method": "average",
+          "average_field": "success_rating",
+          "interpretation": {
+            "1.0-2.0": "You are still learning — keep practising the strategies. Review with your therapist which ones might work better.",
+            "2.1-3.5": "Good progress — you are catching your impulses more often. Keep building on what works.",
+            "3.6-5.0": "Excellent impulse control. You are successfully applying the techniques from this module."
+          }
+        },
+        "instructions_for_patient": "Fill this in at the end of each day. It only takes 2-3 minutes. Even on days with no incidents, log that — it shows progress! Bring this diary to your next session.",
+        "clinician_notes": "Review the diary in session. Look for: time-of-day patterns, which strategies are being used (or not), whether success ratings improve over time, recurring trigger situations, and whether behavioural or cognitive impulsivity predominates. Use the diary data to adjust the treatment plan and celebrate wins."
+      }
+    },
+    {
+      "id": "ch7_item_12",
+      "type": "exercise",
+      "title": "Perspective-Taking Role Play",
+      "instructions": "Impulsivity often means not considering how your behaviour looks to others. In this exercise, you and your therapist will role-play a situation where you typically act impulsively. You will then 'replay' it from the other person's perspective to build empathy and insight.",
+      "xp_value": 70,
+      "schema": {
+        "fields": [
+          {
+            "id": "chosen_situation",
+            "label": "Choose a situation where your impulsive behaviour has affected someone else",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. I interrupted my boss during a meeting and said something inappropriate"
+          },
+          {
+            "id": "my_perspective",
+            "label": "Your perspective: What were you thinking and feeling in the moment?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. I was excited about an idea and could not wait to share it. I felt like the meeting was dragging on."
+          },
+          {
+            "id": "other_perspective",
+            "label": "The other person's perspective: Imagine you are them. What would be going through their mind?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. They might think I was rude, that I do not respect their time, or that I was not listening to them."
+          },
+          {
+            "id": "observer_perspective",
+            "label": "An observer's perspective: If a friend or family member watched this happen, what would they think?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. They might think I need to learn to wait my turn, or they might feel embarrassed for me."
+          },
+          {
+            "id": "what_i_learned",
+            "label": "What did you learn from seeing this situation from different angles?",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "id": "alternative_response",
+            "label": "If you could redo the situation, what would you do differently?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. I would write my idea down and wait for a pause or ask if I could share something."
+          }
+        ],
+        "scoring": {"method": "none"},
+        "instructions_for_patient": "This exercise is done in your therapy session. Your therapist may ask you to act out the situation and then replay it with a different approach. It can feel uncomfortable at first, but it is one of the most powerful ways to build awareness.",
+        "clinician_notes": "Role-plays are particularly helpful for perspective taking. If possible, video-record the role play and play it back — ask the patient to imagine a friend observing them. Consider having the patient play the 'other person' role to build empathy. Be sensitive — this exercise can trigger shame about past behaviour. Normalise and support throughout. This exercise connects to Module 8 (Social Relationships)."
+      }
+    },
+    {
+      "id": "ch7_item_13",
+      "type": "worksheet",
+      "title": "External Support Plan",
+      "instructions": "Sometimes you need people around you to help you manage impulsive behaviour. This worksheet helps you set up a support system with a trusted person — a partner, parent, friend, or family member — who can help cue you, monitor progress, and give constructive feedback.",
+      "xp_value": 50,
+      "schema": {
+        "fields": [
+          {
+            "id": "support_person",
+            "label": "Who will be your support person? (They may attend a session with you if appropriate)",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g. My partner, my sister, my best friend..."
+          },
+          {
+            "id": "behaviours_to_monitor",
+            "label": "What specific behaviours will they help monitor?",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Interrupting during conversations, impulsive spending, changing the TV channel constantly"
+          },
+          {
+            "id": "how_to_cue",
+            "label": "How will they cue you when they notice the behaviour? (Agree on a discreet signal)",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. A gentle touch on the arm, a specific word or phrase, a hand signal"
+          },
+          {
+            "id": "feedback_rules",
+            "label": "Ground rules for feedback: How should they give you feedback? (It must be constructive, not critical)",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. They will focus on specific behaviours not my character, they will also mention what I did well, we will debrief at a set time not in the moment"
+          },
+          {
+            "id": "reward_system",
+            "label": "How will progress be rewarded? (Praise from others is a powerful motivator)",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. My partner will acknowledge when I catch myself, we will celebrate weekly wins together"
+          },
+          {
+            "id": "boundaries",
+            "label": "What should your support person NOT do? (Important to set boundaries)",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "e.g. Do not make excuses for me ('Oh that is just how he is'), do not criticise me in front of others, do not nag"
+          }
+        ],
+        "scoring": {"method": "none"},
+        "instructions_for_patient": "Discuss this with your support person and your therapist together if possible. Consistent, constructive feedback is key — no excuses, no criticism, just honest support. Review and update this plan every few weeks.",
+        "clinician_notes": "Consider inviting the support person to a session if appropriate. Key points from the book: (1) Inappropriate behaviour must never be reinforced or excused ('oh that is Steve, he is a bit crazy'). (2) Feedback must be consistent and constructive — the individual should not feel personally criticised. (3) Positive feedback and praise reinforce appropriate behaviour. (4) Eventually, responsibility for monitoring should transfer from the external person to the client."
+      }
+    }
+  ]
+}
