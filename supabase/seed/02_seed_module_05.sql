@@ -1,0 +1,247 @@
+-- 02_seed_module_05.sql
+-- Seed content items for Module 5 (Time Management) into yb_content_items
+-- Safe to re-run: uses ON CONFLICT DO UPDATE
+--
+-- Module 5 UUID: 00000000-0000-4000-8000-000000000005  (from 01_seed_modules.sql)
+-- Content item UUIDs: 00000000-0000-4000-a000-000000050001 through ...050007
+
+INSERT INTO yb_content_items (id, module_id, type, title, instructions, xp_value, companion_website_ref, schema)
+VALUES
+
+-- ch5_item_01: Psychoeducation — Why Time Management is Hard with ADHD
+(
+  '00000000-0000-4000-a000-000000050001',
+  '00000000-0000-4000-8000-000000000005',
+  'psychoeducation',
+  'Why Time Management is Hard with ADHD',
+  'Read through this before starting the exercises.',
+  20,
+  NULL,
+  '{
+    "content_blocks": [
+      {
+        "heading": "Time Blindness",
+        "body": "People with ADHD often experience ''time blindness'' — difficulty sensing how much time has passed or how long tasks will take. This is not laziness. It is a neurological difference in how your brain tracks time."
+      },
+      {
+        "heading": "Why Plans Fall Apart",
+        "body": "Common traps include underestimating task duration, getting distracted mid-task, forgetting plans that aren''t written down, and not building in buffer time."
+      },
+      {
+        "heading": "What You Will Learn in This Module",
+        "body": "Over 6 steps you will learn to: evaluate your current time management, log how you actually spend time, set goals, make and prioritise lists, estimate time accurately, schedule your week, and build in rewards."
+      }
+    ],
+    "clinician_notes": "Normalise time blindness before starting exercises. Avoid framing as a moral failing."
+  }'::jsonb
+),
+
+-- ch5_item_02: Worksheet — Time Management Evaluation (Table 5.1)
+(
+  '00000000-0000-4000-a000-000000050002',
+  '00000000-0000-4000-8000-000000000005',
+  'worksheet',
+  'Time Management Evaluation (Table 5.1)',
+  'For each item below, rate how often you experience this. Be honest — there are no right or wrong answers. This is your baseline. You will repeat this at the end of the module to see how much you have improved.',
+  50,
+  'Table 5.1',
+  '{
+    "fields": [
+      {"id": "q1", "label": "Do you make plans for your time?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "q2", "label": "Do you write down your plans?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "q3", "label": "Do you complete everything you had planned to do for a day?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "q4", "label": "Is your time interrupted by seemingly urgent tasks?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [4, 3, 2, 1, 0], "reverse_score": true},
+      {"id": "q5", "label": "Do you leave things unfinished?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [4, 3, 2, 1, 0], "reverse_score": true},
+      {"id": "q6", "label": "Do you forget what you were supposed to be doing?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [4, 3, 2, 1, 0], "reverse_score": true},
+      {"id": "q7", "label": "Do you arrive on time and prepared for appointments?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "q8", "label": "Do you know roughly what time it is without checking?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [0, 1, 2, 3, 4], "reverse_score": false},
+      {"id": "q9", "label": "Do you feel that you have wasted your time?", "type": "likert", "required": true, "options": ["Never", "Rarely", "Sometimes", "Often", "Always"], "score_values": [4, 3, 2, 1, 0], "reverse_score": true}
+    ],
+    "scoring": {
+      "method": "sum",
+      "max_score": 36,
+      "interpretation": {
+        "0-12": "Significant time management difficulties. This module will be very helpful.",
+        "13-24": "Moderate difficulties. Several strategies in this module will make a big difference.",
+        "25-36": "Relatively good time awareness. Focus on the areas where you scored lower."
+      }
+    },
+    "instructions_for_patient": "Score your answers honestly. The total helps us understand where to focus.",
+    "clinician_notes": "Administer at baseline and repeat at module end. Use lower-scored items to prioritise which exercises to emphasise in sessions."
+  }'::jsonb
+),
+
+-- ch5_item_03: Diary — Diary Activity Log (Table 5.2)
+(
+  '00000000-0000-4000-a000-000000050003',
+  '00000000-0000-4000-8000-000000000005',
+  'diary',
+  'Diary Activity Log (Table 5.2)',
+  'For the next week, log what you actually do in each time slot. Start by filling in the last 2 days from memory in your session, then continue for the rest of the week. Be honest — this is for you, not a test.',
+  60,
+  'Table 5.2',
+  '{
+    "fields": [
+      {"id": "log_date", "label": "Date", "type": "date", "required": true},
+      {"id": "slot_7_8", "label": "7am – 8am: What did you do?", "type": "textarea", "required": false, "placeholder": "e.g. Asleep, Got up, Had breakfast..."},
+      {"id": "slot_8_9", "label": "8am – 9am", "type": "textarea", "required": false},
+      {"id": "slot_9_10", "label": "9am – 10am", "type": "textarea", "required": false},
+      {"id": "slot_10_11", "label": "10am – 11am", "type": "textarea", "required": false},
+      {"id": "slot_11_12", "label": "11am – 12pm", "type": "textarea", "required": false},
+      {"id": "slot_12_13", "label": "12pm – 1pm", "type": "textarea", "required": false},
+      {"id": "slot_13_14", "label": "1pm – 2pm", "type": "textarea", "required": false},
+      {"id": "slot_14_15", "label": "2pm – 3pm", "type": "textarea", "required": false},
+      {"id": "slot_15_16", "label": "3pm – 4pm", "type": "textarea", "required": false},
+      {"id": "slot_16_17", "label": "4pm – 5pm", "type": "textarea", "required": false},
+      {"id": "slot_17_18", "label": "5pm – 6pm", "type": "textarea", "required": false},
+      {"id": "slot_18_19", "label": "6pm – 7pm", "type": "textarea", "required": false},
+      {"id": "slot_19_20", "label": "7pm – 8pm", "type": "textarea", "required": false},
+      {"id": "slot_20_21", "label": "8pm – 9pm", "type": "textarea", "required": false},
+      {"id": "slot_21_22", "label": "9pm – 10pm", "type": "textarea", "required": false},
+      {"id": "slot_22_plus", "label": "10pm onwards", "type": "textarea", "required": false},
+      {"id": "medication_taken", "label": "Did you take your medication today?", "type": "select", "options": ["Yes", "No", "Not prescribed"], "required": false},
+      {"id": "reflection", "label": "Looking at your day — what surprised you most about how you spent your time?", "type": "textarea", "required": false, "placeholder": "Notice patterns, wasted time, best hours..."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Do one log per day for 7 days. It only takes 3 minutes at the end of each day.",
+    "clinician_notes": "Review the completed log in session. Look for: wasted time patterns, best focus hours, medication timing effects, chaotic vs structured days. Use to guide the time plan exercise."
+  }'::jsonb
+),
+
+-- ch5_item_04: Exercise — Six Steps to Making a Time Plan (Table 5.3)
+(
+  '00000000-0000-4000-a000-000000050004',
+  '00000000-0000-4000-8000-000000000005',
+  'exercise',
+  'Six Steps to Making a Time Plan (Table 5.3)',
+  'Follow these 6 steps with your therapist to build your first weekly time plan. You will use this skill every week going forward.',
+  70,
+  'Table 5.3',
+  '{
+    "fields": [
+      {"id": "step1_goals", "label": "Step 1 — Set Goals: What do you need to achieve this week?", "type": "textarea", "required": true, "placeholder": "List 3-5 things you must get done this week..."},
+      {"id": "step2_list", "label": "Step 2 — Make Lists: Break each goal into specific tasks", "type": "textarea", "required": true, "placeholder": "e.g. Goal: ''Pay bills'' → Tasks: find bills, log into bank, transfer money, take screenshot..."},
+      {"id": "step3_priority", "label": "Step 3 — Prioritise: Rate each task 0 (least important) to 4 (most important)", "type": "textarea", "required": true, "placeholder": "Go through your list and add a priority number next to each task..."},
+      {"id": "step4_estimate", "label": "Step 4 — Estimate Time: How long will each task take? (be honest)", "type": "textarea", "required": true, "placeholder": "Add time estimates. Tip: most things take 2x longer than you think."},
+      {"id": "step5_schedule", "label": "Step 5 — Schedule: When this week will you do each task?", "type": "textarea", "required": true, "placeholder": "Assign tasks to specific days and time slots. Include contingency time."},
+      {"id": "step6_reward", "label": "Step 6 — Reward System: What will you give yourself for completing priority tasks?", "type": "textarea", "required": true, "placeholder": "e.g. Watch a show after finishing the bills. Order food after completing job applications."}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Do this in your session first. Then repeat on your own every Sunday for the coming week.",
+    "clinician_notes": "Work through all 6 steps together in session. Emphasise Step 6 — reward systems are often omitted but critical for ADHD motivation. Revisit the priority task list mid-week if possible."
+  }'::jsonb
+),
+
+-- ch5_item_05: Worksheet — Priority Task List (Table 5.5)
+(
+  '00000000-0000-4000-a000-000000050005',
+  '00000000-0000-4000-8000-000000000005',
+  'worksheet',
+  'Priority Task List (Table 5.5)',
+  'List all your tasks for the week, then rate each one from 0 (least important) to 4 (most important). This helps you focus on what actually matters.',
+  50,
+  'Table 5.5',
+  '{
+    "fields": [
+      {
+        "id": "tasks",
+        "label": "List your tasks and rate their priority (0-4)",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "task_name", "label": "Task", "type": "text"},
+          {"id": "priority", "label": "Priority (0-4)", "type": "scale", "scale_min": 0, "scale_max": 4, "scale_labels": {"0": "Least important", "4": "Most important"}},
+          {"id": "estimated_time", "label": "Estimated time", "type": "text", "placeholder": "e.g. 30 mins"}
+        ],
+        "min_items": 3,
+        "max_items": 15
+      }
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Review and update this list every few days — priorities change.",
+    "clinician_notes": "Priorities are dynamic. Teach the patient to review this regularly rather than treating it as a fixed list."
+  }'::jsonb
+),
+
+-- ch5_item_06: Exercise — Time Estimation Exercise (Table 5.6)
+(
+  '00000000-0000-4000-a000-000000050006',
+  '00000000-0000-4000-8000-000000000005',
+  'exercise',
+  'Time Estimation Exercise (Table 5.6)',
+  'People with ADHD often underestimate how long things take. This exercise helps calibrate your time sense. Estimate how long each task will take, then actually time yourself doing it.',
+  60,
+  'Table 5.6',
+  '{
+    "fields": [
+      {
+        "id": "estimations",
+        "label": "For each activity, write your estimate, then time yourself",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "activity", "label": "Activity", "type": "text", "placeholder": "e.g. Have a shower, Make tea, Read one article..."},
+          {"id": "estimated_time", "label": "Your estimate", "type": "text", "placeholder": "e.g. 5 mins"},
+          {"id": "actual_time", "label": "Actual time (fill in after)", "type": "text", "placeholder": "e.g. 12 mins"}
+        ],
+        "prefill_suggestions": [
+          "Have a shower and dry off",
+          "Get dressed in the morning",
+          "Make a cup of tea/coffee",
+          "Commute to work/college",
+          "Cook a simple meal",
+          "Reply to 5 WhatsApp messages",
+          "Get ready to leave the house"
+        ],
+        "min_items": 5,
+        "max_items": 10
+      },
+      {"id": "reflection", "label": "What did you notice? Were you consistently over or under-estimating?", "type": "textarea", "required": false}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Do the estimation column now. Fill in the actual column after you do each activity this week.",
+    "clinician_notes": "This is a behavioural experiment. Review results together. Most ADHD patients significantly underestimate. Use this to build a personal ''correction factor'' into future time plans."
+  }'::jsonb
+),
+
+-- ch5_item_07: Worksheet — Evaluating the Importance of Punctuality (Table 5.9)
+(
+  '00000000-0000-4000-a000-000000050007',
+  '00000000-0000-4000-8000-000000000005',
+  'worksheet',
+  'Evaluating the Importance of Punctuality (Table 5.9)',
+  'Being late affects more than just you. This exercise helps you connect lateness to real consequences — which builds motivation to change.',
+  40,
+  'Table 5.9',
+  '{
+    "fields": [
+      {
+        "id": "punctuality_situations",
+        "label": "List situations where being on time matters to you",
+        "type": "repeating_group",
+        "required": true,
+        "sub_fields": [
+          {"id": "situation", "label": "Situation", "type": "text", "placeholder": "e.g. Arriving at work, Picking up kids..."},
+          {"id": "importance", "label": "Importance of punctuality (0-10)", "type": "scale", "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "Doesn''t matter", "10": "Critical"}},
+          {"id": "impact", "label": "What actually happens when you are late?", "type": "textarea", "placeholder": "Be specific about real consequences..."}
+        ],
+        "min_items": 2,
+        "max_items": 8
+      },
+      {"id": "highest_priority", "label": "Which situation is most important for you to be on time for and why?", "type": "textarea", "required": true}
+    ],
+    "scoring": {"method": "none"},
+    "instructions_for_patient": "Being honest here will help you prioritise which situations to plan around first.",
+    "clinician_notes": "This exercise shifts punctuality from a vague goal to a concrete, consequence-linked priority. Use the highest-rated situations as anchors for planning exercises."
+  }'::jsonb
+)
+
+ON CONFLICT (id) DO UPDATE SET
+  module_id              = EXCLUDED.module_id,
+  type                   = EXCLUDED.type,
+  title                  = EXCLUDED.title,
+  instructions           = EXCLUDED.instructions,
+  xp_value               = EXCLUDED.xp_value,
+  companion_website_ref  = EXCLUDED.companion_website_ref,
+  schema                 = EXCLUDED.schema,
+  updated_at             = now();

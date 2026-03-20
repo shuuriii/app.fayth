@@ -1,0 +1,707 @@
+INATTENTION AND MEMORY PROBLEMS
+
+This chapter is the first of four chapters in the section outlining treatments for the
+core symptoms of ADHD, beginning with the hallmark of ADHD – attentional problems. The following chapters in this section include methods to assess and treat time
+management, problem solving and impulsivity in adults with ADHD.
+People with ADHD have attentional impairments that can disadvantage them in a
+busy society with its high demand for multi-tasking. Attentional impairment can
+lead to many problems in day-to-day functioning, including difficulty listening, failure to finish tasks and being easily distracted. This means that completing tasks
+simultaneously and to an acceptable and satisfactory standard is difficult for people
+with ADHD. The ability to attend and concentrate comprises a number of stages of
+mental skill required for personal, social and occupational adaptive functioning. The
+human brain has several attentional systems serving different functions in everyday
+behaviour, and impairment in the central executive component of working memory
+may lead to inefficiency in the allocation of attentional resources (Baddeley, 1986;
+Baddeley & Wilson, 1988).
+This chapter will discuss the domains of attention most likely to be affected by
+ADHD, the relationship between motivation and attention, the impact of anxiety and
+stress on attention, methods to teach individuals to recognise tasks that are likely
+to be problematic and strategies to help clients cope more appropriately and adaptively. The latter includes ways in which the client may adapt their environment to
+minimise distraction and thus maximise their ability to concentrate; that is, external
+strategies that involve the selection of the most appropriate surroundings in which
+the client is most likely to succeed. Internal strategies to sustain attention and motivation are also suggested and these can be rehearsed in sessions with the therapist.
+The chapter also discusses how ADHD impacts on an individual’s memory processing and introduces strategies that the individual can adapt to achieve their potential
+within the constraints of an environment. Specific techniques to improve memory
+are outlined, again by applying both external and internal strategies.
+
+60 ADHD IN ADULTS
+
+ATTENTION AND ATTENTIONAL CONTROL
+Attention is the process that allows us to focus on particular features of our environment such that we are aware of them at a particular moment in time. Attentional control processes determine at any given moment where to prioritise effort and to which
+stimuli to attend. These control processes are complex ‘higher order’ cognitive functions that allow attention to be selective to one stimulus, divided between several
+stimuli and shifted between stimuli. In some ways, difficulties in attentional control
+could be regarded as being at the centre of the cognitive deficits underpinning all
+aspects of attentional impairment in ADHD. If an individual is unable to govern
+what they will listen to, look at and focus on, then they have lost attentional control,
+and they are likely to exhibit the problems presented by people with ADHD. Norman and Shallice (1986) and Shallice and Burgess (1996) theorise that attentional
+control is achieved through the organisation of a ‘supervisory attentional system’,
+which is similar to Baddeley’s (1986) concept of the ‘central executive’ (discussed
+later in this chapter). These models propose that the supervisory attentional system/
+central executive is a ‘higher order’ cognitive function that determines which stimuli
+in the environment are prioritised with regard to attentional focus, particularly in
+novel situations. Certain activities make greater demands on the supervisory attentional system than others, for example, forward planning, responding to feedback
+and self-monitoring. Conversely, problems within the supervisory attentional/central
+executive system can lead to various attentional deficits and ultimately can affect
+memory functioning. For people with ADHD, these types of attentional deficit can
+be subdivided into four domains.
+
+Domains of Attention Affected by ADHD
+There are several domains or types of attention, but the main four are: selective
+attention, divided attention, attention shifting and sustained attention. Examples
+of attentional impairments in each of these domains of attentional functioning are
+given in Table 4.1. We also have provided this description of the different types of
+attention which can be affected by the disorder in a handout format on the Companion
+Website, as, in our experience, people with ADHD want to develop their knowledge
+and understanding about attentional processes and this will help them to identify,
+apply and/or adapt strategies to overcome their problems.
+Selective attention involves the ability to focus on a specific task in hand. For
+example, being able to read whilst traveling on public transport and ignoring all
+other distractions. However, in some situations it is necessary to be able to attend to
+two or more sources of information, or ‘divide attention’. This is a common demand
+of everyday life, for example, making conversation whilst driving. A similar ability
+is that of ‘attention shifting’ where there are competing demands on cognitive functions, and attention needs to be shifted from one source to another, for example using a recipe to cook a meal.
+
+INATTENTION AND MEMORY PROBLEMS 61
+Table 4.1
+
+Examples of attentional impairments
+
+Domain of attention
+
+Associated problems
+
+Selective
+
+Being unable to see detail
+Being ‘slapdash’
+Making mistakes in reading or filling in forms
+Skipping lines in questionnaires
+Not being able to focus on a conversation or task when there
+is background noise
+Not being able to do two things at once to an acceptable
+standard
+Getting stuck on one topic and not being able to change track
+Always starting tasks but never finishing because it is
+difficult to resume an original task
+Losing track of a conversation, film, book, etc.
+Being distracted by own thoughts (internal) or anything else
+going on around (external)
+
+Divided
+
+Shifting
+
+Sustained
+
+An example of the types of attentional problems experienced by clients with ADHD
+can be seen by their performance on the Test of Everyday Attention (Robertson et al.,
+1994). As a measure of selective and divided attention, the participant is required to
+perform a task involving identification of stimuli from an array, in other words, they
+are presented a page from the Yellow Pages and asked to identify plumbers which
+are marked with a double cross, star, circle or square. They are then required to perform the same task, but this time it is done simultaneously with an equally important
+task of counting tones played on a tape recorder. For people without ADHD, their
+speed and accuracy at performing the original task is reduced by performing a second
+task. However, adults with ADHD become increasingly error prone and they become
+unable to do both tasks simultaneously. This means they often stop one task in order
+to concentrate on the other. This strategy leads to a suboptimal speed. To put this into
+the context of everyday life, this means that people with ADHD have great difficulty
+multi-tasking. In order to complete a task well, and without making errors, they have
+to apply all their resources to focusing on that task. This is difficult for three reasons:
+1. They find it difficult to maintain the degree of attentional control.
+2. They are easily distracted from the task.
+3. They give up on the task because they are not reaching their goal (i.e. a lack of
+positive reinforcement).
+For adults with ADHD, difficulty with sustaining attention is probably the most pronounced and disabling attentional problem as individuals often struggle to engage
+in activities that are long, irrespective of whether they are repetitious or tedious. If
+a task is lengthy and also tedious, the client with ADHD is likely to completely give
+up on the task. The chores that we have to do in our daily lives are by definition
+
+62 ADHD IN ADULTS
+routine and many are boring and repetitious. It is not possible to have a daily routine that is consistently full of excitement and high stimulation. When people with
+ADHD are faced with mundane tasks they respond with irritation, which is a source
+of frustration for the individual with ADHD as well as those who live or work with
+them. These feelings, coupled with a lot of unfinished tasks, are likely to leave the
+individual with a sense of failure and low self-esteem. In contrast, when activities are
+particularly interesting or motivating and/or involve immediate gratification (such as
+the rapid feedback and reinforcement introduced in many popular computer games),
+people with ADHD are generally able to concentrate. Such inconsistency can be difficult for people around them to understand. We have heard many complaints from
+partners about half-finished household do-it-yourself jobs. One of our clients had a
+half-painted lounge, a half-plumbed washing machine, the shell of a wardrobe built
+in the bedroom, and tiles for the bathroom had been purchased six months earlier
+but remained stacked up on the bathroom floor. It can be confusing to observe the
+individual with ADHD being competent in one domain (e.g. surfing the internet), yet
+unable to achieve in another one which is perceived as more important (e.g. writing
+a CV). The primary difference between the tasks is fluctuating levels of motivation,
+which is not always under control of the person with ADHD.
+
+Motivation and Attention
+There are two forms of motivation: extrinsic motivation and intrinsic motivation
+(Deci, Koestner & Ryan, 1999). Both can be affected by ADHD and can fluctuate
+considerably throughout any given time period:
+1. Extrinsic motivation refers to rewards or incentives for people for performing
+well, or avoiding negative consequences.
+2. Intrinsic motivation is determined by interest in an activity.
+With regard to extrinsic motivation, the person must have some expectation that
+they can achieve the desired goals, otherwise they will feel demotivated regardless
+of the reward or incentive. However, people with ADHD often feel demotivated as
+they have experienced years of underachievement. When motivation drops, attention and effort also drop. A status of learned helplessness may develop. A person
+can change the way they view a task and their ability to achieve it by setting clear
+goals and rewarding their attention to the task with incentives. External reward systems need to be realistic, appropriate and achievable. Goal setting is a motivational
+strategy that has been shown to enhance attentional performance when difficult but
+achievable goals are set (Deci et al., 1999). If goals are not achieved then failure will
+reinforce learned helplessness and the ADHD client will ‘switch off’. We describe
+techniques that will help with goal setting and their achievement in Chapter 5 (Time
+Management) and Chapter 6 (Problem Solving).
+Feedback is a crucial component of intrinsic motivation as it helps the person
+determine the discrepancy between desired and actual performance. If a person has
+
+INATTENTION AND MEMORY PROBLEMS 63
+
+a sense of self-efficacy and believes they can do something, they will feel they have
+control. A sense of control will improve their motivation and optimise their attention for the task. However, if a task is perceived to be out of a person’s control, the
+person may lose interest and stop attending. This means the task will be unfinished,
+which will reinforce a sense of failure. A negative feedback loop may develop from
+repeated failures and learned helplessness. Conversely, a sense of self-efficacy will
+be associated with successful and persistent performance.
+
+Identifying Attentional Deficits and Their Functions
+The attentional impairments associated with ADHD affect different people in different ways. Some examples of reported attentional difficulties are described below:
+1. They lose their train of thought. This is especially irritating if they forget what
+they want to say in the middle of speaking.
+2. When there are a lot of people around or a lot of noise in the background they find
+it difficult to sustain a conversation.
+3. They find it difficult to sustain an in-depth conversation about a single topic.
+Other thoughts or ideas come flooding into their mind which they cannot suppress. At parties, people get annoyed with them as they see them as fickle as they
+flit about, talking to different people and/or changing topics of conversation.
+4. Their mind wanders and they ‘drift off’ or start to daydream when they watch
+television, read a book or study in class.
+5. They start lots of tasks but never finish them. They get distracted into doing
+something different.
+6. They find it difficult to do more than one task at a time, such as driving a car
+whilst having a conversation with a passenger.
+There are, of course, individual differences in everything we do, and this is no different in terms of strengths and weaknesses of attentional control. For example,
+some people have greater difficulty with sustaining attention whereas others have
+greater difficulty with dividing attention. Different tasks present different challenges. Some people find that they are more productive with several activities on
+the go; that is, providing themselves with ‘constructive’ distraction to reduce the
+likelihood of becoming bored with a primary task. Others find this impedes their
+performance. Mood and motivational processes may also affect performance. The
+goal of the therapist is to identify specific areas of weakness and help the individual develop compensatory strategies to facilitate achievement. The client should
+be taught to recognise tasks that are likely to be problematic and respond appropriately and adaptively. This goal will be influenced if there is a dominant symptom of ADHD (e.g. predominantly inattentive type or predominantly hyperactive/
+impulsive type), what the person wants to achieve and what support they have. In
+many ways, ‘forewarned is forearmed’, so recognising and preparing for tasks that
+are likely to be problematic is the first major step towards improving attentional difficulties. Once specific tasks have been identified for which the individual has difficulty
+
+64 ADHD IN ADULTS
+with attentional control, then these should be targeted for improvement by applying
+both external strategies and internal strategies. External strategies involve adaptation
+of the environment and internal strategies involve a process of self-monitoring.
+
+Applying External Strategies to Cope with Attentional Problems
+External distraction refers to all outside sensory information (i.e. both auditory and
+visual) that is being processed at the expense of the required task. Cutting down on
+irrelevant distraction can help the individual focus on the subject of interest. The
+application of external strategies requires the individual to make adaptations to their
+environment in order to maximise the likelihood that they may optimally achieve
+success. We describe this to clients as making ‘change from the outside in’ and
+describe some techniques in Table 4.2, which can be discussed in sessions with the
+client. The client must be encouraged to set up ‘mini experiments’ between sessions
+in order to test out which techniques are most suitable for them and work best.
+There are many possibilities and the client themselves may have ideas to try out or
+already established strategies that are helpful. When following up the efficacy of a
+strategy, it is important to determine whether the client applied the strategy correctly
+and/or appropriately. Sometimes distractions are welcome, especially if the client is
+engaged in a tedious task.
+
+Applying Internal Strategies to Cope with Attentional Problems
+The application of internal strategies to optimise performance or ‘change from the
+inside out’ requires the individual to learn persistence of effort and the suppression
+of internal urges. It is important to encourage the client to maximise their ability to
+sustain attention by increasing interest and motivation. This can be achieved by setting
+small achievable goals and introducing an ‘immediate’ reward system and/or regular
+breaks. Indeed, a primary difference between treating people with ADHD and other
+clients is the introduction of systematic reward systems in the treatment as individuals
+with ADHD are unable to delay gratification and are averse to delay. This means they
+favour small regular rewards as opposed to having greater rewards that are spread out
+over a longer period. However, the client needs to be encouraged to focus on completion
+of a task over a long period, so introducing lots of small ‘immediate’ or regular rewards
+and a larger reward is recommended for completion of the overall goal or task. Aside
+from the set reward for finishing a task, completing a task is a reward in itself as it gives
+the client a sense of achievement. Achievement is a very strong reinforcer.
+Table 4.3 outlines various suggestions that can be explored in sessions that may help
+the client improve attentional control. These include the introduction of a reward
+system, competition with others or themselves, maximisation of novelty, physiological arousal, cognitive challenges, repetition, goal setting, and allocating breaks. Of
+course, not every strategy will suit every client, and some clients will benefit more
+
+INATTENTION AND MEMORY PROBLEMS 65
+Table 4.2
+
+External strategies to improve attentional control
+
+Source of distraction
+
+Proposed techniques
+
+Auditory
+
+Listening to low level music without lyrics can be useful to
+mask out other more intermittent noises. Music with words
+should generally be avoided as this can interfere with
+thoughts and lead to further distraction
+Although it can be awkward to request that others around them
+try to reduce their noise, this strategy can be rehearsed in
+sessions. The client may then work out a way of making this
+request that is least likely to offend. Often people feel relieved
+when the environment is quieter, so their efforts may be
+supported and appreciated
+The simple strategy of using earplugs can be effective in
+blocking out all but the loudest of sounds without the
+individual needing to do their own filtration
+Telephone calls can interrupt concentration and output. Whilst
+it is acknowledged that some calls may be essential, this is
+rarely the case for all calls. Telephones can be switched to
+silent mode, and checked for messages at a convenient time,
+regular intervals, or when a task has been completed
+If a task is portable, it may be helpful for the client to move
+away from a noisy environment, for example, at home where
+the television and radio are blaring. If they cannot find a
+quieter room in their house, then they could negotiate with a
+friend to use a quiet room somewhere else or work in a library
+
+Visual
+
+Distracting visual material such as noticeboards, pictures, etc.,
+should be positioned out of the line of vision where or when
+an individual is working
+Facing a window can be distracting even when nothing is
+happening outside as it is tempting for people with ADHD
+to gaze outside and daydream. However, facing a wall can
+lead to feelings of restlessness. Often facing into a room can
+provide the best compromise for limiting distractibility and
+reducing restlessness
+Using bright colours to attract attention to the task can be
+helpful. For example using post-it notes, and highlighter pens
+It can be useful to place a cue card (e.g. a photograph, a cut out
+from a magazine, a note) in ‘risk’ places to remind the person
+to pay attention. For example, ‘Stop dreaming! Focus!’ can be
+written on notes stuck onto the top of a computer monitor.
+
+66 ADHD IN ADULTS
+Table 4.3
+
+Internal strategies to improve attentional control
+
+Reward
+
+The development of an incentive and reward programme is a
+priority. This should be introduced when targeting small goals
+as well as larger ones as it capitalises on the need of ADHD
+people for immediate gratification. Rewards can be simple
+activities like having a tea break or walking around the block
+
+Competition
+
+People with ADHD can be encouraged to increase their interest
+and stimulation in an activity by introducing a competitive
+element (e.g. let’s see if this can be finished in one hour) or by
+incorporating a pre-existing interest (e.g. if a client enjoys using
+computers, encourage them to pay bills via the internet)
+
+Novelty
+
+People with ADHD may be more motivated in new situations, so
+they should be encouraged to capitalise on the ‘novelty factor’
+by accepting new tasks in exchange for old, less interesting
+ones (e.g. taking on new roles with enthusiasm)
+
+Snap!
+
+Encourage clients to wear an elastic band around the wrist. This
+can be snapped in order to reorient attention at times when it
+has drifted and increases the overall level of alertness
+
+Cognitive challenges
+
+Develop strategies to cope with times when a client loses their
+train of thought, e.g. they should not be embarrassed to say to
+someone ‘I’m sorry but I have forgotten what I was saying’.
+This can be rehearsed in role-play. Dysfunctional thoughts
+regarding what it means to lose attention and how this may be
+perceived by others can be cognitively challenged in sessions
+
+Repetition
+
+In cases when the client has difficulty following and retaining
+information (e.g. when being given instructions), they should
+be encouraged to ask for these to be repeated. Again this can
+be rehearsed in role-play so the client may overcome feelings of
+embarrassment and/or humiliation
+
+Goal setting
+
+Help the client to set achievable goals and avoid overarching
+intangible goals that may be difficult to operationalise. They
+should be encouraged to reflect on what it feels like to finish a
+task and gain a sense of achievement. Principles of pleasure and
+mastery may be incorporated (see Chapter 11 on low mood)
+
+Breaks
+
+It is important to break up activities. The client should train
+themselves to allocate enforced breaks in tasks, especially when
+these are mundane or tedious. The client should additionally
+allocate breaks immediately prior to a ‘risk period’ when they
+may lose concentration or interest, e.g. if they can concentrate
+for 30 minutes, they should break after 25 minutes
+
+INATTENTION AND MEMORY PROBLEMS 67
+
+from some than others, so it is a matter of discussing potential techniques of benefit
+in the session, setting homework to establish what works by investigating ‘miniexperiments’ and evaluating outcome. The client will often have developed their
+own ideas and strategies, and these will be a helpful indicator of what will be most
+useful to them.
+
+Distractibility and Restlessness
+A particular problem for people with ADHD is that they are distracted from the task
+in hand. They find it difficult to stay on task for two reasons:
+1. External distraction: i.e. noticing irrelevant details (e.g. someone walking past
+the window).
+2. Internal distraction: i.e. having the urge to do something more stimulating (e.g.
+chatting when they are supposed to be working quietly).
+Motoric overactivity is frequently a disabling symptom in childhood, but less so in
+adulthood. We have not met many ADHD adults running around the therapy room,
+jumping out of windows, climbing trees, or skateboarding down the hospital corridor. Whilst adults with ADHD may have developed better control over their hyperactive behaviour, they often report a feeling of ‘internal’ restlessness. Some people
+find it almost impossible to stay sitting down or have a feeling of being ‘driven by a
+motor’. However, in adulthood, restlessness is most commonly expressed by pacing,
+tapping fingers, jigging feet, changing posture, fiddling with things, swaying from
+foot-to-foot, humming, and/or excessive talking. Such difficulties are commonly
+mistaken or misdiagnosed as generalised anxiety or manic depression.
+Clients should be encouraged to capitalise on this energy by performing tasks that
+involve exertion. If appropriate, this may be introduced as part of the reward system
+with the day being organised to include regular periods when they are able to move
+around and dispel pent up restlessness and energy. At the same time, it is helpful to
+identify situations that the client finds more relaxing and restful, and structuring
+these into their day as part of an activity schedule (see Chapter 5 on Time Management). Such times can be helpfully timetabled following the completion of cognitively challenging and emotionally demanding tasks.
+
+Anxiety, Stress and Attention
+Attentional control decreases when a person is fatigued, stressed and/or worried.
+If the person is self-monitoring and thinking ‘I can’t do this, I’ll fail’ then their
+attentional ability is likely to be more impaired due to the competing demands of
+worrying about how well they will do it and their actual performance on the task in
+hand. The impairment then becomes exacerbated and becomes a function of stress
+and anxiety. The vicious cycle and self-fulfilling prophecy of stress and anxiety is
+
+68 ADHD IN ADULTS
+
+I’m so nervous, I’ll
+lose my train of
+thought
+
+Anxiety
+
+Attentional impairment
+
+External
+distraction
+from other
+side of
+room
+
+Attentional impairment
+
+Internal distraction
+from anxious
+thoughts
+
+Anxiety
+
+I can’t remember what
+I was saying
+
+Figure 4.1 The spiral of anxiety and attentional control
+
+presented in Figure 4.1 with an example of someone becoming anxious in a social
+situation (also on the Companion Website in handout form). When this occurs,
+clients become highly distractible. It is hard enough at the best of times for them to
+be motivated to remain on task, but if they feel acutely anxious about their performance and/or lose their confidence to do well, they will become even less motivated,
+have many unfinished tasks (both important and less important) and feel even more
+stressed and distressed. Chapter 9 outlines specific characteristics of people with
+ADHD who have comorbid anxiety and techniques to help them.
+
+MEMORY PROBLEMS
+Memory problems are present in many psychiatric disorders, both with or without
+an organic basis. In people with ADHD, memory problems are often associated with
+their attentional problems. Memory problems are also the most obvious problem to
+the person themselves and to those around them as a poor memory is often more
+exposing than poor attention.
+
+INATTENTION AND MEMORY PROBLEMS 69
+
+Common Memory Problems in ADHD
+The types of memory problem reported by individuals with ADHD include:
+1. Misplacing things, e.g. forgetting where they have put their glasses, keys.
+2. Forgetting appointments, deadlines and activities that need to be done in the
+future, such as forgetting to pay the rent.
+3. ‘Losing time’, i.e. not attending to time passing, or having a distorted sense of
+time resulting in them being late and not knowing where time has gone.
+4. Forgetting instructions, if someone tries to explain how to do a task they have to
+slow down and repeat it a number of times.
+5. Mental processing, e.g. mental arithmetic.
+These problems arise due to disruptions in memory processes within the three major memory systems that are presented in Figure 4.2: immediate memory (i.e. very
+brief storage for all sensations); short-term/working memory (i.e. temporary storage
+where information can be manipulated); and long-term memory (i.e. storage over
+longer periods).
+Both shorter and longer term memory deficits may be present in clients with ADHD,
+although ‘working memory’ or short-term memory deficits are more often identified
+(MacLean et al., 2004a; Young et al., 2006). A figural representation of memory
+processes is presented on the Companion Website, which can be used in sessions to
+
+Figure 4.2 Memory systems
+Adapted from Head Injury © Trevor Powell, 2004, Speechmark Publishing Ltd, Bicester.
+
+70 ADHD IN ADULTS
+explain the problems commonly experienced by people with ADHD in order to help
+clients understand their difficulties.
+
+Immediate Memory
+Immediate memory is often regarded as a ‘sense’ memory as it provides brief storage for all the senses including vision, sounds, smells, emotion, touch and taste. It
+is like a scratchpad or snapshot of information, which is quickly overwritten by new
+sensations coming online. For some people with ADHD, they may have particular
+difficulty if their immediate memory becomes overloaded with too much stimulation
+from too many different sources and this leads them to become extremely distractible. Attentional processes are also likely to determine the quality of information
+that enters the immediate memory. When information in immediate memory needs
+to be used it is then transferred into the ‘short-term’ memory or ‘working memory’
+where it can be rehearsed or manipulated.
+
+Short-term Memory/Working Memory
+After the information has been received in the immediate memory system, it is then
+held for a very brief period in a ‘short-term’ or ‘working memory’ system. This is
+a temporary storage for information, like a rewritable cassette or video recording,
+before it enters long-term memory or is ‘rejected’ and thus becomes unrecoverable.
+Working memory has been shown to be disrupted in people with ADHD, possibly
+through poor attention or interference from distraction. Figure 4.3 shows the three
+components that make up the working memory (Baddeley, 1986).
+The central executive determines what sensory information is attended to, or
+provides an attentional control system as discussed earlier, both for the subsystems of working memory and other cognitive functions. This can be particularly affected in ADHD due to susceptibility to distraction. The phonological
+loop is an auditory memory system that stores a few seconds’ worth of information, like a short circular cassette tape. Information stored on the tape can
+either be rehearsed after it is recorded or erased by new information overwriting
+
+Attentional Control
+Visuospatial
+Sketchpad
+
+Central
+Central
+Executive
+Executive
+
+Phonological
+Loop
+
+Figure 4.3 Working memory model
+From Baddeley (1986) Working Memory. Clarendon/Oxford University Press.
+
+INATTENTION AND MEMORY PROBLEMS 71
+
+it. The visuospatial sketch-pad is a visual analogue, and can be likened to an
+‘etchasketch’ toy where images can be stored then wiped out by further information. In ADHD it is possible that information does not enter working memory
+adequately and that the same length of material cannot be stored as for people
+without ADHD. Furthermore, problems with the ‘central executive’ can lead to
+difficulties attending to the appropriate material in order for it to be processed by
+the working memory.
+
+Long-term Memory
+Information is transferred from the working memory to long-term memory, which
+rather confusingly refers to all information from only a few minutes ago to years
+since the event. There are three stages of this memory system: encoding; storage; and retrieval. Encoding involves registering and processing information, and
+is highly dependent on attentional processes and hence can be affected in people
+with ADHD. Storage of learned information is affected by a large range of factors
+that interfere with brain functioning and is evidenced by forgetting. Retrieval of
+stored information involves explicit recall or implicit knowledge revealed in later
+performance.
+Retrieval can depend on strategies for accessing information, such as trying to
+retrace one’s steps in order to find a lost possession. In ADHD, this process may
+be more haphazard without a strategy. Retrieval can also be affected by the way
+information has been encoded. For example, ADHD clients have been shown
+to exhibit difficulties in organising information at the encoding stage, such as
+organising material into categories, and hence have resulting difficulties in optimal retrieval.
+
+Applying External Strategies to Improving Memory
+There are several strategies that the client may adapt to try to help them improve
+their memory. These commonly include the introduction of external aids; that is,
+using support systems to minimise problems arising from poor memory, such as the
+use of diaries, planners, etc., and specific strategies are listed in Table 4.4. Electronic
+organisers are invaluable. However, as we increasingly move towards advanced
+information technology, it is important for clients to ensure that electronic organisers are the servant of the individual and do not become the master and provide an
+opportunity for distraction and time wasting. Moreover, there are also internal strategies that can be applied and, for optimal results, the client should be encouraged to
+develop both internal and external methods to enhance memory. As discussed previously for developing attentional control, the therapist should investigate what the
+client has successfully applied in the past, identify new possibilities, set homework
+tasks to evaluate their efficacy and review with the client the best and most appropriate techniques.
+
+72 ADHD IN ADULTS
+Table 4.4
+
+External strategies to improve memory
+
+Diary
+
+A diary is helpful for short-term planning. A ‘page-a-day’ diary is most
+useful as appointments can be recorded as well as additional notes, e.g.
+tasks to complete, items needed, etc. Having this information presented
+in a day format serves as a cue and reminder of tasks (or steps) that need
+to be completed to achieve longer-term goals
+
+Weekly calendar
+
+A weekly calendar allows family members to write reminders and instructions
+that may be helpful for the individual. For example, for a family birthday
+party, another family member may devise an action plan dividing up the
+responsibilities by noting ‘book a taxi’, ‘buy a cake’, ‘book the restaurant’,
+etc. It is additionally helpful for the person with ADHD to see how their
+activities integrate with those of their family
+
+Annual wall
+planner
+
+This can be used for longer-term plans and forward planning, e.g. by marking
+up school holidays, family vacations, birthdays and anniversaries
+
+Portable
+dictaphone/
+recorder
+
+These can be used to make verbal lists and reminders for information
+that may quickly go out of mind. Some people find it helpful to carry
+a dictaphone around with them so they can quickly record ideas and
+reminders. The list of tasks or reminders can then be worked through
+systematically at a later point in time
+
+Answerphone
+messages
+
+Some telephone systems, including mobile phones, give the opportunity
+for individuals to leave themselves answerphone messages. This can
+help to reduce the need to remember information in the future
+
+Lists
+
+It will be helpful to get the person with ADHD into the habit of making lists.
+These will include daily lists of ‘things to do’, shopping lists, housework
+chores. Organising ideas into lists and categories can also help someone
+with ADHD to develop a sense of control. Ticking off completed items
+serves as feedback and can be a motivator through positive reinforcement
+
+Help cards
+
+Summarised forms of information such as ‘help cards’ can be useful for
+activities that are not performed regularly such as setting the video, or
+filling in tax return forms
+
+Watches and
+clocks
+
+Clocks can be positioned in obvious places, even in every room in the
+house, in order to remind the person with ADHD of the passage of time.
+Clocks with chimes or watches that beep can be useful for orienting
+someone to time when they have become distracted
+
+Alarms and/or
+computerised
+reminders
+
+These can serve as reminders over varying time periods ranging from a
+three hourly alarm to take medication to setting an annual reminder to
+prompt an individual about a friend’s birthday
+
+Personal
+organisers and
+mobile phones
+
+Personal organisers and mobile phones can perform many of the
+above tasks. However, if their organisational functions are new to
+the client then these should be introduced and developed gradually
+into a routine, with goal setting agreed with the therapist to make
+sure that this is not yet another strategy that has been started and
+quickly abandoned. The aim is that these items are functional and not
+distractors. The organiser should only be kept in certain places and
+backed-up, as it may be even more disabling for a person with ADHD
+to lose the organiser and/or memory system in the organiser
+
+INATTENTION AND MEMORY PROBLEMS 73
+
+Applying Internal Strategies to Improve Memory
+Aside from the plethora of external strategies, internal memory strategies may also
+be used in conjunction with external memory strategies in order to enhance encoding
+and retrieval memory processes. Specific strategies are outlined in Table 4.5. If the
+client develops internal strategies for improving their memory then this will improve
+their confidence and self-efficacy, rather than relying entirely on external aids.
+
+Table 4.5
+
+Internal strategies to improve memory
+
+Repetition and
+rehearsal
+
+Repeating and practicing recall of information, e.g. through
+self-talk, can improve the likelihood of information being
+successfully processed by working memory and then encoded for
+longer-term recall
+
+Create a visual cue
+
+Pairing a verbal task with a visual image can improve verbal
+retention as it allows information to be encoded in both a
+visual and verbal form. This enhances the memory trace and
+increases the likelihood of later retrieval. The more bizarre and
+exaggerated the image, the easier it will be to remember. For
+example, if remembering to pay a water bill, think of white-water
+rafting to the bank!
+
+Mnemonics
+
+Learning cues or mnemonics can be a useful method of condensing
+information for later recall and can appear less overwhelming
+for someone with ADHD. For example, S.T.O.P. ⫽ sausages,
+tomatoes, oranges, potatoes
+
+Spaced retrieval
+
+Memory research has shown that gradually increasing the
+time span between retrieval times increases the likelihood
+of it being retrieved in the future, and thus improves storage
+through reinforcement of a memory trace (Ebbinghaus, 1885).
+Information should be rehearsed with increasingly longer gaps,
+e.g. 5 minutes, 30 minutes, an hour, next day, etc. Performing
+this exercise throughout a session and beyond can allow someone
+with ADHD to improve their self-efficacy
+
+Problem solving
+
+A good method for finding lost or mislaid possessions is to mentally
+retrace steps in a systematic way. This can be done by asking the
+client a sequence of questions such as ‘when did I last have my
+keys?’ ‘where did I go when I got in?’ or ‘where would I put that
+key now?’
+
+Keeping calm
+
+High emotional arousal and feelings of stress can interfere
+with both attention and memory functioning. Therefore it is
+important to encourage the client to reduce anxiety and anger
+before attempting any recall. See Chapters 9 and 10 for specific
+strategies, including relaxation techniques
+
+74 ADHD IN ADULTS
+
+CONCLUSIONS
+Attentional and memory difficulties are common cognitive deficits for adults with
+ADHD. However, there is much variation in the difficulties that arise due to individual variation in the disorder, motivational factors and state arousal. In addition,
+environmental factors also play a large part in attentional control. This chapter has
+explained the ways in which attention is affected in ADHD. It is important for individuals to develop an awareness of situations in which their attention becomes
+impaired. Once these have been recognised and established, the person can then
+develop strategies to improve attentional control and reduce both external and internal distractors. Attentional deficits also impact on memory functioning and internal/
+external strategies may be adopted to improve memory. In treatment, the clinician
+therefore adopts a two-pronged approach to overcome attentional and memory problems, by introducing the notion of ‘change from the outside in’, and ‘change from
+the inside out’.
+
+5

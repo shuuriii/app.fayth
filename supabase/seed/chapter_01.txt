@@ -1,0 +1,727 @@
+INTRODUCTION
+
+This book aims to provide clinicians with a comprehensive psychological guide to
+practice when working with adults with ADHD; from the assessment and diagnosis stage, through to treatment of both core symptoms and associated problems. As
+ADHD is a heterogeneous disorder, each individual is likely to present with a different constellation of symptoms covering a range of psychological strengths and weaknesses. For this reason, this book contains several stand-alone modules that have
+been devised and collated to form the Young–Bramham Programme. The Young–
+Bramham Programme provides an innovative and intensive practical approach to
+the presentation of adulthood ADHD using cognitive behavioural and motivational
+interviewing techniques, which are described in detail using case examples. Each
+module is presented in a separate chapter of this book and can be used independently
+or in conjunction with other modules.
+Clinicians often report feeling under-equipped to treat this client group and that there is
+relatively limited literature regarding psychological treatment. This is despite ADHD
+adults seeking help for assessment and/or treatment of their presenting complaints
+in increasing numbers. Approximately one-third of children with ADHD continue
+to be fully symptomatic into adult life and the remainder often retain some residual
+problems that warrant treatment. In addition, although the diagnosis of the disorder of
+ADHD relies on a categorical perspective, many of the core attentional and impulsivity
+difficulties are continuously distributed within the normal population. Therefore, there
+are many individuals with attention, impulsivity and hyperactivity problems that fall
+below the threshold for formal diagnosis, but who nevertheless may also benefit from
+treatment of their functional impairments. Thus, the Young–Bramham Programme
+is appropriate for individuals who have a formal ADHD diagnosis; individuals who
+previously had a diagnosis and continue to have residual symptoms or problems;
+and individuals who present with an undiagnosed constellation of attention and/or
+hyperactive impulsive symptoms, and related problems.
+Literature regarding pharmacological treatment of the disorder has been evolving
+in conjunction with increased recognition of its longstanding nature (e.g. Horrigan,
+
+4 ADHD IN ADULTS
+2001). However, stimulant medication is not effective for up to 20–50% of adults
+with ADHD as they may not experience symptom reduction or they are unable
+to tolerate the medication (Spencer et al., 1995; Wender, 1998; Wilens, Spencer
+& Biederman, 2002). Moreover adults who have benefited from pharmacological
+intervention may not experience a considerable reduction in their core symptoms
+(Weiss, Hechtman & Weiss, 1999) and they may continue to experience a number of
+symptoms and/or associated problems more suitable for treatment with psychological interventions. Cognitive remediation techniques that target problems associated
+with adult ADHD, such as attentional difficulties, poor motivation, poor organisational skills, impulsivity and anger management problems, have been shown to be
+effective in improving daily functioning skills (Stevenson, Whitmont, Bornholt,
+Livesey & Stevenson, 2002).
+People with ADHD have often developed secondary conditions following lifelong
+ADHD-related frustration and failure (Murphy, 1995; Young, 2002). Indeed, a
+number of outcome studies have demonstrated a wide range of comorbid conditions
+associated with ADHD including anxiety disorder, depression, substance misuse and
+dysfunctional anger (for reviews, see Brassett-Grundy & Butler, 2004a; Murphy &
+Barkley, 1996; Shekim, Asarnow, Hess, Zaucha & Wheller 1990). Whilst these conditions are effectively treated by psychological interventions for individuals without
+ADHD, clinicians sometimes feel discouraged from intervening in the same way
+with clients with ADHD as they fear there may be complicating factors. We therefore decided to write this book to share our knowledge and provide guidance for
+clinicians who are working with adults with ADHD.
+A second reason for writing the book was that we have talked to our clients and
+listened to their life histories. This led us to conduct an investigation into their
+thoughts and feelings about receiving a diagnosis of ADHD and their experience
+of treatment with medication (Young, Bramham, Gray & Rose, in submission). The
+results of the study formed the theoretical basis of the Young–Bramham Programme
+(see Chapter 3).
+
+THE COMPANION WEBSITE
+The Young–Bramham Programme book is supplemented by a Companion Website,
+which provides practical and pragmatic exercises that allow the client to identify personal specific problems and methods to address them. Strategies that involve writing
+ideas down or making lists of potential consequences target difficulties in organisational skills and memory problems which are inherent in adulthood ADHD. The
+therapist therefore needs to maximise the opportunity to create lists and structure
+plans during sessions. Examples, charts, diaries, figures, diagrams and illustrations
+are presented in both the book and on the Companion Website (the latter in a format
+suitable for use in sessions) to clarify information, and/or to improve accessibility
+and understanding of the concepts and issues presented. The Companion Website
+
+INTRODUCTION 5
+
+provides psychoeducational handouts and blank copies of relevant materials introduced in the programme. The materials can be downloaded, copied and used in
+treatment sessions to determine, evaluate and treat specific symptoms, problems
+and strategies. The materials will help the therapist and the client to collaboratively
+tailor the Young–Bramham Programme interventions according the client’s specific
+needs.
+
+ATTENTION DEFICIT HYPERACTIVITY DISORDER
+IN ADULTHOOD
+Attention Deficit Hyperactivity Disorder was originally regarded as a childhood disorder in which the core symptoms of hyperactivity, impulsivity and attentional difficulties were thought to dissipate during adolescence. However, prospective studies
+examining the long-term outcome of childhood ADHD indicate that the condition
+can persist into adulthood (Brassett-Grundy & Butler, 2004a; Mannuzza, Klein,
+Bessler, Malloy & LaPadula, 1993; Taylor, Chadwick, Heptinstall & Danckaerts,
+1996; Weiss, Hechtman, Milroy & Perlman, 1985). Estimates of prevalence vary
+widely and range between 3 and 9% of young people and 2% of adults are likely to
+meet DSM IV diagnostic criteria (Shaffer, 1994). A high proportion of young people may retain lesser residual symptoms as young adults. A Canadian longitudinal
+follow-up study suggested that up to two-thirds of young adults retain at least one
+disabling symptom of ADHD (Weiss, Hechtman, Milroy & Perlman, 1985). Symptom expression in adulthood seems to change as the disorder progresses (Bramham,
+Young, Morris, Asherson & Toone, 2005a, 2005b; Weiss & Hechtman, 1993). In our
+investigation of clinical referrals to the Maudsley Hospital, London, we have found
+that impulsivity and hyperactivity seem to diminish with age, but attentional problems persist into the middle adulthood years and beyond (Bramham et al., 2005a,
+2005b).
+It has been established that ADHD has a strong genetic component, with heritability estimates of 60–90%; that is, identical twins demonstrate greater concordance
+for symptoms of inattention and hyperactivity compared with non-identical twins
+(e.g. Thapar, Holmes, Poulton & Harrington, 1999). Family studies have also provided support for the heritability of ADHD; the risk of a parent with ADHD having
+a child with the disorder is 57% (Biederman et al., 1995) and the rate of ADHD
+among parents of ADHD probands falls about 20% (e.g. Faraone, Biederman &
+Monuteaux, 2000a). However, the challenge is now for researchers to determine how
+genetic susceptibility is translated into the disorder, through examining the relationship between genes and environmental risks (Asherson, Kuntsi & Taylor, 2005).
+Environmental risk factors include prenatal and perinatal events (e.g. prematurity,
+birth complications, mother’s tobacco and alcohol use during pregnancy) as well as
+psychosocial factors (e.g. neglect, poor parental management, family discord, etc.).
+In addition, neurobiological risk factors may also contribute to the manifestation of
+ADHD, such as closed head trauma and lead exposure (Asherson et al., 2005).
+
+6 ADHD IN ADULTS
+
+Sex Differences and ADHD
+Prevalence studies of childhood ADHD suggest wide variability between the
+extents to which males outnumber females, with ratios ranging from 1.5:1 to 12:1
+(Heptinstall & Taylor, 2002). The sex differences may relate to underlying biological factors as males in general seem to be more susceptible to neurodevelopmental
+abnormalities (Gualtieri & Hicks, 1985). Further support comes from neuroimaging
+studies, such as that by Ernst et al. (1994) who found that global cerebral glucose
+metabolism in ADHD girls was 20% lower than in ADHD boys, although this study
+had very small sample sizes. Furthermore, Castellanos et al. (2001) found fewer
+structural abnormalities in the brains of girls with ADHD in comparison with those
+of boys.
+Contrary to the hypothesis of biological predisposition is the finding that girls with
+ADHD have similar rates of affected relatives as boys with ADHD (Faraone et al.,
+2000b). Additionally, there has been no difference between the sexes in treatment
+response to methylphenidate and dexamphetamine (Sharp et al., 1999). It may be that
+females tend to be underdiagnosed due to referral biases from parents, teachers and
+health professionals (i.e. more boys are sent for clinical assessment of ADHD than
+girls) (Gaub & Carlson, 1997; Taylor, 1994). Boys may be overrepresented in clinics
+due to higher rates of comorbid conduct disorder and disruptive behaviour leading
+them to attract more notice from health and educational professionals, and resulting in
+more frequent referral for treatment (Biederman et al., 1999; Gaub & Carlson, 1997).
+Whatever the difference, the sex ratio appears to rebalance with age. Cohen et al.
+(1993) found that the prevalence rate for boys declines by 20% during the ages of
+10–20 years, whereas it remains relatively constant for girls. This is supported by
+data from the Maudsley Adult ADHD NHS service, where we found the ratio of
+female/male ADHD adults falls from 1:4.3 in teenage years to 1:1.5 by their thirties
+(Bramham et al., 2005a). A UK Cohort Study also reported a similar ratio of 1:1.7
+for a 30-year longitudinal follow-up of children born in 1970 (Brassett-Grundy &
+Butler, 2004b).
+Sex differences have been shown to exist in several key domains of functioning
+for individuals with ADHD. In non-ADHD groups, females have fewer attentional
+problems and less hyperactivity than males (Bauermeister, 1992). However, in the
+ADHD population, females are reported to be more inattentive and to have greater
+overall cognitive impairment and language dysfunction. By comparison, males
+exhibited increased motor activity, and aggressive and antisocial behaviour (Gaub
+& Carlson, 1997).
+There also appear to be differences in comorbid psychological difficulties. Epidemiological studies suggest outcomes for adolescent girls relate to psychosocial problems
+especially disruption to peer relationships, whereas boys seem to have high psychiatric
+comorbidity and antisocial behaviour problems (Taylor et al., 1996; Young, Heptinstall,
+
+INTRODUCTION 7
+
+Sonuga-Barke, Chadwick & Taylor, 2005a; Young, Chadwick, Heptinstall, Taylor &
+Sonuga-Barke, 2005b). These findings are supported by Carlson, Tamm and Gaub
+(1997) who reported that girls with ADHD received higher peer dislike scores than
+boys, and with increasing age, girls were more often rejected by peers. The peer relationships of boys, by contrast, did not change over time and appeared to be more stable.
+In adolescence, females with ADHD have been reported to be more impaired than
+males with ADHD in self-reported anxiety, distress, depression and locus of control
+(Rucklidge & Tannock, 2001), and to have a higher risk of substance misuse than boys
+(Disney, Elkins, McGue & Iacono, 1999). An epidemiological 8-year follow-up study
+of girls found that at 14–16 years, girls had greater state anxiety and ambivalence about
+their future (Young et al., 2005a, 2005b).
+By adulthood, these problems appear to become more ingrained, with ADHD males
+reporting to be engaging in antisocial or criminal behaviour and females obtaining higher rates of psychiatric admission than males 10–30 years later (Dalsgaard,
+Mortensen, Frydenberg & Thomsen, 2002). There may be a particular risk for
+females with hyperactive subtype and comorbid conduct disorder as 60% of this
+group received inpatient admissions for their problems.
+There is a growing body of evidence documenting sex differences in the expression of ADHD and its associated problems that argues strongly for gender specific treatments. Females seem to experience greater mood instability, anxiety and
+interpersonal problems whereas males seem to present with antisocial behavioural
+problems, including verbal and physical aggression. The modular approach of the
+Young–Bramham Programme is therefore helpful for therapists who may select
+interventions appropriate to females (e.g. social relationships, anxiety) and males
+(e.g. anger management and impulse control techniques). It is particularly striking that for people with ADHD, strengths and weaknesses in coping skills may
+be contrary to those typically reported (i.e. females usually being more prone to
+using emotional coping strategies and males tending to be more adept with problemfocused strategies). Indeed, female adolescents have been reported to adopt a variety
+of ineffectual coping strategies (Young et al., 2005a). Thus, psychological treatment
+needs to facilitate clients to select, develop and apply functional strategies to overcome their problems.
+
+Learning Difficulties, Learning Disabilities and ADHD
+ADHD is experienced by people throughout the intellectual spectrum. However, confusion may arise regarding the comorbidity of learning disabilities and ADHD due
+to differences in terminology used between North America and Europe. In Europe,
+the term ‘learning disability’ is used synonymously with the North American term
+‘mental retardation’, whereas in North America, the term ‘learning disability’ is more
+consistent with the European understanding of specific ‘learning difficulty’. Specific
+learning difficulties are characterised by a skill, such as reading, spelling, writing or
+
+8 ADHD IN ADULTS
+arithmetic, being differentially affected in the context of otherwise adequate mental
+functioning, i.e. the individual’s overall functioning is not globally low.
+Some clinicians suggest that ADHD and learning disabilities are indistinguishable
+(e.g. Prior & Sanson, 1986) and that the core features of ADHD are expressed as a
+learning disabilities characteristic. Although it has been suggested that the disorder is more prevalent in individuals with a learning disability, even in those who
+have severe levels of intellectual impairment (Fox & Wade, 1998), DSM-IV criteria
+(American Psychiatric Association, 1994) may be more reliable for people with mild
+learning disabilities compared with individuals falling in the moderate to severe
+learning disability ranges (Seager & O’Brien, 2003). Others caution that ADHD
+is difficult to diagnose in children or adults with a learning disability because of
+the confounding factor of low IQ and the increased rates of challenging behaviour
+(Young & Newland, 2002).
+Psychostimulant treatment of adults with learning disabilities and ADHD seems to
+be effective and well-tolerated (Jou, Handen & Hardan, 2004) but larger studies are
+required in order to fully determine their efficacy. Guidance regarding psychological intervention with clients with comorbid ADHD and learning disabilities is very
+limited in the current literature. Whilst the Young–Bramham Programme is primarily
+devised for use with non-learning disabled individuals, this does not preclude use with
+learning disabilities clients with ADHD, but several adaptations would be required.
+First, attentional difficulties may be more pronounced for people with learning disabilities (Fox & Wade, 1998), which will further limit their ability to sustain attention in sessions. Thus, if possible, the sessions need to be on a ‘little and often’ basis;
+that is, frequent, brief time periods, such as half an hour, twice per week. Second,
+the primary therapeutic approach should be behavioural, as many individuals with
+learning disabilities have difficulty in accessing and applying cognitive strategies.
+Behavioural experiments in sessions, practical examples and simple explanations
+are particularly important for successful intervention with this client group. The
+therapist may also wish to recruit the assistance of a family member or carer who
+can reinforce what has been learned outside of the session, as well as support homework tasks.
+Specific learning problems such as dyslexia and dyscalculia have also been reported
+as more prevalent in individuals with ADHD (e.g. Rabiner & Cole, 2000). As a result, some individuals may be assessed for their specific learning difficulties whilst
+their underlying ADHD symptoms remain unrecognised for some time. Whilst there
+is comorbidity between ADHD and specific learning difficulty, some individuals
+find their learning problems appear to be due to the latter but clinical assessment and
+formal testing indicates that an attention deficit is the primary problem.
+There are three possible explanations for the association between ADHD and specific
+learning difficulty: (1) attention impairments impede learning; (2) working memory
+
+INTRODUCTION 9
+
+difficulties can affect the ability to unravel complex grammar; and/or (3) both conditions share similar neurobiological underpinnings, particularly those relating to
+executive dysfunction (e.g. Denkla, 1996). Indeed, frontal lobe systems involving
+cognitive control are likely to be affected and can result in attentional and information processing difficulties common to both disorders (Duncan et al., 1994).
+Individuals with comorbid ADHD and dyslexia may be under-represented in clinical
+services because they have difficulty in completing screening questionnaires and this
+deters them from following through referrals. Such individuals may be helped by having written materials relating to the diagnostic and/or treatment process presented in
+an appropriate form for their needs, for example enlarged text using black and white
+simple characters. Some treatment exercises may be adapted from written form to
+verbal records using a Dictaphone and sessions may be recorded in a similar fashion.
+
+A COGNITIVE-BEHAVIOURAL MODEL OF ADHD IN ADULTS
+Based on our research and experience in working therapeutically with adults with
+ADHD, we have devised a cognitive-behavioural model to formulate their presentation (see Figure 1.1). This figure is included on the Companion Website. It may be
+helpful to work through the figure and ‘personalise’ the formulation with the client.
+Due to their longstanding neuropsychological impairments such as poor concentration, forgetfulness, problem-solving difficulties and a need for immediate gratification, adults with ADHD are likely to have experienced numerous negative life events.
+Such experiences include academic underachievement, occupational difficulties,
+problems in making and maintaining both friendships and intimate relationships as
+well as experiences associated with novelty seeking and risk-taking behaviours.
+When faced with certain situations or tasks, such as social encounters, dealing with
+conflict, or having an interview, people with ADHD may find that their neuropsychological impairments hamper their performance. Due to a history of failure, they can
+be prone to negatively appraise a situation with a pessimistic bias. Failure is likely
+to impact on their self-esteem; they may begin to doubt their own abilities, and in a
+self-fulfilling prophecy, expect failure in the future. Following negative appraisal, an
+individual may engage in negative behaviours such as verbal or physical aggression
+or they may withdraw or engage in maladaptive coping, such as misusing substances.
+They are likely to have negative thoughts and beliefs about their abilities and focus
+on weaknesses. The combination of negative behaviour and negative thoughts or beliefs is likely to induce or worsen a negative mood stage such as anxiety, frustration
+or anger. Being in a negative mood state means that an individual is more likely to
+appraise a subsequent situation in a negative way, and so the cycle continues.
+However, there is both anecdotal and research evidence to suggest that adults with
+ADHD have an aptitude for the reappraisal or cognitive reframing of stressful
+
+10 ADHD IN ADULTS
+Neuropsychological deficits
+Poor concentration
+Disorganisation
+Forgetfulness
+Difficulties with problem solving
+Poor response inhibition
+Problems with self-regulation
+Need for immediate gratification
+Delay aversion
+
+Life events/experiences
+Educational failure
+Occupational failure
+Relationship difficulties
+Social rejection
+Risk-taking behaviour
+
+SITUATION /TASK /
+STIMULUS
+e.g. Social situation
+Confrontation
+Exam
+Interview
+
+Resilience
+Try, try again
+Never give up
+Self-belief
+Inattention
+e.g.distraction
+
+Impulsivity
+e.g. Lack of planning
+Jumping to conclusions
+
+Positive appraisal
+
+Negative appraisal
+
+Optimism
+Self-efficacy
+
+Pessimism
+Self-doubt
+Learned helplessness
+Low self-esteem
+
+Reappraisal
+Cognitive reframing
+
+Positive behaviour
+
+Positive feelings
+
+Creativity
+Islands of excellence
+
+Enthusiasm
+Buoyancy
+
+Negative feelings
+
+Negative behaviour
+
+Anxiety
+Low mood and lability
+Frustration and anger
+
+Verbal and physical aggression
+Withdrawal
+Avoidance
+Substance misuse
+
+Positive thoughts/beliefs
+I can do this
+It’s not beyond me
+I’ll get there in the end
+I will manage this
+
+Negative thoughts/beliefs
+I’ll never finish it
+Nothing ever goes right for me
+People don’t like me
+
+Figure 1.1 A cognitive behavioural model of ADHD in adults
+
+situations (Young, 2005). It is possible that the negative cycle itself becomes a motivational force that compels change in a situation. A ‘Drive Theory’ was initially proposed by Hull in 1943. According to this theory, humans are driven to reduce arousal
+or tension so that they may maintain a sense of comfort and equilibrium (Hull, 1943).
+Whilst adults with ADHD may engage in a spontaneous process of reappraisal, this
+
+INTRODUCTION 11
+
+is likely to be negatively influenced by their cognitive impairments, resulting in the
+process being dysfunctional or unsuccessful. Nevertheless, a cycle is re-entered by
+the ADHD individual positively reframing the negative outcome, causing them to
+try again in the hope of achieving success. This explains the resilience commonly
+found in people with ADHD and suggests that this is underpinned by a belief in
+self-efficacy. Therefore, the way they interact is associated with their ability to continually compensate and adapt. This adaptive aspect of the syndrome may also be
+expressed as creative and entrepreneurial personality characteristics (Young, 2005).
+
+STRUCTURE AND CONTENT OF THE YOUNG–BRAMHAM
+PROGRAMME
+The Young–Bramham Programme is divided into four sections: (1) background,
+assessment and treatment; (2) core symptoms; (3) comorbid and associated problems; and (4) the future (see Table 1.1). The first section covers the background
+issues regarding ADHD in adulthood, an outline of the Young–Bramham Programme, as well as assessment and treatment methods. The second section focuses on the core ADHD-related symptoms of inattention, memory problems, time
+
+Table 1.1
+
+The Young–Bramham Programme structure
+Part 1: Background, assessment and treatment
+
+Chapter 1
+Chapter 2
+Chapter 3
+
+Introduction to the Young–Bramham
+Programme and adulthood ADHD
+Assessment
+Treatment
+Part 2: Core symptoms
+
+Chapter 4
+Chapter 5
+Chapter 6
+Chapter 7
+
+Inattention and memory problems
+Time management
+Problem solving
+Impulsivity
+Part 3: Comorbid and associated problems
+
+Chapter 8
+Chapter 9
+Chapter 10
+Chapter 11
+Chapter 12
+Chapter 13
+
+Social relationships
+Anxiety
+Frustration and anger
+Low mood and depression
+Sleep problems
+Substance misuse
+Part 4: The future
+
+Chapter 14
+
+Preparing for the future
+
+12 ADHD IN ADULTS
+management, problem solving and impulsivity. The third section presents common
+comorbid difficulties that can develop as a result of the core symptoms, including
+social relationship difficulties, anxiety, anger management problems, depression,
+sleep difficulties and substance misuse. Finally, issues around individuals’ expectations and plans for the future are presented in the concluding chapter.
+
+Assessment and Treatment of ADHD in Adults
+The Young–Bramham Programme includes guidelines for how to apply the diagnostic classification of ADHD to an adult age group, as most diagnostic criteria were
+written with respect to childhood problems. However, given that many symptoms
+of ADHD are typical of normal behaviour and are present to a greater or lesser
+degree in the general population, it can be difficult to ascertain what constitutes a
+‘symptom’. ADHD can be viewed as representing one end of a continuum, e.g. a category of impairment or dysfunction. As such, the identification of ADHD involves
+an element of subjective judgement to determine whether someone falls into the area
+defined as ‘abnormal’. From our experience of assessing adults with ADHD, we have
+elaborated how each symptom may present in adulthood. We also outline common
+hallmarks or symptomatic features of adulthood ADHD that may assist clinicians in
+making the diagnosis.
+Since individuals with ADHD are prone to developing a range of comorbid conditions, differential diagnosis and comorbidity can make assessment particularly complex in adulthood, especially given that the symptoms of ADHD are also present in
+many other psychiatric disorders. Indeed, some psychiatric disorders can mimic the
+core symptoms of ADHD and, in Chapter 2 on assessment, we suggest how these
+may be excluded before a diagnosis can be made.
+The diagnosis of adult ADHD is strengthened by gaining an accurate and comprehensive history of childhood functioning. Unfortunately clinicians often have to
+rely on the memory of the client and/or family members for this information and
+retrospective information is often affected by distortion. For example, some parents
+may minimise their child’s difficulties or symptoms, whereas others may overestimate them as their memory has only retained the most serious and significant
+events. Thus, the reliability and validity of such data is uncertain. We therefore give
+practical recommendations regarding useful information sources for making the
+diagnosis in Chapter 2. In particular, we evaluate the use and limitations of psychometric rating scales and the contribution of neuropsychological tests to the assessment process, and provide guidance regarding the administration and interpretation
+of results.
+The primary objective of the Young–Bramham Programme is to impart the psychological treatment outlined in Chapter 3, which can be combined with or used in
+preference to pharmacological therapy. The Programme has two primary aims:
+
+INTRODUCTION 13
+
+1. Change from the outside in – to provide clinicians with ways of encouraging
+adults with ADHD to change their environment and optimise functioning.
+2. Change from the inside out – to provide clinicians with ways of encouraging the
+individual to develop psychological strategies for adaptive functioning.
+The clinician needs to instil hope and confidence in the individual in order that they
+can make progress with appropriate treatment, combined with hard work and support. This perspective needs to be offered in light of the information that there is no
+‘magic cure’ for ADHD. However, it is possible to change how the individual copes
+with the disorder and to maximise individual strengths. We do this in the following
+chapters by drawing on various techniques, including: a psychoeducational process
+to inform the individual about the history, treatment and prognosis of the disorder;
+motivational interviewing to overcome ambivalence towards treatment; cognitive
+remediation to help control core symptoms; and cognitive behavioural therapy for
+comorbid and associated problems.
+Psychoeducation is a specific therapeutic approach that can be used from the start
+of the diagnostic process (Jackson & Farrugia, 1997). The way that the diagnosis is
+communicated to the individual is paramount to their understanding of the disorder and their future adjustment to the diagnosis (Murphy & Levert, 1995; Young,
+Bramham, Gray & Rose, in submission). Throughout their lives, clients may have
+been told that they are stupid, lazy and unmotivated. It can therefore be extremely
+therapeutic and provide a sense of relief for the individual to understand that ADHD
+has a neurological basis and their problems are not due to a character defect.
+We introduce how to adapt techniques applied in paradigms of cognitive remediation, cognitive behavioural therapy and motivational interviewing for people who
+are impulsive and inattentive, for example by introducing variety in treatment sessions to sustain focus and interest (e.g. shifting topics, visual aids, role play, etc.),
+by introducing frequent breaks in sessions and by including a reward system. Individuals with ADHD are motivated to satisfy a need for immediate gratification and
+it is important that treatment is structured to include regular immediate rewards
+in addition to delayed rewards. Specific tools such as worksheets, role-plays and
+exercises are employed to maintain motivation and attention. Shifts in topic and
+the incorporation of a variety of teaching techniques (including practical exercises)
+are attractive to individuals who have significant cognitive deficits, high intolerance
+and a low boredom threshold. A feature of the Young–Bramham Programme is the
+incorporation of practical exercises that will help individuals and clinicians identify
+and treat pertinent problems, either core symptoms or associated problems.
+
+Core Symptoms
+Inattention, impulsivity and hyperactivity are the hallmarks of ADHD. In adulthood,
+these symptoms are strongly associated with disorganisation, poor time-management
+
+14 ADHD IN ADULTS
+and inadequate problem-solving skills, and the Young–Bramham Programme therefore includes modules on these topics.
+Inattention and memory problems
+Attentional problems tend to be the primary complaint of adults with ADHD, who
+describe experiencing difficulty focusing on a task and shifting the focus of their
+attention as necessary. Some individuals develop compensatory skills to deal with
+their inattentiveness, such as only obtaining employment where prolonged attention
+is not required (Wender, 2000). For others who have not developed such strategies,
+inattentiveness can impact on their ability to succeed in their adult life.
+There are four facets of attention that are commonly affected in ADHD (selective;
+divided; shifting; sustained) and examples of these in everyday living are provided
+in Chapter 4. Attentional impairment can lead to many problems in day-to-day functioning, including difficulties listening, failure to finish and being easily distracted.
+In particular, two types of distraction can be observed in individuals with ADHD:
+1. External distraction, e.g. noticing irrelevant details.
+2. Internal distraction, e.g. having the urge to do something more stimulating.
+For adults with ADHD, the difficulty with sustaining attention may be the most
+disabling problem as individuals struggle to engage in activities that are long, boring, repetitious or tedious. In contrast, when activities are particularly interesting
+or motivating and/or involve immediate gratification (such as computer games),
+individuals with ADHD are able to concentrate. Such inconsistencies can be difficult to understand for people around them and can be a source of tension and
+frustration.
+In Chapter 4 we also discuss how clients need to be able to recognise tasks that
+are likely to be problematic and respond appropriately and adaptively. Methods of
+adapting the environment to minimise distraction are outlined, which often involves
+selecting the most appropriate surroundings suitable for success. Chapter 4 considers strategies for the individual to achieve their potential within the constraints of
+the environment, for example by maximising their ability to sustain attention by
+setting small achievable goals and introducing an ‘immediate’ reward system and
+regular breaks within a time-management structure. Given that memory problems
+are another common complaint in the context of poor attention, we also cover strategies for improving forgetfulness and poor recall.
+Time management
+Due to their attentional difficulties, poor time management and chaotic organisational
+skills can be particularly prominent for people with ADHD and these problems may
+become more marked in adult life. The ability to organise and prioritise is particularly
+
+INTRODUCTION 15
+
+challenging for people who tend to flit like butterflies from task to task, especially
+when an activity is mundane, or when beckoned by a seemingly more important task.
+Unfinished tasks are a source of frustration and leave the individual with a sense of
+failure. People with ADHD respond well to imposed structure, particularly in terms
+of scheduling time. Thus, Chapter 5 on time management presents ways of applying
+a methodical approach to make plans by reviewing goals for a set time period (shortand long-term), listing activities, devising a schedule, sequencing and prioritising
+activities, and planning breaks and rewards. We also include methods for avoiding
+pitfalls, such as ways of maintaining attention on a task, ways of adhering to a plan,
+advice regarding reviewing priorities and avoiding procrastination.
+Problem solving
+People with ADHD can have difficulty with solving problems for many reasons. They
+may respond impulsively, which leads to rash decision making without full evaluation
+of a situation. They may find it hard to generate multiple alternative options and
+focus on, or expect, negative outcomes. They may additionally worry unnecessarily
+about minor more immediate issues and lose sight of the whole picture. In addition,
+limitations with attentional control may prevent effective problem solving due to
+poor concentration and distractibility. We have therefore included Chapter 6 on
+problem solving to show how, by using a methodical approach, clients can be guided
+to achieve more optimal outcomes. The chapter provides methods to distinguish
+between ‘problems’ and ‘worries’, generate solutions, consider alternatives, perform
+accurate appraisal and avoid inaccurate and rapid decision-making processes. A
+methodology for choosing solutions is introduced through the rehearsal of solutions to
+evaluate consequences, role-playing appropriate scenarios and challenging cognitive
+distortions. In addition, practical advice regarding setting targets and goals, and
+evaluating success is provided.
+Impulsivity and hyperactivity
+Impulsivity in ADHD seems to be closely linked to a low tolerance of frustration.
+This feature appears to be a stable and enduring characteristic of ADHD as well
+as childhood ADHD. ADHD individuals seem to have a preference for short-term
+reward and an inability to delay gratification, which can lead to problems with waiting. This means that people with ADHD may seem demanding or self-centred. In
+addition, ADHD individuals find it difficult to consider the consequences of their
+behaviour before acting. There are obvious social ramifications when individuals
+present in this manner and they may appear to lack consideration for the feelings
+and needs of others. The consequences of their impulsivity appear to be more serious in adulthood as poor impulse control, combined with a ‘short fuse’, may lead to
+antisocial behaviour, aggressive and/or violent behaviour, speeding tickets, roadrage, traffic accidents and criminal acts. In many respects, ADHD may be regarded
+as a potentially life-threatening disorder due to violent behaviour towards others,
+accidental injury, (e.g. road traffic accidents), and deliberate self-harm.
+
+16 ADHD IN ADULTS
+Chapter 7 introduces self-monitoring techniques to identify situations in which clients are vulnerable to responding in an impulsive way, and determine the appropriate
+self-restraint strategies they may apply in these circumstances. Stop-and-think techniques are introduced to maximise self-control, including self-instructional training,
+the use of self-statements, and role-plays involving consideration of personal and
+social consequences of behaviour.
+Hyperactivity is the symptom most commonly reported to reduce over time as the
+ADHD disorder progresses through the lifespan. By adulthood, hyperactivity has
+usually considerably diminished and is objectively and subjectively perceived as an
+objective or subjective sense of restlessness. Clients seem to dislike sitting still and
+relaxing, and Weiss et al. (1999) have suggested that restlessness may be purposeful
+and adaptive for adults with ADHD as it has a motivating function, e.g. it might motivate the ability to achieve more physically taxing tasks. However, feelings of inner
+restlessness may also lead to relationship problems, as friends and family may feel
+exhausted by the client’s inability to relax. In Chapter 7, we introduce methods for
+the individual to capitalise on excess energy and introduce a methodology for structuring and organising the day to anticipate and prepare for hyperactive difficulties.
+
+Comorbid and Associated Problems
+There are several additional features of ADHD in adults that often present in
+conjunction with the core symptoms, but are not necessary for the diagnosis (e.g.
+Nadeau, 1995; Ratey, Greenberg, Bemporad & Lindem, 1992; Weiss & Hechtman,
+1993; Wender, 2000; Young, 2000). These may be viewed as consequences of the
+core symptoms of ADHD and have been described as the secondary characteristics or social and emotional sequelae of ADHD in adulthood (Young, 2000). These
+sequelae include: impairment of social skills and poor interpersonal relationships;
+anxiety; mood lability, especially frustration and poor anger control; a sense of failure and low self-esteem; sleep difficulties; and substance misuse. We have therefore
+devised treatment strategies that can be applied to address these areas of comorbid
+difficulty. However, the problem of low self-esteem is so common and debilitating
+for people with ADHD, we have included this as a common thread that is implicitly
+provided in each of the Young–Bramham Programme modules.
+Social relationships
+Disruption to interpersonal relationships is well-documented in the ADHD literature. Clients are likely to have experienced a lifetime of adverse interactions
+with other people and a lack of opportunity to develop effective social skills. Core
+symptoms of ADHD may be misinterpreted by others, for example a difficulty
+maintaining a conversation may be perceived by others as a lack of interest or fickle
+behaviour. Impulsivity may feature as a difficulty in turn-taking and social reciprocity. Some clients report a long-standing awareness that they are ‘different’ from
+
+INTRODUCTION 17
+
+others in some way, leading to feelings of rejection and social isolation (Young
+et al., in submission).
+It is important for clients to understand the relationship between symptoms and interpersonal relationship problems. In Chapter 8, we emphasise a need to develop
+positive attributions and attitudes in order to improve social skills. We introduce
+techniques to improve macro-skills, for example to increase self-awareness, develop
+the ability to take another’s perspective and accurately perceive others’ emotions.
+This is achieved by developing micro-skills, for example evaluation of facial expressions, posture, voice quality, gestures, non-verbal communication, verbal communication, conversational skills and listening skills. A crucial social dilemma for people
+with ADHD is whether to disclose to others that they have the disorder and coping
+with perceived or actual rejection, so we discuss this issue in detail.
+Anxiety
+Due to their history of academic problems, school failure and interpersonal relationship problems, generalised anxiety problems often present in ADHD adults. Social
+anxiety may also develop, as one of the most commonly experienced sources of anxiety reported by our clients is when they are in group situations (either in unfamiliar
+or intimate settings). Due to their uncertainty in such settings, they have difficulty
+adhering to social norms and/or inhibiting inappropriate behaviour. Some clients
+have such little confidence in such situations that they avoid them altogether. This
+seems paradoxical given their often gregarious presentation, but this can be used to
+mask underlying anxiety and a lack of confidence.
+In Chapter 9, we outline how conventional Cognitive Behavioural Therapy (CBT)
+techniques may be applied and adapted for patients with ADHD to maximise successful outcomes. In order to address social anxiety and avoidance, we discuss how
+to modify behaviour in varying social situations, including controlling the impulse to
+over-compensate for feelings of inadequacy by ‘playing the fool’ and attention seeking
+behaviour. We also introduce methods to re-interpret common reactions/responses to
+anxiety by evaluating thoughts, feelings, behaviours and bodily reactions. A version
+of the Clark (1986) cognitive behavioural model of panic is presented with appropriate coping strategies for intervention. Relaxation and breathing exercises are reviewed
+and tailored for use in different settings. We suggest ways to overcome avoidance and
+increase confidence by applying techniques of graded exposure, systematic desensitisation and behavioural experiments, and outline methods to evaluate success.
+Frustration and anger
+People with ADHD are likely to experience both trait and state anger. Trait anger may be expressed by feelings of general dissatisfaction and irritability towards
+friends, family, employers and clinicians, especially if they believe that they are
+
+18 ADHD IN ADULTS
+misunderstood or negatively evaluated. Symptomatic individuals may be particularly predisposed to have an explosive temperament and express their feelings in
+emotional outbursts. Clients may have developed maladaptive ways of coping with
+their feelings of frustration and irritation. Indeed, anger is more likely to be expressed outwardly than inwardly suppressed, possibly due to poor impulse control,
+emotional lability and a low boredom threshold. This behaviour may lead to negative
+outcomes including relationship breakdown, termination of employment and involvement with the police. It is likely to be perceived by others as a negative character trait
+and clients may be assumed to be unpredictable or in some cases even dangerous.
+In order to effect change, the client needs to understand the function of anger. Reasons for becoming angry are often an unmet desire for immediate gratification and
+this may escalate due to feelings of frustration and inner restlessness, which are then
+inappropriately and impulsively expressed. Chapter 10 examines the stages of anger
+from a cognitive behavioural perspective and focuses in particular on teaching the
+individual to recognise physical indications of anger and learn when and how to
+interrupt the anger process. In addition, ways of dealing with insults and criticisms
+are presented to clients, including sessions to help the client recognise the difference
+between insults and criticisms, appreciate constructive criticism and learn to accept
+criticism appropriately.
+
+Low mood and depression
+Some people with ADHD may be predisposed to experience depressive symptoms
+due to their history of negative life events and low self-esteem, such as academic
+failure, relationship difficulties and financial problems. Their cognitive problems
+may escalate the development of depression. As many ADHD individuals lack the
+ability to plan, they are poorly motivated to start projects and have difficulty finishing tasks. This means that they may lack the opportunity to experience a sense of
+achievement and mastery, and when things go wrong, the individual may rapidly
+spiral into depression. Depression in people with ADHD needs to be taken very
+seriously because of their lack of behavioural control, which may cause them to act
+on an idea or impulse to self-harm. Once medicated, they may develop better insight
+into past problems but ruminate more, e.g. with reduced distractibility, over past
+failures and maladaptive interpersonal relationships with important people in their
+lives. Their risk of becoming depressed may increase shortly post diagnosis and
+treatment (Young, Bramham et al., in submission) and clinicians need to be aware of
+the serious risk of self-harm and suicide in this population due to poor impulse control. Chapter 11 stresses the necessity of risk assessment in addition to the need for
+regular monitoring of low mood and the impact of medication on impulse control.
+In Chapter 11, we have adapted the Beck (1976) cognitive-behavioural model of
+depression to incorporate the negative thinking and thinking errors common to people with ADHD. We provide suggestions of how to break the negative cycle and
+
+INTRODUCTION 19
+
+introduce techniques to challenge their negative automatic thoughts, reduce the
+self-talk that perpetuates low mood and develop positive self-statements according
+to ADHD strengths.
+Sleep problems
+People with ADHD often complain of sleep problems when they present to services.
+Some sleep problems may be explained by core symptoms of ADHD as an incessant
+feeling of inner restlessness may prevent people from getting to sleep. Other sleep
+problems may be more similar to disturbance associated with affective disorders,
+such as early wakening in depression. Sleep problems may also relate to medication
+for treating ADHD, particularly following withdrawal of stimulant medication, or
+drug holidays or changes in dose.
+In Chapter 12, we review the function of sleep, describe the different stages of sleep,
+and consider how the core symptoms of ADHD may exacerbate sleep problems such
+as hypersomnia and insomnia. We detail the management of sleep problems, outlining sleep hygiene programmes and relaxation techniques adapted for individuals
+with ADHD.
+Substance misuse
+People with ADHD may become involved with substances via two mechanisms.
+Poor impulse control may lead to increased risk-taking behaviour, experimentation with drugs and subsequent addiction. A second route is when individuals with
+undiagnosed and/or untreated ADHD use illicit substances to self-medicate. In these
+circumstances, for pharmacological reasons, the drug of choice is likely to be amphetamine-based but alcohol and cannabis are also often taken by adults with ADHD
+who claim they induce a sense of calm and relaxation. Chapter 13 describes the different categories of substance misuse and their relationship with ADHD. Psychological dependency is addressed by suggesting motivational interviewing techniques
+to motivate the client to engage in a process of change. We present the vicious cycle
+of substance misuse and discuss dysfunctional beliefs that may have developed for
+adults with ADHD around substance misuse. The chapter also outlines techniques to
+build self-confidence and cope with physical cravings and urges by applying distraction techniques, activity scheduling and motivating support.
+
+Preparing for the Future
+Many people with ADHD have negative assumptions about themselves and an expectation of failure, and it is therefore useful to explore how expectations of the self
+influence future outcomes. Thus, in the course of the Young–Bramham Programme,
+and particularly in our conclusions in Chapter 14, we discuss the influence of
+
+20 ADHD IN ADULTS
+self-fulfilling prophecies on self-esteem. We emphasise the creative, resilient and
+flexible aspects of the ADHD personality and discuss how the client may have previously applied these characteristics successfully to achieve personal goals. Through
+the reappraisal of personal capabilities and the application of techniques and skills
+developed throughout the Young–Bramham Programme, people with ADHD can be
+encouraged to develop a sense of self-efficacy and purpose.
+It is important to impart how people with ADHD may apply characteristics adaptively to achieve success in everyday challenges, as well as working towards medium
+and longer term plans. Unless this perspective is included in sessions, the therapist
+is likely to have difficulty fostering engagement and developing a therapeutic alliance. We suggest, therefore, that the final module is always included to summarise
+the techniques introduced in previous modules, and determine and/or reiterate those
+which have been beneficial for the client. The module follows a relapse-prevention
+approach whereby a plan to identify and manage ‘risk’ situations is developed to
+support the individual and refer to when they feel vulnerable and are most likely to
+slip back into old habits. The identification of periods of vulnerability and a management plan will prepare the client for their eventuality and increase the likelihood
+that the client will respond by applying useful coping strategies and avoid impulsive
+or dysfunctional responding patterns. It is important that these relapse-prevention
+plans include a variety of options that can be applied as appropriate in a range of
+situations, for example cognitive techniques, avoidance of troublesome situations/
+persons, seeking family/friends’ support, seeking professional advice.
+
+CONCLUSIONS
+The primary intervention for ADHD is treatment with medication and this has been
+reliably shown to provide a reduction in symptoms for many individuals with the
+disorder. However, symptom reduction is but one treatment objective of adults with
+ADHD, who have accumulated a host of concurrent difficulties. Our clients at the
+UK National Adult ADHD service are positive regarding pharmacological treatment, which, they say, gives a sense of ‘normality’ and helps them to achieve their
+potential (Young, Bramham et al., in submission). However, the level of satisfaction
+is variable and clients have stated that medication does not resolve all of their difficulties. Furthermore, as the effects of medication wear off, the rapid emergence of
+symptoms makes clients realise that this is not a ‘miracle cure’ for their problems.
+Treatment with medication appears to help clients distinguish between problems that
+are strongly associated with their symptoms and those that are less influenced by
+the presence of symptoms. This means that clients become personally motivated to
+engage in a process of change, especially with respect to symptoms and/or problems
+they perceive to be resistant to treatment with medication.
+There is clearly a role for psychological intervention for people who are diagnosed
+with ADHD in adulthood in order to facilitate their adjustment and acceptance of
+
+INTRODUCTION 21
+
+the disorder. These individuals, as well as those who were fortunate to be diagnosed
+and treated in childhood, also require psychological interventions to help them cope
+with the psychological, social and occupational demands they will meet as adults.
+The Young–Bramham Programme provides treatment strategies to address these
+needs by applying techniques drawing from psychoeducation, to engage the client in
+a learning process; motivational interviewing to encourage change; cognitive remediation and cognitive behavioural treatments to teach coping strategies and develop
+skills.
+
+2

@@ -1,0 +1,855 @@
+ASSESSMENT OF ADHD IN ADULTS
+
+Although ADHD is now recognised as a condition that is present in adulthood, many
+clinicians lack the confidence to make the diagnosis. The central tenet in performing
+an assessment is that adults with ADHD will have had their symptoms through their
+childhood. Thus, when conducting an assessment of ADHD in adulthood, there are
+two fundamental questions to be answered:
+1. Did the client have ADHD as a child?
+2. If so, to what extent is the client still symptomatic?
+This chapter provides a guide for clinicians to gather sufficient information to answer
+these questions and conduct a comprehensive assessment. The diagnostic classification systems and the manifestation of symptoms in adults are presented, along with
+consideration of typical additional features. The comorbid conditions commonly
+associated with the disorder are discussed in addition to differential diagnoses. We
+review the strengths and limitations regarding sources of information, including the
+structured clinical interview, neuropsychological assessment, rating scales and corroborative documentation.
+
+DIAGNOSTIC CLASSIFICATION OF ADHD
+There are three recognised symptoms of ADHD – inattention, hyperactivity and
+impulsivity – and two formal diagnostic classifications to draw on, the US Diagnostic and Statistical Manual (DSM-IV) (American Psychiatric Association, 1994) and
+the World Health Organization’s International Classification of Disease (ICD-10)
+(World Health Organization, 1992). Different prevalence rates are likely to be at
+least partly influenced by the adoption of these differing classification systems.
+There are 18 items that are required to make a diagnosis of ADHD. These items are
+the same in ICD-10 and DSM-IV. Both classification systems require that symptoms
+are maladaptive, inconsistent with developmental level and present for the past six
+months. Overall there must be clear evidence of clinically significant impairment
+
+24 ADHD IN ADULTS
+in social, academic or occupational functioning; that is, pervasive across different
+environments. However, ICD-10 adopts a more restricted definition of ‘hyperkinetic syndrome’ than DSM-IV and requires that all three symptoms are present
+independently.
+Longitudinal follow-up studies have established that approximately one-quarter
+of children followed up into young adulthood will continue to meet criteria for
+ADHD (Mannuzza et al., 1993; Taylor et al., 1996). However, the heterogeneous nature and trajectory of the ADHD syndrome means that for each individual the experience of the disorder, and their response to treatment, is different.
+Symptoms do not conveniently and uniformly remit, some clients will retain
+predominantly poor impulse control, and others will retain predominantly poor
+attentional control. Whilst motor overactivity is likely to be found unusually in
+adults, this may take a different form and present as a feeling of internal restlessness. Children with ADHD struggle in compulsory environments where they
+have to conform and sit still, either defined by the educational setting (e.g. attending class in school), or by a social setting (e.g. watching a film at the cinema).
+However, it would be unusual to assess an adult for ADHD, for example, who
+gets off the chair, rolls around the floor, picks the desk lock, plays with the light
+switches, and puts all the papers on a desk into complete disarray. What is more
+likely, is that adults will talk about feelings of internal restlessness, and/or ceaseless mental activity.
+Thus whilst the ICD-10 classification may be helpful for the diagnosis of childhood ADHD, it is less so for adult symptoms. Longitudinal follow-up of both
+normal and hyperactive children suggests that concentration is likely to improve
+with age and activity levels are likely to decrease (Biggs, 1995; Fischer, Barkley,
+Fletcher & Smallish, 1993; Taylor et al., 1996). Marsh and Williams (2004) found
+that hyperactivity-impulsivity problems declined more rapidly with age than attention difficulties.
+For these reasons, the DSM-IV criteria are more flexible and better able to accommodate residual symptoms as they remit. Using these criteria ADHD may be diagnosed as three distinct typologies shown in Table 2.1.
+
+Table 2.1
+
+Classification of DSM-IV symptoms for ADHD diagnosis
+
+Predominantly inattentive type
+Predominantly hyperactive-impulsive
+type
+Combined type
+
+Six out of nine inattentive symptoms rated as
+‘often’
+Six out of nine hyperactive/impulsive symptoms
+rated as ‘often’
+Six out of nine inattentive symptoms rated
+as ‘often’ and six out of nine hyperactive/
+impulsive symptoms rated as ‘often’
+
+25
+
+ASSESSMENT OF ADHD IN ADULTS
+
+ADHD combined type represents the more severe form and predominantly inattentive type or predominantly hyperactive impulsive type may account for heterogeneity or remitting symptoms. Additionally, there is a category for disorders with
+prominent symptoms of inattention or hyperactivity-impulsivity that do not meet the
+above stringent criteria, known as ‘ADHD Not Otherwise Specified’.
+Thus, when applying DSM-IV criteria, an assessment of ADHD needs to ascertain
+the presence of six out of nine inattentive symptoms as being present ‘often’; and/or
+six out of nine hyperactive/impulsive symptoms as being present ‘often’. These may
+be assessed by a checklist of symptoms in a semi-structured interview format (see
+Table 2.2, which shows how this may be completed for a client with predominantly
+inattentive symptoms). It is recommended that each positive self-rating is endorsed
+by the assessor on the basis of supplementary questioning or other information (e.g.
+independent documentation or information from a different source). The Companion Website includes two versions of Table 2.2, one for completion by the client
+(Table 2.2a) and the other, indicating scoring and guidelines for diagnosis to be used
+by the therapist (Table 2.2b).
+However, there remain a number of difficulties with the DSM-IV criteria. When
+looking at the above criteria, it can be seen that there is an immediate problem
+Table 2.2
+
+DSM-IV checklist of symptoms for clinician
+
+In the past six months, do you think you:
+
+Never
+0
+
+Sometimes
+1
+
+Often
+2
+
+Failed to give close attention to details or made
+careless mistakes in studying, work or other
+activities?
+
+
+
+Had difficulty sustaining attention in tasks or leisure
+activities?
+
+
+
+Have not seemed to listen when spoken to directly?
+
+
+
+Did not follow through on instructions and failed to
+finish studies, chores or duties in the workplace
+(not due to oppositional behaviour or failure to
+understand instructions)?
+
+
+
+Had difficulty organising tasks and activities?
+
+
+
+Avoided, disliked or were reluctant to engage in tasks
+that require sustained mental effort (e.g. studying,
+homework, leisure activities)?
+
+
+
+Lost things necessary for tasks or activities (e.g. pens,
+books, tools, study papers)?
+
+
+
+Were easily distracted by outside events and stimuli?
+
+
+
+Were forgetful in daily activities?
+
+
+
+(continued)
+
+26 ADHD IN ADULTS
+Table 2.2
+
+(continued)
+
+In the past six months, do you think you:
+1
+
+Never
+0
+
+Sometimes
+1
+
+Inattention criteria met? (i.e. six or more items rated
+‘often’)
+
+Often
+2
+Yes / No
+
+Fidgeted with hands or feet or squirmed in seat?
+
+
+
+Left seat in situations where remaining seated is
+expected (e.g. in classes, church, movies)?
+
+
+
+Experienced feelings of restlessness, especially in
+situations where it is inappropriate?
+
+
+
+Had difficulty engaging in leisure tasks quietly?
+Felt ‘on the go’ or as if driven by a motor?
+
+
+
+
+Talked excessively?
+Blurted out answers before questions have been
+completed?
+
+
+
+
+Had difficulty waiting turn?
+
+
+
+Interrupted or intruded on others (e.g. butting into
+conversations)?
+
+
+
+2
+
+Hyperactivity/impulsivity criteria met?
+(i.e. six or more items rated ‘often’)
+
+A
+
+Either 1 and 2 (or both rated yes)
+
+
+
+B
+
+Were some hyperactive-impulsive or inattentive
+symptoms present before age 7?
+
+
+
+C
+
+Some impairment from the symptoms is present in
+two or more settings (e.g. in educational setting,
+work setting, at home)?
+
+
+
+D
+
+Is there clear evidence of clinically significant
+impairment in social, academic or occupational
+functioning?
+
+
+
+E
+
+The symptoms do not occur exclusively during
+the course of a severe psychiatric illness (e.g.
+schizophrenia) and are not better accounted for
+by another mental disorder (e.g. mood disorder,
+anxiety disorder, dissociative disorder or a
+personality disorder).
+
+
+
+3
+
+Combined (A-E and items 1 and 2 rated yes)
+
+Yes / No
+
+4
+
+Predominantly inattentive type (A-E and item 1 rated yes)
+
+Yes / No
+
+5
+
+Predominantly hyperactive-impulsive type(A-E and item 2 rated yes)
+
+Yes / No
+
+6
+
+Total score obtained for symptoms by applying ratings of 0 ⫽ never, 1 ⫽
+sometimes, 2 ⫽ often
+
+26
+
+7
+
+In partial remission of symptoms? If (3), (4) and (5) above are scored ‘no’
+and if score obtained for (6) above is 17 or greater
+
+Yes / No
+N/A
+
+Yes / No
+
+ASSESSMENT OF ADHD IN ADULTS
+
+27
+
+when diagnosing the disorder in adults as there is unequal weighting between the
+impulsive and hyperactive symptoms. If impulsive symptoms are more likely to be
+retained than hyperactive symptoms in young adulthood, then clearly individuals
+may fall short of these stringent criteria. Bear in mind also that clients may not have
+these problems ‘often’ or all the time. Adults, unlike children, are likely to have
+more control over their impulses not least by being able to exercise choices over their
+environment. They can select their work environment, for example, long distance
+lorry driving may be a more attractive employment than a 9–5 office job. Others
+may prefer to be self-employed. Professions in information technology appear to
+be favoured – most likely because this satisfies a thirst for immediate gratification
+as computer work provides individuals the opportunity to multi-task using lots of
+different windows, etc. Hence, although such adults may well be symptomatic, their
+symptoms may not impair their functioning.
+Although not formally part of the diagnostic criteria, there are other difficulties
+that present in adult ADHD such as procrastination, low tolerance of frustration,
+mood lability, low self-esteem, disorganisation, attitudinal problems, disinhibition
+and ceaseless mental activity. The ways these problems commonly present in adult
+ADHD are presented in Table 2.3.
+Table 2.3
+
+Symptomatic features of ADHD in adulthood
+
+Procrastination
+
+Low tolerance
+of frustration
+Mood lability
+
+Low self-esteem
+
+Individuals with ADHD do not put things off for hours or days, they put
+things off for weeks or months. They have loads of projects half started
+but they do not see things through. They may get into debt because they
+don’t pay bills on time or miss deadlines. If they do meet deadlines, it is
+only because they have crammed in last-minute information or stayed
+up all night to do so. They are always late and have loads of excuses as
+to why they have been unable to do a task on time.
+This is often presented as being irritable or ‘tetchy’. Individuals are
+often impatient and quick to become cross especially when others do
+not appear to understand them or follow what they are saying.
+Mood states can change rapidly and possibly without apparent triggers.
+These symptoms may be misdiagnosed as bipolar disorder, but the
+difference is that, for ADHD, lability occurs over a matter of hours
+whereas in cases of bipolar disorder it will occur over a period of
+weeks.
+Individuals have a history of failing (which they may perceive as
+the incompletion of projects). They commonly feel that they are
+underachieving according to their potential and constantly seek
+reassurance or approval. They are sensitive to criticism and motivated
+to seek social recognition and approval. At the same time they often
+have a sense of self-efficacy and resilience, which drives them to
+constantly seek new opportunities and successes. Their entrepreneurial
+nature may appear incompatible with a lack of self-esteem.
+(continued)
+
+28 ADHD IN ADULTS
+Table 2.3
+
+(continued)
+
+Disorganisation
+
+Attitudinal
+problems
+
+Disinhibition
+
+Sensationseeking
+behaviour
+
+Ceaseless
+mental activity
+
+This is often presented as poor planning and sequencing. They may
+have difficulty organising and prioritising information in addition to
+imposing order and structure in their world. This may be for particular
+tasks, e.g. household chores resulting in mess and chaos in their living
+environment, or more functionally, e.g. being late for work, taking a
+long time to prepare a meal. This problem may present as a lack of
+co-ordination and a tendency to adopt a haphazard, chaotic approach
+to tasks.
+Individuals may present as irritable and oppositional, and argue for
+the sake of the argument. They may seek arousal and stimulus in
+this way, thus presenting as ‘difficult individuals’ who do not take
+criticism well. They may be bad employees, who do not accept
+line management. Attitudinal problems may result in the falling
+out with friends and colleagues. They may have a high turnover of
+jobs.
+This may be expressed as both verbal and physical disinhibitive
+behaviours. Individuals may not be able to inhibit the impulse
+to speak out and say the first thing that comes into their head,
+resulting in them being hurtful and insensitive towards others.
+Their impropriety may get them into trouble in their interpersonal
+relationships with friends, colleagues and the law. They may be unable
+to inhibit the impulse to express anger physically by either lashing out
+at others and/or destroying property. Antisocial behaviour is likely to
+be opportunistic and unplanned. If feeling depressed, poor impulse
+control may be a risk for acting out suicidal ideation.
+A need for high stimulation and immediate gratification will often
+lead to individuals engaging in risk-taking behaviours. This may
+be expressed as an obsessive eagerness to explore new ideas and
+gain new experiences. Leisure pursuits may contain a sense of
+danger and recklessness, e.g. mountaineering, bungee jumping.
+Individuals may deliberately heighten the excitement by increasing
+the odds or risk. They tend to live life to the excess and push limits
+to extremes. This symptom may be expressed in illicit drug taking
+behaviour, they may present as accident prone, and/or engage in
+unsafe sex.
+Individuals will talk about their brain working too fast and a speeding
+up of thoughts that rapidly change. They are unable to keep track
+of these thoughts or write them down and they may feel completely
+overwhelmed and exhausted by this experience. Other people present
+as being able to relax and appear calm, but still report having racing
+thoughts. If a client presents with speeded up thoughts/ideas as
+opposed to a flooding of thoughts/ideas then one might consider
+hypermania to be the primary problem.
+
+ASSESSMENT OF ADHD IN ADULTS
+
+29
+
+The Canadian longitudinal follow-up study conducted by Weiss et al. (1985) found
+that two-thirds of hyperactive children retained at least one disabling ADHD symptom in young adulthood. What does that mean for the individual? Does it mean that
+they no longer have ADHD and thus cannot access treatment in spite of retaining
+a symptom that may cause them to have significant adjustment problems? The
+prevalence of ADHD declines with age. Nevertheless, impulsivity, disorganisation,
+impaired concentration and poor planning can remain as disruptive symptoms and,
+for individuals who currently have symptoms that no longer meet full criteria, ‘in partial remission’ should be specified. However, there are no formal diagnostic guidelines to help identify this important group, who may as a result be prevented from
+accessing appropriate services. Genetic studies support the notion that ADHD represents a dimensional trait rather than a pathological category (Levy, Hay, McStephen,
+Wood & Waldman, 1997) and the DSM-IV criteria may be applied in this way by
+allocating the following scores to responses:
+0 ⫽ never
+1 ⫽ sometimes
+2 ⫽ often
+A score of 17 on the DSM-IV checklist of symptoms represents one standard deviation above the mean average score obtained in a normal control group (Young, 1999);
+that is, falling at the 84th percentile. Thus, individuals who do not meet the categorical diagnosis usually applied, and who are in partial remission of their symptoms
+may be identified using this method (see section 7 in Table 2.2).
+
+DIFFERENTIAL DIAGNOSIS AND COMORBIDITY
+Clinical assessment of adult ADHD should only be made by a professional trained
+in differential diagnosis of adult psychiatric disorders, for example psychiatrists,
+neurologists or clinical psychologists. Multidisciplinary assessment is recommended.
+It is important for professionals to remember that adults with other psychiatric problems may appear to have symptoms of ADHD. A difficulty with attentional control is common to many psychiatric disorders, but this is usually excluded from an
+alternative diagnosis when it involves a very serious psychopathology. Poor impulse
+control is commonly associated with conduct disorders and antisocial behaviours.
+Adolescent-onset socialised conduct disorders or hypomania might appear superficially similar. The age criterion is crucial to distinguish ADHD from later onset
+conditions, thus care must be taken when diagnosing subtypes (either predominantly
+inattention, or predominantly hyperactive-impulsive) or, unless such care is taken
+to rule out the existence of the other conditions, there may be a higher rate of false
+positive diagnoses (Weiss et al., 1999).
+There is considerable comorbidity with childhood ADHD including conduct disorder, oppositional defiant disorder, anxiety disorder, depressive disorder, pervasive
+
+30 ADHD IN ADULTS
+developmental disorder, Tourette’s syndrome and substance misuse. Language,
+learning and motor developmental delays are also commonly reported. In adulthood,
+comorbid problems include personality disorder (particularly antisocial), bipolar
+disorder, obsessive-compulsive disorder and, to a lesser extent, psychotic disorders.
+Adults with severe mental illness, such as schizophrenia, or severe learning disability often have problems with attention and activity levels yet these disorders do
+not occur any more frequently in people with ADHD than in the normal population
+(Mannuzza, Klein, Bessler, Malloy & LaPadula, 1998).
+A competent adult ADHD assessment requires a thorough history taking involving
+a much more detailed developmental history than is undertaken as part of a conventional general adult psychiatric interview. When considering whether a diagnosis is
+differential or comorbid, it is helpful to bear in mind the age of onset. Children with
+ADHD often have comorbid problems whether they are anxiety, depression, emotional lability or substance misuse. However, most of these difficulties are likely to
+have had a later onset than ADHD.
+Thus, to summarise, when assessing adult ADHD one needs to have the following
+checklist in mind:
+1. Obtain a comprehensive childhood history particularly with respect to presence
+of ADHD symptoms.
+2. Evaluate the presence of current ADHD symptoms.
+3. Evidence that these symptoms are causing the individual significant impairment
+in their everyday life (e.g. relationships, job, emotional adjustment).
+4. Assess for differential diagnoses – assess for the existence of comorbid conditions. It may well be that the comorbid condition(s) is impacting more on the
+individual’s life than the ADHD and, as such, this may be the primary target for
+treatment.
+The persistence of the ADHD syndrome beyond childhood and the complexity of its
+assessment as an adult disorder give rise to the need for the development of reliable
+and valid assessment procedures in adolescence and adulthood. This is hampered
+by diagnostic criteria that do not account for the heterogeneity and/or remission of
+symptoms in adulthood. It is also important to screen for comorbid problems and
+rule out differential diagnoses. In the case of severe comorbid symptoms, such as
+substance misuse, it will be important to treat these prior to formal re-assessment.
+
+SOURCES OF REPORTING
+Studies have suggested that children with ADHD are not reliable informants of
+symptoms of ADHD (Danckaerts, Heptinstall, Chadwick & Taylor, 1999; Smith,
+Pelham, Gnagy, Molina & Evans, 2000) and parents have been shown to be more
+reliable informants than their adult children in predicting treatment response
+
+ASSESSMENT OF ADHD IN ADULTS
+
+31
+
+(Wender, Reimherr & Wood, 1981). However, adulthood studies have also reported
+that ADHD adults are able to give reliable and valid accounts of ADHD symptoms
+(Murphy & Schachar, 2000; Young & Gudjonsson, 2005). Thus, the reliability and
+validity of the reporting of ADHD symptoms by adult clients and their parents may
+depend on the context of what is being reported and whether it refers to a prospective
+or retrospective evaluation. For example, a parent may know less about the severity and frequency of ADHD symptoms experienced by an adult child who may be
+employed and living independently. Parental information may be particularly unreliable for antisocial behaviour (Young, 2004; Young & Gudjonsson, 2005; Young &
+Gudjonsson, in press).
+It can be helpful to encourage the client to think about their past experiences in a
+structured way and to identify important gaps in their knowledge about their history.
+In such cases, the therapist could provide Exercise 2.1 (outlined on the Companion
+Website), which aims to facilitate taking a developmental history.
+Clinicians need to be cautious when faced with ‘self-diagnosed’ ADHD symptomatology (particularly since clients could self-refer in anticipation of being prescribed
+a drug of potential misuse). Although the ‘first question’ identified earlier regarding
+whether the client had ADHD as a child requires an assessment of a history of hyperactivity in childhood, this may not be easy to elicit in retrospect and/or reliability
+may be questionable. Client’s recollections have been found to show poor agreement
+with parental recall, whilst the latter seems to be a better predictor of treatment response (Wender et al., 1981). In order to make a diagnosis with confidence, whenever
+possible an assessment should include information from various sources, including
+psychometric measures.
+There are few validated measures appropriate for adults that distinguish adult ADHD
+from other disorders. This is in marked contrast to childhood ADHD, where several
+well validated measures of attention and impulsivity can be implemented, as well as
+access to informants other than the client who can provide reliable historical information and behavioural observations. Parents and teachers may be useful sources of
+information for adolescents, but clinicians may need to turn to other sources such as
+partners (Young, 2004) or put more weight on other sources, such as observational,
+cognitive or neuropsychological measures. Cognitive impairments can be assessed
+by neuropsychological measures and moderate-to-severe impairments will have a
+negative influence on the individual’s academic and social functioning.
+
+NEUROPSYCHOLOGICAL ASSESSMENT
+Several domains of neuropsychological dysfunction have been documented as being
+associated with ADHD in childhood (e.g. Barkley, 1998). However, there is a relative paucity of literature regarding a neuropsychological profile of the disorder in
+adulthood. Studies that have endeavoured to investigate different cognitive functions
+
+32 ADHD IN ADULTS
+have generally involved only small sample sizes with limited power to detect even
+moderate effect sizes and provided little information regarding how clients with this
+disorder may differ from clinically similar but non-ADHD clients, such as those
+with anxiety disorders. Also, researchers tend to have focused on employing laboratory-based experimental tasks rather than standardised tests, which are readily
+available.
+Nevertheless, when assessing an individual for ADHD in adulthood, it is important
+to conduct a neuropsychological assessment for three reasons. First, it may contribute
+to the diagnostic evaluation of adults with ADHD as they commonly exhibit impairment in domains of cognitive function. However, a neuropsychological assessment
+should never be solely used to determine a diagnosis, as it is generally accepted that
+no single individual test or battery of tests has sufficient specificity to reliably diagnose ADHD (Barkley, 1998). A neuropsychological assessment can, however, be
+used to support a diagnosis, in conjunction with information gained from childhood,
+current sources regarding behaviour and a comprehensive clinical interview.
+The second reason for performing a neuropsychological assessment is that it can
+be used to exclude other diagnoses such as learning disabilities or diffuse brain
+injury leading to a global impairment, rather than specific attentional and/or impulse control difficulties. Third, it can be used to provide a functional expectation
+or hypothesis regarding the client’s ability to perform in areas of daily living, for
+example educational attainment, occupational and domestic activities, from which
+discrepancies may be identified.
+When conducting a neuropsychological assessment of adult ADHD, the following
+areas of cognitive functioning need to be assessed: intelligence; attention; other
+executive functions, such as response inhibition; planning ability; working memory;
+and processing speed. Behavioural observation is an extremely important aspect of
+the assessment and one which may be overlooked. Common behavioural features
+of an adult ADHD assessment include inattention (e.g. repetition of instructions,
+distraction, daydreaming), hyperactivity (e.g. fidgeting, restlessness, foot tapping,
+leg shaking, fiddling with papers) and impulsivity (e.g. turning pages of tests prematurely, blurting out irrelevant questions or answers, rapid shifts in topic of conversation). Deterioration in performance may be accounted for by the client’s inability to
+sustain attention as evidenced by complaints about the duration of the assessment,
+requests to leave the room for breaks (for cigarettes, coffee, toilet) and an overall
+reluctance to perform tasks.
+
+Intelligence
+Tests of intellectual functioning can be used either as a baseline measure from which
+to predict a client’s estimated level of functioning in other domains or as discriminatory tools; that is, to indicate clients who may have ADHD.
+
+ASSESSMENT OF ADHD IN ADULTS
+
+33
+
+Baseline intellectual predictions may be made from tasks that do not load heavily
+on the cognitive functions commonly impaired in ADHD. For example, Digit Span
+and Arithmetic subtests from the Wechsler Adult Intelligence Scales (WAIS-III)
+(Wechsler, 1997a) draw heavily on attentional and executive functions whereas
+verbal comprehension tasks, such as Vocabulary and Information may be better
+indicators of intellectual potential. Non-verbal tasks, including the Kaufman Brief
+Intelligence Scale (Kaufman & Kaufman, 1990) and the Matrix Reasoning subtest
+of the WAIS-III (Wechsler, 1997a), are not timed and have the advantage of being
+less culturally specific than most neuropsychological tasks. They are also less sensitive to the effects of educational attainment and problems such as truancy. Hence,
+if an ADHD child missed out on education due to attentional difficulties or behavioural problems, performance intellectual tasks are less likely to underestimate
+their IQ due to lack of exposure to similar materials. However, behavioural observations during these tasks can sometimes indicate underperformance due to impulsive
+response styles, or adopting a ‘stab in the dark’ or guessing approach when the client
+has lost concentration.
+Certain verbal tasks may also be used to estimate a baseline of intellectual functioning. Reading tasks are commonly used in clinical neuropsychology for predicting
+premorbid intellectual functioning, for example, the National Adult Reading Test
+(Nelson, 1992; Nelson & Willison, 1991) and the Wechsler Test of Adult Reading
+(WTAR) (Wechsler, 2001). These tests are often used to evaluate intellectual decline,
+as reading abilities are relatively resistant to many forms of brain damage, disease
+or mental disorder and hence may be employed to estimate a previous overall level
+of ability (otherwise referred to as a premorbid or ‘former’ functioning level). However, for adults with ADHD, the investigation of premorbid intellectual functioning is not particularly relevant as the clinician is not aiming to identify intellectual
+deterioration. The purpose of an intellectual assessment is to determine discrepancies between domains of cognitive functioning, for example specific impairments
+in attention, in comparison with average levels of intelligence. Reading tests can be
+employed to do this but they do have two major limitations. First, reading is a skill
+that is commonly acquired in primary school and early secondary school, and these
+are the ages at which a child with ADHD may be exhibiting particular difficulty in
+sitting still and learning due to hyperactivity and poor attention. Hence, they may
+be deprived of the opportunity to sit quietly with adults in order to be taught reading skills appropriately. The second limitation is that there is a high comorbidity of
+ADHD with dyslexia (e.g. Semrud-Clikeman et al., 1992) and therefore an adult’s
+reading ability may be compromised for reasons due to a specific learning difficulty
+rather than reduced general intellectual functioning.
+An alternative method of estimating verbal intellectual functioning in order to provide a baseline intellectual assessment is through the use of the Vocabulary subtest of
+the WAIS-III or the Wechsler Abbreviated Scale of Intelligence (WASI) (Wechsler,
+1999). This reduces the previously described problems associated with reading tests
+and dyslexia as the individual is required to provide word meanings as opposed to
+
+34 ADHD IN ADULTS
+reading the word. However, educational disruption and lack of exposure to written
+material may also limit a client’s knowledge of word meanings, although this task is
+somewhat less dependent on educational attainment than reading ability as clients
+may be exposed to words aurally in contexts where they have been able to abstract
+a meaning.
+Intellectual measures which have been shown to discriminate ADHD in adults
+from normal controls include subtests of the Wechsler Scales: Digit-Symbol Coding, Arithmetic, Block Design; Digit Span (Hervey, Epstein & Curry, 2004; Quinlan, 2001). This may be due to these tasks loading heavily on working memory
+and processing speed abilities. As yet, no research has been published regarding
+the Working Memory (WMI) and Processing Speed (PSI) indices of the WAIS-III
+(Wechsler, 1997a) but it is likely that these are more sensitive to ADHD symptoms
+in comparison with other indices.
+Aside from examining formal intellectual performance and comparison of subtest
+scores, it is important to bear in mind that ADHD individuals are less likely to have
+achieved their intellectual potential. Thus, it is helpful to compare occupational and
+academic attainment to that of family expectations and sibling achievement. For
+example, it is not uncommon to find a young man of average intellect employed
+in unskilled factory work or manual labour, but whose siblings are at college or in
+skilled or professional employment.
+
+Attention
+Attention inevitably affects all aspects of testing as the ability to focus on any task
+requires attentional functions. Hence, it could be argued that poor attention may contaminate all test results, even for tests which are not specifically designed to assess
+attentional functioning (e.g. IQ scores may be depressed). It is therefore advisable to
+assess attention independently using appropriate measures.
+Attentional functions can be fractionated into several domains. Four commonly
+acknowledged areas are selective attention; divided attention; shifting attention;
+sustained attention.
+1. Selective attention is the ability to focus attention on one stimulus source and
+screen out distracting irrelevant stimuli.
+2. Divided attention is the ability to attend to two or more stimuli simultaneously.
+3. Shifting attention is the ability to switch attention between two or more sources
+of information.
+4. Sustained attention is the ability to maintain attention over a long period of time,
+with only a limited frequency of reinforcement.
+Tests assessing selective attention include the Letter Cancellation Test (e.g. Lezak,
+Howieson & Loring, 2004) (see Figure 2.1), the Trail Making Test (Reitan, 1958;
+
+ASSESSMENT OF ADHD IN ADULTS
+
+35
+
+Instructions
+On this page you will see lines of letters. I want you to go through these letters and put a slash
+through all the letter ‘e’s. Work as quickly as you can but without missing any letter ‘e’s.
+Example
+1 plmkoijuhubgyvftgbhfdcdscczvatwabfhsyxmjewqpoiuytredfrtgvcxzswqaszxcfrtgvbjrmc
+2 plokmjiikmchtsgbxvzfatagsfxcsdweqwqsaczdsewfcvctdhnvjlkomjhdngtsgbcvpoiuytlmikm
+
+Figure 2.1 Letter cancellation test
+
+Spreen & Strauss, 1998) and the Stroop Task (Stroop, 1935; Trenerry, Crosson,
+DeBoe & Leber 1989). Attentional control has been shown to load on certain subtests of the Test of Everyday Attention (Robertson, Ward, Ridgeway & NimmoSmith, 1994), including the Map Search and the Telephone Search tasks. A client
+with ADHD will typically race through tests of selective attention, completing the
+tasks rapidly but making errors by missing target items. However, as individuals mature, they seem to learn from past experience and recognise that by speeding through
+tasks they are liable to make errors and hence apply a strategy of performing the task
+extremely slowly in order to ensure they achieve accuracy.
+Divided attention can be assessed by the TEA: Telephone Search Whilst Counting
+task (Robertson et al., 1994). On this occasion the client is required to listen and
+count a series of tones in series played on a tape recorder. The dual task decrement,
+(i.e. deterioration in performance when required to do two tasks simultaneously) is
+a measure of divided attention.
+There are several neuropsychological measures of attention shifting. The most widely
+available is Part B of the Trail Making Test (Reitan, 1958; Spreen & Strauss, 1998),
+which requires shifting attention between numerical and alphabetical sequences.
+Other tests of attention shifting include the Visual Elevator subtest from the Test
+of Everyday Attention battery (Robertson et al., 1994), which provides measures of
+both speed and accuracy. Laboratory-style tests of attention shifting, can be found
+in the CANTAB battery such as the Intra-dimensional-Extra-dimensional shift
+(ID-ED shift), although this task is also a test of rule learning and mental flexibility
+(MacLean et al., 2004). Clients with ADHD are likely to have increased error rates
+on such tasks, although this has not been found reliably (Hervey et al., 2004).
+Sustained attention can be assessed using various versions of the Continuous Performance Test (e.g. Lezak et al., 2004). It involves attending to computerised stimuli
+that are presented at a slow rate with a low target frequency. A client with ADHD
+may typically lose concentration early in the task and hence miss several targets.
+An ecologically valid sustained attentional task is the Lottery subtest of the Test of
+
+36 ADHD IN ADULTS
+Everyday Attention (Robertson et al., 1994), which involves listening out for target
+lottery numbers over a 10-minute period. However, this has relatively few target
+items and thus may be less sensitive to deficits.
+
+Response Inhibition and Executive Functioning
+Response inhibition is an executive function or higher order cognitive process,
+which is engaged when situations require voluntary control over responses, often
+when there is a change of context. Tasks assessing response inhibition for children
+include Go-No-Go and Stop tasks, but these have been shown to be less sensitive in
+adulthood ADHD (Lovejoy et al., 1999). One task which has been documented to
+discriminate well between ADHD individuals and patient controls is the Matching
+Familiar Figures test (Cairnes & Cammock, 1978; Young & Gudjonsson, 2005;
+Young, Channon & Toone, 2000). This task requires identification of a target
+amongst five distractor items. A typical ADHD response involves a speeded time
+to respond score, but an increased number of errors in comparison with control
+subjects. Other response inhibition tasks include the Stroop test (Trenerry et al.,
+1989) where the Colour-Word version requires inhibition of the prepotent response
+of reading the colour name rather than identifying the colour of the ink. A study
+by Young, Morris, Bramham and Tyson (in press) showed that a deficit in response
+inhibition existed even when controlling for colour naming speed; that is, subtracting the time taken to perform the basic word reading task which loads on selective
+attention.
+Attention and response inhibition are two aspects of a more overarching constellation
+of symptoms manifested by patients with ADHD forming a dysexecutive syndrome.
+This is perhaps unsurprising given the wealth of literature implicating the prefrontal
+cortex in neuroimaging studies to be significantly smaller and less active for individuals with ADHD than matched controls (e.g. Rubia et al., 1999; Rubia et al., 2000).
+Executive dysfunction beyond the core cognitive deficits in ADHD has been identified with tasks assessing spontaneous verbal production (FAS/COWAT tests, e.g.
+Lovejoy et al., 1999) and cognitive flexibility (e.g. Wisconsin Card Sorting Test; Milner, 1963). In a study by Young, Morris, Toone and Tyson (2006), a computerised
+version of the Tower of London test was used to investigate both planning and problem solving in a group of adults with ADHD. It was found that the control subjects
+increased their planning time as a function of task difficulty, whereas the ADHD
+group used the same amount of planning time regardless of difficulty. In contrast,
+the ADHD group increased their time to complete the solution in proportion to difficulty whereas controls did not follow the same pattern. It was concluded that normal
+adults plan and think through the solution for the task before beginning, whereas
+ADHD patients do their thinking during the task. This performance style obviously
+has major implications for a group of patients who are liable to be distracted during
+their everyday ‘on-line’ planning.
+
+ASSESSMENT OF ADHD IN ADULTS
+
+37
+
+We have found that the Behavioural Assessment of Dysexecutive Syndrome is less
+sensitive to adulthood ADHD than more traditional neuropsychological tests of
+executive functioning, although it may provide more valuable qualitative detail. For
+example, some patients may have difficulty in developing a search strategy in the
+Key Search subtest. Others may be unable to plan the route in the Zoo Map subtest
+or sequence and organise their time for the Modified Six Elements subtest. Again,
+behavioural observations are particularly crucial throughout assessment of executive
+functioning.
+
+Memory
+Several studies have investigated memory functioning in adults with ADHD, possibly because forgetfulness or ‘losing track’ of thoughts is one of the most commonly
+reported difficulties experienced in everyday living for this patient group. However,
+measured memory deficits appear to vary as a function of the tests that measure
+them. There have been consistent findings of difficulties with working memory as
+measured by tasks such as the Digit Span and Spatial Span subtests of the Wechsler
+Memory Scale – 3rd edition (WMS-III) (Wechsler, 1997b). Short-term memory deficits have been reported, for example, using Figure Recall and Logical Memory subtests. However, the nature of the impairment is unclear as it is possible that retention
+is affected by poor attention in registration of information rather than dysfunctional
+storage per se. In addition, studies (e.g. Dowson et al., 2004; Young, Morris, Toone
+& Tyson, 2006) have shown that deficits in short-term working memory are also
+exhibited by adults with ADHD.
+Verbal learning tests have also been shown to be performed poorly by adults with
+ADHD (Hervey et al., 2004). Again, this may in part be due to poor attention and
+therefore faulty initial encoding. In addition, adults with ADHD have been shown
+to have a reduced ability to use the optimal strategy of organising their learning
+according to semantic clusters and instead attempt to learn lists according to serial
+clustering instead; that is, they did not group the list in categories such as fruit, vegetables, etc., but learnt the list just in the order it was read to them.
+
+Processing Speed
+Studies of differences in processing and motor speed scores between adults with
+ADHD and healthy controls report smaller effect sizes than those seen in the
+other cognitive domains. However, there seems to be a strong relationship between
+response time and cognitive processing demands, whereby if cognitive processing
+co-occurs with motor activity, there is a relative increase in response time. Tests
+which can be used to assess processing speed include the Information Processing
+subtests from the Adult Memory and Information Processing Battery (AMIPB)
+(Coughlan & Hollows, 1985) and subtests of the WAIS-III (Wechsler, 1997a) that
+load on the Processing Speed Index (e.g. Digit-Symbol Coding; Symbol Search).
+
+38 ADHD IN ADULTS
+Differences in motor speed may be non-significant for some studies, although when
+this has been controlled for then impairment in other domains is still apparent (e.g.
+Young Morris et al., in press; Young, Morris, Toone, & Tyson, 2006).
+
+Limitations of Neuropsychological Assessment
+Clinical research has shown that, whilst abnormal scores are good predictors of
+ADHD, normal scores are poor predictors of the absence of ADHD; that is, there is
+an increase of false negative errors. This suggests that it is possible that a client may
+receive a diagnosis of ADHD in the absence of impaired test results.
+A major limitation of using a neuropsychological assessment for diagnostic purposes
+or to evaluate functional ability, is the unnatural setting of a typical testing session.
+Assessments are usually conducted on a one-to-one basis in a quiet setting with
+only limited distractions. However, the situations in which ADHD symptoms may
+pose the most difficulties for the client are those where there are multiple competing demands on their time which require prioritisation and planning in the context
+of many distractions. In the clinical environment, the examiner is effectively acting
+as the client’s frontal lobes by organising the sequence of tests, thereby minimising
+distraction. The importance of an assessment somehow enforces the client to stay
+seated and motivated to perform optimally. This latter aspect has been shown to be
+important in childhood ADHD where cognitive dysfunction is mediated by motivation; that is, children with ADHD were able to perform a task within normal limits
+when motivated by rewards but unable to do so in the absence of reinforcement. It
+is therefore likely that the presence of the examiner will provide some form of reinforcer, thus inducing motivation. It is likely that more ecologically valid neuropsychological tests will provide a more realistic assessment of true level of attentional
+and executive functioning, and this may also give the individual the opportunity to
+demonstrate adaptive strategies they may employ to overcome difficulties.
+Conversely, patients who do not have ADHD may also exhibit impairment on tests
+of attention, working memory and executive function. For example, the Stroop test
+has been shown to be sensitive to depression (Katz, Wood, Goldstein, Auchenbach &
+Geckle, 1998). Mood disorders, such as anxiety and depression, have been shown to
+be associated with poor attentional functioning, which may contaminate results on
+other tests such as memory assessments (e.g. Elliott, 2002). Unfortunately, these disorders may masquerade as adult ADHD due to their similar attentional symptoms or
+they may co-exist with the disorder. It is therefore crucial to obtain as detailed a history as possible regarding the chronicity and longevity of all cognitive symptoms.
+
+RATING SCALES
+Assessment of behavioural symptoms can be performed using various standardised
+rating scales in order to determine the extent to which they differ from accepted
+
+ASSESSMENT OF ADHD IN ADULTS
+
+39
+
+behaviour. The advantages of using rating scales are that they offer a method for a
+consistent approach to assessment across a service and that they can be used to quantitatively monitor progression of the disorder and treatment response. Rating scales
+can also be used as a screening measure since, if retrospective ratings of childhood
+ADHD symptoms are low, it is unlikely that an individual has ADHD in adulthood.
+Nevertheless, it is important to stress that scoring above a threshold score on a rating
+scale does not constitute a diagnosis but may provide support to clinical information
+regarding symptoms.
+It is advisable to use rating scales in order to attain information regarding both childhood and current behaviour from clients and someone who knew them as a child.
+Several childhood and adulthood ADHD measures are available for this purpose
+and may be selected according to speed and comprehensiveness. The most straightforward scale is the DSM-IV checklist of symptoms (see Table 2.2) where clients
+are required to rate each symptom according to frequency from 0 ⫽ never to 1 ⫽
+sometimes and 2 ⫽ often. A score of 17 or above is an indication of moderate ADHD
+symptoms (Young, 1999). This can be done by both clients and their informant (e.g.
+a parent) for current and childhood symptoms in order to determine presence and
+magnitude of difficulties. However, this scale does not allow assessment of behaviours commonly associated with, but not forming part of, the ADHD diagnostic
+criteria, such as emotional lability.
+
+Childhood ADHD Rating Scales
+Comprehensive and well-established childhood measures include the Conners’
+Rating Scales – Revised available in long and short forms for parents and teachers
+(Conners, 2000). The long form includes assessment of DSM-IV symptom subscales
+and comorbid disorders. The short form can be scored according to a symptom count
+or in comparison to norms. The Conners Global Index additionally provides information regarding restless-impulsive factors and emotional lability in childhood.
+The Wender Utah Rating scale (Ward, Wender & Reimherr, 1993) is a retrospective
+rating scale with a subset of 25 items rated with a 0–4 severity scale. It has been
+shown to be valid in differentiating adults with ADHD from those without and with
+more ambiguous psychopathology (Ward et al., 1993). However, this has not been
+standardised on a UK population, and its wording may have a North American bias.
+
+Adulthood ADHD Rating Scales
+A Conner’s Adult ADHD Rating Scale (CAARS) (Conners, Erhardt & Sparrow,
+1998) can be rated through self-report and by an observer in a parallel form. The
+long versions have 66 items, which form nine subscales of problem behaviours. The
+short versions have 26 items with abbreviated subscales and hence can be used for
+screening purposes.
+
+40 ADHD IN ADULTS
+Although the Brown Attention Deficit Disorder Scales (BADDS) (Brown, 1996) do
+not thoroughly assess impulse control and hyperactivity, they are particularly useful in assessing executive functioning deficits that are associated with ADHD in
+child and adulthood versions. Ratings of six domains of functions can be identified:
+(1) organising, procrastinating and activating to work; (2) focusing, sustaining and
+shifting attention to tasks; (3) regulating alertness, sustaining effort and processing speed; (4) managing frustration and modulating emotions; (5) utilising working
+memory and access recall; and (6) monitoring and self-regulating action.
+
+Limitations of Rating Scales
+There are disadvantages in using rating scales, the most obvious being that the questions are answered subjectively. Given that many clients who present at an assessment
+for ADHD are motivated to receive a diagnosis (Van der Linden, Young, Ryan &
+Toone, 2000), it is possible that biases towards overrating symptoms may be in
+operation. Conversely, clients who have been encouraged to attend the clinic by parents or other influential people may have only limited insight into their difficulties.
+It is therefore advisable to obtain corroborative ratings wherever possible. This is
+particularly so for retrospective ratings regarding childhood behaviour as reporting
+may not be reliable (e.g. Mannuzza, Klein, Klein, Bessler & Shrout, 2002) although
+other studies have shown greater reliability (e.g. Murphy & Schachar, 2000).
+
+CONCLUSIONS
+Assessment of adulthood ADHD requires the consideration of a wide range of sources
+of information in order for a diagnosis to be made. The existence of the disorder in
+childhood is necessary for an adult to be diagnosed with ADHD, therefore presence
+of symptoms that meet diagnostic criteria within the inattentive and/or hyperactive/impulsive domains needs to be established both within childhood and currently.
+Given that attentional and impulse control difficulties are common in other psychiatric disorders, careful consideration must be applied to differential and comorbid
+diagnoses. The information required can be obtained from several subjective and
+objective sources, which vary regarding sensitivity and reliability. The subjective
+sources include interview and rating scales with the client and informants, such as
+parents, for childhood history or a partner for current difficulties. More objective
+sources for consideration include school reports and current documentation regarding functioning, in addition to formal neuropsychological evaluations. Table 2.4 on
+the Companion Website provides an Assessment Checklist, which summarises the
+information to be gathered in order to conduct a comprehensive assessment of adulthood ADHD.
+
+3

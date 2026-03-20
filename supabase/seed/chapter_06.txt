@@ -1,0 +1,694 @@
+PROBLEM-SOLVING
+
+People with ADHD have difficulty solving problems for many reasons. They may
+respond impulsively, rather than think through a solution and its potential outcomes.
+They may worry unnecessarily about minor, more immediate issues and lose sight of
+the whole picture, in other words ‘they can’t see the wood for the trees’. This means
+that they may find it hard to generate solution options. Past experience means they
+may tend to focus on negative outcomes as these are what they have come to expect.
+However, by learning to adopt a methodical approach to solving problems, more
+optimal outcomes can be reached.
+A ‘problem’ can be defined as any life situation or task that requires something to be
+changed or resolved. In order to allow the person to function adaptively. The problem
+may be explicit (for example, needing accommodation) or intrinsic (for example,
+feeling unattractive). Obstacles such as novelty, ambiguity, conflicts of interest, or
+lack of resources may prevent an immediate response or solution from being effective. Sometimes people may only begin to realise that a problem exists when they
+have failed to achieve a desired goal on several occasions, for example getting a
+job.
+A ‘solution’ is a response or pattern of responses that can be cognitive or behavioural.
+A solution arises through the problem-solving process and achieves a problemsolving goal (D’Zurilla & Nezu, 1999). Implementation of a solution is an important
+part of the problem-solving process as this involves carrying out the solution in specific situations. Finally, solutions need to be evaluated as to their level of success in
+reaching the set goals.
+For individuals with ADHD, their problem-solving abilities are often affected by
+executive functioning difficulties, e.g. a difficulty organising and sequencing information, and/or a difficulty inhibiting a prepotent response. Thus, their problem-solving
+abilities are hindered by core cognitive impairments, such as deficits in response
+inhibition, working memory and/or attention. It is important to assess the coping
+styles of clients, both adaptive and maladaptive, as these will determine appropriate
+
+98 ADHD IN ADULTS
+problem-solving techniques, the hurdles they will face implementing them, and their
+potential success. This chapter examines the problem-solving difficulties commonly
+reported by people with ADHD, what is known about their adaptive functioning
+and coping mechanisms and the stages involved in successful problem solving. The
+model presented is a five-stage process that involves identifying and defining the
+problem, generating solutions, evaluating solutions, implementing the chosen solution and evaluating success.
+
+PROBLEM-SOLVING DIFFICULTIES
+Specific problem-solving deficits have been investigated using neuropsychological
+measures in order to establish their cognitive basis in ADHD (e.g. the Tower of
+Hanoi and Tower of London tasks) (Riccio, Wolfe, Romine, Davis & Sullivan, 2004;
+Young et al., in submission). There are several relevant areas of difficulty including
+response inhibition, working memory and attention (see Chapter 4 on inattention
+and memory).
+Failure in inhibitory control when confronted with a problem may lead an individual with ADHD to respond before the optimal solution has been generated.
+A difficulty in delaying gratification may also lead ADHD adults to opt for a
+‘short-cut’; that is, an immediately rewarding solution, rather than implementing
+a longer-term solution that requires waiting and more effort but with a greater
+reward. Young et al. (in submission) explored these concepts using a Three
+Dimensional Computerised Tower of London task where ‘discs’ and ‘rods’ are
+presented on a computer screen. The participant is required to solve problems
+of varying difficulty by rearranging a set of discs in order to make them match
+a goal arrangement. It was found that people with ADHD did not increase their
+planning time and were less accurate as task difficulty increased. Failure to
+increase planning time with increasing problem difficulty was associated with
+elevated levels of impulsivity. This suggests that impairment in response inhibition, or a tendency to act with less prior thought, can lead to problem-solving
+failure.
+Working memory difficulties and attentional impairment can affect problem
+solving at several stages for individuals with ADHD. There can be difficulties in
+generating solutions, as the individual may be liable to lose sight of previously
+suggested ideas and/or become distracted. They may find it difficult to hold in
+mind the advantages and disadvantages of solutions in order to weigh up which
+is most likely to be successful. In addition, working memory impairments may
+cause difficulties for individuals with ADHD implementing solutions as they may
+miss out crucial components or muddle up a sequence of events. For example,
+when solving the problem of getting a vehicle license renewed, they may go to the
+post office without organising the papers and find that they have left behind an
+important document.
+
+PROBLEM SOLVING 99
+
+Young et al. (2006) used an ecologically valid measure of spatial working memory,
+which involved a computerised simulated golf task – ‘The Executive Golf’ (Morris,
+Downes, Sahakian, Evenden, Heald & Robbins, 1988). This involves the participant
+predicting into which hole the ‘golfer’ will putt a ball. The participant is given feedback as to whether their selection is correct or not. The aim is to avoid returning
+to any holes previously selected. Performance can be improved by the participant
+developing a search sequence, however ADHD participants tended not to adopt any
+strategy at all, resulting in a significantly impaired performance. Furthermore, the
+deficit became more evident with task difficulty; that is, when they were required to
+process a larger array of holes in their spatial working memory.
+These specific cognitive difficulties should be borne in mind when developing a
+problem-solving intervention for a client with ADHD. Their strengths and weaknesses may guide the therapist regarding the areas that may require more attention.
+For example, for more impulsive individuals, it may be necessary to focus on strategies that involve generation of multiple solutions in order to avoid them lunging at
+the first idea which comes to mind to resolve a situation. Alternatively, for people
+with inattentive difficulties, they may require more assistance in devising strategies for carrying out solutions without deviating from their planned and desired
+course.
+
+COPING STRATEGIES IN ADULT ADHD
+Adults with ADHD have been shown to use maladaptive coping strategies, such
+as confrontation, escape-avoidance and less planned problem-solving than individuals without ADHD (Young, 2005). This study also found that the way ADHD
+adults coped with stressful situations was determined by their cognitive ability.
+Indeed, impairment in executive function may lead an individual to lack flexibility
+in their ability to access and utilise a repertoire of appropriate coping strategies.
+For example, difficulties with impulse control may lead clients to cope with problems by responding rapidly and without thinking; this may mean they react in an
+aggressive or defensive way. They may find it difficult to employ problem-focused
+strategies if they feel emotionally overwhelmed by anger or anxiety, which in turn
+drives them to act out their feelings. Alternatively, due to previous adverse experiences and attentional difficulties, some individuals with ADHD may respond to
+stress or problems by not acknowledging the problem or actively avoiding dealing
+with it.
+The coping strategies employed by adults with ADHD may also be affected by a
+lack of intimate, confiding, relationships as social support can act as a stress-buffer.
+Close, supportive interpersonal relationships provide the opportunity to consult about
+problems, gain helpful advice, benefit from the experience of others, and learn from
+the modelling of successful and unsuccessful coping mechanisms. However, ‘words
+of wisdom’ and the observation of adaptive functioning may be less accessible to
+
+100 ADHD IN ADULTS
+individuals who experience multiple short-term interpersonal relationships, find it
+difficult to sustain relationships with acquaintances and old friends and may have
+strained relations with family members.
+The individual’s style of adaptive functioning will determine the outcome of a
+problem solution, in other words, its success and viability. A functional coping
+style provides the context for the generation and implementation of optimal solutions. A dysfunctional coping style can negatively affect the quality and suitability
+of solutions generated and may lead to inappropriate decision making. According
+to the Lazarus and Folkman (1984) model of coping, stress depends on a person’s
+cognitive appraisal of a situation and their perceptions of their resources to deal
+with it. They suggest that feelings of stress can be relieved through both emotion-focused coping and instrumental problem-solving. Emotion-focused coping
+is used when the aim is to manage the emotions that are generated by a situation,
+for example, a death in the family or the end of a relationship. Problem-solving
+is used as a general coping strategy in situations that are perceived as changeable
+or controllable. Problem solving can affect a person’s sense of control and change
+their negative appraisal of situations. A functional response to stress involves
+the ability to use emotion-focused coping and problem-solving in the appropriate
+situations.
+There are gender differences in the likelihood of whether emotion-focused or problem-focused coping strategies are employed. Females are more likely to engage
+in emotion-focused coping, whereas men are more likely to use problem-focused
+coping. However, when people have ADHD, it seems that these are the exact areas
+in which the individuals of different genders need the most help. Females with
+ADHD often have emotion-related difficulties, such as anxiety and mood lability,
+which can impact on their ability to cope with stressful situations. Additionally,
+adolescent females have been shown to be less likely to confide in peers and use
+social support, which is a common resource used by young people (Young et al.,
+2005b). On the other hand, males with ADHD are more likely to externalise their
+distress and respond impulsively with aggressive or antisocial behaviour, rather
+than engaging in adaptive problem-solving. For these reasons, it is important to
+begin treatment with psychoeducation regarding when each type of coping may
+be more appropriate, and follow this through with teaching effective skills and
+techniques.
+If a client is in a situation that is entirely beyond their control (and the therapist needs
+to check whether this perception is prone to cognitive distortion, such as catastrophising the problem), then emotion-focused strategies may be most suitable to help
+the client manage their feelings. These may include simple counselling or sharing of
+a difficulty with a friend, but may extend to mood-focused strategies such as those
+provided in Chapters 9 (Anxiety), 10 (Frustration and Anger) and 11 (Low Mood).
+However, situations that are within the control of the individual can be addressed
+using the five-stage model of problem solving provided below.
+
+PROBLEM SOLVING 101
+
+FIVE STAGES OF PROBLEM-SOLVING
+Individuals of both genders can benefit from learning to apply an instrumental and
+structured method of analysing and resolving their problems. This involves adopting
+a five-stage process:
+1. identifying and defining the specific problem
+2. generating various solutions to the problem
+3. evaluating each solution
+4. implementing the chosen solution
+5. evaluating success.
+
+Stage 1: Identifying and Defining the Problem
+Problems may creep up on individuals with ADHD or suddenly occur unexpectedly.
+They may be external obstacles to a goal that arise as part of a natural process (e.g. being
+unable to purchase materials to complete a task as the shop is out of stock); they may
+be the result of actions or interference by others, both positive and negative (e.g. a work
+colleague is off sick for a week and the client has to cover his work-load); they may also
+be self-generated and build up through worry (e.g. ‘my boss hates me’, ‘I’m hopeless at
+parties’). Common areas for problems for people with ADHD are given in Table 6.1.
+However, the client may need some prompting and assistance in teasing out the presenting problem. This can be achieved by asking four main questions in order to
+determine whether the individual has a ‘solvable’ problem or more general worries
+and anxieties. These questions have been included in an exercise format on the
+Table 6.1
+
+Common domains of problems in ADHD
+
+Work
+Transport
+Financial
+Lack of support
+Household chores
+Relationships
+Low self-esteem
+Sleep
+Disorganisation
+Substance misuse
+Trouble with police
+
+Underachievement at work, being passed over for promotion, not
+meeting sales targets
+Missing trains, buses, being late, taxing, insuring and organising
+MOT for a car
+Debts due to not paying bills on time, impulsive spending
+Gaining appropriate support, e.g. setting up childcare arrangements,
+not accessing appropriate benefits
+Incomplete DIY tasks, putting off cleaning and laundry
+Difficulty making or maintaining relationships, argumentative with
+friends
+Feeling like a failure, expectancy of failure
+Restlessness, insomnia, difficulty geting out of bed on time
+Disorganisation of time, time-wasting traps, day lacking structure,
+poor work–leisure time balance
+Drug and alcohol addictions, use of substances as a maladaptive
+coping strategy
+Opportunistic crime, aggressive outbursts, damage to property
+
+102 ADHD IN ADULTS
+Companion Website (Exercise 6.1). The questions will help determine whether the
+problem really needs tackling. If the problem derives more from a client’s general
+attitude or anxious response-style, then the techniques outlined in Chapter 9 on coping with anxiety will be of help.
+1. Why it is a problem?
+2. How does it affect the client?
+3. Does the situation have potential for change?
+4. What could happen if it is not solved?
+For example, take the case of Alex, a client with ADHD. Alex started a new relationship and was unsure whether to tell his girlfriend, Joanne, that he had ADHD.
+1. Why was it a problem? Alex often had to take medication when he was with
+Joanne and did this in secret. If they were together when his medication wore off,
+he sometimes felt a bit ‘ragged’ and irritable.
+2. How did it affect the client? Alex was worried about how Joanne would react if
+she knew. He didn’t want to lie to her but he was worried that she would think he
+was crazy and/or be embarrassed by him taking medication.
+3. Did the situation have potential for change? If Joanne knew about Alex having
+ADHD and was OK about it, Alex would feel very relieved. Alex believed they
+would have a firmer, more honest foundation on which to build their relationship.
+The downside was that they might split up if Joanne wasn’t OK with it.
+4. What could happen if the problem was not solved? The relationship would not
+have an open and honest foundation. If Joanne found out by someone else telling
+her, she might feel angry with Alex and feel that he cannot be trusted.
+This example illustrates that problems are often complex. They are not straightforward
+or simple to resolve. If they were, they would not be a problem! Thus, part of the
+problem-solving process is investigation. Finding out as much as possible about the
+problem and how it has arisen will provide the client with the knowledge to find
+the appropriate solution and give them the self-confidence to implement it. This
+involves not only gathering facts related to the task itself but also examination of
+personal information, for example self-expectations and demands. Hence, if a person sets unrealistic, unachievable goals, then the problem is not the failure to achieve
+set goals, but the inability to realistically acknowledge their capabilities and skills,
+time-management problems, perfectionist attitude, etc.
+Three questions can be asked in order to assist with understanding the problem:
+1. What is the problem or situation?
+2. What do I want?
+3. What are the obstacles to getting what I want?
+An example is provided in Table 6.2, which demonstrates how, by adopting this
+systematic methodology, problems may become more clearly defined and easier to
+understand. A blank version is on the Companion Website.
+
+PROBLEM SOLVING 103
+Table 6.2
+
+Understanding the problem
+Problem list
+I am unsure
+whether to tell
+girlfriend about
+ADHD
+
+I am often
+late for
+work
+
+I have been given
+notice to move out
+of my flat
+
+I have fallen
+out with a
+friend
+
+1. What
+is the
+problem/
+situation?
+
+Whether
+or not to
+disclose
+
+Usually
+20⫺30
+minutes
+late
+
+Need to find
+somewhere to
+live within one
+month
+
+My friend
+has stopped
+contacting
+me since
+I blurted
+out a
+confidence
+
+2. What do I
+want?
+
+That she
+knows
+and feels
+comfortable/
+accepts my
+diagnosis
+
+On time
+or 10
+minutes
+early
+
+Find new
+accommodation
+in next fortnight
+
+Being in
+touch with
+my friend
+again
+
+3. What
+are the
+obstacles to
+getting what
+I want?
+
+Finding the
+right moment
+
+Difficulty
+getting up
+early
+
+Going away for
+weekend next
+week
+
+Pride
+
+Transport
+delays
+
+Raising deposit
+
+Finding the
+right way to
+say it
+She may
+reject me
+
+Fear of
+rejection
+
+Worries about
+having to live
+with strangers
+
+Stage 2: Generating Solutions
+The best way of generating solutions is to brainstorm all the possible ways of solving
+the problem. There are three basic rules for generating alternative solutions through
+brainstorming (D’Zurilla & Nezu, 1999):
+1. Quantity leads to quality, i.e. the more solutions that are produced, the more good
+quality ideas there will be.
+2. Deferment of judgement, i.e. the person needs to wait to choose a solution in order
+to generate better quality solutions at this stage.
+3. Variety, i.e. the greater the range of solutions, the more likely a good solution will
+be generated. Thinking more laterally may prevent the person from choosing a
+well-tried but unsuccessful approach.
+Thus the client should be encouraged to produce ideas including extreme solutions ranging from the sublime to the ridiculous. Figure 6.1 shows the solutions
+
+104 ADHD IN ADULTS
+
+Tell her I am
+terminally ill,
+then say it’s
+only ADHD so
+it’s not so bad!
+
+Don’t answer
+her calls
+
+Get
+someone
+else to tell
+her
+
+Tell
+her I’m
+mad!
+
+Run off
+with her
+best friend
+PROBLEM:
+telling Joanne
+that I have
+ADHD
+
+Change my
+name to
+ADHD
+
+Don’t tell
+her
+
+Leave my
+tablets out so
+she works it
+out
+
+See if she
+can guess
+
+Leave the
+country
+
+Make a
+joke of it
+
+Sit down
+and tell her
+sensibly
+
+Figure 6.1 Example of brainstorming solutions
+
+generated by Alex when he was brainstorming ideas regarding whether to tell his
+girlfriend that he has ADHD. A common obstacle to generating creative solutions
+is ‘habits’ (Parnes, Noller & Biondi, 1977). Habits hinder problem solving by causing clients to respond automatically and in a way to which they have become accustomed. Individuals with ADHD may well have a history of habitual and impulsive
+responding resulting in the development of ‘maladaptive habits’. These become
+maladaptive coping strategies. For example, a client may habitually respond to a
+situation that is perceived to be threatening in some way by storming out and failing to address the problem.
+Whenever Alex prepared himself to tell his girlfriend he had ADHD, he would become anxious and start an argument. The argument distracted him from following through his intention to disclose to her his ADHD status. Such habits may be
+helpfully identified collaboratively in sessions so that the client may recognise them
+when they occur and resist the impulse to automatically respond in a predetermined
+pattern of thinking or behaving.
+One of the most helpful methods in solving problems, and one which is often
+overlooked by adults with ADHD, is simply reviewing the previous solutions
+they have applied to similar problems. The client should be encouraged to think
+about how they usually tackle problems and what has worked (or not worked)
+
+PROBLEM SOLVING 105
+
+in the past. They should also evaluate the methods by which they have successfully avoided problems in the past. This will involve engaging the client in a
+cost-benefit analysis of previous decision-making processes. Clients should be
+encouraged to think not only about what and who helped in the past, but also
+what made things worse. They need to identify the process, how they arrived at
+the decision, and whether this had a positive or negative outcome. They may also
+seek the advice of someone who has known them encounter similar situations in
+the past who may be more objective regarding what worked and what was less
+helpful.
+For example, Alex was asked to consider what had happened in the past when he had
+told friends and girlfriends that he has ADHD. When he told his first girlfriend and
+their friends in the pub, they had laughed and thanked him for letting them know.
+His best friend asked if there was anything he could do to help. His friend asked him
+a lot of questions about the disorder. A few weeks later he and his girlfriend split up
+as she was due to go travelling. His mother told family members that he had ADHD,
+some of whom did not seem to grasp the nature of the disorder. One aunt sent him a
+‘Get Well Soon’ card. From this experience, Alex decided that it would be better if
+he provided his own explanation of his condition.
+
+Stage 3: Evaluating Solutions
+So far the client will have learnt to identify and define problems and generate
+multiple alternative solutions. Once several solutions have been generated, these
+should be assessed according to the degree of satisfaction the client would feel with
+the outcome of each solution. Several methods are recommended to assist with this
+process, including evaluating effort, examining alternatives, rehearsal of the solution, role-play and challenging cognitive distortions.
+
+Evaluating effort
+People with ADHD may avoid adaptive problem-solving when the effort involved in
+carrying out a solution is perceived to be too great. A desire for immediate gratification means that a short cut may be more rewarding than the alternative of expending
+more effort to achieve a greater goal. Motivational interviewing techniques will help
+the individual focus on the goal or task to be achieved and motivate them to stay on
+task, avoid distractors and achieve it.
+For example, in order for Alex to achieve a successful relationship, effort needed
+to be expended in planning how to explain to Joanne about having ADHD. The
+alternative short cut, which did not require effort, was not tell her and to continue
+the relationship on the basis of dishonesty. The latter course may have provided
+immediate relief from the anxiety aroused in Alex whenever he contemplated
+
+106 ADHD IN ADULTS
+disclosure to Joanne, but the problem remained unresolved. Indeed, it may even
+have become worse if, say, Joanne had observed Alex surreptitiously taking
+tablets and then ended the relationship on the assumption that he was taking
+illicit drugs. Alex examined his motivation to change the situation and achieve
+a better relationship by discussing his readiness to engage in change by formulating his position in the ‘Stages of Change’ model (Prochaska & DiClemente,
+1982). Alex identified that he had been oscillating between the precontemplation
+and contemplation state. His ambivalence was expressed by him attempting to
+find some ‘middle ground’ by arguing that he should wait to tell Joanne about his
+ADHD (‘I’ll do it next week’). In Alex’s case, this was a delaying tactic, which
+was challenged in the sessions. However, in some cases it may be sensible for clients to be encouraged to avoid premature disclosure in new relationships or less
+close relationships (e.g. acquaintances, working associates). It is all about doing
+what is right for the client and getting the balance right. This will inevitably
+involve encouraging the client to plan ahead and think about the consequences
+of their actions. As a therapist, the primary task is to help the client to learn to
+think before they speak and act, or react impulsively on the spur of the moment.
+Blurting out his medication history at a party is unlikely to be helpful in resolving Alex’s problem. Alex determined to progress onto a stage of preparation by
+examining alternative solutions, rehearsal and role-play of favoured solutions in
+preparation of the action stage.
+
+Examining alternatives
+After eliminating all the ridiculous and least likely options, the client will usually
+be left with two or three possible ‘realistic’ solutions. These often have very different courses of action. This is the time to make a ‘pros and cons’ list for each – often
+the advantages of one solution are the disadvantages of another. Weightings can be
+given according to how important each ‘pro’ or ‘con’ is for the client. These may depend on the likelihood of achieving the goal, emotional well-being, time and effort.
+Alex decided that he should choose between telling Joanne himself (‘sit down and
+tell her sensibly’) and not telling her, but continuing the relationship. Alex’s pros and
+cons for telling Joanne that he had ADHD are given in Table 6.3. A blank version
+can be found on the Companion Website for use with clients.
+Next Alex was asked to rank the five most important issues identified in the pros and
+cons list. He chose:
+1. It would help Joanne understand why I am the way I am (pro)
+2. It’s being honest (pro)
+3. It might freak her out (con)
+4. She could find out anyway, and might be angry that I didn’t tell her (pro)
+5. She may leave me (con)
+
+PROBLEM SOLVING 107
+Table 6.3
+
+Example of a pros and cons list
+
+Pros of telling
+
+Cons of telling
+
+It’s being honest
+She may not mind
+She could find out anyway, and might be
+cross that I didn’t tell her
+It would help her understand why I am the
+way I am
+The longer I leave it, the harder it will be
+to tell her
+
+It might freak her out
+She may leave me
+I don’t want to worry her
+The relationship may not last
+She may laugh at me and
+tell other people
+
+It then became clearer to Alex that, not only did he choose more pros than cons in
+his importance list, but he also ranked them higher. Therefore, he decided to tell
+Joanne that he had ADHD. The next stage for him was to work out exactly how best
+to do this.
+
+Rehearsal
+Rehearsal is an effective way of preparing for a difficult conversation or situation.
+The client should be taken into an imaginal mode by asking them to imagine the
+anticipated situation and see themselves acting out the chosen solution. The client
+can be oriented to the situation by being cued to imagine and describe the surroundings in detail, for example colour of curtains, type of flooring, cooking smells. At
+first, some clients may have difficulty engaging in an imaginal mode, but with practice this will become easier. In such cases, it may be helpful for the therapist to
+initially talk the client through the specific steps that may be taken to solve the
+problem whilst the client is in the imaginal mode. However, it is important that the
+client progresses to rehearsal of the solution unaided. In addition, they should try to
+identify possible pitfalls to success that were not immediately obvious and determine
+collaboratively how these may be overcome and/or constructively managed. The client should also consider how they feel during the process and at the outcome.
+For example, Alex was asked to imagine the situation carefully. He thought it would
+be better to tell Joanne at her house, when they were relaxing watching television.
+However, when this was rehearsed in the imaginal mode, Alex discovered that the
+TV distracted him. Alex then decided to tell Joanne in the kitchen over a cup of
+coffee. Alex rehearsed what he would say to Joanne and, by using this technique, he
+felt more confident in his ability to see the task through to fruition and to achieve the
+outcome he desired.
+Prior to working in imaginal mode it is very important to determine a calm, happy
+imaginal state that the client relates to positively. Sometimes the client may become
+
+108 ADHD IN ADULTS
+distressed when working in imaginal mode and they may imagine alternative consequences, which may be negative. In such an event, the client should signal feelings
+of distress to the therapist using a predetermined code (e.g. by lifting a finger in the
+air) and the therapist then verbally directs the client to imagine a neutral, calm scene
+and focus on breathing exercises (see Chapter 9 on Anxiety).
+
+Perspective taking role-play
+The next stage involved Alex role-playing the scenario with his therapist. A roleplay method is particularly useful for rehearsing problem solutions involving other
+people such as giving notice at work and ending a relationship. In the case of
+Alex, the role-play was reversed so that the therapist pretended to be Alex (the
+client), and Alex role-played his girlfriend Joanne (the person receiving the information). This helped Alex think about the likely impact of his problem solution
+on Joanne and amend his plans accordingly, such as by using more sensitive wording to explain about ADHD, having some written information to hand to her that
+would help dispel any inaccurate stereotypical lay beliefs she may have. Alex was
+able to think about the questions that Joanne might ask (for which he could then
+prepare answers and rehearse either in imaginal mode or by further role-play in
+sessions).
+Practicing such situations in this way will make individuals feel less nervous when
+the situation actually happens and they will feel more prepared. This will improve
+their sense of self-efficacy and belief that problems are solvable and change is
+possible.
+
+Challenging cognitive distortions
+It is likely that at some stage during treatment distorted thinking will handicap the
+problem-solving process, particularly when maladaptive habitual responses are
+favoured (‘I’m no good at it’, ‘I’ll fail’, ‘I’m stupid’, ‘They don’t like me’). The client
+needs to learn how to check that their ideas about various solutions are productive
+and viable. Cognitive distorted thinking is likely to sabotage helpful solutions in
+favour of ones that add little to resolving the problem, and/or may make it worse (for
+more help with cognitive distortions, see Chapter 11 on Low mood and Depression).
+In such circumstances, potentially helpful solutions may be discarded erroneously
+due to ‘faulty thinking’ processes resulting in:
+
+• Overgeneralisation, e.g. ‘everything I do always goes wrong, so why bother trying’.
+• Black-and-white thinking, e.g. ‘if I can’t get it 100% right, there’s no point in doing it at all’.
+• Jumping to conclusions, e.g. ‘I only just managed to complete Part 1, so I’ll never
+get Part 4 finished’.
+
+PROBLEM SOLVING 109
+
+Alex tended to jump to conclusions and overgeneralise. In fact, his first girlfriend
+had ended their relationship before she went travelling around Europe with a friend.
+This occurred just after he had disclosed to her about him having ADHD. It may
+have been a matter of bad timing. Alex had formed the belief that future relationships would end if he told his friends and girlfriends about having ADHD. He felt
+very anxious about it. However, Alex had never considered alternative possibilities,
+such as his ex-girlfriend had wanted to go travelling for years, it had been arranged
+for a long time and it had nothing to do with him disclosing to her that he had the
+disorder. In fact, Alex had ignored evidence to the contrary, as his ex-girlfriend had
+said that she wanted to stay friends. She had stayed in touch and had sent him post
+cards from various countries. Additionally, Alex tended not to focus on the fact that
+his friends had not responded in a similar way. He still met them regularly in the pub
+and his best friend had obtained an information leaflet about adult ADHD.
+
+Stage 4: Implementing the Chosen Solution
+The client should have become motivated to effect change and resolve problems, and
+they will have generated multiple solutions to their problem and chosen the best. The
+client will have been prepared by rehearsal in sessions and have role-played potential
+outcomes. The next stage is to plan and implement the solution. Once an appropriate
+solution has been determined and rehearsed, the client is encouraged to implement
+this, taking care to avoid procrastination and time-wasting traps. For example, say
+the problem is debt and the target is to pay off £200 of a credit card bill by the end
+of the year. The solution implemented is putting aside £5 each week. This illustrates
+how steps to achieve the target should be planned by breaking down the goal into
+smaller achievable steps.
+However, the process is often more complex, especially when problem-solving difficulties involve interpersonal relationships. This involves thinking about the best
+time and situation in which to address the problem, and if possible ‘set the scene’.
+Depending on the problem, the time management principles set out in Chapter 6 may
+also be helpful if ultimate resolution and goal achievement requires the individual
+to create small achievable steps or tasks that lead to success. Tasks must be clearly
+defined and goals realistic. In the case of Alex, he was encouraged to work out a
+specific evening and place most suited to disclosing his ADHD status to his new
+girlfriend. This was then reviewed in the following session.
+
+Step 5: Evaluating Success
+Following the implementation of a solution, the client should evaluate their success.
+Did they achieve the desired result? Positive feedback by the therapist is a powerful
+reward! It is important that the client feels proud of their achievement and focuses
+on the benefits of success. They should reflect on the impact of success on their
+
+110 ADHD IN ADULTS
+self-confidence, their mood and also their understanding of the original presenting
+problem (was it as life-threatening as they first thought?). Positive feedback will
+increase the likelihood of the client engaging in a problem-solving process without
+delay (or procrastination) in the future and motivate them to pursue further goals.
+For example, Alex told his girlfriend and she was very pleased that he had trusted her
+and told her. Joanne told Alex that she had diabetes and had to inject insulin every
+day. She had been worried about how to tell him. In future, Alex adopted a similar
+model of disclosure to friends at the appropriate time. Both Alex and Joanne felt
+more confident about their relationship.
+In case of partial or no success, the therapist must systematically evaluate all the
+obstacles and difficulties that arose and recommence the problem-solving process
+to explore how these may be better dealt with. Useful areas to explore include the
+client’s feelings about successful resolution, such as fearing the consequences, anxiety about change or uncertainty. It may be that the problem needs to be re-evaluated
+and resolved in a different way. For example, if Alex had been unable to raise the
+issue of ADHD with Joanne, the therapist could examine where the obstacles lay.
+Had there been an external distraction that prevented him (e.g. other people nearby)
+or had Alex been thinking negatively about his solution plan?
+Rewards are crucial to encourage the client and provide motivation. The reward system should include rewards for attempting resolution of the problem and one greater
+reward for successful resolution of the problem. Alex and Joanne went out for dinner
+to a romantic restaurant.
+
+POSITIVE REAPPRAISAL
+Despite the many pitfalls experienced by adults with ADHD in solving problems, they
+have been shown to reappraise stressful situations in a positive way (Young, 2005).
+This may mean that they are more resilient to disappointments and better able to
+‘bounce back’ from difficulties. This trait has been found to be positively associated
+with impulsivity. This may indicate that more impulsive individuals may be less
+prone to dwell on their difficulties and attempt to get on with life. This can be hugely
+advantageous and may underpin many ADHD individuals’ creative and entrepreneurial personality characteristics and successes.
+
+CONCLUSIONS
+People with ADHD are often faced with multiple problems that require solving.
+Their difficulty is in coping with problems adaptively and finding appropriate
+solutions. All too often, people with ADHD respond to the problems in their daily
+lives in a disadvantageous way, for example putting off targets, avoiding situations
+
+PROBLEM SOLVING 111
+
+or people, responding in an irrational or impulsive manner. This is likely to be due
+to cognitive deficits and maladaptive coping styles that can hinder their problemsolving abilities. When small problems mount up, these become great problems.
+People with ADHD respond in much the same way to great problems or life events.
+It is at this point that the psychological problems such as depression and anxiety may
+develop when individuals feel overwhelmed by stressful problematic situations. It is
+therefore important that the individual with ADHD learns to encounter and resolve
+problems in a timely and appropriate way. It is important, however, to recognise that
+individuals with ADHD often have a predisposition to reappraise stressful situations
+in a positive light, which may be a protective factor for future problem solving and
+strengthen their resilience.
+This chapter has reviewed the main stages involved in solving problems. These
+include identifying and defining problems, and generating alternative solutions. The
+implementation of a solution must always be followed by analysis and evaluation
+of success, and reward for success. This provides a constructive feedback loop to
+inform earlier stages of the future problem-solving process.
+
+7

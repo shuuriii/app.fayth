@@ -1,0 +1,669 @@
+IMPULSIVITY
+
+Behavioural and cognitive disinhibition are characteristics of ADHD associated with
+the lack of ability to control either behaviour, speech or certain thought processes. This
+means that someone with ADHD is likely to say the first thing that comes into their
+head, such as expressing feelings, thoughts and opinions without weighing up the consequences. They may also act without considering the consequences of their behaviour.
+In a way, they do not have an internal ‘brake’ that allows them to sift out inappropriate
+responses or behaviours. This is sometimes referred to as having poor ‘response inhibition’; that is, they are unable to inhibit a prepotent response. Poor impulse control
+can cause problems for ADHD individuals in their social interactions. They may blurt
+out inappropriate comments and inadvertently offend people. Nevertheless in some
+circumstances the tendency to act on the ‘spur-of-the-moment’ can be advantageous
+as it means individuals are willing to take risks that may pay off, whereas someone
+without ADHD is likely to be more cautious and perhaps miss out on opportunities.
+Impulsivity or a lack of inhibition can also lead to an increase in divergent or lateral
+thinking, which allows people with ADHD to be creative. Indeed, there are several
+successful entrepreneurs and celebrities in the arts and music industries who have disclosed their ADHD and attribute their success in part to having the disorder.
+However, the tendency to act and think in an impulsive way can also bring great
+disadvantages. People with ADHD tend not to engage in a systematic decisionmaking process or consider alternative perspectives. The need for immediate gratification may make individuals seem demanding, exhausting and tactless and they may
+be perceived as antisocial and irritating company. They may also seem inconsiderate
+and fickle as they can become impulsively enthusiastic about doing something but
+then quickly lose interest in favour of something new. They may be viewed as selfcentred individuals who lack consideration for the feelings and needs of others. This
+presentation is likely to have negative social consequences resulting in the clients
+themselves feeling misunderstood and socially isolated.
+This chapter examines the nature of the deficit that underpins impulsive behaviour
+in adults with ADHD. The current theoretical explanations are discussed along with
+
+114 ADHD IN ADULTS
+a description of the typical impulse control problems that may be exhibited. The relevance of impulsivity to antisocial, delinquent and criminal behaviour is considered,
+particularly with regard to the interaction of comorbid conduct disorder and ADHD.
+Methods are provided for assisting individuals in identifying situations in which
+they may be vulnerable to responding in an impulsive way and determine appropriate control and coping strategies. Various cognitive-behavioural self-monitoring and
+self-restraint strategies are presented within the chapter. These include techniques
+to improve control, including the use of self-talk, distraction and self-instructional
+training.
+
+THEORETICAL EXPLANATIONS
+There are two competing explanations for why impulsivity arises in the disorder
+of ADHD. One is that there is a primary executive functioning deficit in inhibitory
+control mechanisms (e.g. Barkley & Biederman, 1997), such as the mechanisms
+that stop a person from running out across a busy road, or stop someone from blurting out a tactless comment. The probability of successful inhibition seems to relate
+directly to the length of the ‘stopping’ interval; that is, when people with ADHD are
+under pressure to inhibit a response in a short space of time, they are more likely
+to make mistakes. However, if they are given longer to inhibit a response, they are
+more accurate and hence less ‘impulsive’. This concept has strong implications for
+intervention, as ADHD clients must learn to schedule time and be encouraged to
+‘stop and think’ in order to reduce failures through impulsive mistakes.
+An alternative theory is that the disinhibition or impulsivity associated with ADHD
+is due to aversion to delay (e.g. Sonuga-Barke et al., 1992). According to this perspective, impulsive behaviour is due to a choice to avoid delay, which people with
+ADHD find aversive. The theory considers that impulsivity is underpinned by a
+preference for immediate or short-term rewards and an inability to delay gratification in the longer term. This means that individuals are more motivated to receive
+a current reward even if it is less valuable than a more valuable longer-term reward.
+This has implications for everyday functioning where much of our behaviour, particularly in adult life, is governed by the principle of ‘good things come to those
+who wait’. For example, most people find that the prospect of a salary at the end
+of the week or month is sufficient to keep them adequately motivated at work each
+day. However, for someone with ADHD, if they have become dissatisfied and/or
+irritated at work for some reason (e.g. bored with the work; annoyed with a colleague), they may be inclined to quit their job, feeling that the short-term reward
+of getting out of a situation is worth more to them than the long-term reward of
+being paid. Unfortunately the prospect of immediate reward and temptation may
+lure some individuals into delinquent and/or criminal behaviour. The implications
+for treatment strategies are to work with the need for immediate gratification by
+breaking down tasks into smaller stages and providing short-term goals that can
+be rewarded.
+
+IMPULSIVITY 115
+
+THE NATURE OF THE DEFICIT
+There are several ways in which impulsivity is manifested in ADHD adults. People
+can seem to be too ‘quick off the mark’; that is, individuals tend to respond before
+instructions have been completed or before they have acquired all the information
+necessary for starting a task. There are also difficulties when ADHD adults ‘act
+without thinking’, where individuals respond without first considering all the possible response options and their implications. Alternatively, a person may verbally
+or physically lash out at someone who has upset them without considering the social
+and/or legal implications. They focus on short-term rewards as opposed to long-term
+rewards, for example students may have difficulty resisting a readily available reward, such as an evening out, which may prevent them from achieving a longer-term
+goal, such as submitting their coursework on time.
+Impulsivity can be conceptualised in two ways: ‘behavioural impulsivity’ and ‘cognitive impulsivity’. Behavioural impulsivity refers to the inability to inhibit physical
+or verbal actions due to premature and/or over-rapid responsiveness. This is manifested as an inability to resist doing or saying inappropriate things, for example
+ADHD individuals may hit out at someone or something in a fit of temper and/or
+make hurtful comments. Behavioural impulsivity is associated with excessive attraction to immediate reward.
+Cognitive impulsivity relates to disorganised behaviour associated with problems of
+executive function. This underpins forgetfulness, poor planning and poor time management. For example, clients may misappraise a situation or the intentions of others
+and make rash important decisions based on inadequate information.
+Neuropsychological measures are available to help distinguish between the two
+concepts. Behavioural impulsivity is commonly measured using tasks assessing
+response inhibition; that is, the ability to inhibit a salient response when it is inappropriate. People with ADHD have been shown to exhibit impaired performance
+on such tasks, for example ‘stop’ tasks and ‘go-no-go’ tasks (Rubia, Oosterlaan,
+Sergeant, Brandeis & Leeuwen, 1998; Rubia et al., 1999, 2000). ‘Stop’ tasks typically involve responding according to certain contingencies, for example pressing a key on a computer in response to identifying cued target items. Hence, the
+individual is required to press a button every time they see a target on the screen.
+However, on occasions the testee is instructed to do the opposite, in other words, to
+stop responding in this way (by withholding their response), and this can be challenging for a person with ADHD who is likely to respond in the cued way and make
+lots of errors. Similarly, for ‘go-no-go’ tasks, the individual is typically required to
+respond to certain targets (i.e. ‘go’), but not respond if they are preceded or followed
+by another ‘no-go’ target. For example, the individual is required to press a button
+every time they see a target on the screen, but if the target is presented with a second
+aural or visual cue (e.g. a ‘bleep’, or the target is a different colour), then the individual is required to withhold their response. In such cases, individuals with ADHD
+
+116 ADHD IN ADULTS
+have particular difficulty co-ordinating their response pattern and make errors by
+‘misfiring’ at the wrong time (i.e. they have difficulty withholding their response).
+However, performance may improve if individuals are provided with an increase in
+time between stimuli as this gives them more time in which to respond.
+Behavioural impulsivity is also assessed using a task called the Matching Familiar
+Figures Test (Cairnes & Cammock, 1978), which assesses impulsiveness versus reflectiveness in cognitive style. The test involves identifying target pictures among
+five distractors with both speed and accuracy. It is similar to playing ‘spot the difference’ between pictures. Compared with people without ADHD, individuals with
+ADHD tend to respond rapidly and make an increased number of errors by selecting
+incorrect responses. This means that they tend to favour speed over accuracy and
+adopt a ‘trial and error’ approach to problem solving.
+Cognitive impulsivity can be assessed neuropsychologically with various executive
+functioning paradigms as well as through careful observations and anecdotal reports
+of behaviour. The ability to co-ordinate a series of tasks and form a strategy can be
+assessed using the Modified Six Elements subtest of the Behavioural Assessment of
+Dysexecutive Syndrome (Wilson et al., 1996). Individuals with ADHD are more likely
+to break rules by impulsively changing task without planning a sequence. Another test
+from the same battery that can be used to assess planning skills is the Zoo Map task.
+This task requires the individual to assimilate information from rules and instructions
+about how they should organise a visit to the zoo and form a plan before plotting their
+route on a map. People with ADHD typically do not take the time to plan and impulsively begin the route without formulating an effective sequence. This difficulty with
+planning was also found by Young et al. (in submission) where ADHD participants
+were less likely to adjust their planning time according to task difficulty for the Tower
+of London, a test of problem-solving.
+It is important to bear in mind that, whilst deficits of cognitive impulsivity may
+be exhibited on some neuropsychological measures, they are most likely to be extremely debilitating in everyday life. Thus, it is very important to question the client
+carefully about how they cope with completing chores and tasks on a daily basis,
+especially those that require sustained effort and concentration, or those in which
+the client lacks interest or motivation to complete. Indeed, one advantage of the
+Behavioural Assessment of Dysexecutive Syndrome (Wilson et al., 1996) is that it is
+an ecologically valid battery of executive functioning tests which translate relatively
+well from the artificial testing room into real life. Nevertheless, some individuals are
+still able to perform in an assessment setting, in other words control their cognitive
+impulsivity when effectively forced to do so, but have extreme difficulty in doing this
+on a day-to-day basis.
+Table 7.1 provides a summary of the typical impulse control behaviours (and associated problems) that are commonly reported by people with ADHD, or their friends
+and family.
+
+IMPULSIVITY 117
+Table 7.1
+
+Typical impulse control problems experienced by people with ADHD
+
+Consequence
+‘blindness’
+
+People with ADHD find it difficult to consider the consequences
+of their behaviour before acting. For example, the social
+consequence of blurting out gossip or interrupting people
+
+Difficulty waiting
+
+ADHD can greatly affect someone’s ability to queue or wait for
+their turn. This is particularly prominent in shopping queues
+when there is a delay
+
+Motivation for
+immediate
+gratification
+
+People with ADHD are more prone to opt for a short-term
+reward that involves less effort than working for longer periods
+and applying more effort for a larger reward
+
+Taking short cuts
+
+Individuals with ADHD are notorious for taking ‘short cuts’,
+which may lead to reduced accuracy or a lower quality of
+outcome
+
+Demanding behaviour
+
+People with ADHD may seem demanding and self-centred if
+someone else controls access to what they are wanting
+
+Lack of insight
+
+Situations in which they are likely to be impulsive may not be
+immediately obvious to someone with ADHD
+
+Abrupt movements
+
+Motor movements can be affected by impulsivity, such as getting
+up out of a chair suddenly, or snatching items from another
+person
+
+Reckless driving
+
+Driving can cause problems for an individual with ADHD who
+has difficulty waiting at traffic lights, or driving patiently
+behind slower drivers. Poor impulse control on the road
+can lead to many driving violations, commonly including
+speeding, jumping lights, but also may be more serious when
+greater risks are taken, such as overtaking when it is unsafe to
+do so
+
+Rule breaking
+
+Behavioural impulsivity may often present as disobedience or
+deliberate violation of instructions
+
+Recklessness
+
+Impulsivity can also manifest itself as recklessness due to the
+tendency to engage in dangerous activities without considering
+possible consequences
+
+Jumping to conclusions
+
+Jumping to conclusions is a general problem for individuals with
+ADHD. They may be more likely to misinterpret ambiguous
+situations, make assumptions based on very little information
+and also catastrophise
+
+Incurring debts
+
+Impulsive spending may lead individuals to buy items without
+considering whether they can afford them or whether they are
+necessary
+
+Novelty seeking
+behaviour
+
+A search for thrills and novelty may stem from an excessive
+attraction to immediate reward
+
+Anxiety
+
+Anxiety may lead to impulsive avoidance of aversive situations
+or exacerbate impulse control difficulties
+
+118 ADHD IN ADULTS
+The common theme for all these behaviours is that such individuals do not think
+ahead or consider the consequences of their actions. It is not that they are unaware of
+the difference between appropriate and inappropriate behaviour or that one solution/
+response to a problem is better than another. The difficulty arises because they do
+not think or consider every option. Their decision-making processes may be impulse
+driven, resulting in a tendency to make important choices rapidly and without careful consideration or planning (also see Chapter 6 on Problem-Solving). A model of
+therapy should therefore aim to teach self-monitoring and self-regulation skills (e.g.
+‘to stop and think’), train the individual to consider consequences of action and generate appropriate and constructive alternatives.
+
+ANTISOCIAL, DELINQUENT AND CRIMINAL BEHAVIOUR
+Childhood ADHD is frequently associated with conduct problems and just as the
+developmental trajectory of ADHD symptomatology is heterogeneous, so is the developmental trajectory of children with ADHD and Conduct Disorder. Moffitt (1993)
+has theorised that there are two fundamentally divergent categories of delinquent
+adolescents. The ‘adolescence-limited’ group is characterised by noteworthy criminal activity that arises for the first time in early to mid-adolescence and features
+non-aggressive behaviour that typically desists by late adolescence. The ‘life-course
+persistent’ antisocial group is characterised by overt aggression in adolescence, typified by marked defiant and aggressive behaviour from a young age. Moffitt suggests
+that the delinquency of this group is associated with pre-existing cognitive and/or
+behavioural deficits, including neuropsychological dysfunction, family disharmony
+and attention deficits/hyperactivity. Indeed, a longitudinal epidemiological study of
+young hyperactive boys into young adulthood showed that hyperactivity was a risk
+factor in young men for later antisocial problems including violence, even after the
+coexistence of initial conduct problems was taken into account (Taylor et al., 1996).
+This may reflect that young children grow up with a ‘double dose’ of risk, characterised by both cognitive and conduct problems. Indeed there is some evidence that cooccurring ADHD and Conduct Disorder is a clinically and genetically more severe
+variant of the independent disorders (Thapar, Harrington & McGuffin, 2001).
+Irrespective of the additional risk of ADHD, examination of the ‘conduct problem
+route’ into criminal behaviour portrays a pathway that often begins with truancy,
+bullying, vandalism, verbal and physical aggression. Conduct problems may escalate
+in adolescence to become oppositional defiant problems, juvenile delinquency and
+criminal behaviour. For adults with ADHD, this delinquent pathway may be further
+complicated by the addition of the development of personality problems.
+The cognitive deficits of young persons with ADHD may therefore lead them to
+progress along increasingly antisocial trajectory. Symptoms may remit far too late for
+young people to break out of indoctrination in an antisocial peer group and culture,
+and/or purposefully break out of established antisocial patterns of behaviour. Court
+records suggest that ADHD is a great risk for juvenile contact with the criminal
+
+IMPULSIVITY 119
+
+justice system (Satterfield, Swanson, Schell & Lee, 1994) and prison studies suggest
+that about two-thirds of inmates had childhood ADHD and up to 30% of them continue to be symptomatic in adulthood (Eyestone & Howell, 1994; Dalteg, Lindgren
+& Levander, 1999; Rasmussen, Almik & Levander, 2001; Retz et al., 2004; Rosler et
+al., 2004). This association may be explained by poor response inhibition in ADHD
+individuals resulting in a lack of self-control. Thus, recidivism is likely to be high
+and their offending behaviour typified by impetuous, novelty seeking behaviour,
+which leads to opportunistic crimes for which they are apprehended.
+Such individuals require specialised group treatment programmes that focus on their
+criminogenic needs and labile temperament. There is a lack, however, of structured,
+manualised programmes available for an ADHD client group. The R&R2 for ADHD
+Youths and Adults (Young & Ross, 2007), which is a new edition of the original Reasoning and Rehabilitation programme (Ross, Fabiano & Ross, 1986), is designed to
+yield programmes that have an evidence-base in the reduction of antisocial behaviour
+of youths, juvenile delinquents and adult offenders. The R&R2 for ADHD Youths and
+Adults programme not only teaches symptom control, skills development and prosocial attitudes, but also involves the training of cognitive processes involved in problem solving. This group programme provides the opportunity to assess whether an
+individual has specific skills deficits or needs that will benefit from individual attention
+such as interventions outlined in the Young–Bramham Programme modules.
+
+IDENTIFYING THE PROBLEM
+So far, the two main aspects of impulsivity have been described; cognitive and behavioural impulsivity. Clients will readily relate to behavioural impulsivity as this is what
+they perceive as impeding their performance on a day-to-day basis, such as going ‘offtask’ and never finishing anything; jumping to the wrong conclusions; and losing their
+temper. The therapist should direct the client to identify specific situations when they
+are likely to respond in an impulsive manner. This should not present a great problem
+but if it seems difficult, the client should start by looking back at times or behaviours
+that they regret in retrospect. In particular they should identify problems that have
+occurred on a regular basis as these may be used to monitor progress in treatment.
+Through discussion, exploration and Socratic questioning regarding these situations
+(as well as observation of the client’s behaviour in sessions), target behaviours may
+be determined that are suitable for treatment. As with all behavioural measurements
+however, the target behaviour must be specific and clearly defined by the client and
+therapist. The frequency of the target behaviour can then be measured either in the
+course of a session (e.g. number of interruptions) or outside of the session by the client, friend, partner or family member (e.g. shouting at motorists whilst driving), or by
+using an objective measure (e.g. a record of weekly shopping purchases).
+The ultimate aim is for the client to take responsibility for monitoring their own impulsive behaviour. As individuals develop greater self-awareness of their behaviour,
+learning to self-monitor in this way may in itself act as a reduction strategy. Specific
+
+120 ADHD IN ADULTS
+interventions should be discussed collaboratively, selected strategies implemented,
+reviewed and evaluated. This process is called the IMPULSE method of selfmonitoring and regulating poor impulse control. Table 7.2 describes the IMPULSE
+method applied to the problem a client had with making shopping purchases on
+impulse. This happened so frequently that the client was getting into debt. A version
+of Table 7.2 that is suitable for use in sessions is provided on the Companion Website. Once clients have successfully mastered the IMPULSE system they should be
+encouraged to apply it to a range of problem behaviours (including those identified
+by others).
+
+COGNITIVE BEHAVIOURAL TREATMENT STRATEGIES
+Whilst behavioural management plans are helpful to adapt specific behaviours that
+occur on a frequent basis, the primary objective of treatment is for the individual to
+develop and maintain their management plan in order that in time this may become
+more generalised. The aim is for the individual to begin to cope more generally with
+impulsive responding. This involves learning techniques to monitor and control impulsive behaviour. There are several techniques, all of which encourage the individual
+to ‘stop and think’. These include learning to apply cognitive strategies, such as selftalk, self-instructional training, double-checks and distraction techniques. Not all
+strategies will be helpful, but it is likely that the client will find some of these methods
+of benefit. This can only be determined by trying them out and evaluating progress.
+Wherever possible, appropriate behaviour should be modelled. In addition, some
+individuals may benefit from watching recordings of themselves acting in role plays
+that require them to behave in an appropriate manner as well as in an inappropriate
+manner. When playing back the recording, the client should be encouraged to take
+a different perspective of their behaviour by imagining a friend or family member
+observing them. What would be going through their mind? Alternatively, the client
+could be asked to imagine that they are observing the behaviour of a friend or family
+member. What would they make of it? Would they view the interaction differently?
+Role-plays are particularly helpful in perspective taking as this gives the client the
+opportunity of considering the personal and social consequences of behaviour.
+Be wary of cognitive avoidance, which may present as a lack of motivation. It may
+well be distressing for the individual to develop better insight into their own behaviour
+and its impact on others. This may cause clients to avoid facing up to past mistakes,
+which have been financially and/or emotionally costly, and/or painful memories. If
+this occurs, it may hamper progress in treatment. In some cases, individuals may
+deliberately attempt to sabotage treatment by disengagement (this representing a
+‘secondary gain’ as it provides the short-term reward of removing themselves from
+anxiety-provoking treatment). Being sensitive to the client’s feelings and acknowledging their difficulty by taking a non-judgemental and open approach is likely to
+be helpful.
+
+IMPULSIVITY 121
+Table 7.2
+
+The IMPULSE method for identifying and monitoring behaviours
+
+I: identify the behaviour
+
+For example:
+Impulsive spending on credit cards
+
+M: make the behaviour explicit
+
+For example:
+Buying CDs and clothes when the
+client does not have the money
+
+P: Peer/partner monitoring
+
+For example:
+Credit card bills brought to the session.
+Partner can monitor new purchases
+being brought into the house
+
+U: Understanding and self-
+
+monitoring
+For example:
+For all items purchased, evaluation
+of whether they were planned and
+whether the client could afford them
+
+L: List plans to tackle the problem
+
+The target behaviour should be chosen by the
+client. Not all impulsivity is problematic to the
+individual. It is important that they identify and
+target areas that they are motivated to change. For
+example, interrupting others and not taking turns
+appropriately in conversation may lead to problems
+with relationships and isolation
+Developing a clear definition of the problem is crucial if
+change is to be usefully measured. Vague targets such
+as ‘stop being impulsive’ are both difficult to measure
+and difficult to achieve. It is more sensible to use
+operationalised behaviours such as ‘driving over the
+speed limit’ or ‘interrupting others’
+It may be possible for the therapist to monitor some
+behaviours such as interruptions in a therapy session.
+However, other behaviours may be less easy to
+assess. Video cameras might be usefully employed to
+monitor some behaviours. In some situations it may be
+possible to enrol the help of a partner, friend or family
+member, who can count behaviours such as changing
+the television channel or staying seated at mealtimes
+If the IMPULSE method has been monitored by a
+person other than the client, the responsibility
+for monitoring should next be passed to the
+client. It may be helpful to compare reports of
+behaviour in order to check that the client is able
+to recognise the target behaviours appropriately.
+Self-monitoring can serve as an intervention in
+itself as it may encourage recognition of triggers or
+antecedents to behaviour
+
+For example:
+Planning a weekly budget
+
+Once the behaviour has been monitored and a
+baseline rate has been established, the client and
+the therapist collaborate to form an intervention
+plan (see strategies section below)
+
+S
+
+The client applies the agreed strategy
+
+: Strategy implementation
+For example:
+Carrying out budget
+
+E
+
+: Evaluation of strategy
+For example:
+1. Feedback from client, particularly
+regarding times when they have
+resisted temptation
+2. Count of number of unplanned
+purchases
+
+Evaluation of the strategy success is performed
+via two methods: (1) the client should be invited
+to give feedback about the strategy – what has
+been helpful/unhelpful, etc; and (2) there is a
+repeat monitoring period in order to establish the
+frequency of target behaviours. This is compared
+to the original baseline measure
+
+122 ADHD IN ADULTS
+
+Self-talk
+Self-talk is essentially proactive thinking. To a certain extent, everyone engages in
+self-talk, sometimes even out loud. People often think through plans in their heads
+for various situational outcomes and rehearse potential responses. The client can be
+taught to apply self-talk as a cognitive technique to interrupt an automatic dysfunctional thinking process, for example by saying words like ‘Stop’, ‘Control’, ‘Look
+before you leap’, ‘Think before you speak’. If the client is in a state of high emotional
+arousal then this will exacerbate cognitive deficits resulting in them feeling overwhelmed and confused. Self-talk, such as ‘stay calm’, ‘I can do this’, at the same
+time as visualising (pre-determined) calming images is likely to help the individual
+to feel more in control. Potential calming images should be discussed and tried out
+in sessions in order that the client may develop a repertoire of helpful and restful
+visual images that can be accessed and cued as necessary (e.g. a Caribbean beach;
+sitting on top of a mountain; an English garden; an evening sunset). Once thinking
+has been interrupted in this way, the client should be encouraged to stand back and
+take a different perspective, such as ‘Is there another way I can think about this and
+resolve this problem?’; ‘What would my mother, brother, friends say?’
+Self-talk must be tailored to individual needs by identifying what the client finds helpful.
+This needs to be achieved collaboratively in sessions and tested out and evaluated in ‘real
+life’ settings, such as by setting up ‘mini-experiments’. Once useful self-talk has been
+identified, this should be practised when an individual is not acting on an impulse, but is
+carrying out day-to-day activities that do not require decision making. For example, the
+self-talk can be rehearsed when driving on a clear road. The more experience an individual has using self-talk, the more likely they will apply it in the heat of the moment.
+
+Self-instructional Training
+A second step towards ‘taking the heat out of an impulse’ is self-instructional training.
+Self-talk interrupts a dysfunctional thinking process and, once this has been achieved, the
+individual must then learn to direct themselves towards more positive functional thinking. Self-instructional training helps the client to stand back from a situation, appraise it
+from different perspectives, evaluate possible responses and outcomes, re-appraise and
+select an appropriate response. This is achieved by teaching the client to engage in selfdirected purposeful instructions. Until the client becomes used to this process it should
+be enacted out loud in sessions. For example, Julie, a client with ADHD, has difficulty
+waiting in line to pay for groceries in a supermarket. If the line is very long she invariably gets irritated and restless and walks out of the shop leaving her shopping behind. In
+this case, the therapist and client devised the following management plan:
+1. Whenever possible, Julie did her shopping at more quiet periods during the day.
+2. When she had to wait in line and began to feel restless and irritated and had
+thoughts that she should leave the shop, she employed self-talk by saying to herself ‘stop’, ‘calm down’.
+
+IMPULSIVITY 123
+
+3. Next Julie evaluated her options in a self-directed thought process, e.g. ‘if I walk
+out of the shop I will not have achieved my goal of getting the shopping done; that
+means that I will have to make time to come back to the shop at a later time and
+I will have to change my plans for this evening; the shop may still be busy later
+on and I may not get my shopping today; I have run out of cereal so I will have to
+go to work without eating breakfast. If I stay, I can cope with feelings of irritation
+by occupying my thoughts using a distraction technique; I will have my shopping
+and can have what I want for breakfast; I can meet my friends this evening’.
+4. Julie then applied selected distraction techniques (see Table 7.4).
+5. Once the shopping had been completed, Julie rewarded herself for achieving her
+goal, e.g. by having a chocolate bar when she leaves the supermarket.
+The most common obstacle to success is the ADHD individual’s desire and motivation
+for immediate gratification. An immediate or short-term reward, such as leaving the
+shop to avoid feelings of irritability and restlessness, is preferred over the longer-term
+reward of purchasing the shopping. Thus, consequential thinking (i.e. evaluating
+potential outcomes, their merits and disadvantages) is an important component to any
+management plan. This may be introduced to the client by encouraging them to rehearse
+a strategy in sessions called CONTROL (see Table 7.3). CONTROL is a process in
+which the client engages in self-talk to stop dysfunctional thinking, makes self-directed
+statements and/or instructions and considers options and alternatives. The CONTROL
+Table 7.3
+
+The process of CONTROL
+
+C: Control
+
+In order to interrupt a dysfunctional thinking process, the person
+should say (either aloud or to themselves) ‘CONTROL’ as
+a thought-stopping technique. In addition, they may benefit
+from temporarily removing themselves from the situation
+
+O: ‘Off-line’ processing
+
+Self-talk and self-instructions are applied to anchor attention
+to calmer images and an emotionally neutral state
+
+N: New solutions
+
+Alternative solutions are generated by using self-directed
+statements. Rationalisation and problem-solving
+techniques will additionally be helpful (see Chapter 6)
+
+T: Test solutions
+
+Solutions can be tested through mental rehearsal, and predicting
+outcomes, e.g. I can (1) buy the new TV now on credit but
+have less money each month for a year, (2) save to buy the
+TV and have it in six month’s time, (3) buy a cheaper one, etc.
+
+R: Re-evaluation
+
+Once the options have been considered, the most preferable
+can be chosen by reviewing the client’s goals
+
+O: ‘On-line’ processing
+
+Once a decision has been made, this should be carried out,
+i.e. the solution becomes ‘on-line’. Determine and include a
+reward for successful engagement of the CONTROL process
+
+L: Look for benefits
+
+In order to further positively reinforce the CONTROL
+process, evaluate outcome by examining advantages and
+positive outcome
+
+124 ADHD IN ADULTS
+process is achieved by teaching the client to interrupt their dysfunctional thoughts
+(which triggers them to go ‘off-line’) and engage in a sequential thinking process
+whereby they employ techniques to lessen emotional arousal, generate alternative
+options and evaluate these options before going back ‘on-line’ to carry out a solution.
+Consequential thinking is a particularly powerful tool if the client is able to write down
+the advantages and disadvantages of potential outcomes, although in some situations
+this will not be possible. The most important aspect of this technique, however, is that
+the client learns to introduce an additional feedback loop or circuit in their thinking
+process, i.e. the ‘off-line’ stage. In order to facilitate the introduction of the process
+of CONTROL to the client, the client could be provided with cue cards to carry in
+their wallet or purse, which can be used to prompt the individual components of the
+process. This information has been included on the Companion Website in a format
+that could be used for this purpose. The CONTROL process has also been provided
+on the Companion Website in a format for use in sessions whereby the client can write
+out and test methods to interrupt dysfunctional thoughts. With practice the client will
+be able to successfully engage in this process without prompting.
+
+Double Checks
+As self-talk and self-instructional training techniques become a more automatic
+process; the client should be encouraged to incorporate a system of ‘double checking’ information, assumptions, beliefs, etc. This involves a decision-making process
+whereby clients can be encouraged to ‘double-check’ or review decisions by asking
+themselves the five questions given in Table 7.4.
+It is important that the individual keeps in mind the objective or goal to be achieved.
+For example, a common problem for people with ADHD is that they make impulse
+purchases. This inclination is not helped by the practice of stores to actively encourage impulse buying by displaying small relatively cheap ‘luxury’ products by checkout cash registers. However, many clients have additionally made relatively large
+purchases on impulse, many of which are costly mistakes. It is not uncommon for
+ADHD adults to report the presence of numerous unworn unsuitable clothes and/or
+unused DIY accessories in their homes.
+Learning to postpone decision making, albeit briefly, is thus a good ‘safety guard’
+for adults with ADHD. Treatment should focus on getting the person to ‘stop and
+think’. Individuals should go through the ‘double-check’ system outlined above and
+Table 7.4
+
+‘Double-check’ questions
+
+1. Is this what I really want to happen?
+2. For how long have I wanted to do this?
+3. What will happen if I do this?
+4. What will happen if I don’t do this?
+5. What are the longer-term consequences?
+
+IMPULSIVITY 125
+
+it may be helpful for them to have these questions written down on a small card that
+they carry around in their purse or wallet. (These are presented on the Companion
+Website in a suitable format.) The client should also determine a management plan
+in sessions that they then apply ‘in vivo’, for example, leave the shop without making the purchase; walk about for five minutes and go through the questions on a
+card, before deciding whether to return to the shop to make the purchase or not. It is
+important to measure and evaluate outcome in order to demonstrate success. In this
+case, keeping a record of purchases and ‘near purchases’ would reinforce success by
+highlighting potential savings from the latter over a set period of time.
+
+Distraction Techniques
+One of the most common times that impulsive behaviour is expressed by people with
+ADHD is in situations that require a person to wait or queue. An aversion to delay
+and lack of tolerance causes individuals to feel bored, frustrated and/or irritated. Every
+minute seems like ten and individuals will often favour the short-term reward of giving up and leaving the queue altogether, or deciding not to wait any longer but demand
+instant attention instead. The problem with the former scenario is that this means they
+will not achieve their objective. The problem with the latter scenario is that they are
+very likely to provoke a confrontation. In such situations, the individual could apply distraction techniques to develop better self-control (by distracting themselves from ruminating over their negative thoughts and feelings about the situation). These techniques
+can be practised either in advance of difficult situations that are anticipated, or practised
+in the imagination. Table 7.5 outlines a variety of distraction techniques which may be
+helpful. This table is also provided in handout form on the Companion Website.
+Table 7.5
+
+Distraction techniques
+
+Object focus
+Person focus
+
+Sensory awareness
+Counting
+Word generation
+Fantasies
+Winning the lottery
+Puzzles
+
+Focus on an object and describe it in detail
+Look at the person in front of you in the queue – imagine
+what they might be called, what they do for a living, where
+they live, what sort of character they might play in a film,
+etc. (Be careful not to stare as this may be perceived as
+confrontational or provocative)
+Focus on each sense in turn and make a mental list using sight,
+hearing, taste, touch and smell
+Complicated counting tasks, such as backwards in 7 s, can
+provide good distraction
+Try to think of as many animals/countries/towns/girls names/
+boys names beginning with each letter of the alphabet.
+Imagining where you would rather be – on a beach, in the
+mountains, swimming…
+How would you spend a million pounds?
+Crosswords, word-searches, etc., can assist with waiting,
+although attentional problems may lead to distractibility
+
+126 ADHD IN ADULTS
+
+External Strategies
+It may be helpful if the client invites parents, partners and/or a good friend to attend
+some of the sessions (if appropriate) as this provides an opportunity for techniques
+to be observed and reinforced outside of the session. Friends or family can support
+the client by reminding them of techniques learned in the session, rehearsing the
+techniques and providing cues when appropriate for these to be applied ‘in vivo’,
+for example by cueing the client to engage in a process of CONTROL, and/or
+monitor progress and change in behaviour. Positive feedback by others may also
+be an important component of a ‘reward system’ as praise will reinforce successful
+and/or appropriate behaviour. Inappropriate or unacceptable behaviour should never
+be reinforced. Exceptions or making allowances, such as ‘oh that’s Steve, he’s a
+bit crazy’, must be avoided. It is very important that feedback is consistent and
+constructive and the individual does not feel personally criticised.
+
+CONCLUSIONS
+Learning to develop better impulse control involves the recognition of situations in
+which a person is vulnerable to acting without thinking, applying various cognitive
+behaviour techniques to cope with that situation, obtaining and rewarding successful
+outcome. Once a dysfunctional thinking process has been interrupted, other more
+positive or neutral beliefs can be recruited and reviewed to develop a more balanced
+view of a situation and the potential methods for dealing with it. Situations can be
+rehearsed in order for the client to become accustomed to utilising self-control techniques and potential outcomes evaluated.
+
+PART III
+
+COMORBID AND ASSOCIATED
+PROBLEMS
+
+8

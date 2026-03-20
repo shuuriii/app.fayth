@@ -1,0 +1,927 @@
+LOW MOOD AND DEPRESSION
+
+Depression is a common comorbid condition in adults with ADHD. In ADHD clinical samples, 16–31% of adults have major depression (Biederman et al., 1993; Murphy
+& Barkley, 1996). In addition, 19–37% of adults with ADHD have dysthymia, a more
+mild but persistent form of depression with low mood as a core feature. Therefore,
+dips in mood are very likely to be experienced by ADHD clients and it is well worth
+exploring mood-related symptoms with individuals when assessing for ADHD. It is
+also helpful to establish whether these have been experienced in the past and, if so,
+teach the client techniques to prevent their low mood from spiralling into a more
+entrenched depressed mood in the future.
+People with depression have symptoms of low mood, loss of energy and motivation,
+and a sense of hopelessness about the future. When these symptoms are comorbid
+with ADHD, the person also has additional symptoms, such as greater concentration
+problems and feelings of lethargy. Although they feel restless inside, their lack of
+motivation and energy means their natural optimism and creativity is ‘trapped’ in a
+negative cycle of depressive rumination.
+In a study of individuals diagnosed with ADHD for the first time in adulthood and
+comparing severity of depression in different age groups by decade (Bramham et
+al., 2005b), a positive association was found between age and depression ratings.
+This means that the later a person received a diagnosis, the greater their severity
+of depressive symptoms. Thus, clinicians need to be sensitive to the possibility of
+underlying depressive symptoms in adults diagnosed with ADHD, especially when
+this diagnosis is made well into adulthood. Qualitative research investigating the
+experience of obtaining a diagnosis of ADHD and treatment found an increased
+likelihood that following diagnosis, treatment and improvement in ADHD symptoms,
+people with ADHD are more likely to engage in depressive rumination (Young et al.,
+in submission). Even mild depression should be taken seriously and treated as a
+priority, especially since ADHD individuals are more likely to attempt suicide in the
+context of a depressive illness (Weiss et al., 1985). If they have thoughts of suicide,
+they may impulsively act out their ideation.
+
+198 ADHD IN ADULTS
+There are several possible explanations for why individuals with ADHD may be at
+greater risk of depression. For example, they are more likely to have experienced
+adverse events early in childhood. It is likely that parents of ADHD children are not
+without their problems. It is not easy being a parent at the best of times and parenting
+an ADHD child who challenges authority, breaks rules and disrupts stable family life
+is difficult to manage. Additionally, many parents have undiagnosed ADHD, meaning that they themselves may be disorganised and chaotic in their parenting style, and
+unable to provide the appropriate structure and stability for their children. At school
+as well as home, a child with ADHD is likely to have been overly criticised. Scholastic underachievement is usually not initially recognised to be associated with ADHD
+symptoms but construed by others as ‘laziness’. Relationship difficulties seem to be a
+consistent problem; as children, they may have had difficulty developing supportive
+relationships and become unpopular with peers; as adults they have difficulty maintaining friendships and lack intimate relationships. They may have low self-esteem.
+It is no great surprise that these experiences predispose an individual to feel low and
+develop depression at some period in their life.
+People with ADHD can find that, along with low mood, they become particularly
+irritable and intolerant. They may feel guilty about the hurtful things they say
+and do on impulse to people they love and care for. Attentional deficits can also
+be exacerbated, leading the person to be even less likely to complete tasks and
+depriving them from feeling a sense of achievement. People can become distracted
+from constructive activities and preoccupied by their own internal negative automatic
+thoughts, which characterise depression. This leads to disturbed sleep with insomnia
+and early waking. The internal conflict between feelings of restlessness and lack
+of motivation can be a source of discomfort and emotional exhaustion. Seeing the
+world through dark glasses and observing hopelessness all around leads some people
+to cope by increasing their alcohol intake or taking drugs. Such coping mechanisms
+are only temporarily effective. Alcohol ‘drowns their sorrows’ and drugs give brief
+relief (and possibly temporary symptom improvement, depending on the substance
+of preference). However, the short-term aftermath is a hangover and symptoms
+of withdrawal, including low mood. In the longer term, these strategies have the
+expensive price tag of psychological and physical dependence. These issues are
+discussed in Chapter 13.
+Mood regulation is a considerable problem for adults with ADHD and their capacity
+to regulate mood worsens when depressed or low in mood due to an increase in emotional lability. Individuals may find that they become tearful quickly and without
+apparent reason. They are also much more likely to be ‘touchy’, or ‘snappy’. Indeed,
+in clients with ADHD, low mood is often displayed as anger and understood by others as bad temperament. This may reflect a need to hide their feelings of despair and
+futility from others.
+Emotional lability has been misdiagnosed in people with ADHD as bipolar disorder. Mania is characterised by excitability, over-talkativeness, racing thoughts,
+
+LOW MOOD AND DEPRESSION
+
+199
+
+euphoria and increased energy. All of these symptoms are exhibited by adults
+with ADHD and it can sometimes be difficult to tease the disorders apart phenomenologically. One way of differentiating between them is to establish rate of
+onset of the elated mood and its persistency. Mood swings in ADHD can occur
+very rapidly and dissipate quickly, for example within an hour or a day, whereas
+manic episodes are more likely to have a prodromal stage, to increase gradually
+and be more persistent over time, for example weeks or months. The age of onset
+is also a useful indicator as the majority of bipolar illnesses do not emerge until
+late adolescence or early adulthood, whereas ADHD has onset in early childhood. It is unusual for a child of 7 years or under to be diagnosed with bipolar
+disorder.
+When clinicians are faced with individuals with comorbid ADHD and severe
+depression, it is recommended that the depression is treated with antidepressant medication and psychological interventions. Traditional psychostimulants
+(e.g. methylphenidate) have been shown to be of benefit for depression and therefore
+may act as a dual intervention. However, a side effect of this treatment is that it
+may induce anxiety (Vance, Luk, Costin, Tonge & Pantelis, 1999). Norepinephrine
+reuptake inhibitors, such as Atomoxetine, have been shown to treat ADHD (Pliszka,
+2003), but these can also be used as an antidepressant and may be a treatment of
+choice for individuals with both diagnoses.
+Suggestions for psychological treatment of people with ADHD and comorbid
+mood problems are presented in this chapter. A cognitive model of depression
+can be adapted for individuals with ADHD with an intervention that addresses
+depressive and ADHD thinking styles. The chapter will examine common negative thinking and thinking errors of ADHD adults. Cognitive and behavioural
+interventions are suggested that include challenging negative thoughts and activity scheduling.
+
+THE COGNITIVE MODEL OF DEPRESSION
+Beck’s (1976) well-established cognitive model of depression can be adapted to
+describe the experience of adults with ADHD who exhibit depressive symptoms. Individuals with ADHD are likely to be able to elaborate on multiple early negative life
+experiences. They have usually a history of being criticised by parents and teachers
+who have told them that they are lazy, stupid or unable to learn. In comparison with
+their peers, there may even be objective evidence, for example test marks, which may
+have made them feel less able than others and lead them to internalise the idea of
+their reduced status. Through this typical ADHD childhood experience, individuals
+are likely to have generated schemas about themselves that are related to feelings of
+inferiority. In our experience, a common schema is that the individual is ‘different’
+from others in some unique way and that others are more able, successful, likeable,
+etc. Such schemata lead to the formation of dysfunctional assumptions. These are
+
+200 ADHD IN ADULTS
+usually ‘if… then’ statements and they serve to maintain a sense of low self-value
+and self-worth. For example, ‘If I don’t play the clown and entertain people, then
+they won’t want to spend time with me’; ‘If I don’t get a new account this week, my
+boss will think I’m no good and fire me’. These assumptions are not available at a
+conscious level, but are likely to have influenced the manner in which ADHD individuals interact with others and the expectations they place on themselves. These
+expectations are often unrealistic and overly high, causing them to be perfectionistic
+and pedantic in their attempts to achieve them. This is stressful and in order to reduce the stress, some people with ADHD choose to settle for undemanding activities
+in which they are more likely to achieve success. However, deep down they know
+that they are underachieving, that they lack the confidence to stretch themselves and
+reach their potential, which causes them to feel unhappy and deeply dissatisfied. For
+others their schemas mean that they accept criticism uncritically from others and
+they may become enmeshed in an abusive relationship.
+Due to both their inattentive and impulsive symptoms, ADHD individuals are more
+likely to incur critical life events, such as losing their job (either because they walk
+out on impulse or are fired), getting divorced or being involved in accidents, etc.
+When such events occur, this precipitates the activation of previously developed
+dysfunctional schemata and leads to an increase in negative automatic thoughts
+about themselves (see Figure 11.1 adapted from Beck, 1976; also on the Companion
+Website in a format for use in session as Figure 11.1a). Unlike earlier, at this stage
+in the process the individual assumptions are conscious and the individual may be
+aware of the multiple negative thoughts about themselves racing through their head.
+These thoughts may be so rapid and so severe that the individual feels completely
+overwhelmed and metaphorically beaten by them. An inability to modulate cognitions and emotions means the individual may develop symptoms such as labile mood
+swings of low mood and anger; hopelessness and a sense of loss of control about the
+future; distraction and preoccupation; and a loss of the creative resources, interest
+and energy that are usually readily accessible to the individual. It is not easy for a
+person with ADHD to stay on task at the best of times, but especially when their
+own thoughts and feelings become ‘internal distracters’ or an additional hurdle or
+obstacle to overcome. If low mood spirals further into depression, the person may
+become withdrawn, indecisive and give up completely. In turn, this will confirm an
+underlying schema and the dysfunctional assumptions that are held about themselves
+are activated. This in turn reinforces the behaviour and keeps the person engaged in
+a vicious cycle of depression.
+However, there appears to be a positive aspect to the ADHD personality that may
+protect individuals from spiralling into clinical depression – this is ‘resilience’ and
+the ability to cognitively reframe social problems and disappointments. Indeed, from
+interviewing individuals with ADHD, it appears that a common characteristic is their
+ability to bounce back and try again. Lability in mood means their mood state is
+changing (sometimes rapidly) and these fluctuations may ‘kickstart’ their creativity
+and zest for life. An alternative explanation may be that they are unable to resist the
+impulse to have another go when others may conclude that an option is unviable.
+
+Early experience
+e.g. comparison to sibling in childhood
+educational underachievement
+criticism from important adults
+impulsive behaviour
+
+Schemata/unconditional beliefs about self
+e.g. ‘I’m a loser’
+‘I’m not good at anything’
+‘I’m different from everyone else’
+
+Formation of dysfunctional assumptions about self
+e.g. ‘If I don’t always succeed, then I’ll be a failure’
+‘If I don’t do everything really well, then people will think I’m no good’
+‘If I don’t try and fit in, then everyone will know I’m different’
+
+Stressful incident
+e.g. failing exams
+losing a job
+being rejected in a relationship
+
+Assumptions activated
+e.g. ‘I’ve failed again’
+‘I’m not as good as other people’
+‘Everyone else is better than me’
+
+Negative automatic thoughts
+e.g. ‘I’m a failure’
+‘I’m worthless’
+‘Nobody likes me’
+‘It’s useless even trying’
+
+Motivational
+reduced energy and interest
+lack of enthusiasm and creativity
+
+Negative behaviour
+e.g. withdrawal
+avoidance of activities
+loss of motivation
+
+The
+Vicious Cycle of
+Symptoms
+
+Affective
+sadness
+tearful
+labile
+
+Somatic
+tired
+distracted
+
+Cognitive
+hopelessness
+negative bias
+
+Figure 11.1 Cognitive model of depression in ADHD
+Adapted from Beck (1976). Cognitive Therapy and the Emotional Disorders. International University Press.
+
+202 ADHD IN ADULTS
+Attentional problems may also feed resilience by limiting the ability to reason about
+the implications of negative consequences and predict or anticipate future problems.
+A word of warning, however, as whilst in some individuals this characteristic may
+serve as a protective factor, in others it may predispose to depression as it leads them
+to experience a higher number of negative events or failures. These may aggregate to
+reach a critical mass when resilience can no longer spring them back to positivity and
+they are left with a legacy of failures and regrets which appear insurmountable.
+
+ADHD NEGATIVE THINKING STYLES
+Negative thinking styles directly relate to mood. When their mood fluctuates, as is
+common in people with ADHD, their cognitions fluctuate and this can cause the
+person to feel confused, uncertain and distressed. Additionally, depressed ADHD
+individuals are more likely to be snappy or irritable, which is likely to increase the
+frequency of negative social encounters. This may lead to social withdrawal in order
+to reduce feelings of irritation, by avoiding people or situations they perceive will
+make them feel this way. However, this may mean they conceptualise themselves
+as an ‘unlikeable’ person. The ‘cognitive triad’ is a focus on negative aspects of the
+self, the world and the future (Beck, 1963). It is easy to see how this position may
+develop when a person has an underlying schema that they are stupid and useless
+(self), others find them lazy and irritable (the world), and that tomorrow is bleak
+and unchangeable (the future). Perhaps it is this latter aspect that prevents people
+with ADHD completely capitulating to clinical depression, as fundamentally they
+see the world as a challenge that may be changeable. They see a better outcome is
+possible because they sense that they underachieve their potential. This means that
+they believe they have potential even if they do not appreciate the full extent of this.
+Such beliefs are ‘food’ for cognitive challenges and alternative thinking, which can
+be achieved by developing the ADHD individual’s natural interest and curiosity for
+novel tasks. Their talents must be identified and exploited.
+The ADHD thinking style is driven by speed. People with ADHD involuntarily react
+both behaviourally and cognitively. People describe themselves frequently being distracted by thoughts that ‘come from nowhere’ and flit from one idea to the next, when
+they are trying to focus on one thing. When these thoughts are negative, they are
+particularly distressing. The characteristics of negative thoughts are that they are:
+
+• automatic – they just pop into your head and are not generated consciously
+• distorted – they only take into account the negative
+• unhelpful – they keep the vicious cycle of low mood going
+• plausible – they are not questioned, because they seem ‘true’
+• involuntary – they do not happen through choice and are hard to switch off
+Individuals with ADHD are more likely to accept the plausibility of negative automatic thoughts (NATs) because they have difficulty thinking about consequences and
+
+LOW MOOD AND DEPRESSION
+
+203
+
+evaluating thoughts, so they often erroneously accept negative thoughts as the truth.
+Psychoeducation regarding the nature of NATs is important in any therapy for depression. However, this will be particularly important for individuals with ADHD as
+their familiarity with such thoughts may be exceptionally strong. People with ADHD
+are passionate people and when they feel low they will feel passionately low. It is not
+easy to learn to identify NATs and this will take practice and guidance in sessions.
+People with ADHD have often been seeking an explanation of their negative life experiences and problems. The cognitive model is something that they understand and
+recognise. By seeing the model outlined in Figure 11.1 and completing the categories
+with their own experience, clients will take important steps towards making sense of
+any confusion and inner turmoil. Although recognition, insight and understanding
+of past problems and current needs may seem like ‘turning on a light’, the problem
+remains, for example feelings of inadequacy and anxiety that they will fail to meet
+their own expectations and those of others. These concerns underpin their self-assumptions and core beliefs that they are inferior human beings. Thinking errors
+may additionally relate to the tendency of ADHD adults to make rapid, erroneous
+attributions due to their inability to ‘stop’ and engage in a process of consequential
+thinking. This haphazard ‘hit and miss’ approach to life means that ADHD adults
+do not develop the ability to reason in a rational stage-by-stage process. The most
+common thinking error for people with ADHD is the tendency to jump to conclusions, which stems from their poor impulse control. For example, Pete, a client with
+ADHD thought his manager did not like him. One day he was asked to go to speak
+to his manager, and he jumped to the conclusion that he was going to be fired from
+his job. Acting on this notion, he went into the general office, shouted at his manager,
+resigned and walked out. This was in the absence of any information suggesting that
+he was going to be fired. He later learned that he was about to be promoted. Thinking errors common to people with ADHD are presented in Table 11.1 (also on the
+Companion Website).
+The therapist may perform an exercise jointly (see Table 11.2) with their client in
+order to teach them how to identify and evaluate thinking errors before going on to
+encourage them to identify their own (i.e. without the support of the therapist). A
+blank version is included on the Companion Website. However, the categories are not
+mutually exclusive and there may be more than one error of thinking present. It does
+not really matter if the client identifies the categories correctly, the point is to get the
+client to recognise that they are making thinking errors. If they stop and evaluate
+their own thoughts, they may not make the same errors.
+
+CHALLENGING NEGATIVE THOUGHTS
+Individuals with ADHD need greater practice and rehearsal of challenging negative
+thoughts due to their attentional problems and difficulty in grasping concepts. They
+are also more likely to give up impulsively and quickly decide that they cannot do it.
+
+204 ADHD IN ADULTS
+Table 11.1
+
+Typical thinking errors of people with ADHD
+
+Type of error
+Jumping to conclusions
+All or nothing
+
+Overgeneralising
+
+Catastrophising
+
+Personalising
+
+Negative focus
+
+Shoulds and oughts
+
+Negative interpretations in the absence of facts
+Example: Predicting the future or reading someone’s mind
+There seems to be no middle ground and everything can
+be categorised as ‘black’ or ‘white’
+Example: I can’t concentrate at all
+Drawing extreme conclusions from a single event
+Example: I am always tactless and offend people when I
+speak to them
+Exaggerating and overestimating outcomes
+Example: I have missed a deadline and therefore am
+going to be sacked
+Taking the blame for everything that goes wrong or is
+unpleasant, believing that everything people do or say
+is a personal reaction to you
+Example: It’s all my fault
+Ignoring or misinterpreting positive aspects due to
+learned helplessness. Always assuming the worst
+Example: The glass is half empty rather than half full
+A sense of failure to meet standards or expectations, without
+consideration of whether these are reasonable or realistic
+Example: I should always get it right
+
+It is therefore crucial to make homework very manageable. Early failure will reinforce the negative schema and lead to disengagement. Adaptations need to be made
+to improve the likelihood of clients completing thought records, for example, by
+getting them to quickly telephone an answerphone to record the thought or by saying
+Table 11.2
+
+Thinking errors exercise
+What are the following thinking errors?
+
+1. I did that badly and have completely ruined it all.
+Answer: Catastrophising
+2. I upset her by blurting out gossip. I’m a terrible person.
+Answer: Personalising
+3. I should have finished everything I planned to do.
+Answer: Shoulds and oughts
+4. Everything goes wrong.
+Answer: All or nothing
+5. He didn’t shake my hand. I definitely won’t get the job.
+Answer: Jumping to conclusions
+6. She didn’t return my call. All women find me unattractive.
+Answer: Overgeneralising
+
+LOW MOOD AND DEPRESSION
+
+205
+
+it into a recording device (the latter facility is often incorporated into mobile phones
+which means this is likely to be an easily accessible resource).
+Just as thoughts can exacerbate low mood, they can also be exploited to improve
+moods. Explaining how the vicious spiral can be reversed can be a strong motivator
+and give a sense of hope. Recognising that different more negative thoughts in the
+same situation can lead to the experience of positive feelings and result in positive
+behaviours can improve mood. This is a difficult skill to master as the client must
+learn to impose control over a lability they have long believed they cannot control.
+The client should be encouraged to look at alternative interpretations or alternative
+outcomes, for example replace thoughts such as ‘I can’t cope’ with ‘this is difficult, but I can manage if I take it a step at a time’. However, people with ADHD
+are likely to find considering alternatives to original thinking difficult due to their
+executive functioning problems and relative inflexibility. This seems ironic given
+that they often have strong creative talent. The issue here is that they have the ability
+to generate lots of original ideas but do not do so spontaneously as they either stick
+rigidly to one aspect for some time and do not consider alternative ideas or solutions
+at all, or they give up and move on to a completely different topic leaving a task
+incomplete or a problem unresolved. This rigidity needs to be overcome by teaching
+the client to relax and let new ideas flow. Brainstorming techniques are helpful and
+might include asking the client to:
+1. Think of many different solutions to the problem, even silly ones.
+2. Disregard all solutions that are not pragmatic.
+3. Consider the outcome of remaining solutions and rate how useful they may be on
+a scale of 0 ⫽ useless to 10 ⫽ very helpful: problem likely to be resolved.
+4. Select a solution.
+Aside from the brainstorming techniques outlined above (and presented for client
+use on the Companion Website in Table 11.2b), it can be useful in sessions to develop with the client a set of standard questions which they ask themselves to help
+them challenge the belief that they cannot cope with their negative thinking, generate alternative thinking or commence a creative thinking process (see, for example,
+Table 11.3). Table 11.5 provides examples of challenging the negative thoughts of
+people with ADHD. (Both tables are presented on the Companion Website.)
+Table 11.3
+
+Exercise – challenging negative thinking
+
+1. What is the evidence that you can’t cope? Write down the times when you have
+successfully coped in the past.
+2. Imagine your friend came to you with this problem – what would you tell them? Would
+you view it in the same way, that is, believing that there are no solutions?
+3. What is the worst that could happen? Am I overestimating the likelihood of this
+happening?
+
+206 ADHD IN ADULTS
+Table 11.4
+
+Replacing negative thoughts
+
+Exercise
+Think of a negative thought:
+‘I cannot complete this form – it’s too difficult and long.’
+Now counteract it with a positive self-statement:
+‘I have managed to finish many more forms in the past and some were even longer.’
+
+One positive aspect of working with people with ADHD is that once they have procured the skills of brainstorming and perspective taking, they seem to quickly develop these skills and adopt them in their daily lives. This most likely reflects the
+fact that these techniques tap into their creativity and ingenuity and, once they have
+learned the skill of alternative thinking, they have no difficulty applying the process.
+The key is learning to stop their automatic acceptance of an original thought or idea
+and engage in a process of consequential or alternative thinking. The therapist may
+have to prompt many times to do this. It may be helpful to encourage the client to
+write out the prompting questions outlined in the exercise in Table 11.4 and carry
+them on a card. The Companion Website contains this list in a format that can be
+copied for this purpose. The client could, at a more fundamental level, be encouraged to interrupt automatic responding by linking the process with a visual image,
+e.g. new idea, red flash, ‘stop’ sign.
+Once negative thoughts have been determined and the thinking process halted, the client
+may be helped by learning to replace a negative thought with a more positive one. This
+may be motivating as well as rewarding. It can be helpful to make up a list of possible
+negative and positive thoughts. This involves dividing a sheet of paper into two columns
+and writing a list of negative thoughts down one side of the page and then a list of positive
+self-statements on the other side. Make sure that items are not ‘global’ abstract thoughts
+or schemas but refer to thoughts about that moment in time. With careful prompting,
+the therapist must ensure that positive thoughts and outcomes far outweigh the negative
+outcomes. If the page is folded over to show only the positive side, this provides a list of
+self-generated positive statements that may be usefully applied in treatment. Examples
+of negative thoughts and cognitive challenges are presented in Table 11.5.
+
+ACTIVITY SCHEDULING
+As discussed previously, individuals with ADHD often feel overwhelmed by what are
+perceived to be insurmountable problems and therefore give up very early or easily. It
+can be difficult to know where to start, especially if motivation is low and the task is
+not of particular interest. This can make the client feel worse, because they are even
+less likely to achieve tasks and lose attention before they are completed. When this happens, the system needs to be ‘kick started’. Activity makes people feel better and more
+alert, and motivates further activity; that is, the more you do, the more you feel like
+doing. This can be counterintuitive, however, as many people do not perform activities
+
+LOW MOOD AND DEPRESSION
+Table 11.5
+
+207
+
+Examples of negative thoughts and challenges
+
+Negative thoughts
+
+Challenges
+
+I am not as capable as other
+people.
+
+I am not good at everything. Like everybody I am good
+at some things and not so good at others.
+
+There is no way I can complete
+that task. What is the point in
+trying?
+
+If I don’t try, I won’t know. If I break it down into smaller
+sections I will be able to complete it. Trying in itself
+will broaden my experience and skill. Nobody is
+expecting me to do it all in one go.
+
+I’m bound to miss something out
+or make a mistake.
+
+Everybody makes mistakes, even people without ADHD.
+I know how to check what I have done for mistakes
+and I can ask others to help me. Sometimes it is good
+to make mistakes because that is the best way to learn.
+
+I end up talking about rubbish
+and nobody wants to listen to
+me.
+
+I have opinions, thoughts and feelings. A lot of people
+find it very difficult to talk in public and I may put
+them at their ease. I can make sure I talk about things
+which interest them.
+
+Everybody hates me and thinks
+I’m a moody person.
+
+There are people who like me for who I am. Everyone is
+allowed to have their down moments.
+
+People without ADHD are
+happier than me.
+
+I don’t know this for a fact. Some people may be and
+others may be very unhappy. Just because somebody
+appears to be in control, doesn’t mean they are more
+satisfied.
+
+It would be best if I avoided
+people, because I end up being
+rude and offending people.
+
+If I stay away I don’t give myself a chance. There are
+many more occasions when I get on well with people
+than occasions when I offend them.
+
+My mood swings around so
+much – I may start crying in
+front of everyone.
+
+It is acceptable to be upset sometimes. When I see others
+crying, I am understanding and do not think any worse
+of the person. It would not be the end of the world.
+What is wrong with showing emotion?
+
+I’m hopeless at everything and
+There are many things that I can do very well. I have
+always have been. I’ve been
+made great improvements in many areas of my life
+trying all my life to sort myself
+and this aspect is not any more important.
+out and have got nowhere.
+
+because they ‘do not feel like it’. The client should be encouraged to understand the
+behaviour-motivation lag, whereby starting an activity (even when they do not want to
+at first) can make them feel like doing it when they have finished. However, an attention
+deficit means that people have difficulty finishing tasks at the best of times, let alone
+when they feel low in mood. So tasks need to be broken down into smaller stages, with
+the client aiming to start at a pre-determined point of a task and finish it. By learning
+to apply this methodology, clients who feel unmotivated and are low in mood may find
+that not only do they complete their target but in the course of time they may develop
+motivation to complete many other parts, if not complete the whole task.
+
+208 ADHD IN ADULTS
+Table 11.6 Making a task list
+1
+
+2
+
+3
+
+Tasks that must be done
+collecting the children from school
+going shopping
+renewing the bus pass
+Tasks that client wants to do
+watching new film at cinema
+going to hairdressers
+meeting friend
+Rewards
+reading magazine
+going for a run
+watching television
+
+The first task for the therapist is to engage the client in a process of categorising what has
+to be done. The way to do this is to make a list of tasks that are compulsory, important and
+necessary, and finally desirable (see Table 11.6; also on the Companion Website). This
+will be intuitively interesting to the client as they will see spread before them a frame or
+plan that structures achievement. People with ADHD are generally active and so activity
+schedules and plans are unlikely to be rejected. However, because clients can be chaotic
+and disorganised in their general approach to life, using such plans and outlines will be
+unusual. If they have tried and failed to use similar techniques, this is probably for one of
+two reasons: (1) either they have not broken tasks down into sufficiently small steps, or
+(2) because they have not incorporated a reward system into their schedule.
+By definition, a reward is something that is pleasurable to the individual and will lift
+mood. However, if a person is very depressed, their avoidance of tasks or social withdrawal may represent a ‘reward’ to the individual and reinforce their depressed state. In
+such cases, the therapist must guide the client to select rewards that will act as positive
+reinforcers. Of course, rewards will vary between individuals. One man’s meat is another
+man’s poison! If the client is feeling particularly low it can be hard to think of things that
+give pleasure so it can be helpful to encourage the client to think about what they would
+suggest to somebody else. If they find it difficult to define ‘rewards’ they would like now,
+ask the client about activities and/or treats that used to give them pleasure. Identify small
+rewards as well as large rewards. A reward could be taking a bath, watching a television
+programme, going for a swim, going to the cinema, going to the gym, meeting a friend,
+going for a walk, making a telephone call to a friend, a piece of cake, listening to music,
+a holiday… there are endless possibilities.
+Once the tasks and rewards have been established, the client can be guided to plan
+ahead by making up a Diary Activity Plan, which divides each day into hours (see
+Table 5.2 on Companion Website). The client should be encouraged to avoid the
+temptation of doing too much in one go. Schedule activities in small amounts so
+they become manageable. Initially, the planning phase may seem a daunting task for
+someone with ADHD so the client should be encouraged to reward themselves once
+
+LOW MOOD AND DEPRESSION
+
+209
+
+the planning is completed. The schedule should include regular breaks, for example,
+stop for a drink or go for a quick walk. The timing of breaks should be determined by
+their concentration span. This may need to be determined by trial and error, however,
+they should ensure that the schedule is not all reward for little achievement. The rest
+of the time can be filled in, from morning to evening, with the activities identified
+previously in the Task List (see Table 11.7 – also in handout format on the Companion Website). People with ADHD have a difficulty with ‘delayed gratification’, that
+is, they find it difficult to wait for a reward, so long periods should not be scheduled
+between rewards. Completion of tasks or structured activity must be paired with
+reward, which may be brief periods of relaxation or alternatively high stimulation.
+Rewards that involve some form of activity can be particularly stimulating, such as
+physical exercise, as this will help alleviate feelings of restlessness.
+The aim is to create a system whereby frequent rewards are incorporated to reward
+completion of tasks that have been put off or avoided. Rewards can be matched
+according to task demand and complexity, for example if the client is working on
+a task requiring a lot of thought and sustained concentration (such as completing
+a report) then schedule in frequent short breaks for a drink and/or snack. When
+the report has been completed, say at the end of the day, a bigger reward can be
+scheduled, such as going out to the cinema or going for a run. The goal is to maximise activity levels and increase the level of satisfaction and feeling of achievement.
+Clients should be reminded of the thoughts, feelings and behaviour cycle whilst completing tasks and increasing productivity. By being more active, the cycle can be reversed
+by using positive behaviour to improve mood. For the client, this will also increase
+a sense of control over their life and what they can achieve. The aim is to reduce an
+insurmountable mass of unstarted or half-finished tasks into a prioritised manageable
+list. A list that is completed and has an end. Once tasks are completed, the client should
+be encouraged to see this visually and increase feelings of satisfaction and achievement
+by ticking off items on their list or crossing them through. One client has told us that he
+used to use a highlighter pen to mark tasks done as he wanted to highlight achievement.
+He said it was a reward in itself to see a block of tasks in fluorescent yellow ink.
+It is important to review what has been achieved at the end of each day and think about
+the days ahead. The client should be encouraged to focus on what they have managed
+to do and not to punish themselves for what they did not achieve – after all, they could
+have stayed in bed and done nothing. Some adjustments will inevitably need to be made
+to the plan, depending on how well the client has overestimated or underestimated the
+time it takes to complete tasks. As mentioned earlier, in the initial stages, it is better to
+schedule very short tasks into a longer period, in order to maximise the likelihood of
+success. If the plan has not been adhered to, then try to identify what went wrong and
+at what time. It will be useful to note this information in the Diary Activity Plan at the
+appropriate place. It could be, for example, that the client was able to stick to the plan in
+the morning but not after lunch, in which case the therapist should adapt the schedule to
+start the afternoon with a ‘desirable’ activity before moving to one from the ‘must do’
+list. It is important to include tasks that give pleasure, and not just a list of chores.
+
+210 ADHD IN ADULTS
+Table 11.7
+
+Example of a task list for activity scheduling
+Tasks John must do
+
+Complete tax return
+Cut the grass
+Buy my daughter a birthday present
+Grocery shopping for the week
+Household chores
+Prepare invoices and statements for work completed
+Visit a potential client and prepare an estimate
+Finish current job fitting a water feature
+Go to the bank
+Return a movie to the hire shop
+Tasks John wants to do
+Go to the cinema
+Finish reading book
+Find out about joining the local gym
+Visit a friend in hospital
+Go to the opticians for an eye test
+Find out about how to run in the next marathon
+Rewards
+Go running
+Read the newspaper
+Watch the football on television
+Watch a movie
+Meet a friend for a drink
+Have a takeaway meal
+
+An example of a diary activity plan is given in Table 11.8 (see blank version for use
+in sessions in Table 5.2 on Companion Website). This is a week’s schedule for a client, John, who is a self-employed landscape gardener who lives on his own.
+Before John made his Diary Activity Plan, he had to break down some of the items
+he wished to achieve (see Table 11.7). For example, in the ‘must do’ list he wrote
+‘household chores’. What John had to do was the vacuuming, tidying up, washing
+and ironing. These tasks needed to be listed out separately. Similarly some tasks
+required John to make telephone calls, for example finding out about the local gym
+and the marathon; enquiring about costs of materials required for his next job.
+John could work for a two hour span before he lost concentration, so his Diary Activity Plan was organised around this time span to optimise completion of tasks. In
+the regular allotted breaks, John either ate lunch or dinner or during the 15 minute
+breaks he had a cup of tea or coffee or wandered outside. He usually relaxed during
+the longer breaks and read the newspaper or watched something on television.
+
+Table 11.8 Diary Activity Plan
+Week beginning …
+Monday
+
+Tuesday
+
+Wednesday
+
+Thursday
+
+Friday
+
+Saturday
+
+Sunday
+
+9–10 am
+
+Work
+
+Work
+
+Tax form
+
+Invoicing and
+statements
+
+Cut grass
+
+Sleep
+
+Sleep
+
+10–11 am
+
+Work
+
+Work
+
+Tax form
+
+Invoicing and
+statements
+
+Cut grass
+
+Read book
+
+Vacuuming
+
+Break
+
+Break
+
+Break
+
+Break
+
+Break
+
+Break
+
+Break
+
+11.15–12 am
+
+Work
+
+Work
+
+Tax form
+
+P hone calls
+
+P aperwork and
+correspondence
+
+Travel to shops
+
+Ironing
+
+12–1 pm
+
+Work
+
+Work
+
+Go out for
+run
+
+Hoovering
+
+Write and post
+letters
+
+Shop for
+present
+
+Ironing
+
+1–2 pm
+
+Lunch
+
+Lunch
+
+Lunch
+
+Lunch
+
+Lunch
+
+Lunch
+
+Lunch
+
+2–3 pm
+
+Work
+
+Work
+
+Tidy up
+house
+
+Prepare
+estimate
+
+Travel to shops
+
+Visit gym
+
+Go out for
+run
+
+3.15–4 pm
+
+Work
+
+Work
+
+Post tax form
+and travel
+to client
+
+P ost estimate
+Travel to
+hospital
+
+Banking
+
+Travel home
+
+Watch
+football on
+TV
+
+Break
+
+Break
+
+Break
+
+Break
+
+Break
+
+Break
+
+Break
+
+4.15–5 pm
+
+Work
+
+Work
+
+Visit new
+client
+
+Hospital visit
+
+Opticians
+
+Read book
+
+Watch football
+on T V
+
+5–6 pm
+
+Travel home
+
+Travel home
+
+Travel home
+
+Travel home
+
+Travel home
+
+Go out for a
+walk
+
+Read book
+
+6–7 pm
+
+Break
+
+Break
+
+Break
+
+Break
+
+Break
+
+Break
+
+Break
+
+7–12 pm
+
+Takeaway
+
+Football on T V
+
+TV
+
+Watch movie
+
+Go to cinema
+
+Out with friend
+
+Visit family
+
+212 ADHD IN ADULTS
+An example of John’s schedule is provided in Table 11.8. The text in bold represents
+break and reward periods.
+
+CONCLUSIONS
+This chapter has discussed the reasons why many individuals with ADHD may also
+experience comorbid low mood or depression. It has elaborated the traditional cognitive model in order to elucidate how particular features of ADHD can exacerbate low
+mood and/or typical depression. There may be a potential risk period following the
+diagnosis and treatment of ADHD symptoms, when the individual appears to engage
+in depressive ruminations and analysis of the past. Examples of thought patterns
+and thinking errors are provided along with exercises for the client and therapist to
+perform in sessions. Suggestions for activity scheduling are explained with a particular emphasis on how short-term rewards are crucial in maintaining motivation in
+depressed individuals with ADHD.
+
+12
