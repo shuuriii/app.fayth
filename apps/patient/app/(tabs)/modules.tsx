@@ -8,6 +8,7 @@ import {
   Alert,
   RefreshControl,
 } from 'react-native';
+import { useRouter } from 'expo-router';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/lib/supabase';
 import { ModuleCard } from '@/components/ModuleCard';
@@ -34,6 +35,7 @@ interface ModuleWithStatus extends YBModule {
 
 export default function ModulesScreen() {
   const { user } = useAuth();
+  const router = useRouter();
   const [modules, setModules] = useState<ModuleWithStatus[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -93,12 +95,7 @@ export default function ModulesScreen() {
       return;
     }
 
-    // For now, just show module info for non-locked modules
-    Alert.alert(
-      `Module ${mod.chapter_number}`,
-      mod.description || mod.title,
-      [{ text: 'OK' }]
-    );
+    router.push(`/module/${mod.id}`);
   }
 
   if (loading) {

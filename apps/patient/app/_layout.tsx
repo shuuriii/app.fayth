@@ -14,7 +14,25 @@ export default function RootLayout() {
           contentStyle: { backgroundColor: Colors.background },
           animation: 'fade',
         }}
-      />
+      >
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+        <Stack.Screen name="(onboarding)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="module/[id]"
+          options={{
+            headerShown: true,
+            animation: 'slide_from_right',
+          }}
+        />
+        <Stack.Screen
+          name="worksheet/[id]"
+          options={{
+            headerShown: true,
+            animation: 'slide_from_right',
+          }}
+        />
+      </Stack>
     </>
   );
 }

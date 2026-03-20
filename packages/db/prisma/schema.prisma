@@ -94,6 +94,9 @@ model Patient {
   adjustmentStage         Int?         @map("adjustment_stage")
   focusosScore            Json?        @map("focusos_score")
   onboardingComplete      Boolean      @default(false) @map("onboarding_complete")
+  totalXp                 Int          @default(0) @map("total_xp")
+  level                   String       @default("seed")
+  dailyCheckinStreak      Int          @default(0) @map("daily_checkin_streak")
   createdAt               DateTime     @default(now()) @map("created_at") @db.Timestamptz
   updatedAt               DateTime     @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 

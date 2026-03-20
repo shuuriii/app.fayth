@@ -15,6 +15,7 @@
     "react-dom": "18.3.1",
     "@fayth/ui": "workspace:*",
     "@fayth/types": "workspace:*",
+    "@fayth/ai": "workspace:*",
     "@fayth/db": "workspace:*",
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.47.10"

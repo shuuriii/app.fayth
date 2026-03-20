@@ -1,5 +1,6 @@
 import { createSupabaseServer } from '@/lib/supabase/server';
 import { notFound } from 'next/navigation';
+import { AISummary } from '@/components/ai-summary';
 
 const STAGE_LABELS: Record<number, string> = {
   1: 'Relief & Elation',
@@ -80,6 +81,15 @@ export default async function PatientDetailPage({
     .gte('logged_at', sevenDaysAgo.toISOString())
     .order('logged_at', { ascending: false });
 
+  // Fetch the most recent session for AI summary
+  const { data: latestSession } = await supabase
+    .from('sessions')
+    .select('id')
+    .eq('patient_id', patientId)
+    .order('scheduled_at', { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
   // Fetch recent worksheet responses
   const { data: recentResponses } = await supabase
     .from('patient_content_responses')
@@ -159,6 +169,20 @@ export default async function PatientDetailPage({
             )}
           />
         </div>
+      </div>
+
+      {/* AI Pre-Session Summary */}
+      <div>
+        <h2 className="text-lg font-semibold text-gray-900 mb-3">
+          AI Pre-Session Summary
+        </h2>
+        {latestSession ? (
+          <AISummary sessionId={latestSession.id} patientId={patientId} />
+        ) : (
+          <div className="bg-white rounded-xl border border-gray-200 p-6 text-center text-sm text-gray-500">
+            No sessions scheduled yet. A summary can be generated once a session exists.
+          </div>
+        )}
       </div>
 
       {/* Active Modules */}
