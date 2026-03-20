@@ -1,0 +1,316 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ── Enums ───────────────────────────────────────────────────────────
+
+enum UserRole {
+  patient
+  psychologist
+  psychiatrist
+  admin
+
+  @@map("user_role")
+}
+
+enum AdhdSubtype {
+  inattentive
+  hyperactive
+  combined
+
+  @@map("adhd_subtype")
+}
+
+enum ModuleStatus {
+  locked
+  assigned
+  active
+  complete
+
+  @@map("module_status")
+}
+
+enum ContentItemType {
+  worksheet
+  table
+  exercise
+  diary
+  psychoeducation
+
+  @@map("content_item_type")
+}
+
+enum MedicationForm {
+  IR
+  SR
+
+  @@map("medication_form")
+}
+
+enum SessionType {
+  therapy
+  medication_review
+
+  @@map("session_type")
+}
+
+enum SessionStatus {
+  scheduled
+  complete
+  cancelled
+
+  @@map("session_status")
+}
+
+// ── Models ──────────────────────────────────────────────────────────
+
+model Profile {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String   @unique @map("user_id") @db.Uuid
+  role      UserRole
+  fullName  String   @map("full_name")
+  phone     String?
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@index([userId])
+  @@index([role])
+  @@map("profiles")
+}
+
+model Patient {
+  id                      String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId                  String       @unique @map("user_id") @db.Uuid
+  assignedPsychologistId  String?      @map("assigned_psychologist_id") @db.Uuid
+  assignedPsychiatristId  String?      @map("assigned_psychiatrist_id") @db.Uuid
+  diagnosisDate           DateTime?    @map("diagnosis_date") @db.Date
+  adhdSubtype             AdhdSubtype? @map("adhd_subtype")
+  adjustmentStage         Int?         @map("adjustment_stage")
+  focusosScore            Json?        @map("focusos_score")
+  onboardingComplete      Boolean      @default(false) @map("onboarding_complete")
+  createdAt               DateTime     @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt               DateTime     @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  patientModules          PatientModule[]
+  contentResponses        PatientContentResponse[]
+  symptomLogs             SymptomLog[]
+  medications             Medication[]
+  medicationLogs          MedicationLog[]
+  sessions                Session[]
+  aiCheckins              AiCheckin[]
+
+  @@index([userId])
+  @@index([assignedPsychologistId])
+  @@index([assignedPsychiatristId])
+  @@map("patients")
+}
+
+model Provider {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId        String   @unique @map("user_id") @db.Uuid
+  role          UserRole
+  licenseNumber String?  @map("license_number")
+  specialty     String?
+  bio           String?
+  createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt     DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@index([userId])
+  @@index([role])
+  @@map("providers")
+}
+
+model YbModule {
+  id                    String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  chapterNumber         Int      @unique @map("chapter_number")
+  title                 String
+  description           String?
+  prerequisiteModuleIds Int[]    @map("prerequisite_module_ids")
+  targetSymptoms        String[] @map("target_symptoms")
+  estimatedSessions     Int?     @map("estimated_sessions")
+  sequenceOrder         Int      @map("sequence_order")
+  active                Boolean  @default(true)
+  createdAt             DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt             DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  contentItems          YbContentItem[]
+  patientModules        PatientModule[]
+
+  @@index([chapterNumber])
+  @@index([sequenceOrder])
+  @@map("yb_modules")
+}
+
+model YbContentItem {
+  id                  String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  moduleId            String          @map("module_id") @db.Uuid
+  type                ContentItemType
+  title               String
+  instructions        String?
+  schema              Json?
+  xpValue             Int             @default(0) @map("xp_value")
+  companionWebsiteRef String?         @map("companion_website_ref")
+  createdAt           DateTime        @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt           DateTime        @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  module              YbModule        @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  responses           PatientContentResponse[]
+
+  @@index([moduleId])
+  @@index([type])
+  @@map("yb_content_items")
+}
+
+model PatientModule {
+  id          String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  patientId   String       @map("patient_id") @db.Uuid
+  moduleId    String       @map("module_id") @db.Uuid
+  status      ModuleStatus @default(locked)
+  assignedBy  String?      @map("assigned_by") @db.Uuid
+  assignedAt  DateTime?    @map("assigned_at") @db.Timestamptz
+  startedAt   DateTime?    @map("started_at") @db.Timestamptz
+  completedAt DateTime?    @map("completed_at") @db.Timestamptz
+  xpEarned    Int          @default(0) @map("xp_earned")
+  createdAt   DateTime     @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt   DateTime     @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  patient     Patient      @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  module      YbModule     @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  @@unique([patientId, moduleId])
+  @@index([patientId])
+  @@index([moduleId])
+  @@index([status])
+  @@map("patient_modules")
+}
+
+model PatientContentResponse {
+  id                   String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  patientId            String        @map("patient_id") @db.Uuid
+  contentItemId        String        @map("content_item_id") @db.Uuid
+  sessionDate          DateTime?     @map("session_date") @db.Date
+  responseData         Json?         @map("response_data")
+  aiFeedback           String?       @map("ai_feedback")
+  reviewedByProviderId String?       @map("reviewed_by_provider_id") @db.Uuid
+  flagged              Boolean       @default(false)
+  createdAt            DateTime      @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt            DateTime      @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  patient              Patient       @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  contentItem          YbContentItem @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
+
+  @@index([patientId])
+  @@index([contentItemId])
+  @@index([flagged])
+  @@map("patient_content_responses")
+}
+
+model SymptomLog {
+  id               String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  patientId        String   @map("patient_id") @db.Uuid
+  loggedAt         DateTime @default(now()) @map("logged_at") @db.Timestamptz
+  focusScore       Int?     @map("focus_score")
+  moodScore        Int?     @map("mood_score")
+  energyScore      Int?     @map("energy_score")
+  impulsivityScore Int?     @map("impulsivity_score")
+  sleepHours       Decimal? @map("sleep_hours") @db.Decimal(3, 1)
+  notes            String?
+  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt        DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  patient          Patient  @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@index([patientId])
+  @@index([loggedAt])
+  @@index([patientId, loggedAt(sort: Desc)])
+  @@map("symptom_logs")
+}
+
+model Medication {
+  id           String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  patientId    String          @map("patient_id") @db.Uuid
+  name         String
+  doseMg       Decimal         @map("dose_mg")
+  frequency    String
+  form         MedicationForm?
+  prescribedBy String?         @map("prescribed_by") @db.Uuid
+  startDate    DateTime?       @map("start_date") @db.Date
+  active       Boolean         @default(true)
+  createdAt    DateTime        @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt    DateTime        @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  patient      Patient         @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  logs         MedicationLog[]
+
+  @@index([patientId])
+  @@index([patientId, active])
+  @@map("medications")
+}
+
+model MedicationLog {
+  id           String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  patientId    String     @map("patient_id") @db.Uuid
+  medicationId String     @map("medication_id") @db.Uuid
+  takenAt      DateTime   @default(now()) @map("taken_at") @db.Timestamptz
+  missed       Boolean    @default(false)
+  sideEffects  String[]   @map("side_effects")
+  createdAt    DateTime   @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt    DateTime   @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  patient      Patient    @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  medication   Medication @relation(fields: [medicationId], references: [id], onDelete: Cascade)
+
+  @@index([patientId])
+  @@index([medicationId])
+  @@index([patientId, takenAt(sort: Desc)])
+  @@map("medication_logs")
+}
+
+model Session {
+  id                  String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  patientId           String        @map("patient_id") @db.Uuid
+  providerId          String        @map("provider_id") @db.Uuid
+  type                SessionType
+  scheduledAt         DateTime      @map("scheduled_at") @db.Timestamptz
+  durationMins        Int?          @map("duration_mins")
+  status              SessionStatus @default(scheduled)
+  aiPreSessionSummary String?       @map("ai_pre_session_summary")
+  providerNotes       String?       @map("provider_notes")
+  modulesWorkedOn     Int[]         @map("modules_worked_on")
+  createdAt           DateTime      @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt           DateTime      @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  patient             Patient       @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@index([patientId])
+  @@index([providerId])
+  @@index([scheduledAt])
+  @@index([status])
+  @@index([providerId, scheduledAt(sort: Desc)])
+  @@map("sessions")
+}
+
+model AiCheckin {
+  id                String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  patientId         String   @map("patient_id") @db.Uuid
+  triggeredAt       DateTime @default(now()) @map("triggered_at") @db.Timestamptz
+  context           Json?
+  response          String?
+  flaggedForProvider Boolean  @default(false) @map("flagged_for_provider")
+  flagReason        String?  @map("flag_reason")
+  createdAt         DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt         DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  patient           Patient  @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@index([patientId])
+  @@index([patientId, triggeredAt(sort: Desc)])
+  @@index([flaggedForProvider])
+  @@map("ai_checkins")
+}

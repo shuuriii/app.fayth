@@ -10,12 +10,18 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@fayth/types": "workspace:*",
+    "@fayth/ui": "workspace:*",
+    "@react-native-async-storage/async-storage": "2.1.2",
+    "@supabase/supabase-js": "^2.49.1",
     "expo": "~52.0.0",
     "expo-router": "~4.0.0",
+    "expo-secure-store": "~14.0.1",
+    "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
     "react-native": "0.76.7",
-    "@fayth/ui": "workspace:*",
-    "@fayth/types": "workspace:*"
+    "react-native-safe-area-context": "~4.14.1",
+    "react-native-screens": "~4.4.0"
   },
   "devDependencies": {
     "@types/react": "~18.3.0",

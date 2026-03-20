@@ -33,6 +33,19 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Prisma
+packages/db/src/generated/
+
+# Expo
+apps/patient/.expo/
+apps/patient/ios/
+apps/patient/android/
+
+# Python
+fastapi/__pycache__/
+fastapi/.venv/
+*.pyc
+
 # Misc
 .DS_Store
 *.pem
