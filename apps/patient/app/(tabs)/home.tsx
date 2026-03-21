@@ -54,23 +54,21 @@ async function fetchActiveModule(patientId: string): Promise<ActiveModuleItem | 
 
   const pm = patientModules[0];
 
-  // Get module info
-  const { data: mod } = await supabase
-    .from('yb_modules')
-    .select('id, title, chapter_number')
-    .eq('id', pm.module_id)
-    .single();
+  // Fetch module info and content items in parallel (both only need module_id)
+  const [{ data: mod }, { data: items }] = await Promise.all([
+    supabase
+      .from('yb_modules')
+      .select('id, title, chapter_number')
+      .eq('id', pm.module_id)
+      .single(),
+    supabase
+      .from('yb_content_items')
+      .select('id, title, type')
+      .eq('module_id', pm.module_id)
+      .order('id', { ascending: true }),
+  ]);
 
-  if (!mod) return null;
-
-  // Get content items for this module
-  const { data: items } = await supabase
-    .from('yb_content_items')
-    .select('id, title, type')
-    .eq('module_id', mod.id)
-    .order('id', { ascending: true });
-
-  if (!items || items.length === 0) return null;
+  if (!mod || !items || items.length === 0) return null;
 
   // Get completed responses
   const itemIds = items.map((i) => i.id);

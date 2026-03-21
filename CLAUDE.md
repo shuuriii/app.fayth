@@ -71,7 +71,7 @@ providers      — (user_id, role, license_number, specialty, bio)
 
 -- YB PROGRAMME ENGINE
 yb_modules     — (id, chapter_number 1-14, title, description,
-                  prerequisite_module_ids INT[], target_symptoms TEXT[],
+                  prerequisite_chapters INT[], target_symptoms TEXT[],
                   estimated_sessions INT, sequence_order INT, active BOOL)
 
 yb_content_items — (id, module_id FK, type: worksheet|table|exercise|diary|psychoeducation,

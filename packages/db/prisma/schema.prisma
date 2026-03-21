@@ -94,6 +94,7 @@ model Patient {
   adjustmentStage         Int?         @map("adjustment_stage")
   focusosScore            Json?        @map("focusos_score")
   onboardingComplete      Boolean      @default(false) @map("onboarding_complete")
+  expoPushToken           String?      @map("expo_push_token")
   totalXp                 Int          @default(0) @map("total_xp")
   level                   String       @default("seed")
   dailyCheckinStreak      Int          @default(0) @map("daily_checkin_streak")
@@ -134,7 +135,7 @@ model YbModule {
   chapterNumber         Int      @unique @map("chapter_number")
   title                 String
   description           String?
-  prerequisiteModuleIds Int[]    @map("prerequisite_module_ids")
+  prerequisiteChapters  Int[]    @map("prerequisite_chapters")
   targetSymptoms        String[] @map("target_symptoms")
   estimatedSessions     Int?     @map("estimated_sessions")
   sequenceOrder         Int      @map("sequence_order")

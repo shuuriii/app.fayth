@@ -5,7 +5,7 @@
 -- Deterministic UUIDs: 00000000-0000-4000-8000-0000000000XX
 -- where XX = zero-padded chapter number (01-14)
 
-INSERT INTO yb_modules (id, chapter_number, title, description, prerequisite_module_ids, target_symptoms, estimated_sessions, sequence_order, active)
+INSERT INTO yb_modules (id, chapter_number, title, description, prerequisite_chapters, target_symptoms, estimated_sessions, sequence_order, active)
 VALUES
   (
     '00000000-0000-4000-8000-000000000001',
@@ -137,7 +137,7 @@ ON CONFLICT (id) DO UPDATE SET
   chapter_number     = EXCLUDED.chapter_number,
   title              = EXCLUDED.title,
   description        = EXCLUDED.description,
-  prerequisite_module_ids = EXCLUDED.prerequisite_module_ids,
+  prerequisite_chapters = EXCLUDED.prerequisite_chapters,
   target_symptoms    = EXCLUDED.target_symptoms,
   estimated_sessions = EXCLUDED.estimated_sessions,
   sequence_order     = EXCLUDED.sequence_order,
