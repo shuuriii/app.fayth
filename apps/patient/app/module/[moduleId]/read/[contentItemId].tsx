@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet,
   FlatList,
+  ScrollView,
   Pressable,
   Dimensions,
   ActivityIndicator,
@@ -294,12 +295,19 @@ export default function PsychoeducationReaderScreen() {
           renderItem={({ item: block, index }) => (
             <View style={[styles.page, { width: SCREEN_WIDTH }]}>
               <View style={styles.pageContent}>
-                {block.heading && (
-                  <Text style={styles.heading}>{block.heading}</Text>
-                )}
-                {block.body && (
-                  <Text style={styles.body}>{block.body}</Text>
-                )}
+                <ScrollView
+                  showsVerticalScrollIndicator={true}
+                  bounces={true}
+                  nestedScrollEnabled={true}
+                  contentContainerStyle={styles.pageScrollContent}
+                >
+                  {block.heading && (
+                    <Text style={styles.heading}>{block.heading}</Text>
+                  )}
+                  {block.body && (
+                    <Text style={styles.body}>{block.body}</Text>
+                  )}
+                </ScrollView>
               </View>
             </View>
           )}
@@ -481,10 +489,14 @@ const styles = StyleSheet.create({
   pageContent: {
     backgroundColor: Colors.surface,
     borderRadius: Radii.lg,
-    padding: Spacing.xl,
     borderWidth: 1,
     borderColor: Colors.borderLight,
     maxHeight: '85%',
+    overflow: 'hidden',
+  },
+  pageScrollContent: {
+    padding: Spacing.xl,
+    paddingBottom: Spacing.xl + 8,
   },
   heading: {
     fontSize: FontSizes.xl,
