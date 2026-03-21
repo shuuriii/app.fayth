@@ -10,21 +10,18 @@ import {
   Alert,
   ActivityIndicator,
 } from 'react-native';
-import { useRouter, useLocalSearchParams } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { supabase } from '@/lib/supabase';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
 
 export default function LoginScreen() {
   const router = useRouter();
-  const { role } = useLocalSearchParams<{ role?: string }>();
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
 
   const formattedPhone = phone.startsWith('+91') ? phone : `+91${phone.replace(/^0+/, '')}`;
 
   const isValid = phone.replace(/\D/g, '').replace(/^91/, '').length === 10;
-
-  const isProvider = role === 'provider';
 
   async function handleSendOtp() {
     if (!isValid) {
@@ -45,7 +42,7 @@ export default function LoginScreen() {
 
       router.push({
         pathname: '/(auth)/verify',
-        params: { phone: formattedPhone, role: role ?? 'patient' },
+        params: { phone: formattedPhone },
       });
     } catch (err: any) {
       Alert.alert('Error', err.message ?? 'Something went wrong');
@@ -62,9 +59,7 @@ export default function LoginScreen() {
       <View style={styles.content}>
         <View style={styles.header}>
           <Text style={styles.logo}>fayth</Text>
-          <Text style={styles.tagline}>
-            {isProvider ? 'Sign in as a healthcare provider' : 'Your companion for managing ADHD'}
-          </Text>
+          <Text style={styles.tagline}>Your companion for managing ADHD</Text>
         </View>
 
         <View style={styles.form}>

@@ -18,7 +18,7 @@ const OTP_LENGTH = 6;
 
 export default function VerifyScreen() {
   const router = useRouter();
-  const { phone, role } = useLocalSearchParams<{ phone: string; role?: string }>();
+  const { phone } = useLocalSearchParams<{ phone: string }>();
   const [otp, setOtp] = useState('');
   const [loading, setLoading] = useState(false);
   const [resending, setResending] = useState(false);
@@ -62,10 +62,7 @@ export default function VerifyScreen() {
       if (profile) {
         router.replace('/(tabs)/home');
       } else {
-        router.replace({
-          pathname: '/(onboarding)/name',
-          params: { role: role ?? 'patient' },
-        });
+        router.replace('/(onboarding)/name');
       }
     } catch (err: any) {
       Alert.alert('Error', err.message ?? 'Something went wrong');

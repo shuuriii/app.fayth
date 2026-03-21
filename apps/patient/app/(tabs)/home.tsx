@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
   Pressable,
-  ActivityIndicator,
   RefreshControl,
+  Animated,
+  Easing,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
 import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@/hooks/useAuth';
 import { usePatient } from '@/hooks/usePatient';
+import { usePatientId } from '@/hooks/usePatientId';
 import { useSymptomLog } from '@/hooks/useSymptomLog';
 import { useFay } from '@/hooks/useFay';
 import { Fay } from '@/components/Fay';
-import { Colors, FontSizes, Spacing, Radii, LEVEL_LABELS, FAY_EVOLUTION_LABELS } from '@/lib/constants';
+import { Colors, FontSizes, Spacing, Radii, LEVEL_LABELS, getLevelProgress } from '@/lib/constants';
 import { supabase } from '@/lib/supabase';
 
 const LAST_OPEN_KEY = 'fayth_last_open_ts';
@@ -39,12 +41,12 @@ interface ActiveModuleItem {
   totalCount: number;
 }
 
-async function fetchActiveModule(userId: string): Promise<ActiveModuleItem | null> {
+async function fetchActiveModule(patientId: string): Promise<ActiveModuleItem | null> {
   // Find the first active/assigned module
   const { data: patientModules } = await supabase
     .from('patient_modules')
     .select('module_id, status')
-    .eq('patient_id', userId)
+    .eq('patient_id', patientId)
     .in('status', ['active', 'assigned'])
     .limit(1);
 
@@ -75,7 +77,7 @@ async function fetchActiveModule(userId: string): Promise<ActiveModuleItem | nul
   const { data: responses } = await supabase
     .from('patient_content_responses')
     .select('content_item_id')
-    .eq('patient_id', userId)
+    .eq('patient_id', patientId)
     .in('content_item_id', itemIds);
 
   const completedIds = new Set((responses ?? []).map((r) => r.content_item_id));
@@ -95,13 +97,67 @@ async function fetchActiveModule(userId: string): Promise<ActiveModuleItem | nul
   };
 }
 
+// ── Skeleton Loader ──────────────────────────────────────────────────
+
+function Skeleton({ width, height, style }: { width: number | string; height: number; style?: object }) {
+  const opacity = useRef(new Animated.Value(0.3)).current;
+  useEffect(() => {
+    const anim = Animated.loop(
+      Animated.sequence([
+        Animated.timing(opacity, { toValue: 0.7, duration: 800, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+        Animated.timing(opacity, { toValue: 0.3, duration: 800, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+      ])
+    );
+    anim.start();
+    return () => anim.stop();
+  }, [opacity]);
+
+  return (
+    <Animated.View
+      style={[
+        { width: width as any, height, borderRadius: Radii.sm, backgroundColor: Colors.surfaceAlt, opacity },
+        style,
+      ]}
+    />
+  );
+}
+
+function HomeSkeleton() {
+  return (
+    <View style={[styles.container, styles.contentContainer]}>
+      <View style={styles.greetingRow}>
+        <View style={styles.greetingSection}>
+          <Skeleton width={140} height={20} />
+          <Skeleton width={100} height={34} style={{ marginTop: 6 }} />
+        </View>
+        <Skeleton width={48} height={48} style={{ borderRadius: 24 }} />
+      </View>
+      <View style={styles.statsRow}>
+        {[1, 2, 3].map((i) => (
+          <View key={i} style={[styles.statCard, { alignItems: 'center' }]}>
+            <Skeleton width={40} height={22} />
+            <Skeleton width={50} height={12} style={{ marginTop: 6 }} />
+          </View>
+        ))}
+      </View>
+      <Skeleton width="100%" height={120} style={{ borderRadius: Radii.lg, marginBottom: Spacing.md }} />
+      <Skeleton width="100%" height={80} style={{ borderRadius: Radii.lg }} />
+    </View>
+  );
+}
+
+// ── Main Component ───────────────────────────────────────────────────
+
 export default function HomeScreen() {
   const router = useRouter();
   const { user } = useAuth();
+  const { patientId } = usePatientId(user?.id);
   const { profile, patient, loading: patientLoading, refetch } = usePatient(user?.id);
-  const { todayLog, loading: logLoading } = useSymptomLog(user?.id);
+  const { todayLog, loading: logLoading, checkinGenerating } = useSymptomLog(patientId ?? undefined);
   const [refreshing, setRefreshing] = useState(false);
   const [daysSinceLastOpen, setDaysSinceLastOpen] = useState(0);
+  const prevCheckinRef = useRef<string | null>(null);
+  const hasAutoShownFay = useRef(false);
 
   // Track days since last app open
   useEffect(() => {
@@ -122,41 +178,37 @@ export default function HomeScreen() {
   }, []);
 
   const { data: lastCheckin } = useQuery({
-    queryKey: ['last-checkin', user?.id],
+    queryKey: ['last-checkin', patientId],
     queryFn: async () => {
       const { data } = await supabase
         .from('ai_checkins')
-        .select('response')
-        .eq('patient_id', user!.id)
+        .select('response, triggered_at')
+        .eq('patient_id', patientId!)
         .order('triggered_at', { ascending: false })
         .limit(1)
         .single();
-      return data?.response ?? null;
+      if (!data?.response) return null;
+      return {
+        message: data.response as string,
+        isToday: new Date(data.triggered_at).toDateString() === new Date().toDateString(),
+      };
     },
-    enabled: !!user?.id,
+    enabled: !!patientId,
     staleTime: 5 * 60 * 1000,
   });
 
-  const { data: activeModule } = useQuery({
-    queryKey: ['active-module', user?.id],
-    queryFn: () => fetchActiveModule(user!.id),
-    enabled: !!user?.id,
+  // Derived check-in message (handle both string from cache seeding and object from query)
+  const checkinMessage = typeof lastCheckin === 'string'
+    ? lastCheckin
+    : lastCheckin?.message ?? null;
+  const isCheckinFresh = typeof lastCheckin === 'string' || (lastCheckin?.isToday ?? false);
+
+  const { data: activeModule, isLoading: moduleLoading } = useQuery({
+    queryKey: ['active-module', patientId],
+    queryFn: () => fetchActiveModule(patientId!),
+    enabled: !!patientId,
     staleTime: 5 * 60 * 1000,
   });
-
-  async function handleRefresh() {
-    setRefreshing(true);
-    await refetch();
-    setRefreshing(false);
-  }
-
-  if (patientLoading) {
-    return (
-      <View style={styles.centered}>
-        <ActivityIndicator size="large" color={Colors.primary} />
-      </View>
-    );
-  }
 
   const firstName = profile?.full_name?.split(' ')[0] ?? 'there';
   const level = (patient?.level ?? 'seed') as import('@fayth/types').Level;
@@ -179,6 +231,51 @@ export default function HomeScreen() {
     dailyActionsComplete: !!todayLog && !activeModule,
   });
 
+  // Auto-show Fay's tooltip on first load (brief delay for entrance feel)
+  useEffect(() => {
+    if (!patientLoading && fayState.message && !hasAutoShownFay.current) {
+      hasAutoShownFay.current = true;
+      const timer = setTimeout(() => {
+        if (!fayMessageVisible) toggleFayMessage();
+      }, 600);
+      return () => clearTimeout(timer);
+    }
+  }, [patientLoading, fayState.message]);
+
+  // When a fresh AI check-in arrives, auto-show Fay's tooltip
+  useEffect(() => {
+    if (checkinMessage && checkinMessage !== prevCheckinRef.current && isCheckinFresh) {
+      prevCheckinRef.current = checkinMessage;
+      if (!fayMessageVisible) toggleFayMessage();
+    }
+  }, [checkinMessage, isCheckinFresh]);
+
+  async function handleRefresh() {
+    setRefreshing(true);
+    await refetch();
+    setRefreshing(false);
+  }
+
+  // Skeleton loading state instead of blank spinner
+  if (patientLoading) {
+    return <HomeSkeleton />;
+  }
+
+  // Determine Fay's displayed message: AI check-in takes priority
+  const fayDisplayMessage =
+    checkinGenerating
+      ? '...'
+      : isCheckinFresh && checkinMessage
+        ? checkinMessage
+        : fayState.message?.text ?? null;
+
+  const fayDisplayState =
+    checkinGenerating
+      ? 'glowing' as const
+      : isCheckinFresh && checkinMessage
+        ? 'attentive' as const
+        : fayState.visualState;
+
   return (
     <ScrollView
       style={styles.container}
@@ -199,32 +296,49 @@ export default function HomeScreen() {
           <Text style={styles.name}>{firstName}</Text>
         </View>
         <Fay
-          visualState={fayState.visualState}
+          visualState={fayDisplayState}
           evolutionStage={fayState.evolutionStage}
-          message={fayState.message?.text}
-          messageVisible={fayMessageVisible}
+          message={fayDisplayMessage}
+          messageVisible={checkinGenerating || fayMessageVisible}
           onPress={toggleFayMessage}
         />
       </View>
 
       {/* Stats Row */}
-      <View style={styles.statsRow}>
-        <View style={styles.statCard}>
-          <Text style={styles.statValue}>{LEVEL_LABELS[level] ?? level}</Text>
-          <Text style={styles.statLabel}>Level</Text>
-        </View>
-        <View style={styles.statCard}>
-          <Text style={styles.statValue}>{totalXp.toLocaleString()}</Text>
-          <Text style={styles.statLabel}>XP</Text>
-        </View>
-        <View style={styles.statCard}>
-          <Text style={styles.statValue}>{streak}</Text>
-          <Text style={styles.statLabel}>Day Streak</Text>
-        </View>
-      </View>
+      {(() => {
+        const lp = getLevelProgress(totalXp);
+        return (
+          <View style={styles.statsRow}>
+            <View style={styles.statCard}>
+              <Text style={styles.statValue}>{lp.label}</Text>
+              <Text style={styles.statLabel}>Level</Text>
+            </View>
+            <View style={[styles.statCard, styles.xpCard]}>
+              <Text style={styles.statValue}>{totalXp.toLocaleString()}</Text>
+              <Text style={styles.statLabel}>XP</Text>
+              {lp.nextLabel && (
+                <View style={styles.xpBarSection}>
+                  <View style={styles.xpBarBg}>
+                    <View style={[styles.xpBarFill, { width: `${lp.progress * 100}%` }]} />
+                  </View>
+                  <Text style={styles.xpBarLabel}>
+                    {lp.xpIntoLevel}/{lp.xpNeededForNext} to {lp.nextLabel}
+                  </Text>
+                </View>
+              )}
+            </View>
+            <View style={styles.statCard}>
+              <Text style={styles.statValue}>{streak}</Text>
+              <Text style={styles.statLabel}>Day Streak</Text>
+            </View>
+          </View>
+        );
+      })()}
 
       {/* Daily Check-in Card */}
-      {!todayLog ? (
+      {logLoading ? (
+        <Skeleton width="100%" height={120} style={{ borderRadius: Radii.lg, marginBottom: Spacing.md }} />
+      ) : !todayLog ? (
         <Pressable
           style={({ pressed }) => [
             styles.promptCard,
@@ -252,8 +366,10 @@ export default function HomeScreen() {
         </View>
       )}
 
-      {/* Continue Module Card */}
-      {activeModule && (
+      {/* Continue Module Card / Empty State */}
+      {moduleLoading ? (
+        <Skeleton width="100%" height={100} style={{ borderRadius: Radii.lg, marginBottom: Spacing.md }} />
+      ) : activeModule ? (
         <Pressable
           style={({ pressed }) => [
             styles.continueCard,
@@ -292,13 +408,49 @@ export default function HomeScreen() {
             </Text>
           </View>
         </Pressable>
+      ) : (
+        <View style={styles.emptyModuleCard}>
+          <Text style={styles.emptyModuleTitle}>Your programme</Text>
+          <Text style={styles.emptyModuleSubtitle}>
+            Your psychologist will assign modules based on your needs.
+            In the meantime, explore what's available.
+          </Text>
+          <Pressable
+            style={({ pressed }) => [
+              styles.emptyModuleAction,
+              pressed && { opacity: 0.8 },
+            ]}
+            onPress={() => router.push('/(tabs)/modules')}
+          >
+            <Text style={styles.emptyModuleActionText}>Browse Modules</Text>
+          </Pressable>
+        </View>
       )}
 
-      {/* AI Check-in Message */}
-      {lastCheckin && (
+      {/* AI Check-in — older messages (not from today) shown as card fallback */}
+      {checkinMessage && !isCheckinFresh && (
         <View style={styles.checkinCard}>
-          <Text style={styles.checkinLabel}>Your last check-in note</Text>
-          <Text style={styles.checkinText}>{lastCheckin}</Text>
+          <Text style={styles.checkinLabel}>Fay's last note</Text>
+          <Text style={styles.checkinText}>{checkinMessage}</Text>
+        </View>
+      )}
+
+      {/* Getting Started Tips — shown for brand-new users */}
+      {totalXp === 0 && !todayLog && !logLoading && (
+        <View style={styles.tipsCard}>
+          <Text style={styles.tipsTitle}>Getting started</Text>
+          <View style={styles.tipRow}>
+            <Text style={styles.tipBullet}>1</Text>
+            <Text style={styles.tipText}>Log how you're feeling — it takes 30 seconds</Text>
+          </View>
+          <View style={styles.tipRow}>
+            <Text style={styles.tipBullet}>2</Text>
+            <Text style={styles.tipText}>Your psychologist will assign therapy modules</Text>
+          </View>
+          <View style={styles.tipRow}>
+            <Text style={styles.tipBullet}>3</Text>
+            <Text style={styles.tipText}>Fay checks in with you daily — tap her to chat</Text>
+          </View>
         </View>
       )}
 
@@ -328,12 +480,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.lg,
     paddingTop: 60,
     paddingBottom: Spacing.xxl,
-  },
-  centered: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: Colors.background,
   },
   greetingRow: {
     flexDirection: 'row',
@@ -378,6 +524,31 @@ const styles = StyleSheet.create({
     color: Colors.textSecondary,
     marginTop: 2,
     fontWeight: '500',
+  },
+  xpCard: {
+    flex: 1.5,
+  },
+  xpBarSection: {
+    width: '100%',
+    marginTop: Spacing.xs,
+  },
+  xpBarBg: {
+    width: '100%',
+    height: 4,
+    backgroundColor: Colors.surfaceAlt,
+    borderRadius: Radii.full,
+    overflow: 'hidden',
+  },
+  xpBarFill: {
+    height: '100%',
+    backgroundColor: Colors.primary,
+    borderRadius: Radii.full,
+  },
+  xpBarLabel: {
+    fontSize: 10,
+    color: Colors.textTertiary,
+    marginTop: 2,
+    textAlign: 'center',
   },
   promptCard: {
     backgroundColor: Colors.primaryLight,
@@ -506,6 +677,80 @@ const styles = StyleSheet.create({
     color: Colors.text,
     lineHeight: 24,
   },
+  // Empty module state
+  emptyModuleCard: {
+    backgroundColor: Colors.surface,
+    borderRadius: Radii.lg,
+    padding: Spacing.lg,
+    marginBottom: Spacing.md,
+    borderWidth: 1,
+    borderColor: Colors.borderLight,
+    borderStyle: 'dashed',
+  },
+  emptyModuleTitle: {
+    fontSize: FontSizes.md,
+    fontWeight: '700',
+    color: Colors.text,
+    marginBottom: Spacing.xs,
+  },
+  emptyModuleSubtitle: {
+    fontSize: FontSizes.sm,
+    color: Colors.textSecondary,
+    lineHeight: 20,
+    marginBottom: Spacing.md,
+  },
+  emptyModuleAction: {
+    alignSelf: 'flex-start',
+    backgroundColor: Colors.surfaceAlt,
+    borderRadius: Radii.sm,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.sm,
+  },
+  emptyModuleActionText: {
+    fontSize: FontSizes.sm,
+    fontWeight: '600',
+    color: Colors.primary,
+  },
+  // Tips card
+  tipsCard: {
+    backgroundColor: Colors.surface,
+    borderRadius: Radii.lg,
+    padding: Spacing.lg,
+    marginBottom: Spacing.md,
+    borderWidth: 1,
+    borderColor: Colors.borderLight,
+  },
+  tipsTitle: {
+    fontSize: FontSizes.md,
+    fontWeight: '700',
+    color: Colors.text,
+    marginBottom: Spacing.md,
+  },
+  tipRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: Spacing.sm,
+    gap: Spacing.sm,
+  },
+  tipBullet: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    backgroundColor: Colors.primaryLight,
+    textAlign: 'center',
+    lineHeight: 22,
+    fontSize: FontSizes.xs,
+    fontWeight: '700',
+    color: Colors.primary,
+    overflow: 'hidden',
+  },
+  tipText: {
+    flex: 1,
+    fontSize: FontSizes.sm,
+    color: Colors.textSecondary,
+    lineHeight: 20,
+  },
+  // Quick links
   quickLinks: {
     marginTop: Spacing.sm,
   },

@@ -9,11 +9,12 @@ import {
   Alert,
   KeyboardAvoidingView,
   Platform,
+  Animated as RNAnimated,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
 import { useWorksheet, useSubmitWorksheet } from '@/hooks/useWorksheet';
-import { WorksheetRenderer } from '@/components/WorksheetRenderer';
+import { WorksheetRenderer, SteppedWorksheetRenderer } from '@/components/WorksheetRenderer';
 import { ScoreDisplay } from '@/components/ScoreDisplay';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
 
@@ -34,6 +35,8 @@ export default function WorksheetScreen() {
   const [initializedForItem, setInitializedForItem] = useState<string | null>(null);
   const [draftRestored, setDraftRestored] = useState(false);
   const autosaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const draftSavedOpacity = useRef(new RNAnimated.Value(0)).current;
+  const draftSavedTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const contentItem = data?.item ?? null;
   const existingResponse = data?.existingResponse ?? null;
@@ -80,7 +83,24 @@ export default function WorksheetScreen() {
 
     autosaveTimer.current = setTimeout(() => {
       if (Object.keys(values).length > 0) {
-        AsyncStorage.setItem(`${DRAFT_PREFIX}${id}`, JSON.stringify(values)).catch(() => {});
+        AsyncStorage.setItem(`${DRAFT_PREFIX}${id}`, JSON.stringify(values))
+          .then(() => {
+            // Flash the "Draft saved" indicator
+            RNAnimated.timing(draftSavedOpacity, {
+              toValue: 1,
+              duration: 200,
+              useNativeDriver: true,
+            }).start();
+            if (draftSavedTimer.current) clearTimeout(draftSavedTimer.current);
+            draftSavedTimer.current = setTimeout(() => {
+              RNAnimated.timing(draftSavedOpacity, {
+                toValue: 0,
+                duration: 400,
+                useNativeDriver: true,
+              }).start();
+            }, 1500);
+          })
+          .catch(() => {});
       }
     }, AUTOSAVE_DELAY);
 
@@ -317,14 +337,34 @@ export default function WorksheetScreen() {
             />
           )}
 
+          {/* Draft saved indicator */}
+          {screenState === 'form' && (
+            <RNAnimated.View style={[styles.draftSavedRow, { opacity: draftSavedOpacity }]}>
+              <Text style={styles.draftSavedText}>Draft saved</Text>
+            </RNAnimated.View>
+          )}
+
           {fields.length > 0 ? (
             <View style={styles.formSection}>
-              <WorksheetRenderer
-                fields={fields}
-                values={values}
-                onChange={handleChange}
-                errors={errors}
-              />
+              {/* Use stepped wizard for 5+ fields, scroll mode for shorter forms */}
+              {!isReviewMode && fields.length >= 5 ? (
+                <SteppedWorksheetRenderer
+                  fields={fields}
+                  values={values}
+                  onChange={handleChange}
+                  errors={errors}
+                  onSubmit={handleSubmit}
+                  submitLabel="Submit Responses"
+                  xpValue={contentItem.xp_value}
+                />
+              ) : (
+                <WorksheetRenderer
+                  fields={fields}
+                  values={values}
+                  onChange={handleChange}
+                  errors={errors}
+                />
+              )}
             </View>
           ) : (
             <View style={styles.noFieldsContainer}>
@@ -334,7 +374,8 @@ export default function WorksheetScreen() {
             </View>
           )}
 
-          {!isReviewMode && fields.length > 0 && (
+          {/* Show classic submit button only for scroll mode (short forms & review) */}
+          {!isReviewMode && fields.length > 0 && fields.length < 5 && (
             <Pressable
               onPress={handleSubmit}
               style={({ pressed }) => [
@@ -471,6 +512,15 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.sm,
     color: '#0c4a6e',
     lineHeight: 22,
+  },
+  draftSavedRow: {
+    alignItems: 'flex-end',
+    marginBottom: Spacing.xs,
+  },
+  draftSavedText: {
+    fontSize: FontSizes.xs,
+    color: Colors.success,
+    fontWeight: '500',
   },
   formSection: {
     marginTop: Spacing.sm,

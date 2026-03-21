@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/hooks/useAuth';
+import { usePatientId } from '@/hooks/usePatientId';
 
 export interface ModuleInfo {
-  id: number;
+  id: string;
   chapter_number: number;
   title: string;
   description: string;
@@ -11,7 +12,7 @@ export interface ModuleInfo {
 
 export interface ContentItem {
   id: string;
-  module_id: number;
+  module_id: string;
   type: 'worksheet' | 'psychoeducation' | 'exercise' | 'diary' | 'table';
   title: string;
   instructions: string | null;
@@ -30,7 +31,7 @@ export interface ContentResponse {
   flagged: boolean;
 }
 
-async function fetchModuleDetail(moduleId: number, userId: string | undefined) {
+async function fetchModuleDetail(moduleId: string, patientId: string | undefined) {
   // Fetch module info
   const { data: moduleData, error: modError } = await supabase
     .from('yb_modules')
@@ -51,12 +52,12 @@ async function fetchModuleDetail(moduleId: number, userId: string | undefined) {
 
   // Fetch existing responses
   const responseMap = new Map<string, ContentResponse>();
-  if (userId && items && items.length > 0) {
+  if (patientId && items && items.length > 0) {
     const itemIds = items.map((i: ContentItem) => i.id);
     const { data: responses, error: respError } = await supabase
       .from('patient_content_responses')
       .select('*')
-      .eq('patient_id', userId)
+      .eq('patient_id', patientId)
       .in('content_item_id', itemIds)
       .order('session_date', { ascending: false });
 
@@ -78,12 +79,12 @@ async function fetchModuleDetail(moduleId: number, userId: string | undefined) {
 
 export function useModuleDetail(moduleId: string | undefined) {
   const { user } = useAuth();
-  const numericId = moduleId ? Number(moduleId) : 0;
+  const { patientId } = usePatientId(user?.id);
 
   return useQuery({
-    queryKey: ['module-detail', numericId, user?.id],
-    queryFn: () => fetchModuleDetail(numericId, user?.id),
-    enabled: !!moduleId && numericId > 0,
+    queryKey: ['module-detail', moduleId, patientId],
+    queryFn: () => fetchModuleDetail(moduleId!, patientId ?? undefined),
+    enabled: !!moduleId,
     staleTime: 5 * 60 * 1000,
   });
 }

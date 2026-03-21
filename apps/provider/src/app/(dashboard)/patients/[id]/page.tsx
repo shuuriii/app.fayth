@@ -1,6 +1,7 @@
 import { createSupabaseServer } from '@/lib/supabase/server';
 import { notFound } from 'next/navigation';
 import { AISummary } from '@/components/ai-summary';
+import { AssignModule } from '@/components/assign-module';
 
 const STAGE_LABELS: Record<number, string> = {
   1: 'Relief & Elation',
@@ -53,21 +54,6 @@ export default async function PatientDetailPage({
     .in('status', ['active', 'assigned', 'complete'])
     .order('module_id', { ascending: true });
 
-  // Fetch module details for active modules
-  const moduleIds = (activeModules ?? []).map((m) => m.module_id);
-  let moduleDetails: Record<number, { title: string; chapter_number: number }> = {};
-
-  if (moduleIds.length > 0) {
-    const { data: modules } = await supabase
-      .from('yb_modules')
-      .select('id, title, chapter_number')
-      .in('id', moduleIds);
-
-    (modules ?? []).forEach((m) => {
-      moduleDetails[m.id] = { title: m.title, chapter_number: m.chapter_number };
-    });
-  }
-
   // Fetch last 7 days of symptom logs
   const sevenDaysAgo = new Date();
   sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
@@ -100,7 +86,7 @@ export default async function PatientDetailPage({
 
   // Fetch content item titles for responses
   const contentItemIds = (recentResponses ?? []).map((r) => r.content_item_id);
-  let contentItemTitles: Record<number, string> = {};
+  let contentItemTitles: Record<string, string> = {};
 
   if (contentItemIds.length > 0) {
     const { data: items } = await supabase
@@ -185,51 +171,17 @@ export default async function PatientDetailPage({
         )}
       </div>
 
-      {/* Active Modules */}
+      {/* Module Assignment */}
       <div>
         <h2 className="text-lg font-semibold text-gray-900 mb-3">Modules</h2>
-        {!activeModules || activeModules.length === 0 ? (
-          <div className="bg-white rounded-xl border border-gray-200 p-6 text-center text-sm text-gray-500">
-            No modules assigned yet.
-          </div>
-        ) : (
-          <div className="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100">
-            {activeModules.map((pm) => {
-              const detail = moduleDetails[pm.module_id];
-              return (
-                <div
-                  key={pm.module_id}
-                  className="px-4 py-3 flex items-center justify-between"
-                >
-                  <div>
-                    <p className="text-sm font-medium text-gray-900">
-                      {detail
-                        ? `Ch. ${detail.chapter_number} — ${detail.title}`
-                        : `Module ${pm.module_id}`}
-                    </p>
-                    {pm.started_at && (
-                      <p className="text-xs text-gray-500">
-                        Started{' '}
-                        {new Date(pm.started_at).toLocaleDateString('en-IN', {
-                          day: 'numeric',
-                          month: 'short',
-                        })}
-                      </p>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <ModuleStatusBadge status={pm.status} />
-                    {pm.xp_earned > 0 && (
-                      <span className="text-xs text-fayth-600 font-medium">
-                        +{pm.xp_earned} XP
-                      </span>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
+        <AssignModule
+          patientId={patientId}
+          initialModules={(activeModules ?? []).map((pm) => ({
+            module_id: pm.module_id,
+            status: pm.status,
+            xp_earned: pm.xp_earned,
+          }))}
+        />
       </div>
 
       {/* Symptom Logs (Last 7 Days) */}
@@ -362,25 +314,6 @@ function DetailField({ label, value }: { label: string; value: string }) {
       <p className="text-xs text-gray-500">{label}</p>
       <p className="text-sm font-medium text-gray-900 mt-0.5">{value}</p>
     </div>
-  );
-}
-
-function ModuleStatusBadge({ status }: { status: string }) {
-  const styles: Record<string, string> = {
-    active: 'bg-fayth-50 text-fayth-700',
-    assigned: 'bg-yellow-50 text-yellow-700',
-    complete: 'bg-green-50 text-green-700',
-    locked: 'bg-gray-100 text-gray-500',
-  };
-
-  return (
-    <span
-      className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium capitalize ${
-        styles[status] ?? styles.locked
-      }`}
-    >
-      {status}
-    </span>
   );
 }
 

@@ -99,6 +99,52 @@ export const LEVEL_LABELS: Record<string, string> = {
   thrive: 'Thrive',
 };
 
+// ── Level XP thresholds ─────────────────────────────────────────────
+// Each entry: [levelKey, xpRequired to reach this level]
+export const LEVEL_ORDER = ['seed', 'sapling', 'sprout', 'focus', 'flow', 'thrive'] as const;
+
+export const LEVEL_THRESHOLDS: Record<string, number> = {
+  seed: 0,
+  sapling: 500,
+  sprout: 1500,
+  focus: 3500,
+  flow: 7000,
+  thrive: 12000,
+};
+
+/** Given total XP, return { currentLevel, nextLevel, xpIntoLevel, xpNeededForNext } */
+export function getLevelProgress(totalXp: number) {
+  let currentLevel = 'seed';
+  let currentThreshold = 0;
+
+  for (const level of LEVEL_ORDER) {
+    if (totalXp >= LEVEL_THRESHOLDS[level]) {
+      currentLevel = level;
+      currentThreshold = LEVEL_THRESHOLDS[level];
+    } else {
+      break;
+    }
+  }
+
+  const currentIndex = LEVEL_ORDER.indexOf(currentLevel as typeof LEVEL_ORDER[number]);
+  const nextLevel = currentIndex < LEVEL_ORDER.length - 1 ? LEVEL_ORDER[currentIndex + 1] : null;
+  const nextThreshold = nextLevel ? LEVEL_THRESHOLDS[nextLevel] : currentThreshold;
+
+  const xpIntoLevel = totalXp - currentThreshold;
+  const xpNeededForNext = nextThreshold - currentThreshold;
+  const progress = nextLevel ? Math.min(xpIntoLevel / xpNeededForNext, 1) : 1;
+
+  return {
+    currentLevel,
+    nextLevel,
+    xpIntoLevel,
+    xpNeededForNext,
+    progress,
+    label: LEVEL_LABELS[currentLevel] ?? currentLevel,
+    nextLabel: nextLevel ? LEVEL_LABELS[nextLevel] : null,
+  };
+}
+
 // ── Adjustment stage labels ─────────────────────────────────────────
 export const ADJUSTMENT_STAGE_LABELS: Record<number, string> = {
   1: 'Relief & Elation',

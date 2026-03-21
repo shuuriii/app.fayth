@@ -12,7 +12,7 @@ import { ScoreSlider } from '@/components/ScoreSlider';
 
 // ── Types ──────────────────────────────────────────────────────────────
 
-interface YBField {
+export interface YBField {
   id: string;
   label: string;
   type: 'text' | 'textarea' | 'number' | 'scale' | 'likert' | 'checkbox' | 'select' | 'date' | 'time' | 'repeating_group';
@@ -33,7 +33,9 @@ interface WorksheetRendererProps {
   errors?: Record<string, string>;
 }
 
-// ── Main Component ─────────────────────────────────────────────────────
+const FIELDS_PER_STEP = 3;
+
+// ── Scroll Mode (original) ──────────────────────────────────────────────
 
 export function WorksheetRenderer({ fields, values, onChange, errors }: WorksheetRendererProps) {
   return (
@@ -47,6 +49,182 @@ export function WorksheetRenderer({ fields, values, onChange, errors }: Workshee
           error={errors?.[field.id]}
         />
       ))}
+    </View>
+  );
+}
+
+// ── Stepped Wizard Mode ─────────────────────────────────────────────────
+
+interface SteppedWorksheetRendererProps extends WorksheetRendererProps {
+  onSubmit: () => void;
+  submitLabel?: string;
+  xpValue?: number;
+}
+
+/** Chunk an array into groups of `size` */
+function chunk<T>(arr: T[], size: number): T[][] {
+  const result: T[][] = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+}
+
+export function SteppedWorksheetRenderer({
+  fields,
+  values,
+  onChange,
+  errors,
+  onSubmit,
+  submitLabel = 'Submit Responses',
+  xpValue,
+}: SteppedWorksheetRendererProps) {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [stepErrors, setStepErrors] = useState<Record<string, string>>({});
+
+  const steps = chunk(fields, FIELDS_PER_STEP);
+  const totalSteps = steps.length;
+  const currentFields = steps[currentStep] ?? [];
+  const isLastStep = currentStep === totalSteps - 1;
+
+  // Merge parent errors with local step errors
+  const mergedErrors = { ...errors, ...stepErrors };
+
+  function validateCurrentStep(): boolean {
+    const newErrors: Record<string, string> = {};
+    for (const field of currentFields) {
+      if (!field.required) continue;
+      const val = values[field.id];
+      if (val === undefined || val === null || val === '') {
+        newErrors[field.id] = 'This field is required';
+      } else if (field.type === 'checkbox' && Array.isArray(val) && val.length === 0) {
+        newErrors[field.id] = 'Please select at least one option';
+      }
+    }
+    setStepErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  }
+
+  function handleNext() {
+    if (!validateCurrentStep()) return;
+    setStepErrors({});
+    setCurrentStep((s) => Math.min(s + 1, totalSteps - 1));
+  }
+
+  function handleBack() {
+    setStepErrors({});
+    setCurrentStep((s) => Math.max(s - 1, 0));
+  }
+
+  function handleStepSubmit() {
+    if (!validateCurrentStep()) return;
+    onSubmit();
+  }
+
+  // Overall progress: how many fields have been answered
+  const answeredCount = fields.filter((f) => {
+    const v = values[f.id];
+    if (v === undefined || v === null || v === '') return false;
+    if (Array.isArray(v) && v.length === 0) return false;
+    return true;
+  }).length;
+
+  return (
+    <View>
+      {/* Step indicator */}
+      <View style={styles.stepHeader}>
+        <Text style={styles.stepLabel}>
+          Step {currentStep + 1} of {totalSteps}
+        </Text>
+        <Text style={styles.stepProgress}>
+          {answeredCount}/{fields.length} answered
+        </Text>
+      </View>
+
+      {/* Progress dots */}
+      <View style={styles.stepDotsRow}>
+        {steps.map((_, i) => (
+          <View
+            key={i}
+            style={[
+              styles.stepDot,
+              i < currentStep && styles.stepDotCompleted,
+              i === currentStep && styles.stepDotActive,
+            ]}
+          />
+        ))}
+      </View>
+
+      {/* Progress bar */}
+      <View style={styles.stepProgressBarBg}>
+        <View
+          style={[
+            styles.stepProgressBarFill,
+            { width: `${((currentStep + (isLastStep ? 1 : 0)) / totalSteps) * 100}%` },
+          ]}
+        />
+      </View>
+
+      {/* Current step fields */}
+      <View style={styles.stepFieldsContainer}>
+        {currentFields.map((field) => (
+          <FieldRenderer
+            key={field.id}
+            field={field}
+            value={values[field.id]}
+            onChange={(val) => onChange(field.id, val)}
+            error={mergedErrors[field.id]}
+          />
+        ))}
+      </View>
+
+      {/* Navigation buttons */}
+      <View style={styles.stepNavRow}>
+        {currentStep > 0 ? (
+          <Pressable
+            onPress={handleBack}
+            style={({ pressed }) => [
+              styles.stepNavButton,
+              styles.stepNavButtonBack,
+              pressed && styles.stepNavButtonBackPressed,
+            ]}
+            accessibilityLabel="Go to previous step"
+          >
+            <Text style={styles.stepNavButtonBackText}>Back</Text>
+          </Pressable>
+        ) : (
+          <View />
+        )}
+
+        {isLastStep ? (
+          <Pressable
+            onPress={handleStepSubmit}
+            style={({ pressed }) => [
+              styles.stepNavButton,
+              styles.stepNavButtonNext,
+              pressed && styles.stepNavButtonNextPressed,
+            ]}
+            accessibilityLabel={submitLabel}
+          >
+            <Text style={styles.stepNavButtonNextText}>{submitLabel}</Text>
+            {xpValue != null && xpValue > 0 && (
+              <Text style={styles.stepNavXpHint}>+{xpValue} XP</Text>
+            )}
+          </Pressable>
+        ) : (
+          <Pressable
+            onPress={handleNext}
+            style={({ pressed }) => [
+              styles.stepNavButton,
+              styles.stepNavButtonNext,
+              pressed && styles.stepNavButtonNextPressed,
+            ]}
+            accessibilityLabel="Go to next step"
+          >
+            <Text style={styles.stepNavButtonNextText}>Next</Text>
+          </Pressable>
+        )}
+      </View>
     </View>
   );
 }
@@ -555,5 +733,99 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.sm,
     color: Colors.textTertiary,
     fontStyle: 'italic',
+  },
+
+  // ── Stepped wizard styles ───────────────────────────────────────────
+  stepHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: Spacing.sm,
+  },
+  stepLabel: {
+    fontSize: FontSizes.sm,
+    fontWeight: '700',
+    color: Colors.text,
+  },
+  stepProgress: {
+    fontSize: FontSizes.xs,
+    color: Colors.textSecondary,
+    fontWeight: '500',
+  },
+  stepDotsRow: {
+    flexDirection: 'row',
+    gap: Spacing.xs,
+    marginBottom: Spacing.sm,
+  },
+  stepDot: {
+    flex: 1,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: Colors.surfaceAlt,
+  },
+  stepDotCompleted: {
+    backgroundColor: Colors.primary,
+  },
+  stepDotActive: {
+    backgroundColor: Colors.primaryDark,
+  },
+  stepProgressBarBg: {
+    height: 3,
+    backgroundColor: Colors.surfaceAlt,
+    borderRadius: Radii.full,
+    overflow: 'hidden',
+    marginBottom: Spacing.lg,
+  },
+  stepProgressBarFill: {
+    height: '100%',
+    backgroundColor: Colors.primary,
+    borderRadius: Radii.full,
+  },
+  stepFieldsContainer: {
+    minHeight: 120,
+  },
+  stepNavRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: Spacing.md,
+    gap: Spacing.sm,
+  },
+  stepNavButton: {
+    borderRadius: Radii.md,
+    paddingVertical: 14,
+    paddingHorizontal: Spacing.lg,
+    alignItems: 'center',
+  },
+  stepNavButtonBack: {
+    backgroundColor: Colors.surfaceAlt,
+    borderWidth: 1,
+    borderColor: Colors.border,
+  },
+  stepNavButtonBackPressed: {
+    backgroundColor: Colors.border,
+  },
+  stepNavButtonBackText: {
+    fontSize: FontSizes.md,
+    fontWeight: '600',
+    color: Colors.textSecondary,
+  },
+  stepNavButtonNext: {
+    backgroundColor: Colors.primary,
+    flex: 1,
+  },
+  stepNavButtonNextPressed: {
+    backgroundColor: Colors.primaryDark,
+  },
+  stepNavButtonNextText: {
+    fontSize: FontSizes.md,
+    fontWeight: '700',
+    color: Colors.textOnPrimary,
+  },
+  stepNavXpHint: {
+    fontSize: FontSizes.xs,
+    fontWeight: '600',
+    color: Colors.primaryLight,
+    marginTop: 2,
   },
 });

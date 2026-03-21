@@ -7,20 +7,23 @@ import {
   type DayScore,
 } from '@fayth/ai';
 import type { AdjustmentStage } from '@fayth/types';
+import { schemas } from '@/lib/validation';
 
 // ── POST — Trigger daily check-in for a patient ───────────────────
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { patient_id: patientId } = body as { patient_id?: string };
+    const parsed = schemas.triggerCheckin.safeParse(body);
 
-    if (!patientId) {
+    if (!parsed.success) {
       return NextResponse.json(
-        { data: null, error: 'Missing patient_id in request body' },
+        { data: null, error: parsed.error.issues[0]?.message ?? 'Invalid request body' },
         { status: 400 }
       );
     }
+
+    const patientId = parsed.data.patient_id;
 
     const supabase = await createSupabaseServer();
 

@@ -12,13 +12,15 @@ import {
   Platform,
 } from 'react-native';
 import { useAuth } from '@/hooks/useAuth';
+import { usePatientId } from '@/hooks/usePatientId';
 import { useSymptomLog } from '@/hooks/useSymptomLog';
 import { ScoreSlider } from '@/components/ScoreSlider';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
 
 export default function LogScreen() {
   const { user } = useAuth();
-  const { todayLog, submitting, submitLog, loading } = useSymptomLog(user?.id);
+  const { patientId } = usePatientId(user?.id);
+  const { todayLog, submitting, submitLog, loading, checkinGenerating } = useSymptomLog(patientId);
 
   const [focus, setFocus] = useState(5);
   const [mood, setMood] = useState(5);
@@ -69,9 +71,11 @@ export default function LogScreen() {
             {submitted ? 'Log submitted!' : "You've already logged today"}
           </Text>
           <Text style={styles.successSubtitle}>
-            {submitted
-              ? 'Great job checking in with yourself. Every log helps you understand your patterns better.'
-              : 'Come back tomorrow to log again. Consistency is key!'}
+            {submitted && checkinGenerating
+              ? 'Fay is reading your check-in...'
+              : submitted
+                ? 'Great job checking in with yourself. Every log helps you understand your patterns better.'
+                : 'Come back tomorrow to log again. Consistency is key!'}
           </Text>
 
           {log && (

@@ -1,6 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/hooks/useAuth';
+import { usePatientId } from '@/hooks/usePatientId';
 import type { ContentItem, ContentResponse } from '@/hooks/useModuleDetail';
 
 async function fetchWorksheetData(itemId: string, userId: string | undefined) {
@@ -38,17 +39,19 @@ async function fetchWorksheetData(itemId: string, userId: string | undefined) {
 
 export function useWorksheet(itemId: string | undefined) {
   const { user } = useAuth();
+  const { patientId } = usePatientId(user?.id);
 
   return useQuery({
-    queryKey: ['worksheet', itemId, user?.id],
-    queryFn: () => fetchWorksheetData(itemId!, user?.id),
-    enabled: !!itemId,
+    queryKey: ['worksheet', itemId, patientId],
+    queryFn: () => fetchWorksheetData(itemId!, patientId!),
+    enabled: !!itemId && !!patientId,
     staleTime: 5 * 60 * 1000,
   });
 }
 
 export function useSubmitWorksheet() {
   const { user } = useAuth();
+  const { patientId } = usePatientId(user?.id);
   const queryClient = useQueryClient();
 
   return useMutation({
@@ -61,13 +64,13 @@ export function useSubmitWorksheet() {
       responseData: Record<string, any>;
       xpValue: number;
     }) => {
-      if (!user?.id) throw new Error('Not authenticated');
+      if (!patientId) throw new Error('Not authenticated');
 
       // Insert response
       const { error: insertError } = await supabase
         .from('patient_content_responses')
         .insert({
-          patient_id: user.id,
+          patient_id: patientId,
           content_item_id: contentItemId,
           session_date: new Date().toISOString().split('T')[0],
           response_data: responseData,
@@ -76,20 +79,15 @@ export function useSubmitWorksheet() {
 
       if (insertError) throw insertError;
 
-      // Award XP if applicable
+      // Award XP atomically via Postgres RPC (prevents race condition)
       if (xpValue > 0) {
-        const { data: patient } = await supabase
-          .from('patients')
-          .select('total_xp')
-          .eq('user_id', user.id)
-          .single();
+        const { error: xpError } = await supabase.rpc('increment_xp', {
+          p_user_id: user!.id,
+          p_amount: xpValue,
+        });
 
-        if (patient) {
-          const newXp = (patient.total_xp ?? 0) + xpValue;
-          await supabase
-            .from('patients')
-            .update({ total_xp: newXp })
-            .eq('user_id', user.id);
+        if (xpError) {
+          console.warn('[useSubmitWorksheet] XP increment failed:', xpError.message);
         }
       }
     },
@@ -105,17 +103,18 @@ export function useSubmitWorksheet() {
 
 export function useMarkPsychoeducationRead() {
   const { user } = useAuth();
+  const { patientId } = usePatientId(user?.id);
   const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: async (contentItemId: string) => {
-      if (!user?.id) throw new Error('Not authenticated');
+      if (!patientId) throw new Error('Not authenticated');
 
       // Check if already marked
       const { data: existing } = await supabase
         .from('patient_content_responses')
         .select('id')
-        .eq('patient_id', user.id)
+        .eq('patient_id', patientId)
         .eq('content_item_id', contentItemId)
         .limit(1)
         .maybeSingle();
@@ -125,7 +124,7 @@ export function useMarkPsychoeducationRead() {
       await supabase
         .from('patient_content_responses')
         .insert({
-          patient_id: user.id,
+          patient_id: patientId,
           content_item_id: contentItemId,
           session_date: new Date().toISOString().split('T')[0],
           response_data: { read: true },

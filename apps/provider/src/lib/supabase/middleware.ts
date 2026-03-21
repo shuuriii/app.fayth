@@ -27,5 +27,16 @@ export async function updateSession(request: NextRequest) {
 
   await supabase.auth.getUser();
 
+  // Security headers for clinical data dashboard
+  supabaseResponse.headers.set('X-Frame-Options', 'DENY');
+  supabaseResponse.headers.set('X-Content-Type-Options', 'nosniff');
+  supabaseResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  supabaseResponse.headers.set('X-DNS-Prefetch-Control', 'off');
+  supabaseResponse.headers.set(
+    'Strict-Transport-Security',
+    'max-age=31536000; includeSubDomains'
+  );
+  supabaseResponse.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+
   return supabaseResponse;
 }

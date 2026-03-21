@@ -11,13 +11,14 @@ import {
 import { useRouter } from 'expo-router';
 import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@/hooks/useAuth';
+import { usePatientId } from '@/hooks/usePatientId';
 import { supabase } from '@/lib/supabase';
 import { ModuleCard } from '@/components/ModuleCard';
 import { Colors, FontSizes, Spacing } from '@/lib/constants';
 import type { ModuleStatus } from '@fayth/types';
 
 interface YBModule {
-  id: number;
+  id: string;
   chapter_number: number;
   title: string;
   description: string;
@@ -26,7 +27,7 @@ interface YBModule {
 }
 
 interface PatientModule {
-  module_id: number;
+  module_id: string;
   status: ModuleStatus;
 }
 
@@ -34,7 +35,7 @@ interface ModuleWithStatus extends YBModule {
   status: ModuleStatus;
 }
 
-async function fetchModules(userId: string | undefined): Promise<ModuleWithStatus[]> {
+async function fetchModules(patientId: string | undefined): Promise<ModuleWithStatus[]> {
   const { data: ybModules, error: modError } = await supabase
     .from('yb_modules')
     .select('*')
@@ -44,11 +45,11 @@ async function fetchModules(userId: string | undefined): Promise<ModuleWithStatu
   if (modError) throw modError;
 
   let patientModules: PatientModule[] = [];
-  if (userId) {
+  if (patientId) {
     const { data, error } = await supabase
       .from('patient_modules')
       .select('module_id, status')
-      .eq('patient_id', userId);
+      .eq('patient_id', patientId);
 
     if (!error && data) {
       patientModules = data;
@@ -59,17 +60,18 @@ async function fetchModules(userId: string | undefined): Promise<ModuleWithStatu
 
   return (ybModules ?? []).map((mod) => ({
     ...mod,
-    status: statusMap.get(mod.id) ?? (mod.chapter_number === 1 ? 'assigned' : 'locked'),
+    status: statusMap.get(mod.id) ?? 'locked',
   }));
 }
 
 export default function ModulesScreen() {
   const { user } = useAuth();
+  const { patientId } = usePatientId(user?.id);
   const router = useRouter();
 
   const { data: modules = [], isLoading, refetch, isRefetching } = useQuery({
-    queryKey: ['modules', user?.id],
-    queryFn: () => fetchModules(user?.id),
+    queryKey: ['modules', patientId],
+    queryFn: () => fetchModules(patientId ?? undefined),
     enabled: !!user?.id,
     staleTime: 5 * 60 * 1000,
   });
