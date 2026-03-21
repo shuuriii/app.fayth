@@ -10,6 +10,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { usePatientId } from '@/hooks/usePatientId';
 import { usePatient } from '@/hooks/usePatient';
 import { supabase } from '@/lib/supabase';
+import { resolveAllModuleStatuses } from '@fayth/yb-engine';
 import { ModuleMap } from '@/components/map/ModuleMap';
 import { Colors } from '@/lib/constants';
 import type { ModuleStatus } from '@fayth/types';
@@ -54,11 +55,15 @@ async function fetchModules(patientId: string | undefined): Promise<ModuleWithSt
     }
   }
 
-  const statusMap = new Map(patientModules.map((pm) => [pm.module_id, pm.status]));
+  // Use yb-engine unlock logic instead of defaulting to 'active'
+  const statusMap = resolveAllModuleStatuses(
+    (ybModules ?? []).map((m) => ({ id: m.id, chapter_number: m.chapter_number })),
+    patientModules,
+  );
 
   return (ybModules ?? []).map((mod) => ({
     ...mod,
-    status: statusMap.get(mod.id) ?? 'active',
+    status: statusMap.get(mod.id) ?? 'locked',
   }));
 }
 

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { supabase } from '@/lib/supabase';
+import { useAuth } from '@/hooks/useAuth';
+import { calculateXP } from '@fayth/yb-engine';
 import type { SymptomLogInput } from '@fayth/types';
 
 interface SymptomLog extends SymptomLogInput {
@@ -62,6 +64,7 @@ async function triggerCheckin(): Promise<string | null> {
 }
 
 export function useSymptomLog(patientId: string | undefined) {
+  const { user } = useAuth();
   const queryClient = useQueryClient();
   const [checkinGenerating, setCheckinGenerating] = useState(false);
 
@@ -96,6 +99,31 @@ export function useSymptomLog(patientId: string | undefined) {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['symptom-logs', patientId] });
+
+      // Award XP for symptom logging (fire-and-forget, don't block on failure)
+      if (user) {
+        (async () => {
+          try {
+            const { data } = await supabase
+              .from('patients')
+              .select('daily_checkin_streak')
+              .eq('user_id', user.id)
+              .single();
+
+            const streakDays = data?.daily_checkin_streak ?? 0;
+            const xpAmount = calculateXP('log_symptoms', streakDays);
+
+            await supabase.rpc('increment_xp', {
+              p_user_id: user.id,
+              p_amount: xpAmount,
+            });
+
+            queryClient.invalidateQueries({ queryKey: ['patient'] });
+          } catch (err) {
+            console.warn('[useSymptomLog] XP award failed:', err);
+          }
+        })();
+      }
 
       // Generate Fay check-in in the background after log submission
       setCheckinGenerating(true);

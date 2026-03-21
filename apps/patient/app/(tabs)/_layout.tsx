@@ -2,6 +2,8 @@ import React from 'react';
 import { Tabs } from 'expo-router';
 import { Text, StyleSheet } from 'react-native';
 import { Colors, FontSizes } from '@/lib/constants';
+import { useAuth } from '@/hooks/useAuth';
+import { usePushToken } from '@/hooks/usePushToken';
 
 function TabIcon({ label, focused }: { label: string; focused: boolean }) {
   const icons: Record<string, string> = {
@@ -24,6 +26,9 @@ function TabIcon({ label, focused }: { label: string; focused: boolean }) {
 }
 
 export default function TabsLayout() {
+  const { user } = useAuth();
+  usePushToken(user?.id);
+
   return (
     <Tabs
       screenOptions={{

@@ -208,7 +208,7 @@ function MiniMap({
       case 'locked': return Colors.locked;
       case 'assigned': return FayColors.glow;
       case 'active': return Colors.primary;
-      case 'complete': return FayColors.glow;
+      case 'complete': return Colors.success;
     }
   };
 
@@ -314,7 +314,7 @@ function LandmarkNode({
       )}
 
       {/* Landmark SVG */}
-      <View style={[landmarkStyles.svgContainer, isLocked && landmarkStyles.lockedOverlay]}>
+      <View style={[landmarkStyles.svgContainer, isLocked && landmarkStyles.lockedOverlay, isComplete && landmarkStyles.completeContainer]}>
         <LandmarkSvg status={mod.status} size={80} />
       </View>
 
@@ -387,6 +387,10 @@ const landmarkStyles = StyleSheet.create({
   lockedOverlay: {
     opacity: 0.5,
   },
+  completeContainer: {
+    backgroundColor: Colors.successLight,
+    borderRadius: 40,
+  },
   chapterBadge: {
     position: 'absolute',
     top: -6,
@@ -404,8 +408,8 @@ const landmarkStyles = StyleSheet.create({
     backgroundColor: Colors.lockedBg,
   },
   chapterBadgeComplete: {
-    backgroundColor: FayColors.glowLight,
-    borderColor: FayColors.glow,
+    backgroundColor: Colors.successLight,
+    borderColor: Colors.success,
   },
   chapterNumber: {
     fontSize: 11,
@@ -413,7 +417,7 @@ const landmarkStyles = StyleSheet.create({
     color: Colors.primary,
   },
   chapterNumberComplete: {
-    color: FayColors.glowDim,
+    color: Colors.success,
   },
   lockIcon: {
     fontSize: 10,
@@ -437,7 +441,7 @@ const landmarkStyles = StyleSheet.create({
   },
   completionStarText: {
     fontSize: 16,
-    color: FayColors.glow,
+    color: Colors.success,
   },
 });
 

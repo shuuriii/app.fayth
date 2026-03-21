@@ -16,6 +16,25 @@ export interface PatientProgress {
 const CORE_MODULE_CHAPTERS = [4, 5, 6, 7, 8];
 const CORE_MODULES_REQUIRED = 4;
 
+// ── Chapter → UnlockRule map (YB Programme is fixed at 14 chapters) ─
+
+export const CHAPTER_UNLOCK_RULES: Record<number, UnlockRule> = {
+  1: 'always',
+  2: 'after_module_1',
+  3: 'after_module_2',
+  4: 'assigned_by_psychologist',
+  5: 'after_module_4',
+  6: 'after_module_4',
+  7: 'after_module_4',
+  8: 'assigned_by_psychologist',
+  9: 'assigned_if_comorbid',
+  10: 'assigned_if_comorbid',
+  11: 'assigned_if_comorbid',
+  12: 'assigned_if_comorbid',
+  13: 'assigned_if_comorbid',
+  14: 'after_4_core_modules',
+};
+
 // ── Unlock logic ───────────────────────────────────────────────────
 
 /**
@@ -120,4 +139,70 @@ export function getModuleStatus(
   }
 
   return 'locked';
+}
+
+// ── Batch status resolver ─────────────────────────────────────────
+
+/**
+ * Resolves ModuleStatus for all modules given the DB data.
+ *
+ * @param modules — yb_modules rows (need id, chapter_number)
+ * @param patientModuleRows — patient_modules rows (module_id, status)
+ *
+ * Returns a Map<module_id, ModuleStatus> that respects unlock rules.
+ */
+export function resolveAllModuleStatuses(
+  modules: Array<{ id: string; chapter_number: number }>,
+  patientModuleRows: Array<{ module_id: string; status: ModuleStatus }>,
+): Map<string, ModuleStatus> {
+  // Build chapter→id and id→chapter maps
+  const idToChapter = new Map<string, number>();
+  for (const m of modules) {
+    idToChapter.set(m.id, m.chapter_number);
+  }
+
+  // Build lookup from patient_modules
+  const dbStatusMap = new Map<string, ModuleStatus>();
+  for (const pm of patientModuleRows) {
+    dbStatusMap.set(pm.module_id, pm.status);
+  }
+
+  // Derive completed and assigned chapter numbers from DB rows
+  const completedModules: number[] = [];
+  const assignedModules: number[] = [];
+
+  for (const pm of patientModuleRows) {
+    const ch = idToChapter.get(pm.module_id);
+    if (!ch) continue;
+    if (pm.status === 'complete') completedModules.push(ch);
+    if (pm.status === 'assigned' || pm.status === 'active') assignedModules.push(ch);
+  }
+
+  const progress: PatientProgress = { completedModules, assignedModules };
+  const result = new Map<string, ModuleStatus>();
+
+  for (const m of modules) {
+    // If the DB already says 'complete', trust it
+    const dbStatus = dbStatusMap.get(m.id);
+    if (dbStatus === 'complete') {
+      result.set(m.id, 'complete');
+      continue;
+    }
+
+    // Otherwise, compute from unlock rules
+    const unlockRule = CHAPTER_UNLOCK_RULES[m.chapter_number];
+    if (!unlockRule) {
+      result.set(m.id, 'locked');
+      continue;
+    }
+
+    const computed = getModuleStatus(
+      { chapterNumber: m.chapter_number, unlockRule },
+      progress,
+    );
+
+    result.set(m.id, computed);
+  }
+
+  return result;
 }

@@ -2,6 +2,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/hooks/useAuth';
 import { usePatientId } from '@/hooks/usePatientId';
+import { useAwardXP } from '@/hooks/useAwardXP';
 import type { ContentItem, ContentResponse } from '@/hooks/useModuleDetail';
 
 async function fetchWorksheetData(itemId: string, userId: string | undefined) {
@@ -53,6 +54,7 @@ export function useSubmitWorksheet() {
   const { user } = useAuth();
   const { patientId } = usePatientId(user?.id);
   const queryClient = useQueryClient();
+  const awardXP = useAwardXP();
 
   return useMutation({
     mutationFn: async ({
@@ -79,32 +81,24 @@ export function useSubmitWorksheet() {
 
       if (insertError) throw insertError;
 
-      // Award XP atomically via Postgres RPC (prevents race condition)
+      // Award XP — awaited so patient cache refetch sees the new total
       if (xpValue > 0) {
-        const { error: xpError } = await supabase.rpc('increment_xp', {
-          p_user_id: user!.id,
-          p_amount: xpValue,
-        });
-
-        if (xpError) {
-          console.warn('[useSubmitWorksheet] XP increment failed:', xpError.message);
-        }
+        await awardXP.mutateAsync({ action: 'complete_worksheet', overrideAmount: xpValue }).catch(() => {});
       }
     },
     onSuccess: (_data, variables) => {
-      // Invalidate relevant queries
       queryClient.invalidateQueries({ queryKey: ['worksheet', variables.contentItemId] });
       queryClient.invalidateQueries({ queryKey: ['module-detail'] });
-      queryClient.invalidateQueries({ queryKey: ['patient'] });
       queryClient.invalidateQueries({ queryKey: ['active-module'] });
+      queryClient.invalidateQueries({ queryKey: ['patient'] });
     },
   });
 }
 
 export function useMarkPsychoeducationRead() {
-  const { user } = useAuth();
-  const { patientId } = usePatientId(user?.id);
+  const { patientId } = usePatientId(useAuth().user?.id);
   const queryClient = useQueryClient();
+  const awardXP = useAwardXP();
 
   return useMutation({
     mutationFn: async (contentItemId: string) => {
@@ -141,20 +135,14 @@ export function useMarkPsychoeducationRead() {
         .eq('id', contentItemId)
         .single();
 
-      if (item?.xp_value && item.xp_value > 0 && user) {
-        const { error: xpError } = await supabase.rpc('increment_xp', {
-          p_user_id: user.id,
-          p_amount: item.xp_value,
-        });
-        if (xpError) {
-          console.warn('[useMarkPsychoeducationRead] XP increment failed:', xpError.message);
-        }
+      if (item?.xp_value && item.xp_value > 0) {
+        await awardXP.mutateAsync({ action: 'complete_worksheet', overrideAmount: item.xp_value }).catch(() => {});
       }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['module-detail'] });
-      queryClient.invalidateQueries({ queryKey: ['patient'] });
       queryClient.invalidateQueries({ queryKey: ['active-module'] });
+      queryClient.invalidateQueries({ queryKey: ['patient'] });
     },
   });
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -7,9 +7,12 @@ import {
   ActivityIndicator,
   Pressable,
   RefreshControl,
+  Animated,
+  Easing,
 } from 'react-native';
-import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
+import { useLocalSearchParams, useRouter, Stack, useFocusEffect } from 'expo-router';
 import { useModuleDetail } from '@/hooks/useModuleDetail';
+import { useCompleteModule } from '@/hooks/useCompleteModule';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
 import type { ContentItem } from '@/hooks/useModuleDetail';
 
@@ -25,10 +28,47 @@ export default function ModuleDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const { data, isLoading, refetch, isRefetching } = useModuleDetail(id);
+  const completeModule = useCompleteModule();
 
   const module = data?.module ?? null;
   const items = data?.items ?? [];
   const responses = data?.responses ?? new Map();
+
+  // Refetch when screen regains focus (e.g. returning from reader/worksheet)
+  useFocusEffect(
+    React.useCallback(() => {
+      refetch();
+    }, [refetch])
+  );
+
+  // Auto-completion: detect when all items are done
+  const [moduleCompleted, setModuleCompleted] = useState(false);
+  const completionTriggered = useRef(false);
+  const celebrateOpacity = useRef(new Animated.Value(0)).current;
+
+  const completedCount = items.filter((i) => responses.has(i.id)).length;
+  const allDone = items.length > 0 && completedCount === items.length;
+
+  useEffect(() => {
+    if (allDone && !completionTriggered.current && id) {
+      completionTriggered.current = true;
+      completeModule
+        .mutateAsync(id)
+        .then(() => {
+          setModuleCompleted(true);
+          Animated.timing(celebrateOpacity, {
+            toValue: 1,
+            duration: 400,
+            easing: Easing.out(Easing.ease),
+            useNativeDriver: true,
+          }).start();
+        })
+        .catch(() => {
+          // Module may already be complete — that's fine
+          completionTriggered.current = false;
+        });
+    }
+  }, [allDone, id]);
 
   function handleItemPress(item: ContentItem) {
     if (item.type === 'psychoeducation') {
@@ -48,6 +88,7 @@ export default function ModuleDetailScreen() {
         onPress={() => handleItemPress(item)}
         style={({ pressed }) => [
           styles.itemCard,
+          hasResponse && styles.itemCardCompleted,
           pressed && styles.itemCardPressed,
         ]}
         accessibilityRole="button"
@@ -124,11 +165,18 @@ export default function ModuleDetailScreen() {
     );
   }
 
-  const completedCount = items.filter((i) => responses.has(i.id)).length;
-
   return (
     <>
       <Stack.Screen options={headerOptions} />
+      {moduleCompleted && (
+        <Animated.View style={[styles.completionBanner, { opacity: celebrateOpacity }]}>
+          <Text style={styles.completionEmoji}>+500 XP</Text>
+          <Text style={styles.completionTitle}>Module Complete!</Text>
+          <Text style={styles.completionSubtext}>
+            Great work finishing all the activities.
+          </Text>
+        </Animated.View>
+      )}
       <FlatList
         data={items}
         keyExtractor={(item) => item.id}
@@ -238,6 +286,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: Colors.borderLight,
   },
+  itemCardCompleted: {
+    backgroundColor: Colors.successLight,
+    borderColor: Colors.success,
+  },
   itemCardPressed: {
     backgroundColor: Colors.surfaceAlt,
   },
@@ -294,6 +346,30 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.xs,
     color: Colors.primary,
     fontWeight: '500',
+  },
+  completionBanner: {
+    backgroundColor: Colors.successLight,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.success,
+    paddingVertical: Spacing.md,
+    paddingHorizontal: Spacing.lg,
+    alignItems: 'center',
+  },
+  completionEmoji: {
+    fontSize: FontSizes.lg,
+    fontWeight: '800',
+    color: Colors.primary,
+    marginBottom: 2,
+  },
+  completionTitle: {
+    fontSize: FontSizes.md,
+    fontWeight: '700',
+    color: Colors.success,
+  },
+  completionSubtext: {
+    fontSize: FontSizes.sm,
+    color: Colors.textSecondary,
+    marginTop: 2,
   },
   emptyContainer: {
     alignItems: 'center',
