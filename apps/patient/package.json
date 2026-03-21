@@ -10,6 +10,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@babel/runtime": "^7.29.2",
     "@fayth/types": "workspace:*",
     "@fayth/ui": "workspace:*",
     "@fayth/yb-engine": "workspace:*",

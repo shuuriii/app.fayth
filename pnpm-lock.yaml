@@ -20,6 +20,9 @@ importers:
 
   apps/patient:
     dependencies:
+      '@babel/runtime':
+        specifier: ^7.29.2
+        version: 7.29.2
       '@fayth/types':
         specifier: workspace:*
         version: link:../../packages/types
