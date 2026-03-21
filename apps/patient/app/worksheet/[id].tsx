@@ -148,8 +148,8 @@ export default function WorksheetScreen() {
 
     if (!validate()) {
       Alert.alert(
-        'Missing answers',
-        'Please fill in all required fields (marked with *) before submitting.',
+        'A few questions are still empty',
+        'Take your time \u2014 you can save a draft and come back.',
       );
       return;
     }
@@ -354,7 +354,7 @@ export default function WorksheetScreen() {
                   onChange={handleChange}
                   errors={errors}
                   onSubmit={handleSubmit}
-                  submitLabel="Submit Responses"
+                  submitLabel="Save my responses"
                   xpValue={contentItem.xp_value}
                 />
               ) : (
@@ -383,7 +383,7 @@ export default function WorksheetScreen() {
                 pressed && styles.submitButtonPressed,
               ]}
             >
-              <Text style={styles.submitButtonText}>Submit Responses</Text>
+              <Text style={styles.submitButtonText}>Save my responses</Text>
               {contentItem.xp_value > 0 && (
                 <Text style={styles.submitXpHint}>+{contentItem.xp_value} XP</Text>
               )}

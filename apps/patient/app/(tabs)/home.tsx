@@ -377,7 +377,7 @@ export default function HomeScreen() {
           ]}
           onPress={() => {
             if (activeModule.nextItemType === 'psychoeducation') {
-              router.push(`/module/${activeModule.moduleId}`);
+              router.push(`/module/${activeModule.moduleId}/read/${activeModule.nextItemId}`);
             } else {
               router.push(`/worksheet/${activeModule.nextItemId}`);
             }

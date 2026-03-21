@@ -76,7 +76,7 @@ export function SteppedWorksheetRenderer({
   onChange,
   errors,
   onSubmit,
-  submitLabel = 'Submit Responses',
+  submitLabel = 'Save my responses',
   xpValue,
 }: SteppedWorksheetRendererProps) {
   const [currentStep, setCurrentStep] = useState(0);
