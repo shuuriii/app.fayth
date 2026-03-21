@@ -10,6 +10,10 @@ export default function AuthLayout() {
         contentStyle: { backgroundColor: Colors.background },
         animation: 'slide_from_right',
       }}
-    />
+    >
+      <Stack.Screen name="welcome" />
+      <Stack.Screen name="login" />
+      <Stack.Screen name="verify" />
+    </Stack>
   );
 }

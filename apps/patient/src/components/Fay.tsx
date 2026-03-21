@@ -59,6 +59,8 @@ export function Fay({
 }: FayProps) {
   const visuals = STAGE_VISUALS[evolutionStage];
   const pulseAnim = useRef(new Animated.Value(1)).current;
+  // Separate pulse for the halo (JS-driven, since glowAnim is also JS on same node)
+  const haloPulseAnim = useRef(new Animated.Value(1)).current;
   const bobAnim = useRef(new Animated.Value(0)).current;
   const glowAnim = useRef(new Animated.Value(0.3)).current;
   const messageOpacity = useRef(new Animated.Value(0)).current;
@@ -82,9 +84,27 @@ export function Fay({
         }),
       ])
     );
+    // Mirror for halo (JS-driven to avoid native/JS conflict with glowAnim)
+    const haloPulse = Animated.loop(
+      Animated.sequence([
+        Animated.timing(haloPulseAnim, {
+          toValue: 1.15,
+          duration: speed,
+          easing: Easing.inOut(Easing.sin),
+          useNativeDriver: false,
+        }),
+        Animated.timing(haloPulseAnim, {
+          toValue: 1,
+          duration: speed,
+          easing: Easing.inOut(Easing.sin),
+          useNativeDriver: false,
+        }),
+      ])
+    );
     pulse.start();
-    return () => pulse.stop();
-  }, [visualState, pulseAnim]);
+    haloPulse.start();
+    return () => { pulse.stop(); haloPulse.stop(); };
+  }, [visualState, pulseAnim, haloPulseAnim]);
 
   // Gentle vertical bob
   useEffect(() => {
@@ -176,7 +196,7 @@ export function Fay({
               height: haloSize,
               borderRadius: haloSize / 2,
               opacity: glowAnim,
-              transform: [{ scale: pulseAnim }],
+              transform: [{ scale: haloPulseAnim }],
             },
           ]}
         />
