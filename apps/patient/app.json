@@ -24,6 +24,15 @@
     "plugins": [
       "expo-router",
       "expo-secure-store"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "59b7fb35-e6f2-4f0b-b1e9-83e8f88427f9"
+      }
+    },
+    "owner": "suriii"
   }
 }
