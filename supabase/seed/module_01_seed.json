@@ -13,63 +13,67 @@
         "content_blocks": [
           {
             "heading": "ADHD Persists into Adulthood",
-            "body": "Approximately one-third of children with ADHD continue to be fully symptomatic into adult life, and up to two-thirds retain at least one disabling symptom. Symptom expression changes with age — hyperactivity and impulsivity tend to diminish, but attentional problems persist into middle adulthood and beyond. Adults are more likely to describe internal restlessness and ceaseless mental activity rather than the physical hyperactivity seen in children."
+            "body": "Approximately one-third of children with ADHD continue to be fully symptomatic into adult life, and up to two-thirds retain at least one disabling symptom. Symptom expression changes with age \u2014 hyperactivity and impulsivity tend to diminish, but attentional problems persist into middle adulthood and beyond. Adults are more likely to describe internal restlessness and ceaseless mental activity rather than the physical hyperactivity seen in children."
           },
           {
             "heading": "The Three Core Symptoms",
-            "body": "ADHD has three core symptoms: inattention (difficulty sustaining focus, being easily distracted, forgetfulness), hyperactivity (fidgeting, restlessness, feeling driven by a motor), and impulsivity (blurting out answers, difficulty waiting, interrupting others). In adults, these often show up as procrastination, disorganisation, mood lability, low frustration tolerance, and ceaseless mental energy."
+            "body": "ADHD has three core symptoms: inattention (difficulty sustaining focus, being easily distracted, forgetfulness), hyperactivity (fidgeting, restlessness, feeling driven by a motor), and impulsivity (blurting out answers, difficulty waiting, interrupting others). In adults, these often show up as procrastination, disorganisation, mood swings, low frustration tolerance, and ceaseless mental energy."
           },
           {
             "heading": "Genetics and Neurobiology",
-            "body": "ADHD has a strong genetic component with heritability estimates of 60-90%. If a parent has ADHD, there is a 57% chance their child will too. Environmental risk factors include prenatal events, birth complications, and psychosocial factors. ADHD is a neurobiological condition — it is not caused by laziness, poor parenting, or lack of willpower."
+            "body": "ADHD has a strong genetic component with heritability estimates of 60\u201390%. If a parent has ADHD, there is a 57% chance their child will too. Environmental risk factors include prenatal events, birth complications, and psychosocial factors. ADHD is a neurobiological condition \u2014 it is not caused by laziness, poor parenting, or lack of willpower."
           },
           {
-            "heading": "Sex Differences",
-            "body": "Boys are diagnosed more often in childhood, but the sex ratio rebalances with age (from 4.3:1 in teenage years to 1.5:1 by the thirties). Females tend to experience more inattention, mood instability, anxiety, and interpersonal problems. Males tend to present with more antisocial and aggressive behaviour. The Young-Bramham Programme allows therapists to select modules appropriate to each individual's presentation."
+            "heading": "Gender and Diagnostic Patterns",
+            "body": "Boys are diagnosed more often in childhood, but the gap narrows significantly by adulthood. The diagnostic system was historically built around hyperactive boys in classrooms \u2014 which means people who present differently are often diagnosed much later. Inattentive symptoms in particular are frequently missed or attributed to other causes. In India, women are especially under-diagnosed because inattentive symptoms are often dismissed as daydreaming or explained away by social expectations. People of all genders can present with any combination of symptoms. Your individual experience matters more than any category."
+          },
+          {
+            "heading": "ADHD in the Indian Context",
+            "body": "Most Indian adults with ADHD are diagnosed 15\u201325 years later than their Western counterparts. If you are reading this after a late diagnosis, your experience is shared by many. You may have been told you were lazy, careless, or not serious \u2014 by teachers, by family, by yourself. These labels were wrong. ADHD is real, it is neurobiological, and it is manageable. You get to decide who you share your diagnosis with, and when. There is no obligation to tell anyone before you are ready."
           },
           {
             "heading": "The Young-Bramham Programme",
-            "body": "This programme provides a comprehensive psychological approach to treating ADHD in adults using cognitive-behavioural and motivational interviewing techniques. It is divided into 14 standalone modules covering core symptoms (inattention, time management, problem solving, impulsivity), comorbid problems (anxiety, anger, depression, sleep, substance misuse, social relationships), and future planning. Modules can be used independently or together."
+            "body": "This programme provides a comprehensive psychological approach to managing ADHD in adults using cognitive-behavioural and motivational interviewing techniques. It is divided into 14 standalone modules covering core symptoms (inattention, time management, problem solving, impulsivity), related challenges (anxiety, anger, low mood, sleep, substance misuse, social relationships), and future planning. Modules can be used independently or together, based on what matters most to you."
           }
         ],
-        "clinician_notes": "This is the client's first exposure to the programme. Focus on normalisation — many clients feel relief at diagnosis. Emphasise that ADHD is neurobiological, not a character flaw. Use Figure 1.1 (CBT model) to personalise the formulation with the client."
+        "clinician_notes": "This is the client's first exposure to the programme. Focus on normalisation \u2014 many clients feel relief at diagnosis. Emphasise that ADHD is neurobiological, not a character flaw. Use Figure 1.1 (CBT model) to personalise the formulation with the client. In the Indian context, explore family system impact (joint family dynamics, academic pressure, marriage expectations) alongside individual impact. The 'ADHD in the Indian Context' block is new \u2014 gauge the client's reaction to it and note whether family disclosure is a concern."
       }
     },
     {
       "id": "ch1_item_02",
       "type": "psychoeducation",
       "title": "The Cognitive-Behavioural Model of ADHD",
-      "instructions": "This model explains how ADHD affects your thoughts, feelings, and behaviour — and why certain patterns keep repeating. Understanding this cycle is the first step to breaking it.",
+      "instructions": "This model explains how ADHD affects your thoughts, feelings, and behaviour \u2014 and why certain patterns keep repeating. Understanding this cycle is the first step to changing it.",
       "xp_value": 20,
       "schema": {
         "content_blocks": [
           {
-            "heading": "The Negative Cycle",
-            "body": "Due to longstanding neuropsychological impairments (poor concentration, forgetfulness, difficulty with problem-solving, need for immediate gratification), adults with ADHD have often experienced repeated failures — academic underachievement, job difficulties, relationship problems, risk-taking. When faced with new situations, this history of failure can lead to negative appraisal ('I'll mess this up too'), which triggers negative thoughts, feelings (anxiety, frustration, low mood), and behaviours (avoidance, aggression, substance misuse). This becomes a self-reinforcing cycle."
+            "heading": "Patterns That Get Stuck",
+            "body": "Due to longstanding neurological differences (difficulty concentrating, forgetfulness, trouble with planning, need for immediate gratification), adults with ADHD have often faced repeated setbacks \u2014 academic struggles, job difficulties, relationship challenges. When faced with new situations, this history can lead to thoughts like 'I'll mess this up too', which triggers difficult feelings (anxiety, frustration, low mood) and unhelpful behaviours (avoidance, withdrawal, substance use). This becomes a self-reinforcing cycle."
           },
           {
-            "heading": "The Resilience Factor",
-            "body": "Here is the good news: adults with ADHD have a remarkable aptitude for cognitive reframing — reappraising stressful situations positively. This resilience means they tend to try again after failure, driven by self-belief and self-efficacy. This is why many people with ADHD are described as creative, entrepreneurial, and determined. The programme builds on this natural strength."
+            "heading": "The Resilience You Already Have",
+            "body": "Here is the good news: many adults with ADHD develop strong skills in cognitive reframing \u2014 finding new ways to look at setbacks. This resilience means they tend to try again after things go wrong, driven by self-belief and determination. This is a real strength, built through years of experience. Many people with ADHD are described as creative, entrepreneurial, and persistent. The programme builds on this natural strength."
           },
           {
             "heading": "Two Directions of Change",
-            "body": "The programme works in two ways: (1) Change from the outside in — modifying your environment and routines to optimise functioning. (2) Change from the inside out — developing psychological strategies for adaptive thinking and behaviour. Both are needed for lasting improvement."
+            "body": "The programme works in two ways: (1) Change from the outside in \u2014 modifying your environment and routines to make daily life easier. (2) Change from the inside out \u2014 developing psychological strategies for adaptive thinking and behaviour. Both are needed for lasting improvement. This programme does not aim to 'fix' you. It provides tools for the areas where you want support, while building on the strategies you have already developed."
           }
         ],
-        "clinician_notes": "Work through Figure 1.1 with the client and personalise it — ask them to identify their own examples of each element (neuropsychological deficits they notice, life events, negative vs positive cycles). Emphasise the resilience/reappraisal pathway as a strength to build on."
+        "clinician_notes": "Work through Figure 1.1 with the client and personalise it \u2014 ask them to identify their own examples of each element (neurological differences they notice, life events, unhelpful vs helpful cycles). Emphasise the resilience/reappraisal pathway as a strength to build on. Use India-relevant examples: competitive exam stress, job-hopping, forgetting bill payments, family friction due to forgetfulness."
       }
     },
     {
       "id": "ch1_item_03",
       "type": "psychoeducation",
       "title": "The Six Stages of Psychological Adjustment After Diagnosis",
-      "instructions": "Receiving an ADHD diagnosis as an adult is a significant life event. Most people go through these six stages — in any order, and sometimes more than once. Understanding where you are helps your therapist pace the programme appropriately.",
+      "instructions": "Receiving an ADHD diagnosis as an adult is a significant life event. Most people go through these six stages \u2014 in any order, and sometimes more than once. Understanding where you are helps your therapist pace the programme appropriately.",
       "xp_value": 20,
       "schema": {
         "content_blocks": [
           {
             "heading": "Stage 1: Relief and Elation",
-            "body": "Many adults feel immense relief at diagnosis — finally there is an explanation for lifelong struggles. There may be excitement about treatment possibilities and a sense of validation. 'So there IS a reason I'm like this.'"
+            "body": "Many adults feel immense relief at diagnosis \u2014 finally there is an explanation for lifelong struggles. There may be excitement about treatment possibilities and a sense of validation. 'So there IS a reason I'm like this.'"
           },
           {
             "heading": "Stage 2: Confusion and Emotional Turmoil",
@@ -77,22 +81,22 @@
           },
           {
             "heading": "Stage 3: Anger",
-            "body": "'Why wasn't I diagnosed sooner?' Anger is common — directed at parents, teachers, doctors, or the system. Years of struggle that might have been avoided. This is a valid and important feeling to process."
+            "body": "'Why wasn't I diagnosed sooner?' Anger is common \u2014 directed at the education system, at family members who labelled you lazy or careless, at doctors who missed the signs, or at a system that was not built to catch this. Years of struggle that might have been avoided. This is a valid and important feeling to process."
           },
           {
             "heading": "Stage 4: Sadness and Grief",
-            "body": "Grief for lost opportunities, for the person you might have been, for relationships that were damaged. This can feel like mourning. It is a natural part of coming to terms with the diagnosis."
+            "body": "Grief for opportunities that feel lost \u2014 exam results that could have been different, careers not pursued, relationships strained by misunderstanding. You may carry specific pain about coaching classes where you could not concentrate, or about being compared to siblings or cousins. This can feel like mourning. It is a natural part of coming to terms with the diagnosis."
           },
           {
             "heading": "Stage 5: Anxiety",
-            "body": "The realisation that ADHD is a chronic, lifelong condition can trigger anxiety. 'Will I always be like this? Can treatment really help? What if the medication stops working?' These worries are normal."
+            "body": "The realisation that ADHD is a chronic, lifelong condition can trigger anxiety. 'Will I always be like this? Can treatment really help? What if the medication stops working?' These worries are normal. You may also worry about what family or colleagues will think. You are not alone in this."
           },
           {
             "heading": "Stage 6: Accommodation and Acceptance",
-            "body": "Gradually, the diagnosis becomes integrated into your sense of self. You learn what works for you, develop strategies, and begin to see ADHD as one part of who you are — not all of it. Acceptance does not mean giving up; it means building from a place of understanding."
+            "body": "Gradually, the diagnosis becomes integrated into your sense of self. You learn what works for you, develop strategies, and begin to see ADHD as one part of who you are \u2014 not all of it. Acceptance does not mean giving up; it means building from a place of understanding."
           }
         ],
-        "clinician_notes": "CRITICAL: Patients do not absorb information at diagnosis. Do NOT dump content at onboarding. Pace psychoeducation across the first 2-3 sessions. Ask the client which stage they identify with most — this informs content pacing. The adjustment_stage field in the patient record should be updated based on this discussion. Stages are not strictly linear; clients may revisit earlier stages."
+        "clinician_notes": "CRITICAL: Patients do not absorb information at diagnosis. Do NOT dump content at onboarding. Pace psychoeducation across the first 2\u20133 sessions. Ask the client which stage they identify with most \u2014 this informs content pacing. The adjustment_stage field in the patient record should be updated based on this discussion. Stages are not strictly linear; clients may revisit earlier stages. In the Indian context, explore whether the patient is processing the diagnosis privately or with family support. Disclosure concerns are common and valid. You may also need to manage family members who are going through their own adjustment stages about the patient's diagnosis."
       }
     },
     {
@@ -112,7 +116,7 @@
             "sub_fields": [
               { "id": "module_name", "label": "Module", "type": "text" },
               { "id": "relevance", "label": "How relevant is this to me? (0-10)", "type": "scale", "scale_min": 0, "scale_max": 10, "scale_labels": {"0": "Not relevant", "10": "Very relevant"} },
-              { "id": "notes", "label": "Any specific examples?", "type": "textarea", "placeholder": "e.g. I'm always late for work, I lose my keys daily..." }
+              { "id": "notes", "label": "Any specific examples?", "type": "textarea", "placeholder": "e.g. I keep forgetting to pay bills, I lose my Aadhaar card constantly, I cannot focus in meetings..." }
             ],
             "prefill_data": [
               { "module_name": "Inattention & Memory (Ch 4)" },
@@ -131,14 +135,14 @@
           },
           {
             "id": "top_priorities",
-            "label": "Which 2-3 areas feel most urgent for you right now?",
+            "label": "Which 2\u20133 areas feel most urgent for you right now?",
             "type": "textarea",
             "required": true,
             "placeholder": "e.g. Time management and anxiety are my biggest daily struggles..."
           },
           {
             "id": "adjustment_stage",
-            "label": "Which adjustment stage do you most identify with right now? (1=Relief, 2=Confusion, 3=Anger, 4=Sadness, 5=Anxiety, 6=Acceptance)",
+            "label": "Where do you feel you are in processing your diagnosis?",
             "type": "scale",
             "required": true,
             "scale_min": 1,
@@ -147,8 +151,8 @@
           }
         ],
         "scoring": { "method": "none" },
-        "instructions_for_patient": "There are no right answers here — this helps your therapist understand what matters most to you and plan your treatment accordingly.",
-        "clinician_notes": "Use the relevance ratings to guide module selection after core modules (4-7). The adjustment_stage rating should be stored in the patient record. High relevance ratings on comorbid modules (9-13) may indicate need for earlier intervention. Compare the client's self-assessment with your clinical impression."
+        "instructions_for_patient": "There are no right answers here \u2014 this helps your therapist understand what matters most to you and plan your treatment accordingly.",
+        "clinician_notes": "Use the relevance ratings to guide module selection after core modules (4\u20137). The adjustment_stage rating should be stored in the patient record. High relevance ratings on comorbid modules (9\u201313) may indicate need for earlier intervention. Compare the client's self-assessment with your clinical impression."
       }
     },
     {
@@ -161,57 +165,57 @@
         "fields": [
           {
             "id": "neuropsych_deficits",
-            "label": "Which neuropsychological difficulties do you notice most? (e.g. poor concentration, forgetfulness, disorganisation, need for immediate gratification)",
+            "label": "Which difficulties do you notice most in how your brain works? (e.g. poor concentration, forgetfulness, disorganisation, need for immediate gratification)",
             "type": "textarea",
             "required": true,
             "placeholder": "List the ones that affect your daily life most..."
           },
           {
             "id": "life_events",
-            "label": "What negative life events or experiences have resulted from these difficulties? (e.g. academic problems, job losses, relationship issues)",
+            "label": "What challenging experiences have resulted from these difficulties? (e.g. exam results, job changes, relationship strain, family friction)",
             "type": "textarea",
-            "required": true,
-            "placeholder": "Be honest — this is about understanding patterns, not blame..."
+            "required": false,
+            "placeholder": "Be honest \u2014 this is about understanding patterns, not blame. You can skip this and come back to it."
           },
           {
             "id": "negative_thoughts",
-            "label": "What negative thoughts do you have about yourself? (e.g. 'I'll never finish it', 'Nothing ever goes right', 'People don't like me')",
+            "label": "What thoughts hold you back? (e.g. 'I'll never finish it', 'Nothing ever goes right', 'People think I don't care')",
             "type": "textarea",
-            "required": true,
-            "placeholder": "Write the thoughts that come up most often..."
+            "required": false,
+            "placeholder": "Write the thoughts that come up most often. These are patterns, not facts."
           },
           {
             "id": "negative_feelings",
-            "label": "What negative feelings do these thoughts trigger? (e.g. anxiety, frustration, anger, low mood)",
+            "label": "What feelings do these thoughts bring up?",
             "type": "checkbox",
-            "required": true,
+            "required": false,
             "options": ["Anxiety", "Low mood", "Frustration", "Anger", "Shame", "Hopelessness", "Overwhelm", "Loneliness"]
           },
           {
             "id": "negative_behaviours",
-            "label": "What negative behaviours do you fall into? (e.g. avoidance, aggression, substance use, withdrawal)",
+            "label": "What patterns of behaviour do you notice when you are struggling? (e.g. avoidance, withdrawal, scrolling for hours, snapping at people)",
             "type": "textarea",
             "required": false,
-            "placeholder": "e.g. I avoid opening bills, I drink to calm down, I shut people out..."
+            "placeholder": "e.g. I keep postponing important calls, I scroll my phone instead of working, I get short-tempered with family..."
           },
           {
             "id": "positive_reappraisal",
-            "label": "Now the other side — what are your strengths? How do you bounce back? (e.g. creativity, determination, humour, resilience)",
+            "label": "Now the other side \u2014 what are your strengths? How do you bounce back? (e.g. creativity, determination, humour, resilience)",
             "type": "textarea",
             "required": true,
-            "placeholder": "e.g. I never give up, I always find a new way, I'm good at thinking on my feet..."
+            "placeholder": "e.g. I never give up, I always find a new way, I'm good at thinking on my feet, I can hyperfocus when something interests me..."
           },
           {
             "id": "positive_thoughts",
-            "label": "What positive thoughts can you hold onto? (e.g. 'I can do this', 'I'll get there in the end', 'I will manage this')",
+            "label": "What positive thoughts can you hold onto? (e.g. 'I can do this', 'I'll get there in the end', 'I will figure this out')",
             "type": "textarea",
             "required": true,
             "placeholder": "Write thoughts that feel true and motivating to you..."
           }
         ],
         "scoring": { "method": "none" },
-        "instructions_for_patient": "This is your personal map of how ADHD affects you. We will refer back to it throughout the programme as you develop new strategies.",
-        "clinician_notes": "Walk through Figure 1.1 with the client and populate each box with their own examples. Pay attention to the positive reappraisal section — this is the client's natural resilience and should be leveraged throughout treatment. Save this worksheet as a reference point for future sessions."
+        "instructions_for_patient": "This is your personal map of how ADHD affects you. The next few questions look at patterns that might be holding you back. Then we look at the strengths you bring. Both sides matter equally. You can skip any question and come back to it. There are no wrong answers.",
+        "clinician_notes": "Walk through Figure 1.1 with the client and populate each box with their own examples. Pay attention to the positive reappraisal section \u2014 this is the client's natural resilience and should be leveraged throughout treatment. Save this worksheet as a reference point for future sessions. Note: life_events, negative_thoughts, negative_feelings, and negative_behaviours are now optional to reduce abandonment risk for patients in adjustment stages 2\u20134. Follow up on skipped fields in session."
       }
     }
   ]

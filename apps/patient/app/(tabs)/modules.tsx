@@ -58,7 +58,7 @@ async function fetchModules(patientId: string | undefined): Promise<ModuleWithSt
 
   return (ybModules ?? []).map((mod) => ({
     ...mod,
-    status: statusMap.get(mod.id) ?? 'locked',
+    status: statusMap.get(mod.id) ?? 'active',
   }));
 }
 

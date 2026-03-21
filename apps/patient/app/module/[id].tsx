@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -10,13 +10,12 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
 import { useModuleDetail } from '@/hooks/useModuleDetail';
-import { PsychoeducationCard } from '@/components/PsychoeducationCard';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
 import type { ContentItem } from '@/hooks/useModuleDetail';
 
 const TYPE_CONFIG: Record<string, { label: string; color: string; bg: string }> = {
   worksheet: { label: 'Worksheet', color: Colors.primary, bg: Colors.primaryLight },
-  psychoeducation: { label: 'Learn', color: '#6366f1', bg: '#eef2ff' },
+  psychoeducation: { label: 'Learn', color: '#B8935A', bg: '#FDF6E8' },
   exercise: { label: 'Exercise', color: '#e08a52', bg: '#fff7ed' },
   diary: { label: 'Diary', color: '#e6a817', bg: Colors.warningLight },
   table: { label: 'Table', color: Colors.textSecondary, bg: Colors.surfaceAlt },
@@ -27,27 +26,13 @@ export default function ModuleDetailScreen() {
   const router = useRouter();
   const { data, isLoading, refetch, isRefetching } = useModuleDetail(id);
 
-  const [expandedPsychoed, setExpandedPsychoed] = useState<Set<string>>(new Set());
-
   const module = data?.module ?? null;
   const items = data?.items ?? [];
   const responses = data?.responses ?? new Map();
 
-  function togglePsychoed(itemId: string) {
-    setExpandedPsychoed((prev) => {
-      const next = new Set(prev);
-      if (next.has(itemId)) {
-        next.delete(itemId);
-      } else {
-        next.add(itemId);
-      }
-      return next;
-    });
-  }
-
   function handleItemPress(item: ContentItem) {
     if (item.type === 'psychoeducation') {
-      togglePsychoed(item.id);
+      router.push(`/module/${item.module_id}/read/${item.id}`);
       return;
     }
     router.push(`/worksheet/${item.id}`);
@@ -57,70 +42,54 @@ export default function ModuleDetailScreen() {
     const config = TYPE_CONFIG[item.type] ?? TYPE_CONFIG.table;
     const hasResponse = responses.has(item.id);
     const isPsychoed = item.type === 'psychoeducation';
-    const isExpanded = expandedPsychoed.has(item.id);
 
     return (
-      <View>
-        <Pressable
-          onPress={() => handleItemPress(item)}
-          style={({ pressed }) => [
-            styles.itemCard,
-            pressed && styles.itemCardPressed,
-          ]}
-          accessibilityRole="button"
-          accessibilityLabel={`${config.label}: ${item.title}. ${hasResponse ? 'Completed' : 'Not started'}`}
-        >
-          <View style={styles.itemContent}>
-            <View style={styles.itemTop}>
-              <View style={[styles.typeBadge, { backgroundColor: config.bg }]}>
-                <Text style={[styles.typeBadgeText, { color: config.color }]}>
-                  {config.label}
-                </Text>
-              </View>
-              {item.xp_value > 0 && (
-                <Text style={styles.xpText}>{item.xp_value} XP</Text>
-              )}
-            </View>
-
-            <Text style={styles.itemTitle}>{item.title}</Text>
-
-            {item.instructions ? (
-              <Text style={styles.itemInstructions} numberOfLines={isPsychoed && !isExpanded ? 2 : undefined}>
-                {item.instructions}
+      <Pressable
+        onPress={() => handleItemPress(item)}
+        style={({ pressed }) => [
+          styles.itemCard,
+          pressed && styles.itemCardPressed,
+        ]}
+        accessibilityRole="button"
+        accessibilityLabel={`${config.label}: ${item.title}. ${hasResponse ? 'Completed' : 'Not started'}`}
+      >
+        <View style={styles.itemContent}>
+          <View style={styles.itemTop}>
+            <View style={[styles.typeBadge, { backgroundColor: config.bg }]}>
+              <Text style={[styles.typeBadgeText, { color: config.color }]}>
+                {config.label}
               </Text>
-            ) : null}
-
-            <View style={styles.itemBottom}>
-              {hasResponse && (
-                <View style={styles.completedBadge}>
-                  <Text style={styles.completedText}>Completed</Text>
-                </View>
-              )}
-              {isPsychoed && (
-                <Text style={styles.expandHint}>
-                  {isExpanded ? 'Tap to collapse' : 'Tap to read'}
-                </Text>
-              )}
-              {!isPsychoed && !hasResponse && (
-                <Text style={styles.startHint}>Tap to start</Text>
-              )}
-              {!isPsychoed && hasResponse && (
-                <Text style={styles.startHint}>Tap to review</Text>
-              )}
             </View>
+            {item.xp_value > 0 && (
+              <Text style={styles.xpText}>{item.xp_value} XP</Text>
+            )}
           </View>
-        </Pressable>
 
-        {isPsychoed && isExpanded && item.schema?.content_blocks && (
-          <View style={styles.psychoedContent}>
-            <PsychoeducationCard
-              contentItemId={item.id}
-              blocks={item.schema.content_blocks}
-              alreadyRead={hasResponse}
-            />
+          <Text style={styles.itemTitle}>{item.title}</Text>
+
+          {item.instructions ? (
+            <Text style={styles.itemInstructions} numberOfLines={2}>
+              {item.instructions}
+            </Text>
+          ) : null}
+
+          <View style={styles.itemBottom}>
+            {hasResponse && (
+              <View style={styles.completedBadge}>
+                <Text style={styles.completedText}>{isPsychoed ? 'Read' : 'Completed'}</Text>
+              </View>
+            )}
+            {!hasResponse && (
+              <Text style={styles.startHint}>
+                {isPsychoed ? 'Read' : 'Start'}
+              </Text>
+            )}
+            {hasResponse && !isPsychoed && (
+              <Text style={styles.startHint}>Review</Text>
+            )}
           </View>
-        )}
-      </View>
+        </View>
+      </Pressable>
     );
   }
 
@@ -192,7 +161,7 @@ export default function ModuleDetailScreen() {
                   />
                 </View>
                 <Text style={styles.progressText}>
-                  {completedCount}/{items.length} done
+                  {completedCount} of {items.length} explored
                 </Text>
               </View>
             )}
@@ -321,20 +290,10 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: Colors.success,
   },
-  expandHint: {
-    fontSize: FontSizes.xs,
-    color: '#6366f1',
-    fontWeight: '500',
-  },
   startHint: {
     fontSize: FontSizes.xs,
     color: Colors.primary,
     fontWeight: '500',
-  },
-  psychoedContent: {
-    paddingHorizontal: Spacing.xs,
-    marginBottom: Spacing.sm,
-    marginTop: -Spacing.xs,
   },
   emptyContainer: {
     alignItems: 'center',

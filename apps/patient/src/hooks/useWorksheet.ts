@@ -121,7 +121,8 @@ export function useMarkPsychoeducationRead() {
 
       if (existing) return; // Already read
 
-      await supabase
+      // Insert response
+      const { error: insertError } = await supabase
         .from('patient_content_responses')
         .insert({
           patient_id: patientId,
@@ -130,9 +131,30 @@ export function useMarkPsychoeducationRead() {
           response_data: { read: true },
           flagged: false,
         });
+
+      if (insertError) throw insertError;
+
+      // Award XP — fetch the item's xp_value
+      const { data: item } = await supabase
+        .from('yb_content_items')
+        .select('xp_value')
+        .eq('id', contentItemId)
+        .single();
+
+      if (item?.xp_value && item.xp_value > 0 && user) {
+        const { error: xpError } = await supabase.rpc('increment_xp', {
+          p_user_id: user.id,
+          p_amount: item.xp_value,
+        });
+        if (xpError) {
+          console.warn('[useMarkPsychoeducationRead] XP increment failed:', xpError.message);
+        }
+      }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['module-detail'] });
+      queryClient.invalidateQueries({ queryKey: ['patient'] });
+      queryClient.invalidateQueries({ queryKey: ['active-module'] });
     },
   });
 }

@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
-import { useMarkPsychoeducationRead } from '@/hooks/useWorksheet';
 
 interface ContentBlock {
   heading?: string;
@@ -19,14 +18,6 @@ export function PsychoeducationCard({
   blocks,
   alreadyRead,
 }: PsychoeducationCardProps) {
-  const markRead = useMarkPsychoeducationRead();
-
-  useEffect(() => {
-    if (!alreadyRead) {
-      markRead.mutate(contentItemId);
-    }
-  }, [contentItemId, alreadyRead]);
-
   if (!blocks || blocks.length === 0) return null;
 
   return (
@@ -41,11 +32,6 @@ export function PsychoeducationCard({
           ) : null}
         </View>
       ))}
-      {!alreadyRead && (
-        <View style={styles.readBadge}>
-          <Text style={styles.readBadgeText}>Marked as read</Text>
-        </View>
-      )}
     </View>
   );
 }
@@ -69,21 +55,8 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.xs,
   },
   body: {
-    fontSize: FontSizes.sm,
+    fontSize: FontSizes.md,
     color: Colors.textSecondary,
-    lineHeight: 22,
-  },
-  readBadge: {
-    alignSelf: 'flex-start',
-    backgroundColor: Colors.successLight,
-    paddingHorizontal: Spacing.sm,
-    paddingVertical: 3,
-    borderRadius: Radii.full,
-    marginBottom: Spacing.sm,
-  },
-  readBadgeText: {
-    fontSize: FontSizes.xs,
-    fontWeight: '600',
-    color: Colors.success,
+    lineHeight: 26,
   },
 });
