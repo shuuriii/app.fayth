@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -8,12 +8,18 @@ import {
   ActivityIndicator,
   RefreshControl,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
+import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@/hooks/useAuth';
 import { usePatient } from '@/hooks/usePatient';
 import { useSymptomLog } from '@/hooks/useSymptomLog';
-import { Colors, FontSizes, Spacing, Radii, LEVEL_LABELS } from '@/lib/constants';
+import { useFay } from '@/hooks/useFay';
+import { Fay } from '@/components/Fay';
+import { Colors, FontSizes, Spacing, Radii, LEVEL_LABELS, FAY_EVOLUTION_LABELS } from '@/lib/constants';
 import { supabase } from '@/lib/supabase';
+
+const LAST_OPEN_KEY = 'fayth_last_open_ts';
 
 function getGreeting(): string {
   const hour = new Date().getHours();
@@ -22,18 +28,102 @@ function getGreeting(): string {
   return 'Good evening';
 }
 
+interface ActiveModuleItem {
+  moduleId: number;
+  moduleTitle: string;
+  chapterNumber: number;
+  nextItemId: string;
+  nextItemTitle: string;
+  nextItemType: string;
+  completedCount: number;
+  totalCount: number;
+}
+
+async function fetchActiveModule(userId: string): Promise<ActiveModuleItem | null> {
+  // Find the first active/assigned module
+  const { data: patientModules } = await supabase
+    .from('patient_modules')
+    .select('module_id, status')
+    .eq('patient_id', userId)
+    .in('status', ['active', 'assigned'])
+    .limit(1);
+
+  if (!patientModules || patientModules.length === 0) return null;
+
+  const pm = patientModules[0];
+
+  // Get module info
+  const { data: mod } = await supabase
+    .from('yb_modules')
+    .select('id, title, chapter_number')
+    .eq('id', pm.module_id)
+    .single();
+
+  if (!mod) return null;
+
+  // Get content items for this module
+  const { data: items } = await supabase
+    .from('yb_content_items')
+    .select('id, title, type')
+    .eq('module_id', mod.id)
+    .order('id', { ascending: true });
+
+  if (!items || items.length === 0) return null;
+
+  // Get completed responses
+  const itemIds = items.map((i) => i.id);
+  const { data: responses } = await supabase
+    .from('patient_content_responses')
+    .select('content_item_id')
+    .eq('patient_id', userId)
+    .in('content_item_id', itemIds);
+
+  const completedIds = new Set((responses ?? []).map((r) => r.content_item_id));
+  const nextItem = items.find((i) => !completedIds.has(i.id));
+
+  if (!nextItem) return null;
+
+  return {
+    moduleId: mod.id,
+    moduleTitle: mod.title,
+    chapterNumber: mod.chapter_number,
+    nextItemId: nextItem.id,
+    nextItemTitle: nextItem.title,
+    nextItemType: nextItem.type,
+    completedCount: completedIds.size,
+    totalCount: items.length,
+  };
+}
+
 export default function HomeScreen() {
   const router = useRouter();
   const { user } = useAuth();
   const { profile, patient, loading: patientLoading, refetch } = usePatient(user?.id);
   const { todayLog, loading: logLoading } = useSymptomLog(user?.id);
-  const [lastCheckin, setLastCheckin] = useState<string | null>(null);
   const [refreshing, setRefreshing] = useState(false);
+  const [daysSinceLastOpen, setDaysSinceLastOpen] = useState(0);
 
+  // Track days since last app open
   useEffect(() => {
-    if (!user?.id) return;
+    (async () => {
+      try {
+        const stored = await AsyncStorage.getItem(LAST_OPEN_KEY);
+        if (stored) {
+          const lastTs = parseInt(stored, 10);
+          const diffMs = Date.now() - lastTs;
+          const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+          setDaysSinceLastOpen(diffDays);
+        }
+        await AsyncStorage.setItem(LAST_OPEN_KEY, String(Date.now()));
+      } catch {
+        // AsyncStorage failure is non-critical
+      }
+    })();
+  }, []);
 
-    async function fetchLastCheckin() {
+  const { data: lastCheckin } = useQuery({
+    queryKey: ['last-checkin', user?.id],
+    queryFn: async () => {
       const { data } = await supabase
         .from('ai_checkins')
         .select('response')
@@ -41,14 +131,18 @@ export default function HomeScreen() {
         .order('triggered_at', { ascending: false })
         .limit(1)
         .single();
+      return data?.response ?? null;
+    },
+    enabled: !!user?.id,
+    staleTime: 5 * 60 * 1000,
+  });
 
-      if (data) {
-        setLastCheckin(data.response);
-      }
-    }
-
-    fetchLastCheckin();
-  }, [user?.id]);
+  const { data: activeModule } = useQuery({
+    queryKey: ['active-module', user?.id],
+    queryFn: () => fetchActiveModule(user!.id),
+    enabled: !!user?.id,
+    staleTime: 5 * 60 * 1000,
+  });
 
   async function handleRefresh() {
     setRefreshing(true);
@@ -65,9 +159,25 @@ export default function HomeScreen() {
   }
 
   const firstName = profile?.full_name?.split(' ')[0] ?? 'there';
-  const level = patient?.level ?? 'seed';
+  const level = (patient?.level ?? 'seed') as import('@fayth/types').Level;
   const totalXp = patient?.total_xp ?? 0;
   const streak = patient?.daily_checkin_streak ?? 0;
+
+  // ── Fay companion state ──
+  const {
+    state: fayState,
+    messageVisible: fayMessageVisible,
+    toggleMessage: toggleFayMessage,
+    dismissMessage: dismissFayMessage,
+  } = useFay({
+    level,
+    streakDays: streak,
+    todayLogComplete: !!todayLog,
+    daysSinceLastOpen,
+    lastFocusScore: todayLog?.focus_score,
+    lastMoodScore: todayLog?.mood_score,
+    dailyActionsComplete: !!todayLog && !activeModule,
+  });
 
   return (
     <ScrollView
@@ -82,10 +192,19 @@ export default function HomeScreen() {
         />
       }
     >
-      {/* Greeting */}
-      <View style={styles.greetingSection}>
-        <Text style={styles.greeting}>{getGreeting()},</Text>
-        <Text style={styles.name}>{firstName}</Text>
+      {/* Greeting + Fay */}
+      <View style={styles.greetingRow}>
+        <View style={styles.greetingSection}>
+          <Text style={styles.greeting}>{getGreeting()},</Text>
+          <Text style={styles.name}>{firstName}</Text>
+        </View>
+        <Fay
+          visualState={fayState.visualState}
+          evolutionStage={fayState.evolutionStage}
+          message={fayState.message?.text}
+          messageVisible={fayMessageVisible}
+          onPress={toggleFayMessage}
+        />
       </View>
 
       {/* Stats Row */}
@@ -133,6 +252,48 @@ export default function HomeScreen() {
         </View>
       )}
 
+      {/* Continue Module Card */}
+      {activeModule && (
+        <Pressable
+          style={({ pressed }) => [
+            styles.continueCard,
+            pressed && styles.continueCardPressed,
+          ]}
+          onPress={() => {
+            if (activeModule.nextItemType === 'psychoeducation') {
+              router.push(`/module/${activeModule.moduleId}`);
+            } else {
+              router.push(`/worksheet/${activeModule.nextItemId}`);
+            }
+          }}
+          accessibilityRole="button"
+          accessibilityLabel={`Continue ${activeModule.moduleTitle}`}
+        >
+          <Text style={styles.continueLabel}>Continue</Text>
+          <Text style={styles.continueModuleTitle}>
+            Module {activeModule.chapterNumber}: {activeModule.moduleTitle}
+          </Text>
+          <Text style={styles.continueNextItem}>
+            Next: {activeModule.nextItemTitle}
+          </Text>
+          <View style={styles.continueProgressRow}>
+            <View style={styles.continueProgressBg}>
+              <View
+                style={[
+                  styles.continueProgressFill,
+                  {
+                    width: `${(activeModule.completedCount / activeModule.totalCount) * 100}%`,
+                  },
+                ]}
+              />
+            </View>
+            <Text style={styles.continueProgressText}>
+              {activeModule.completedCount}/{activeModule.totalCount}
+            </Text>
+          </View>
+        </Pressable>
+      )}
+
       {/* AI Check-in Message */}
       {lastCheckin && (
         <View style={styles.checkinCard}>
@@ -150,8 +311,8 @@ export default function HomeScreen() {
           ]}
           onPress={() => router.push('/(tabs)/modules')}
         >
-          <Text style={styles.quickLinkTitle}>Continue Modules</Text>
-          <Text style={styles.quickLinkSubtitle}>Pick up where you left off</Text>
+          <Text style={styles.quickLinkTitle}>All Modules</Text>
+          <Text style={styles.quickLinkSubtitle}>Browse the full programme</Text>
         </Pressable>
       </View>
     </ScrollView>
@@ -174,8 +335,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: Colors.background,
   },
-  greetingSection: {
+  greetingRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
     marginBottom: Spacing.lg,
+  },
+  greetingSection: {
+    flex: 1,
   },
   greeting: {
     fontSize: FontSizes.lg,
@@ -263,6 +430,59 @@ const styles = StyleSheet.create({
   },
   completedSubtitle: {
     fontSize: FontSizes.sm,
+    color: Colors.textSecondary,
+  },
+  // Continue card
+  continueCard: {
+    backgroundColor: Colors.surface,
+    borderRadius: Radii.lg,
+    padding: Spacing.lg,
+    marginBottom: Spacing.md,
+    borderWidth: 1,
+    borderColor: Colors.primary,
+  },
+  continueCardPressed: {
+    backgroundColor: Colors.primaryLight,
+  },
+  continueLabel: {
+    fontSize: FontSizes.xs,
+    fontWeight: '700',
+    color: Colors.primary,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    marginBottom: Spacing.xs,
+  },
+  continueModuleTitle: {
+    fontSize: FontSizes.md,
+    fontWeight: '700',
+    color: Colors.text,
+    marginBottom: Spacing.xs,
+  },
+  continueNextItem: {
+    fontSize: FontSizes.sm,
+    color: Colors.textSecondary,
+    marginBottom: Spacing.md,
+  },
+  continueProgressRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.sm,
+  },
+  continueProgressBg: {
+    flex: 1,
+    height: 6,
+    backgroundColor: Colors.surfaceAlt,
+    borderRadius: Radii.full,
+    overflow: 'hidden',
+  },
+  continueProgressFill: {
+    height: '100%',
+    backgroundColor: Colors.primary,
+    borderRadius: Radii.full,
+  },
+  continueProgressText: {
+    fontSize: FontSizes.xs,
+    fontWeight: '600',
     color: Colors.textSecondary,
   },
   checkinCard: {

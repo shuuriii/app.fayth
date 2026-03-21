@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -6,20 +6,13 @@ import {
   FlatList,
   ActivityIndicator,
   Pressable,
-  Alert,
+  RefreshControl,
 } from 'react-native';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
-import { supabase } from '@/lib/supabase';
-import { useContentItems, ContentItem, ContentResponse } from '@/hooks/useContentItems';
-import { PsychoeducationBlock } from '@/components/PsychoeducationBlock';
+import { useModuleDetail } from '@/hooks/useModuleDetail';
+import { PsychoeducationCard } from '@/components/PsychoeducationCard';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
-
-interface ModuleInfo {
-  id: number;
-  chapter_number: number;
-  title: string;
-  description: string;
-}
+import type { ContentItem } from '@/hooks/useModuleDetail';
 
 const TYPE_CONFIG: Record<string, { label: string; color: string; bg: string }> = {
   worksheet: { label: 'Worksheet', color: Colors.primary, bg: Colors.primaryLight },
@@ -32,48 +25,13 @@ const TYPE_CONFIG: Record<string, { label: string; color: string; bg: string }> 
 export default function ModuleDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { fetchContentItems, getResponsesForModule } = useContentItems();
+  const { data, isLoading, refetch, isRefetching } = useModuleDetail(id);
 
-  const [module, setModule] = useState<ModuleInfo | null>(null);
-  const [items, setItems] = useState<ContentItem[]>([]);
-  const [responses, setResponses] = useState<Map<string, ContentResponse>>(new Map());
   const [expandedPsychoed, setExpandedPsychoed] = useState<Set<string>>(new Set());
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (!id) return;
-    loadModuleData();
-  }, [id]);
-
-  async function loadModuleData() {
-    setLoading(true);
-    try {
-      // Fetch module info
-      const { data: modData, error: modError } = await supabase
-        .from('yb_modules')
-        .select('id, chapter_number, title, description')
-        .eq('id', Number(id))
-        .single();
-
-      if (modError) throw modError;
-      setModule(modData);
-
-      // Fetch content items for this module
-      const contentItems = await fetchContentItems(id);
-      setItems(contentItems);
-
-      // Fetch existing responses for all items
-      if (contentItems.length > 0) {
-        const itemIds = contentItems.map((ci) => ci.id);
-        const responseMap = await getResponsesForModule(itemIds);
-        setResponses(responseMap);
-      }
-    } catch (err: any) {
-      Alert.alert('Error', err.message ?? 'Failed to load module');
-    } finally {
-      setLoading(false);
-    }
-  }
+  const module = data?.module ?? null;
+  const items = data?.items ?? [];
+  const responses = data?.responses ?? new Map();
 
   function togglePsychoed(itemId: string) {
     setExpandedPsychoed((prev) => {
@@ -92,8 +50,6 @@ export default function ModuleDetailScreen() {
       togglePsychoed(item.id);
       return;
     }
-
-    // Navigate to worksheet screen for interactive types
     router.push(`/worksheet/${item.id}`);
   }
 
@@ -157,25 +113,30 @@ export default function ModuleDetailScreen() {
 
         {isPsychoed && isExpanded && item.schema?.content_blocks && (
           <View style={styles.psychoedContent}>
-            <PsychoeducationBlock blocks={item.schema.content_blocks} />
+            <PsychoeducationCard
+              contentItemId={item.id}
+              blocks={item.schema.content_blocks}
+              alreadyRead={hasResponse}
+            />
           </View>
         )}
       </View>
     );
   }
 
-  if (loading) {
+  const headerOptions = {
+    headerShown: true,
+    headerTitle: module ? `Module ${module.chapter_number}` : 'Loading...',
+    headerBackTitle: 'Modules',
+    headerTintColor: Colors.primary,
+    headerStyle: { backgroundColor: Colors.background },
+    headerTitleStyle: { color: Colors.text, fontWeight: '600' as const },
+  };
+
+  if (isLoading) {
     return (
       <>
-        <Stack.Screen
-          options={{
-            headerShown: true,
-            headerTitle: 'Loading...',
-            headerBackTitle: 'Modules',
-            headerTintColor: Colors.primary,
-            headerStyle: { backgroundColor: Colors.background },
-          }}
-        />
+        <Stack.Screen options={headerOptions} />
         <View style={styles.centered}>
           <ActivityIndicator size="large" color={Colors.primary} />
         </View>
@@ -186,15 +147,7 @@ export default function ModuleDetailScreen() {
   if (!module) {
     return (
       <>
-        <Stack.Screen
-          options={{
-            headerShown: true,
-            headerTitle: 'Module',
-            headerBackTitle: 'Modules',
-            headerTintColor: Colors.primary,
-            headerStyle: { backgroundColor: Colors.background },
-          }}
-        />
+        <Stack.Screen options={headerOptions} />
         <View style={styles.centered}>
           <Text style={styles.emptyText}>Module not found.</Text>
         </View>
@@ -206,22 +159,21 @@ export default function ModuleDetailScreen() {
 
   return (
     <>
-      <Stack.Screen
-        options={{
-          headerShown: true,
-          headerTitle: `Module ${module.chapter_number}`,
-          headerBackTitle: 'Modules',
-          headerTintColor: Colors.primary,
-          headerStyle: { backgroundColor: Colors.background },
-          headerTitleStyle: { color: Colors.text, fontWeight: '600' },
-        }}
-      />
+      <Stack.Screen options={headerOptions} />
       <FlatList
         data={items}
         keyExtractor={(item) => item.id}
         renderItem={renderContentItem}
         contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false}
+        refreshControl={
+          <RefreshControl
+            refreshing={isRefetching}
+            onRefresh={() => refetch()}
+            tintColor={Colors.primary}
+            colors={[Colors.primary]}
+          />
+        }
         ListHeaderComponent={
           <View style={styles.header}>
             <Text style={styles.moduleTitle}>{module.title}</Text>
@@ -235,7 +187,7 @@ export default function ModuleDetailScreen() {
                   <View
                     style={[
                       styles.progressBarFill,
-                      { width: `${items.length > 0 ? (completedCount / items.length) * 100 : 0}%` },
+                      { width: `${(completedCount / items.length) * 100}%` },
                     ]}
                   />
                 </View>
@@ -270,8 +222,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.lg,
     paddingBottom: Spacing.xxl,
   },
-
-  // Header
   header: {
     paddingTop: Spacing.md,
     paddingBottom: Spacing.lg,
@@ -311,8 +261,6 @@ const styles = StyleSheet.create({
     color: Colors.textSecondary,
     minWidth: 55,
   },
-
-  // Content items
   itemCard: {
     backgroundColor: Colors.surface,
     borderRadius: Radii.lg,
@@ -383,15 +331,11 @@ const styles = StyleSheet.create({
     color: Colors.primary,
     fontWeight: '500',
   },
-
-  // Psychoeducation expanded content
   psychoedContent: {
     paddingHorizontal: Spacing.xs,
     marginBottom: Spacing.sm,
     marginTop: -Spacing.xs,
   },
-
-  // Empty state
   emptyContainer: {
     alignItems: 'center',
     paddingTop: Spacing.xxl,

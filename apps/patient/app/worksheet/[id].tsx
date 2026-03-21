@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -10,57 +10,87 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
-import { useContentItems, ContentItem, ContentResponse } from '@/hooks/useContentItems';
+import { useWorksheet, useSubmitWorksheet } from '@/hooks/useWorksheet';
 import { WorksheetRenderer } from '@/components/WorksheetRenderer';
+import { ScoreDisplay } from '@/components/ScoreDisplay';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
 
-type ScreenState = 'loading' | 'form' | 'submitting' | 'success' | 'error' | 'already_done';
+const DRAFT_PREFIX = 'worksheet_draft_';
+const AUTOSAVE_DELAY = 800; // ms
+
+type ScreenState = 'form' | 'submitting' | 'success' | 'already_done';
 
 export default function WorksheetScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { fetchContentItem, submitResponse, getResponseForItem, loading: hookLoading } = useContentItems();
+  const { data, isLoading, error: fetchError } = useWorksheet(id);
+  const submitMutation = useSubmitWorksheet();
 
-  const [contentItem, setContentItem] = useState<ContentItem | null>(null);
-  const [existingResponse, setExistingResponse] = useState<ContentResponse | null>(null);
-  const [screenState, setScreenState] = useState<ScreenState>('loading');
+  const [screenState, setScreenState] = useState<ScreenState | null>(null);
   const [values, setValues] = useState<Record<string, any>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [initializedForItem, setInitializedForItem] = useState<string | null>(null);
+  const [draftRestored, setDraftRestored] = useState(false);
+  const autosaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
-    if (!id) return;
-    loadData();
-  }, [id]);
+  const contentItem = data?.item ?? null;
+  const existingResponse = data?.existingResponse ?? null;
 
-  async function loadData() {
-    setScreenState('loading');
-    try {
-      const item = await fetchContentItem(id!);
-      if (!item) {
-        setScreenState('error');
-        return;
-      }
-      setContentItem(item);
-
-      // Check for existing response
-      const existing = await getResponseForItem(id!);
-      if (existing) {
-        setExistingResponse(existing);
-        // Pre-fill form with existing data so user can review
-        setValues(existing.response_data ?? {});
-        setScreenState('already_done');
-      } else {
-        setScreenState('form');
-      }
-    } catch {
-      setScreenState('error');
+  // Initialize form state once data loads, restoring draft if available
+  if (data && id && initializedForItem !== id) {
+    if (existingResponse) {
+      setValues(existingResponse.response_data ?? {});
+      setScreenState('already_done');
+      setDraftRestored(true);
+    } else {
+      setValues({});
+      setScreenState('form');
+      setDraftRestored(false);
     }
+    setErrors({});
+    setInitializedForItem(id);
   }
+
+  // Restore draft from AsyncStorage (only for new responses, not review mode)
+  useEffect(() => {
+    if (!id || draftRestored || screenState !== 'form') return;
+
+    AsyncStorage.getItem(`${DRAFT_PREFIX}${id}`).then((saved) => {
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (parsed && typeof parsed === 'object' && Object.keys(parsed).length > 0) {
+            setValues(parsed);
+          }
+        } catch {
+          // Corrupted draft, ignore
+        }
+      }
+      setDraftRestored(true);
+    });
+  }, [id, draftRestored, screenState]);
+
+  // Auto-save draft to AsyncStorage on value changes (debounced)
+  useEffect(() => {
+    if (!id || screenState !== 'form' || !draftRestored) return;
+
+    if (autosaveTimer.current) clearTimeout(autosaveTimer.current);
+
+    autosaveTimer.current = setTimeout(() => {
+      if (Object.keys(values).length > 0) {
+        AsyncStorage.setItem(`${DRAFT_PREFIX}${id}`, JSON.stringify(values)).catch(() => {});
+      }
+    }, AUTOSAVE_DELAY);
+
+    return () => {
+      if (autosaveTimer.current) clearTimeout(autosaveTimer.current);
+    };
+  }, [values, id, screenState, draftRestored]);
 
   const handleChange = useCallback((fieldId: string, value: any) => {
     setValues((prev) => ({ ...prev, [fieldId]: value }));
-    // Clear error for this field when user interacts
     setErrors((prev) => {
       if (prev[fieldId]) {
         const next = { ...prev };
@@ -106,24 +136,28 @@ export default function WorksheetScreen() {
 
     setScreenState('submitting');
 
-    const result = await submitResponse(id, values);
-    if (result.success) {
+    try {
+      await submitMutation.mutateAsync({
+        contentItemId: id,
+        responseData: values,
+        xpValue: contentItem.xp_value,
+      });
+      // Clear draft after successful submission
+      AsyncStorage.removeItem(`${DRAFT_PREFIX}${id}`).catch(() => {});
       setScreenState('success');
-    } else {
-      Alert.alert('Error', result.error ?? 'Something went wrong. Please try again.');
+    } catch (err: any) {
+      Alert.alert('Error', err.message ?? 'Something went wrong. Please try again.');
       setScreenState('form');
     }
   }
 
   function handleRetake() {
-    setExistingResponse(null);
     setValues({});
     setErrors({});
     setScreenState('form');
   }
 
-  // ── Header ─────────────────────────────────────────────────────────
-
+  // Header
   const headerTitle = contentItem
     ? contentItem.title.length > 30
       ? contentItem.title.slice(0, 28) + '...'
@@ -132,16 +166,15 @@ export default function WorksheetScreen() {
 
   const stackScreenOptions = {
     headerShown: true,
-    headerTitle: headerTitle,
+    headerTitle,
     headerBackTitle: 'Back',
     headerTintColor: Colors.primary,
     headerStyle: { backgroundColor: Colors.background },
     headerTitleStyle: { color: Colors.text, fontWeight: '600' as const },
   };
 
-  // ── Loading ────────────────────────────────────────────────────────
-
-  if (screenState === 'loading') {
+  // Loading
+  if (isLoading) {
     return (
       <>
         <Stack.Screen options={stackScreenOptions} />
@@ -153,9 +186,8 @@ export default function WorksheetScreen() {
     );
   }
 
-  // ── Error ──────────────────────────────────────────────────────────
-
-  if (screenState === 'error' || !contentItem) {
+  // Error
+  if (fetchError || !contentItem) {
     return (
       <>
         <Stack.Screen options={stackScreenOptions} />
@@ -170,13 +202,18 @@ export default function WorksheetScreen() {
     );
   }
 
-  // ── Success ────────────────────────────────────────────────────────
-
+  // Success with score
   if (screenState === 'success') {
+    const scoring = contentItem.schema?.scoring;
+    const fields = contentItem.schema?.fields ?? [];
+
     return (
       <>
         <Stack.Screen options={stackScreenOptions} />
-        <View style={styles.successContainer}>
+        <ScrollView
+          style={styles.flex}
+          contentContainerStyle={styles.successScrollContent}
+        >
           <View style={styles.successCard}>
             <View style={styles.successIconCircle}>
               <Text style={styles.successIcon}>{'✓'}</Text>
@@ -192,21 +229,24 @@ export default function WorksheetScreen() {
                 <Text style={styles.xpEarnedLabel}>XP earned</Text>
               </View>
             )}
-
-            <Pressable
-              onPress={() => router.back()}
-              style={styles.doneButton}
-            >
-              <Text style={styles.doneButtonText}>Back to Module</Text>
-            </Pressable>
           </View>
-        </View>
+
+          {scoring && scoring.method !== 'none' && fields.length > 0 && (
+            <ScoreDisplay scoring={scoring} fields={fields} values={values} />
+          )}
+
+          <Pressable
+            onPress={() => router.back()}
+            style={styles.doneButton}
+          >
+            <Text style={styles.doneButtonText}>Back to Module</Text>
+          </Pressable>
+        </ScrollView>
       </>
     );
   }
 
-  // ── Submitting ─────────────────────────────────────────────────────
-
+  // Submitting
   if (screenState === 'submitting') {
     return (
       <>
@@ -219,8 +259,7 @@ export default function WorksheetScreen() {
     );
   }
 
-  // ── Already Done (review mode) ────────────────────────────────────
-
+  // Form / Review mode
   const isReviewMode = screenState === 'already_done';
   const fields = contentItem.schema?.fields ?? [];
   const instructionsForPatient = contentItem.schema?.instructions_for_patient;
@@ -239,7 +278,6 @@ export default function WorksheetScreen() {
           showsVerticalScrollIndicator={false}
           keyboardShouldPersistTaps="handled"
         >
-          {/* Title and instructions */}
           <Text style={styles.worksheetTitle}>{contentItem.title}</Text>
 
           {contentItem.instructions ? (
@@ -271,7 +309,14 @@ export default function WorksheetScreen() {
             </View>
           ) : null}
 
-          {/* Form fields */}
+          {isReviewMode && contentItem.schema?.scoring && contentItem.schema.scoring.method !== 'none' && fields.length > 0 && (
+            <ScoreDisplay
+              scoring={contentItem.schema.scoring}
+              fields={fields}
+              values={values}
+            />
+          )}
+
           {fields.length > 0 ? (
             <View style={styles.formSection}>
               <WorksheetRenderer
@@ -289,7 +334,6 @@ export default function WorksheetScreen() {
             </View>
           )}
 
-          {/* Submit button (only in form mode) */}
           {!isReviewMode && fields.length > 0 && (
             <Pressable
               onPress={handleSubmit}
@@ -305,7 +349,6 @@ export default function WorksheetScreen() {
             </Pressable>
           )}
 
-          {/* Bottom spacing */}
           <View style={{ height: Spacing.xxl }} />
         </ScrollView>
       </KeyboardAvoidingView>
@@ -330,15 +373,11 @@ const styles = StyleSheet.create({
     paddingTop: Spacing.md,
     paddingBottom: Spacing.xxl,
   },
-
-  // Loading
   loadingText: {
     fontSize: FontSizes.sm,
     color: Colors.textSecondary,
     marginTop: Spacing.md,
   },
-
-  // Error
   errorTitle: {
     fontSize: FontSizes.lg,
     fontWeight: '700',
@@ -361,8 +400,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: Colors.textOnPrimary,
   },
-
-  // Worksheet header
   worksheetTitle: {
     fontSize: FontSizes.xl,
     fontWeight: '700',
@@ -392,8 +429,6 @@ const styles = StyleSheet.create({
     color: Colors.primaryDark,
     lineHeight: 22,
   },
-
-  // Review mode
   reviewBanner: {
     backgroundColor: Colors.warningLight,
     borderRadius: Radii.md,
@@ -418,8 +453,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#ffffff',
   },
-
-  // AI feedback
   aiFeedbackCard: {
     backgroundColor: '#f0f9ff',
     borderRadius: Radii.md,
@@ -439,8 +472,6 @@ const styles = StyleSheet.create({
     color: '#0c4a6e',
     lineHeight: 22,
   },
-
-  // Form
   formSection: {
     marginTop: Spacing.sm,
   },
@@ -452,8 +483,6 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.sm,
     color: Colors.textTertiary,
   },
-
-  // Submit
   submitButton: {
     backgroundColor: Colors.primary,
     borderRadius: Radii.md,
@@ -475,14 +504,12 @@ const styles = StyleSheet.create({
     color: Colors.primaryLight,
     marginTop: Spacing.xs,
   },
-
   // Success
-  successContainer: {
-    flex: 1,
-    backgroundColor: Colors.background,
-    justifyContent: 'center',
-    alignItems: 'center',
+  successScrollContent: {
     paddingHorizontal: Spacing.lg,
+    paddingTop: Spacing.xl,
+    paddingBottom: Spacing.xxl,
+    alignItems: 'center',
   },
   successCard: {
     backgroundColor: Colors.surface,
@@ -522,7 +549,6 @@ const styles = StyleSheet.create({
   },
   xpEarned: {
     alignItems: 'center',
-    marginBottom: Spacing.lg,
     backgroundColor: Colors.primaryLight,
     paddingHorizontal: Spacing.xl,
     paddingVertical: Spacing.md,
@@ -546,6 +572,7 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     width: '100%',
     alignItems: 'center',
+    marginTop: Spacing.lg,
   },
   doneButtonText: {
     fontSize: FontSizes.md,

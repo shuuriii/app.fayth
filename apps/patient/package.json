@@ -12,8 +12,10 @@
   "dependencies": {
     "@fayth/types": "workspace:*",
     "@fayth/ui": "workspace:*",
+    "@fayth/yb-engine": "workspace:*",
     "@react-native-async-storage/async-storage": "2.1.2",
     "@supabase/supabase-js": "^2.49.1",
+    "@tanstack/react-query": "^5.91.3",
     "expo": "~52.0.0",
     "expo-router": "~4.0.0",
     "expo-secure-store": "~14.0.1",

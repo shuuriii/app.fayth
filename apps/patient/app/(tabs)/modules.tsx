@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -9,6 +9,7 @@ import {
   RefreshControl,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/lib/supabase';
 import { ModuleCard } from '@/components/ModuleCard';
@@ -33,64 +34,52 @@ interface ModuleWithStatus extends YBModule {
   status: ModuleStatus;
 }
 
-export default function ModulesScreen() {
-  const { user } = useAuth();
-  const router = useRouter();
-  const [modules, setModules] = useState<ModuleWithStatus[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
+async function fetchModules(userId: string | undefined): Promise<ModuleWithStatus[]> {
+  const { data: ybModules, error: modError } = await supabase
+    .from('yb_modules')
+    .select('*')
+    .eq('active', true)
+    .order('sequence_order', { ascending: true });
 
-  async function fetchModules() {
-    try {
-      // Fetch all YB modules
-      const { data: ybModules, error: modError } = await supabase
-        .from('yb_modules')
-        .select('*')
-        .eq('active', true)
-        .order('sequence_order', { ascending: true });
+  if (modError) throw modError;
 
-      if (modError) throw modError;
+  let patientModules: PatientModule[] = [];
+  if (userId) {
+    const { data, error } = await supabase
+      .from('patient_modules')
+      .select('module_id, status')
+      .eq('patient_id', userId);
 
-      // Fetch patient's module assignments
-      let patientModules: PatientModule[] = [];
-      if (user?.id) {
-        const { data, error } = await supabase
-          .from('patient_modules')
-          .select('module_id, status')
-          .eq('patient_id', user.id);
-
-        if (!error && data) {
-          patientModules = data;
-        }
-      }
-
-      // Merge: default to locked, module 1 is always unlocked
-      const statusMap = new Map(patientModules.map((pm) => [pm.module_id, pm.status]));
-
-      const merged: ModuleWithStatus[] = (ybModules ?? []).map((mod) => ({
-        ...mod,
-        status: statusMap.get(mod.id) ?? (mod.chapter_number === 1 ? 'assigned' : 'locked'),
-      }));
-
-      setModules(merged);
-    } catch (err: any) {
-      Alert.alert('Error', err.message ?? 'Failed to load modules');
-    } finally {
-      setLoading(false);
-      setRefreshing(false);
+    if (!error && data) {
+      patientModules = data;
     }
   }
 
-  useEffect(() => {
-    fetchModules();
-  }, [user?.id]);
+  const statusMap = new Map(patientModules.map((pm) => [pm.module_id, pm.status]));
+
+  return (ybModules ?? []).map((mod) => ({
+    ...mod,
+    status: statusMap.get(mod.id) ?? (mod.chapter_number === 1 ? 'assigned' : 'locked'),
+  }));
+}
+
+export default function ModulesScreen() {
+  const { user } = useAuth();
+  const router = useRouter();
+
+  const { data: modules = [], isLoading, refetch, isRefetching } = useQuery({
+    queryKey: ['modules', user?.id],
+    queryFn: () => fetchModules(user?.id),
+    enabled: !!user?.id,
+    staleTime: 5 * 60 * 1000,
+  });
 
   function handleModulePress(mod: ModuleWithStatus) {
     if (mod.status === 'locked') {
       Alert.alert(
         'Module Locked',
         'This module will be unlocked by your psychologist when the time is right. Focus on your current modules for now.',
-        [{ text: 'Got it' }]
+        [{ text: 'Got it' }],
       );
       return;
     }
@@ -98,7 +87,7 @@ export default function ModulesScreen() {
     router.push(`/module/${mod.id}`);
   }
 
-  if (loading) {
+  if (isLoading) {
     return (
       <View style={styles.centered}>
         <ActivityIndicator size="large" color={Colors.primary} />
@@ -130,11 +119,8 @@ export default function ModulesScreen() {
         showsVerticalScrollIndicator={false}
         refreshControl={
           <RefreshControl
-            refreshing={refreshing}
-            onRefresh={() => {
-              setRefreshing(true);
-              fetchModules();
-            }}
+            refreshing={isRefetching}
+            onRefresh={() => refetch()}
             tintColor={Colors.primary}
             colors={[Colors.primary]}
           />

@@ -64,6 +64,31 @@ export const Radii = {
   full: 9999,
 } as const;
 
+// ── Fay Companion ─────────────────────────────────────────────────
+export const FayColors = {
+  /** Core amber glow */
+  glow: '#D4A852',
+  glowLight: '#F5E6C4',
+  glowDim: '#B8935A',
+  /** Celebration spark */
+  spark: '#E8C868',
+  /** Dot-eyes */
+  eyes: '#FFFDF5',
+  /** Resting state — warm but subdued */
+  restingBg: 'rgba(212, 168, 82, 0.08)',
+  /** Active glow halo */
+  halo: 'rgba(212, 168, 82, 0.15)',
+} as const;
+
+export const FAY_EVOLUTION_LABELS: Record<string, string> = {
+  ember: 'Ember',
+  spark: 'Spark',
+  glow: 'Glow',
+  flare: 'Flare',
+  radiance: 'Radiance',
+  lumina: 'Lumina',
+};
+
 // ── Level display names ─────────────────────────────────────────────
 export const LEVEL_LABELS: Record<string, string> = {
   seed: 'Seed',

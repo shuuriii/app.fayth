@@ -79,6 +79,54 @@ export const LEVEL_THRESHOLDS: Record<Level, number> = {
   thrive: 12000,
 };
 
+// ── Fay Companion ─────────────────────────────────────────────────
+
+export type FayVisualState = 'resting' | 'present' | 'attentive' | 'celebrating' | 'glowing';
+
+export type FayEvolutionStage = 'ember' | 'spark' | 'glow' | 'flare' | 'radiance' | 'lumina';
+
+/** Maps player Level to Fay's evolution stage */
+export const FAY_EVOLUTION_MAP: Record<Level, FayEvolutionStage> = {
+  seed: 'ember',
+  sapling: 'spark',
+  sprout: 'glow',
+  focus: 'flare',
+  flow: 'radiance',
+  thrive: 'lumina',
+};
+
+export type FayMessageContext =
+  | 'checkin_prompt'
+  | 'post_worksheet'
+  | 'post_symptom_log'
+  | 'post_medication'
+  | 'streak_milestone'
+  | 'return_after_absence'
+  | 'rough_day'
+  | 'anti_hyperfocus'
+  | 'idle';
+
+export interface FayMessage {
+  context: FayMessageContext;
+  text: string;
+  /** Minimum streak days required (for streak_milestone) */
+  minStreak?: number;
+}
+
+export interface FayState {
+  visualState: FayVisualState;
+  evolutionStage: FayEvolutionStage;
+  message: FayMessage | null;
+  visible: boolean;
+}
+
+export interface FayPreferences {
+  enabled: boolean;
+  quietMode: boolean;
+  notificationsCheckin: boolean;
+  notificationsMilestone: boolean;
+}
+
 // ── Module Unlock Rules ─────────────────────────────────────────────
 
 export type UnlockRule =
