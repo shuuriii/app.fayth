@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { createSupabaseServer } from '@/lib/supabase/server';
 
 export default async function SessionsPage() {
@@ -73,9 +74,10 @@ export default async function SessionsPage() {
         ) : (
           <div className="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100">
             {upcomingSessions.map((session) => (
-              <div
+              <Link
                 key={session.id}
-                className="px-4 py-4 flex items-center justify-between"
+                href={`/sessions/${session.id}`}
+                className="px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-gray-900">
@@ -104,7 +106,7 @@ export default async function SessionsPage() {
                     </span>
                   )}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}
@@ -122,9 +124,10 @@ export default async function SessionsPage() {
         ) : (
           <div className="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100">
             {pastSessions.map((session) => (
-              <div
+              <Link
                 key={session.id}
-                className="px-4 py-4 flex items-center justify-between"
+                href={`/sessions/${session.id}`}
+                className="px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-gray-900">
@@ -148,7 +151,7 @@ export default async function SessionsPage() {
                     <span className="text-xs text-gray-400">Has notes</span>
                   )}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}

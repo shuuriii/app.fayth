@@ -12,4 +12,14 @@ export const schemas = {
   triggerCheckin: z.object({
     patient_id: z.string().uuid('patient_id must be a valid UUID'),
   }),
+
+  updateSession: z.object({
+    provider_notes: z.string().optional(),
+    status: z.enum(['scheduled', 'complete', 'cancelled']).optional(),
+  }),
+
+  reviewResponse: z.object({
+    provider_feedback: z.string().optional(),
+    flagged: z.boolean().optional(),
+  }),
 } as const;

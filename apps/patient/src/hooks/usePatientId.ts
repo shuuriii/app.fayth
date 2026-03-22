@@ -24,7 +24,7 @@ export function usePatientId(authUserId: string | undefined) {
   });
 
   return {
-    patientId: query.data ?? null,
+    patientId: query.data ?? undefined,
     loading: query.isLoading,
   };
 }

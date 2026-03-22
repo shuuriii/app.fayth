@@ -9,6 +9,7 @@ function TabIcon({ label, focused }: { label: string; focused: boolean }) {
   const icons: Record<string, string> = {
     Home: focused ? '||' : '||',
     Log: focused ? '+' : '+',
+    Meds: focused ? 'Rx' : 'Rx',
     Modules: focused ? '[]' : '[]',
     Profile: focused ? '@' : '@',
   };
@@ -51,6 +52,13 @@ export default function TabsLayout() {
         options={{
           title: 'Log',
           tabBarIcon: ({ focused }) => <TabIcon label="Log" focused={focused} />,
+        }}
+      />
+      <Tabs.Screen
+        name="medications"
+        options={{
+          title: 'Meds',
+          tabBarIcon: ({ focused }) => <TabIcon label="Meds" focused={focused} />,
         }}
       />
       <Tabs.Screen

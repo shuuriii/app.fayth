@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { createSupabaseServer } from '@/lib/supabase/server';
 import { notFound } from 'next/navigation';
 import { AISummary } from '@/components/ai-summary';
@@ -269,37 +270,39 @@ export default async function PatientDetailPage({
         ) : (
           <div className="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100">
             {recentResponses.map((response) => (
-              <div
+              <Link
                 key={response.id}
-                className="px-4 py-3 flex items-center justify-between"
+                href={`/patients/${patientId}/responses/${response.id}`}
               >
-                <div className="min-w-0">
-                  <p className="text-sm font-medium text-gray-900">
-                    {contentItemTitles[response.content_item_id] ??
-                      `Content #${response.content_item_id}`}
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    {response.session_date
-                      ? new Date(response.session_date).toLocaleDateString(
-                          'en-IN',
-                          { day: 'numeric', month: 'short', year: 'numeric' }
-                        )
-                      : 'No date'}
-                  </p>
+                <div className="px-4 py-3 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer">
+                  <div className="min-w-0">
+                    <p className="text-sm font-medium text-gray-900">
+                      {contentItemTitles[response.content_item_id] ??
+                        `Content #${response.content_item_id}`}
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      {response.session_date
+                        ? new Date(response.session_date).toLocaleDateString(
+                            'en-IN',
+                            { day: 'numeric', month: 'short', year: 'numeric' }
+                          )
+                        : 'No date'}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {response.flagged && (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-50 text-red-700">
+                        Flagged
+                      </span>
+                    )}
+                    {response.ai_feedback && (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-600">
+                        AI Feedback
+                      </span>
+                    )}
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  {response.flagged && (
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-50 text-red-700">
-                      Flagged
-                    </span>
-                  )}
-                  {response.ai_feedback && (
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-600">
-                      AI Feedback
-                    </span>
-                  )}
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}
