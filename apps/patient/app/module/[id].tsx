@@ -75,6 +75,10 @@ export default function ModuleDetailScreen() {
       router.push(`/module/${item.module_id}/read/${item.id}`);
       return;
     }
+    if (item.type === 'exercise') {
+      router.push(`/exercise/${item.id}`);
+      return;
+    }
     router.push(`/worksheet/${item.id}`);
   }
 

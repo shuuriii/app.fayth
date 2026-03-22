@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
 import { ScoreSlider } from '@/components/ScoreSlider';
+import { AdjustmentStageSelector } from '@/components/interactive/AdjustmentStageSelector';
 
 // ── Types ──────────────────────────────────────────────────────────────
 
@@ -231,14 +232,14 @@ export function SteppedWorksheetRenderer({
 
 // ── Field Renderer ─────────────────────────────────────────────────────
 
-interface FieldRendererProps {
+export interface FieldRendererProps {
   field: YBField;
   value: any;
   onChange: (value: any) => void;
   error?: string;
 }
 
-function FieldRenderer({ field, value, onChange, error }: FieldRendererProps) {
+export function FieldRenderer({ field, value, onChange, error }: FieldRendererProps) {
   return (
     <View style={styles.fieldContainer}>
       <View style={styles.labelRow}>
@@ -295,6 +296,15 @@ function renderFieldInput(field: YBField, value: any, onChange: (value: any) => 
       );
 
     case 'scale':
+      // Special case: adjustment stage selector (1-6 scale)
+      if (field.id === 'adjustment_stage' && field.scale_max === 6) {
+        return (
+          <AdjustmentStageSelector
+            value={value}
+            onChange={onChange}
+          />
+        );
+      }
       return (
         <ScoreSlider
           label=""

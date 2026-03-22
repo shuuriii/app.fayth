@@ -14,8 +14,13 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
 import { useWorksheet, useSubmitWorksheet } from '@/hooks/useWorksheet';
-import { WorksheetRenderer, SteppedWorksheetRenderer } from '@/components/WorksheetRenderer';
+import { WorksheetRenderer, SteppedWorksheetRenderer, type YBField } from '@/components/WorksheetRenderer';
+import { WorksheetExperience } from '@/components/experiences/WorksheetExperience';
 import { ScoreDisplay } from '@/components/ScoreDisplay';
+import { DSMChecklist } from '@/components/interactive/DSMChecklist';
+import { CBTCycleDiagram } from '@/components/interactive/CBTCycleDiagram';
+import { SymptomRadarChart } from '@/components/interactive/SymptomRadarChart';
+import { getCustomRenderer } from '@/lib/content-registry';
 import { Colors, FontSizes, Spacing, Radii } from '@/lib/constants';
 
 const DRAFT_PREFIX = 'worksheet_draft_';
@@ -40,6 +45,7 @@ export default function WorksheetScreen() {
 
   const contentItem = data?.item ?? null;
   const existingResponse = data?.existingResponse ?? null;
+  const customRenderer = id ? getCustomRenderer(id) : null;
 
   // Initialize form state once data loads, restoring draft if available
   if (data && id && initializedForItem !== id) {
@@ -251,9 +257,28 @@ export default function WorksheetScreen() {
             )}
           </View>
 
-          {scoring && scoring.method !== 'none' && fields.length > 0 && (
+          {/* SymptomRadarChart for ch2_item_06, or generic ScoreDisplay */}
+          {customRenderer?.component === 'SymptomRadarChart' && scoring ? (
+            <SymptomRadarChart
+              scores={fields
+                .filter((f: any) => f.score_values && f.options && values[f.id])
+                .map((f: any) => {
+                  const idx = f.options.indexOf(values[f.id]);
+                  return {
+                    label: f.id.replace(/_/g, ' '),
+                    value: idx >= 0 ? (f.score_values[idx] ?? 0) : 0,
+                    maxValue: Math.max(...(f.score_values ?? [3])),
+                  };
+                })}
+              interpretation={
+                scoring.interpretation
+                  ? Object.values(scoring.interpretation).find((v: any) => typeof v === 'string') as string | undefined
+                  : undefined
+              }
+            />
+          ) : scoring && scoring.method !== 'none' && fields.length > 0 ? (
             <ScoreDisplay scoring={scoring} fields={fields} values={values} />
-          )}
+          ) : null}
 
           <Pressable
             onPress={() => router.back()}
@@ -281,8 +306,84 @@ export default function WorksheetScreen() {
 
   // Form / Review mode
   const isReviewMode = screenState === 'already_done';
-  const fields = contentItem.schema?.fields ?? [];
+  const fields: YBField[] = contentItem.schema?.fields ?? [];
   const instructionsForPatient = contentItem.schema?.instructions_for_patient;
+
+  // Use WorksheetExperience for worksheets with section headers or many fields
+  const hasSectionHeaders = fields.some(
+    (f: YBField) => f.type === 'text' && f.id.startsWith('section_'),
+  );
+  const useEnhancedExperience = !isReviewMode && !customRenderer && (hasSectionHeaders || fields.length >= 8);
+
+  // Custom interactive component path
+  if (customRenderer && screenState === 'form') {
+    switch (customRenderer.component) {
+      case 'DSMChecklist':
+        return (
+          <>
+            <Stack.Screen options={stackScreenOptions} />
+            <DSMChecklist
+              fields={fields}
+              values={values}
+              onChange={handleChange}
+              onSubmit={handleSubmit}
+              scoring={contentItem.schema?.scoring}
+              xpValue={contentItem.xp_value}
+            />
+          </>
+        );
+      case 'CBTCycleDiagram':
+        return (
+          <>
+            <Stack.Screen options={stackScreenOptions} />
+            <ScrollView
+              style={styles.flex}
+              contentContainerStyle={styles.scrollContent}
+              keyboardShouldPersistTaps="handled"
+            >
+              <Text style={styles.worksheetTitle}>{contentItem.title}</Text>
+              {contentItem.instructions && (
+                <Text style={styles.instructions}>{contentItem.instructions}</Text>
+              )}
+              <CBTCycleDiagram
+                mode={customRenderer.mode ?? 'edit'}
+                values={values}
+                onChange={handleChange}
+              />
+              <Pressable
+                onPress={handleSubmit}
+                style={({ pressed }) => [
+                  styles.submitButton,
+                  pressed && styles.submitButtonPressed,
+                ]}
+              >
+                <Text style={styles.submitButtonText}>Save my responses</Text>
+                {contentItem.xp_value > 0 && (
+                  <Text style={styles.submitXpHint}>+{contentItem.xp_value} XP</Text>
+                )}
+              </Pressable>
+            </ScrollView>
+          </>
+        );
+    }
+  }
+
+  // Enhanced experience path (section-aware, ADHD-optimized)
+  if (useEnhancedExperience) {
+    return (
+      <>
+        <Stack.Screen options={stackScreenOptions} />
+        <WorksheetExperience
+          contentItem={contentItem}
+          values={values}
+          onChange={handleChange}
+          onSubmit={handleSubmit}
+          onSaveAndExit={() => router.back()}
+          errors={errors}
+        />
+      </>
+    );
+  }
 
   return (
     <>
