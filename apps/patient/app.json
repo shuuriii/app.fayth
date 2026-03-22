@@ -6,7 +6,7 @@
     "scheme": "fayth",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "icon": "./assets/icon.png",
     "splash": {
       "backgroundColor": "#2f9468"
@@ -23,7 +23,8 @@
     },
     "plugins": [
       "expo-router",
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-notifications"
     ],
     "extra": {
       "router": {
