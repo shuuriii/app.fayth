@@ -24,10 +24,7 @@
     "plugins": [
       "expo-router",
       "expo-secure-store",
-      "expo-notifications",
-      "expo-device",
-      "expo-constants",
-      "expo-haptics"
+      "expo-notifications"
     ],
     "extra": {
       "router": {
